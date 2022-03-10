@@ -1,0 +1,6 @@
+<RCC>
+    <qresource prefix="/plugins/Wody_Polskie_WMS" >
+        <file>icon.png</file>
+		<file>WPicona.ico</file>
+    </qresource>
+</RCC>
