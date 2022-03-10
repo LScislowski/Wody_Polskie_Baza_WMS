@@ -1,0 +1,1051 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>WodyPolskieWMSDialogBase</class>
+ <widget class="QDialog" name="WodyPolskieWMSDialogBase">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1000</width>
+    <height>641</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Wody Polskie - Baza WMS</string>
+  </property>
+  <property name="autoFillBackground">
+   <bool>false</bool>
+  </property>
+  <property name="sizeGripEnabled">
+   <bool>false</bool>
+  </property>
+  <property name="modal">
+   <bool>false</bool>
+  </property>
+  <layout class="QGridLayout" name="gridLayout">
+   <item row="1" column="0">
+    <widget class="QLabel" name="label_stopka">
+     <property name="font">
+      <font>
+       <weight>50</weight>
+       <italic>false</italic>
+       <bold>false</bold>
+       <strikeout>false</strikeout>
+       <kerning>true</kerning>
+      </font>
+     </property>
+     <property name="frameShape">
+      <enum>QFrame::StyledPanel</enum>
+     </property>
+     <property name="frameShadow">
+      <enum>QFrame::Plain</enum>
+     </property>
+     <property name="text">
+      <string>Wody Polskie - Baza WMS v 1.0.1            Państwowe Gospodarstwo Wodne Wody Polskie / Krajowy Zarząd Gospodarki Wodnej / Wydział Systemu Informacyjnego Gospodarowania Wodami</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+   </item>
+   <item row="0" column="0">
+    <widget class="QWidget" name="widget" native="true">
+     <layout class="QGridLayout" name="gridLayout_2">
+      <item row="2" column="0">
+       <widget class="QDialogButtonBox" name="button_box">
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+        <property name="standardButtons">
+         <set>QDialogButtonBox::Cancel|QDialogButtonBox::Ok</set>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="0">
+       <layout class="QVBoxLayout" name="verticalLayout">
+        <item>
+         <widget class="QTabWidget" name="tabWidget">
+          <property name="toolTip">
+           <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Dodaj WMS&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+          </property>
+          <property name="whatsThis">
+           <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Dodaj WMS&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+          </property>
+          <property name="currentIndex">
+           <number>0</number>
+          </property>
+          <property name="tabBarAutoHide">
+           <bool>true</bool>
+          </property>
+          <widget class="QWidget" name="tab_MPHP">
+           <attribute name="title">
+            <string>MPHP10k</string>
+           </attribute>
+           <layout class="QFormLayout" name="formLayout_4">
+            <item row="0" column="0" colspan="2">
+             <widget class="QLabel" name="label_71">
+              <property name="font">
+               <font>
+                <pointsize>13</pointsize>
+                <weight>75</weight>
+                <bold>true</bold>
+               </font>
+              </property>
+              <property name="text">
+               <string>Mapa Podziału Hydrograficznego Polski w skali 1:10 000 (MPHP10k)</string>
+              </property>
+             </widget>
+            </item>
+            <item row="2" column="0" colspan="2">
+             <layout class="QHBoxLayout" name="horizontalLayout_8">
+              <item>
+               <widget class="QLabel" name="label_28">
+                <property name="text">
+                 <string>
+
+
+
+
+</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QLabel" name="label_29">
+                <property name="text">
+                 <string/>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QLabel" name="label_30">
+                <property name="text">
+                 <string/>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QLabel" name="label_17">
+                <property name="text">
+                 <string/>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QLabel" name="label_83">
+                <property name="styleSheet">
+                 <string notr="true">image: url(:/plugins/Wody_Polskie_WMS/icon.png);</string>
+                </property>
+                <property name="text">
+                 <string/>
+                </property>
+                <property name="alignment">
+                 <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </item>
+            <item row="4" column="0" colspan="2">
+             <widget class="QLabel" name="label_70">
+              <property name="text">
+               <string>Dodaj WMS do mapy:</string>
+              </property>
+             </widget>
+            </item>
+            <item row="5" column="0">
+             <widget class="QPushButton" name="pbMPHP">
+              <property name="text">
+               <string>Dodaj</string>
+              </property>
+             </widget>
+            </item>
+            <item row="5" column="1">
+             <widget class="QLabel" name="label_MPHP">
+              <property name="text">
+               <string>-   Mapa Podziału Hydrograficznego Polski w skali 1:10 000 (MPHP10k)                                                                 </string>
+              </property>
+             </widget>
+            </item>
+            <item row="7" column="0">
+             <widget class="QLabel" name="label_6">
+              <property name="text">
+               <string/>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </widget>
+          <widget class="QWidget" name="tab_aPGW">
+           <attribute name="title">
+            <string>aPGW</string>
+           </attribute>
+           <layout class="QFormLayout" name="formLayout_5">
+            <item row="0" column="0" colspan="2">
+             <widget class="QLabel" name="label_74">
+              <property name="font">
+               <font>
+                <pointsize>13</pointsize>
+                <weight>75</weight>
+                <bold>true</bold>
+               </font>
+              </property>
+              <property name="text">
+               <string>Aktualizacja Planów Gospodarowania Wodami (aPGW)</string>
+              </property>
+             </widget>
+            </item>
+            <item row="1" column="0" colspan="2">
+             <layout class="QHBoxLayout" name="horizontalLayout_5">
+              <item>
+               <widget class="QLabel" name="label_20">
+                <property name="text">
+                 <string>
+
+
+
+
+</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QLabel" name="label_21">
+                <property name="text">
+                 <string/>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QLabel" name="label_22">
+                <property name="text">
+                 <string/>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QLabel" name="label_4">
+                <property name="text">
+                 <string/>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QLabel" name="label_82">
+                <property name="styleSheet">
+                 <string notr="true">image: url(:/plugins/Wody_Polskie_WMS/icon.png);</string>
+                </property>
+                <property name="text">
+                 <string/>
+                </property>
+                <property name="alignment">
+                 <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </item>
+            <item row="2" column="0" colspan="2">
+             <widget class="QLabel" name="label_73">
+              <property name="text">
+               <string>Dodaj WMS do mapy:</string>
+              </property>
+             </widget>
+            </item>
+            <item row="3" column="0">
+             <widget class="QPushButton" name="pbaPGW">
+              <property name="text">
+               <string>Dodaj</string>
+              </property>
+             </widget>
+            </item>
+            <item row="3" column="1">
+             <widget class="QLabel" name="label_aPGW">
+              <property name="text">
+               <string>-  Aktualizacja Planów Gospodarowania Wodami (aPGW)</string>
+              </property>
+             </widget>
+            </item>
+            <item row="4" column="1">
+             <widget class="QLabel" name="label_27">
+              <property name="text">
+               <string>
+
+
+Usługa przeglądania (WMS) prezentuje dane dotyczace planów gospodarowania wodami zgodnie z drugim cyklem planistycznym (2016-2020)</string>
+              </property>
+             </widget>
+            </item>
+           </layout>
+           <zorder>label_74</zorder>
+           <zorder>label_aPGW</zorder>
+           <zorder>label_73</zorder>
+           <zorder>pbaPGW</zorder>
+           <zorder></zorder>
+           <zorder>label_27</zorder>
+          </widget>
+          <widget class="QWidget" name="tab_PGWWP">
+           <attribute name="title">
+            <string>Granice PGWWP</string>
+           </attribute>
+           <layout class="QFormLayout" name="formLayout_6">
+            <item row="0" column="0" colspan="2">
+             <widget class="QLabel" name="label_84">
+              <property name="font">
+               <font>
+                <pointsize>13</pointsize>
+                <weight>75</weight>
+                <bold>true</bold>
+               </font>
+              </property>
+              <property name="text">
+               <string>Jednostki organizacyjne PGW Wody Polskie</string>
+              </property>
+             </widget>
+            </item>
+            <item row="1" column="0" colspan="2">
+             <layout class="QHBoxLayout" name="horizontalLayout_6">
+              <item>
+               <widget class="QLabel" name="label_23">
+                <property name="text">
+                 <string>
+
+
+
+
+</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QLabel" name="label_24">
+                <property name="text">
+                 <string/>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QLabel" name="label_25">
+                <property name="text">
+                 <string/>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QLabel" name="label_5">
+                <property name="text">
+                 <string/>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QLabel" name="label_85">
+                <property name="styleSheet">
+                 <string notr="true">image: url(:/plugins/Wody_Polskie_WMS/icon.png);</string>
+                </property>
+                <property name="text">
+                 <string/>
+                </property>
+                <property name="alignment">
+                 <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </item>
+            <item row="4" column="0" colspan="2">
+             <widget class="QLabel" name="label_76">
+              <property name="text">
+               <string>Dodaj WMS do mapy:</string>
+              </property>
+             </widget>
+            </item>
+            <item row="5" column="0">
+             <widget class="QPushButton" name="pbPGWWP">
+              <property name="text">
+               <string>Dodaj</string>
+              </property>
+             </widget>
+            </item>
+            <item row="5" column="1">
+             <widget class="QLabel" name="label_PGWWP">
+              <property name="text">
+               <string>-  Granice jednostek organizacyjnych PGW Wody Polskie (Regionalne Zarządy Gospodarki Wodnej, Zarządy Zlewni, Nadzory Wodne)</string>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </widget>
+          <widget class="QWidget" name="tab_WORP">
+           <attribute name="title">
+            <string>WORP</string>
+           </attribute>
+           <layout class="QFormLayout" name="formLayout">
+            <item row="0" column="0" colspan="2">
+             <widget class="QLabel" name="label_45">
+              <property name="font">
+               <font>
+                <pointsize>13</pointsize>
+                <weight>75</weight>
+                <bold>true</bold>
+               </font>
+              </property>
+              <property name="text">
+               <string>Wstępna ocena ryzyka powodziowego (WORP)</string>
+              </property>
+             </widget>
+            </item>
+            <item row="1" column="0" colspan="2">
+             <layout class="QHBoxLayout" name="horizontalLayout_2">
+              <item>
+               <widget class="QLabel" name="label_9">
+                <property name="text">
+                 <string>
+
+
+
+
+</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QLabel" name="label_8">
+                <property name="text">
+                 <string/>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QLabel" name="label_7">
+                <property name="text">
+                 <string/>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QLabel" name="label">
+                <property name="text">
+                 <string/>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QLabel" name="label_78">
+                <property name="styleSheet">
+                 <string notr="true">image: url(:/plugins/Wody_Polskie_WMS/icon.png);</string>
+                </property>
+                <property name="text">
+                 <string/>
+                </property>
+                <property name="alignment">
+                 <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </item>
+            <item row="2" column="0" colspan="2">
+             <widget class="QLabel" name="label_44">
+              <property name="text">
+               <string>Dodaj WMS do mapy:</string>
+              </property>
+             </widget>
+            </item>
+            <item row="3" column="0">
+             <widget class="QPushButton" name="pbWORP1">
+              <property name="text">
+               <string>Dodaj</string>
+              </property>
+             </widget>
+            </item>
+            <item row="3" column="1">
+             <widget class="QLabel" name="label_WORP1">
+              <property name="text">
+               <string>-  Obszary narażone na niebezpieczeństwo powodzi - od strony morza</string>
+              </property>
+             </widget>
+            </item>
+            <item row="4" column="0">
+             <widget class="QPushButton" name="pbWORP2">
+              <property name="text">
+               <string>Dodaj</string>
+              </property>
+             </widget>
+            </item>
+            <item row="4" column="1">
+             <widget class="QLabel" name="label_WORP2">
+              <property name="text">
+               <string>-  Obszary narażone na niebezpieczeństwo powodzi - rzeczne</string>
+              </property>
+             </widget>
+            </item>
+            <item row="5" column="0">
+             <widget class="QPushButton" name="pbWORP3">
+              <property name="text">
+               <string>Dodaj</string>
+              </property>
+             </widget>
+            </item>
+            <item row="5" column="1">
+             <widget class="QLabel" name="label_WORP3">
+              <property name="text">
+               <string>-  Obszary narażone na niebezpieczeństwo powodzi - zniszczenie budowli piętrzących</string>
+              </property>
+             </widget>
+            </item>
+            <item row="6" column="0">
+             <widget class="QPushButton" name="pbWORP4">
+              <property name="text">
+               <string>Dodaj</string>
+              </property>
+             </widget>
+            </item>
+            <item row="6" column="1">
+             <widget class="QLabel" name="label_WORP4">
+              <property name="text">
+               <string>-  Powodzie historyczne, powodzie prawdopodobne</string>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </widget>
+          <widget class="QWidget" name="tab_MZP">
+           <attribute name="title">
+            <string>MZP</string>
+           </attribute>
+           <layout class="QFormLayout" name="formLayout_2">
+            <item row="0" column="0" colspan="2">
+             <widget class="QLabel" name="label_46">
+              <property name="font">
+               <font>
+                <pointsize>13</pointsize>
+                <weight>75</weight>
+                <bold>true</bold>
+               </font>
+              </property>
+              <property name="text">
+               <string>Mapa zagrożenia powodziowego (MZP)</string>
+              </property>
+             </widget>
+            </item>
+            <item row="1" column="0" colspan="2">
+             <layout class="QHBoxLayout" name="horizontalLayout_7">
+              <item>
+               <widget class="QLabel" name="label_10">
+                <property name="text">
+                 <string>
+
+
+
+
+</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QLabel" name="label_11">
+                <property name="text">
+                 <string/>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QLabel" name="label_12">
+                <property name="text">
+                 <string/>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QLabel" name="label_2">
+                <property name="text">
+                 <string/>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QLabel" name="label_79">
+                <property name="styleSheet">
+                 <string notr="true">image: url(:/plugins/Wody_Polskie_WMS/icon.png);</string>
+                </property>
+                <property name="text">
+                 <string/>
+                </property>
+                <property name="alignment">
+                 <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </item>
+            <item row="2" column="0" colspan="2">
+             <widget class="QLabel" name="label_47">
+              <property name="text">
+               <string>Dodaj WMS do mapy:</string>
+              </property>
+             </widget>
+            </item>
+            <item row="3" column="0">
+             <widget class="QPushButton" name="pbMZP1">
+              <property name="text">
+               <string>Dodaj</string>
+              </property>
+             </widget>
+            </item>
+            <item row="3" column="1">
+             <widget class="QLabel" name="label_MZP1">
+              <property name="text">
+               <string>-  MZP z głębokością wody 0,2%, raz na 500 lat dla powodzi rzecznych oraz od strony morza</string>
+              </property>
+             </widget>
+            </item>
+            <item row="4" column="0">
+             <widget class="QPushButton" name="pbMZP2">
+              <property name="text">
+               <string>Dodaj</string>
+              </property>
+             </widget>
+            </item>
+            <item row="4" column="1">
+             <widget class="QLabel" name="label_MZP2">
+              <property name="text">
+               <string>-  MZP z głębokością wody 1%, raz na 100 lat dla powodzi rzecznych oraz od strony morza</string>
+              </property>
+             </widget>
+            </item>
+            <item row="5" column="0">
+             <widget class="QPushButton" name="pbMZP3">
+              <property name="text">
+               <string>Dodaj</string>
+              </property>
+             </widget>
+            </item>
+            <item row="5" column="1">
+             <widget class="QLabel" name="label_MZP3">
+              <property name="text">
+               <string>-  MZP z głębokością wody 10%, raz na 10 lat</string>
+              </property>
+             </widget>
+            </item>
+            <item row="6" column="0">
+             <widget class="QPushButton" name="pbMZP4">
+              <property name="text">
+               <string>Dodaj</string>
+              </property>
+             </widget>
+            </item>
+            <item row="6" column="1">
+             <widget class="QLabel" name="label_MZP4">
+              <property name="text">
+               <string>-  MZP z prędkością przepływu wody 0,2%, raz na 500 lat</string>
+              </property>
+             </widget>
+            </item>
+            <item row="7" column="0">
+             <widget class="QPushButton" name="pbMZP5">
+              <property name="text">
+               <string>Dodaj</string>
+              </property>
+             </widget>
+            </item>
+            <item row="7" column="1">
+             <widget class="QLabel" name="label_MZP5">
+              <property name="text">
+               <string>-  MZP z prędkością przepływu wody 1%, raz na 100 lat</string>
+              </property>
+             </widget>
+            </item>
+            <item row="8" column="0">
+             <widget class="QPushButton" name="pbMZP6">
+              <property name="text">
+               <string>Dodaj</string>
+              </property>
+             </widget>
+            </item>
+            <item row="8" column="1">
+             <widget class="QLabel" name="label_MZP6">
+              <property name="text">
+               <string>-  MZP z prędkością przepływu wody 10%, raz na 10 lat</string>
+              </property>
+             </widget>
+            </item>
+            <item row="9" column="0">
+             <widget class="QPushButton" name="pbMZP7">
+              <property name="text">
+               <string>Dodaj</string>
+              </property>
+             </widget>
+            </item>
+            <item row="9" column="1">
+             <widget class="QLabel" name="label_MZP7">
+              <property name="text">
+               <string>-  MZP - całkowite zniszczenie wału przeciwpowodziowego</string>
+              </property>
+             </widget>
+            </item>
+            <item row="10" column="0">
+             <widget class="QPushButton" name="pbMZP8">
+              <property name="text">
+               <string>Dodaj</string>
+              </property>
+             </widget>
+            </item>
+            <item row="10" column="1">
+             <widget class="QLabel" name="label_MZP8">
+              <property name="text">
+               <string>-  MZP - zniszczenie lub uszkodzenie budowli piętrzącej</string>
+              </property>
+             </widget>
+            </item>
+            <item row="11" column="0">
+             <widget class="QPushButton" name="pbMZP9">
+              <property name="text">
+               <string>Dodaj</string>
+              </property>
+             </widget>
+            </item>
+            <item row="11" column="1">
+             <widget class="QLabel" name="label_MZP9">
+              <property name="text">
+               <string>-  MZP od strony morza - całkowite zniszczenie wału przeciwsztormowego</string>
+              </property>
+             </widget>
+            </item>
+            <item row="12" column="0">
+             <widget class="QPushButton" name="pbMZP10">
+              <property name="text">
+               <string>Dodaj</string>
+              </property>
+             </widget>
+            </item>
+            <item row="12" column="1">
+             <widget class="QLabel" name="label_MZP8_2">
+              <property name="text">
+               <string>-  MZP - Obszary szczególnego zagrożenia powodzią</string>
+              </property>
+             </widget>
+            </item>
+            <item row="13" column="0">
+             <widget class="QPushButton" name="pbMZP11">
+              <property name="text">
+               <string>Dodaj</string>
+              </property>
+             </widget>
+            </item>
+            <item row="13" column="1">
+             <widget class="QLabel" name="label_MZP9_2">
+              <property name="text">
+               <string>-  MZP - Mapa orientacyjna</string>
+              </property>
+             </widget>
+            </item>
+           </layout>
+           <zorder>label_MZP1</zorder>
+           <zorder>pbMZP1</zorder>
+           <zorder>label_47</zorder>
+           <zorder>pbMZP7</zorder>
+           <zorder>label_MZP5</zorder>
+           <zorder>pbMZP6</zorder>
+           <zorder>label_MZP8</zorder>
+           <zorder>pbMZP5</zorder>
+           <zorder>pbMZP9</zorder>
+           <zorder>label_MZP7</zorder>
+           <zorder>label_MZP6</zorder>
+           <zorder>label_MZP9</zorder>
+           <zorder>pbMZP8</zorder>
+           <zorder>pbMZP4</zorder>
+           <zorder>label_MZP4</zorder>
+           <zorder>pbMZP3</zorder>
+           <zorder>label_MZP3</zorder>
+           <zorder>pbMZP2</zorder>
+           <zorder>label_MZP2</zorder>
+           <zorder>label_MZP8_2</zorder>
+           <zorder>pbMZP10</zorder>
+           <zorder>label_MZP9_2</zorder>
+           <zorder>pbMZP11</zorder>
+           <zorder>label_46</zorder>
+          </widget>
+          <widget class="QWidget" name="tab_MRP">
+           <attribute name="title">
+            <string>MRP</string>
+           </attribute>
+           <layout class="QFormLayout" name="formLayout_3">
+            <item row="0" column="0" colspan="2">
+             <widget class="QLabel" name="label_68">
+              <property name="font">
+               <font>
+                <pointsize>13</pointsize>
+                <weight>75</weight>
+                <bold>true</bold>
+               </font>
+              </property>
+              <property name="text">
+               <string>Mapa ryzyka powodziowego (MRP)</string>
+              </property>
+             </widget>
+            </item>
+            <item row="1" column="0" colspan="2">
+             <layout class="QHBoxLayout" name="horizontalLayout_3">
+              <item>
+               <widget class="QLabel" name="label_13">
+                <property name="text">
+                 <string>
+
+
+
+
+</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QLabel" name="label_14">
+                <property name="text">
+                 <string/>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QLabel" name="label_15">
+                <property name="text">
+                 <string/>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QLabel" name="label_16">
+                <property name="text">
+                 <string/>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QLabel" name="label_80">
+                <property name="styleSheet">
+                 <string notr="true">image: url(:/plugins/Wody_Polskie_WMS/icon.png);</string>
+                </property>
+                <property name="text">
+                 <string/>
+                </property>
+                <property name="alignment">
+                 <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </item>
+            <item row="2" column="0" colspan="2">
+             <widget class="QLabel" name="label_67">
+              <property name="text">
+               <string>Dodaj WMS do mapy:</string>
+              </property>
+             </widget>
+            </item>
+            <item row="3" column="0">
+             <widget class="QPushButton" name="pbMRP1">
+              <property name="text">
+               <string>Dodaj</string>
+              </property>
+             </widget>
+            </item>
+            <item row="3" column="1">
+             <widget class="QLabel" name="label_MRP1">
+              <property name="text">
+               <string>-  MRP 10% potencjalne negatywne konsekwencje dla życia i zdrowia ludzi oraz wartości potencjalnych strat powodziowych</string>
+              </property>
+             </widget>
+            </item>
+            <item row="4" column="0">
+             <widget class="QPushButton" name="pbMRP2">
+              <property name="text">
+               <string>Dodaj</string>
+              </property>
+             </widget>
+            </item>
+            <item row="4" column="1">
+             <widget class="QLabel" name="label_MRP2">
+              <property name="text">
+               <string>-  MRP 1% potencjalne negatywne konsekwencje dla życia i zdrowia ludzi oraz wartości potencjalnych strat powodziowych dla powodzi rzecznych oraz od strony morza</string>
+              </property>
+             </widget>
+            </item>
+            <item row="5" column="0">
+             <widget class="QPushButton" name="pbMRP3">
+              <property name="text">
+               <string>Dodaj</string>
+              </property>
+             </widget>
+            </item>
+            <item row="5" column="1">
+             <widget class="QLabel" name="label_MRP3">
+              <property name="text">
+               <string>-  MRP 0,2% potencjalne negatywne konsekwencje dla życia i zdrowia ludzi oraz wartości potencjalnych strat powodziowych dla powodzi rzecznych oraz od strony morza</string>
+              </property>
+             </widget>
+            </item>
+            <item row="6" column="0">
+             <widget class="QPushButton" name="pbMRP4">
+              <property name="text">
+               <string>Dodaj</string>
+              </property>
+             </widget>
+            </item>
+            <item row="6" column="1">
+             <widget class="QLabel" name="label_MRP4">
+              <property name="text">
+               <string>-  MRP - całkowite zniszczenie wału przeciwpowodziowego - potencjalne negatywne skutki dla życia i zdrowia ludzi oraz wartości potencjalnych strat powodziowych</string>
+              </property>
+             </widget>
+            </item>
+            <item row="7" column="0">
+             <widget class="QPushButton" name="pbMRP5">
+              <property name="text">
+               <string>Dodaj</string>
+              </property>
+             </widget>
+            </item>
+            <item row="7" column="1">
+             <widget class="QLabel" name="label_MRP5">
+              <property name="text">
+               <string>-  MRP - całkowite zniszczenie wału przeciwsztormowego - potencjalne negatywne skutki dla życia i zdrowia ludzi oraz wartości potencjalnych strat powodziowych</string>
+              </property>
+             </widget>
+            </item>
+            <item row="8" column="0">
+             <widget class="QPushButton" name="pbMRP6">
+              <property name="text">
+               <string>Dodaj</string>
+              </property>
+             </widget>
+            </item>
+            <item row="8" column="1">
+             <widget class="QLabel" name="label_MRP6">
+              <property name="text">
+               <string>-  MRP 10% negatywne konsekwencje dla środowiska, dziedzictwa kulturowego i działalności gospodarczej</string>
+              </property>
+             </widget>
+            </item>
+            <item row="9" column="0">
+             <widget class="QPushButton" name="pbMRP7">
+              <property name="text">
+               <string>Dodaj</string>
+              </property>
+             </widget>
+            </item>
+            <item row="9" column="1">
+             <widget class="QLabel" name="label_MRP7">
+              <property name="text">
+               <string>-  MRP 1% negatywne konsekwencje dla środowiska, dziedzictwa kulturowego i działalności gospodarczej dla powodzi rzecznych oraz od strony morza</string>
+              </property>
+             </widget>
+            </item>
+            <item row="10" column="0">
+             <widget class="QPushButton" name="pbMRP8">
+              <property name="text">
+               <string>Dodaj</string>
+              </property>
+             </widget>
+            </item>
+            <item row="10" column="1">
+             <widget class="QLabel" name="label_MRP8">
+              <property name="text">
+               <string>-  MRP 0,2% negatywne konsekwencje dla środowiska, dziedzictwa kulturowego i działalności gospodarczej dla powodzi rzecznych oraz od strony morza</string>
+              </property>
+             </widget>
+            </item>
+            <item row="11" column="0">
+             <widget class="QPushButton" name="pbMRP9">
+              <property name="text">
+               <string>Dodaj</string>
+              </property>
+             </widget>
+            </item>
+            <item row="11" column="1">
+             <widget class="QLabel" name="label_MRP9">
+              <property name="text">
+               <string>-  MRP - całkowite zniszczenie wału przeciwpowodziowego - potencjalne negatywne skutki dla środowiska, dziedzictwa kulturowego i działalności gospodarczej</string>
+              </property>
+             </widget>
+            </item>
+            <item row="12" column="0">
+             <widget class="QPushButton" name="pbMRP10">
+              <property name="text">
+               <string>Dodaj</string>
+              </property>
+             </widget>
+            </item>
+            <item row="12" column="1">
+             <widget class="QLabel" name="label_MRP10">
+              <property name="text">
+               <string>-  MRP - całkowite zniszczenie wału przeciwsztormowego - potencjalne negatywne skutki dla środowiska, dziedzictwa kulturowego i działalności gospodarczej</string>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </widget>
+         </widget>
+        </item>
+       </layout>
+      </item>
+      <item row="1" column="0">
+       <widget class="QLabel" name="label_26">
+        <property name="font">
+         <font>
+          <pointsize>7</pointsize>
+         </font>
+        </property>
+        <property name="frameShape">
+         <enum>QFrame::NoFrame</enum>
+        </property>
+        <property name="text">
+         <string>Prezentowane usługi mają charakter wyłącznie poglądowy i nie mogą być traktowane jako dokument oficjalny. Nie mogą też być podstawą jakichkolwiek czynności administacyjnych czy urzędowych.
+
+</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>button_box</sender>
+   <signal>rejected()</signal>
+   <receiver>WodyPolskieWMSDialogBase</receiver>
+   <slot>reject()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>20</x>
+     <y>20</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>20</x>
+     <y>20</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>button_box</sender>
+   <signal>accepted()</signal>
+   <receiver>WodyPolskieWMSDialogBase</receiver>
+   <slot>accept()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>20</x>
+     <y>20</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>20</x>
+     <y>20</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>
