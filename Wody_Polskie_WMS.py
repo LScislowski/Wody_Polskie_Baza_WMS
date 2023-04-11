@@ -218,436 +218,894 @@ class WodyPolskieWMS:
         ["1", "PGWWP-Zarządy Zlewni", "https://wody.isok.gov.pl/gpservices/KZGW2/REG_ISOK_RZGW/MapServer/WMSServer?"],
         ["2", "PGWWP-Regionalne Zarządy Gospodarki Wodnej", "https://wody.isok.gov.pl/gpservices/KZGW2/REG_ISOK_RZGW/MapServer/WMSServer?"]]
 
-        aPGW = [["0", "aPGW-Ekoregiony", "https://wody.isok.gov.pl/gpservices/KZGW/ISOK_PGW/MapServer/WMSServer?"],
-        ["1", "aPGW-Obszary Dorzeczy", "https://wody.isok.gov.pl/gpservices/KZGW/ISOK_PGW/MapServer/WMSServer?"],
-        ["2", "aPGW-Regiony wodne", "https://wody.isok.gov.pl/gpservices/KZGW/ISOK_PGW/MapServer/WMSServer?"],
-        ["3", "aPGW-Zlewnie JCWP", "https://wody.isok.gov.pl/gpservices/KZGW/ISOK_PGW/MapServer/WMSServer?"],
-        ["4", "aPGW-Jednolite Części Wód Podziemnych", "https://wody.isok.gov.pl/gpservices/KZGW/ISOK_PGW/MapServer/WMSServer?"],
-        ["5", "aPGW-JCWP Jeziornych", "https://wody.isok.gov.pl/gpservices/KZGW/ISOK_PGW/MapServer/WMSServer?"],
-        ["6", "aPGW-JCWP Przejściowych", "https://wody.isok.gov.pl/gpservices/KZGW/ISOK_PGW/MapServer/WMSServer?"],
-        ["7", "aPGW-JCWP Przybrzeżnych", "https://wody.isok.gov.pl/gpservices/KZGW/ISOK_PGW/MapServer/WMSServer?"],
-        ["8", "aPGW-Główne rzeki", "https://wody.isok.gov.pl/gpservices/KZGW/ISOK_PGW/MapServer/WMSServer?"],
-        ["9", "aPGW-Główne jeziora", "https://wody.isok.gov.pl/gpservices/KZGW/ISOK_PGW/MapServer/WMSServer?"],
-        ["10", "aPGW-JCWP Rzecznych", "https://wody.isok.gov.pl/gpservices/KZGW/ISOK_PGW/MapServer/WMSServer?"]]
+        aPGW = [["8", "Główne rzeki", "https://wody.isok.gov.pl/gpservices/KZGW/ISOK_PGW/MapServer/WMSServer?"],
+        ["10", "JCWP Rzecznych", "https://wody.isok.gov.pl/gpservices/KZGW/ISOK_PGW/MapServer/WMSServer?"],
+        ["5", "JCWP Jeziornych", "https://wody.isok.gov.pl/gpservices/KZGW/ISOK_PGW/MapServer/WMSServer?"],
+        ["6", "JCWP Przejściowych", "https://wody.isok.gov.pl/gpservices/KZGW/ISOK_PGW/MapServer/WMSServer?"],
+        ["7", "JCWP Przybrzeżnych", "https://wody.isok.gov.pl/gpservices/KZGW/ISOK_PGW/MapServer/WMSServer?"],
+        ["9", "Główne jeziora", "https://wody.isok.gov.pl/gpservices/KZGW/ISOK_PGW/MapServer/WMSServer?"],
+        ["0", "Ekoregiony", "https://wody.isok.gov.pl/gpservices/KZGW/ISOK_PGW/MapServer/WMSServer?"],
+        ["2", "Regiony wodne", "https://wody.isok.gov.pl/gpservices/KZGW/ISOK_PGW/MapServer/WMSServer?"],
+        ["1", "Obszary Dorzeczy", "https://wody.isok.gov.pl/gpservices/KZGW/ISOK_PGW/MapServer/WMSServer?"],
+        ["3", "Zlewnie JCWP", "https://wody.isok.gov.pl/gpservices/KZGW/ISOK_PGW/MapServer/WMSServer?"],
+        ["4", "Jednolite Części Wód Podziemnych", "https://wody.isok.gov.pl/gpservices/KZGW/ISOK_PGW/MapServer/WMSServer?"]
+]
 
-        worp1 = [["1", "WORP-Obszary narażone na niebezpieczeństwo powodzi-od morza", "https://wody.isok.gov.pl/gpservices/KZGW/ISOK_WORP_ONNP_1/MapServer/WMSServer?"]]
+        worp1 = [["1", "Obszary narażone na niebezpieczeństwo powodzi-od morza", "https://wody.isok.gov.pl/gpservices/KZGW/ISOK_WORP_ONNP_1/MapServer/WMSServer?"]]
 
-        worp2 = [["1", "WORP-Obszary narażone na niebezpieczeństwo powodzi-rzeczne", "https://wody.isok.gov.pl/gpservices/KZGW/ISOK_WORP_ONNP_2/MapServer/WMSServer?"]]
+        worp2 = [["1", "Obszary narażone na niebezpieczeństwo powodzi-rzeczne", "https://wody.isok.gov.pl/gpservices/KZGW/ISOK_WORP_ONNP_2/MapServer/WMSServer?"]]
 
-        worp3 = [["1", "WORP-Obszary narażone na niebezpieczeństwo powodzi-zniszczenie budowli piętrzących", "https://wody.isok.gov.pl/gpservices/KZGW/ISOK_WORP_ONNP_3/MapServer/WMSServer?"]]
+        worp3 = [["1", "Obszary narażone na niebezpieczeństwo powodzi-zniszczenie budowli piętrzących", "https://wody.isok.gov.pl/gpservices/KZGW/ISOK_WORP_ONNP_3/MapServer/WMSServer?"]]
 
-        worp4 = [["0", "WORP-Powodzie historyczne, powodzie prawdopodobne-Obszary zalewowe-II cykl", "https://wody.isok.gov.pl/gpservices/KZGW/ISOK_WORP_v2/MapServer/WMSServer?"],
-        ["1", "WORP-Powodzie historyczne, powodzie prawdopodobne-Obszary zalewowe-I cykl", "https://wody.isok.gov.pl/gpservices/KZGW/ISOK_WORP_v2/MapServer/WMSServer?"],
-        ["3", "WORP-Powodzie historyczne, powodzie prawdopodobne-Powodzie prawdopodobne II cykl-poligon", "https://wody.isok.gov.pl/gpservices/KZGW/ISOK_WORP_v2/MapServer/WMSServer?"],
-        ["4", "WORP-Powodzie historyczne, powodzie prawdopodobne-Powodzie prawdopodobne II cykl-linia", "https://wody.isok.gov.pl/gpservices/KZGW/ISOK_WORP_v2/MapServer/WMSServer?"],
-        ["5", "WORP-Powodzie historyczne, powodzie prawdopodobne-Powodzie prawdopodobne II cykl-punkt", "https://wody.isok.gov.pl/gpservices/KZGW/ISOK_WORP_v2/MapServer/WMSServer?"],
-        ["6", "WORP-Powodzie historyczne, powodzie prawdopodobne-Powodzie prawdopodobne-I cykl", "https://wody.isok.gov.pl/gpservices/KZGW/ISOK_WORP_v2/MapServer/WMSServer?"],
-        ["8", "WORP-Powodzie historyczne, powodzie prawdopodobne-Powodzie historyczne II cykl-poligon", "https://wody.isok.gov.pl/gpservices/KZGW/ISOK_WORP_v2/MapServer/WMSServer?"],
-        ["9", "WORP-Powodzie historyczne, powodzie prawdopodobne-Powodzie historyczne II cykl-punkt", "https://wody.isok.gov.pl/gpservices/KZGW/ISOK_WORP_v2/MapServer/WMSServer?"],
-        ["11", "WORP-Powodzie historyczne, powodzie prawdopodobne-Powodzie historyczne I cykl-poligon", "https://wody.isok.gov.pl/gpservices/KZGW/ISOK_WORP_v2/MapServer/WMSServer?"],
-        ["12", "WORP-Powodzie historyczne, powodzie prawdopodobne-Powodzie historyczne I cykl-punkt", "https://wody.isok.gov.pl/gpservices/KZGW/ISOK_WORP_v2/MapServer/WMSServer?"]]
+        worp4 = [["5", "Powodzie prawdopodobne II cykl-punkt", "https://wody.isok.gov.pl/gpservices/KZGW/ISOK_WORP_v2/MapServer/WMSServer?"],
+        ["9", "Powodzie historyczne II cykl-punkt", "https://wody.isok.gov.pl/gpservices/KZGW/ISOK_WORP_v2/MapServer/WMSServer?"],
+        ["12", "Powodzie historyczne I cykl-punkt", "https://wody.isok.gov.pl/gpservices/KZGW/ISOK_WORP_v2/MapServer/WMSServer?"],
+        ["4", "Powodzie prawdopodobne II cykl-linia", "https://wody.isok.gov.pl/gpservices/KZGW/ISOK_WORP_v2/MapServer/WMSServer?"],
+        ["0", "Obszary zalewowe-II cykl", "https://wody.isok.gov.pl/gpservices/KZGW/ISOK_WORP_v2/MapServer/WMSServer?"],
+        ["1", "Obszary zalewowe-I cykl", "https://wody.isok.gov.pl/gpservices/KZGW/ISOK_WORP_v2/MapServer/WMSServer?"],
+        ["3", "Powodzie prawdopodobne II cykl-poligon", "https://wody.isok.gov.pl/gpservices/KZGW/ISOK_WORP_v2/MapServer/WMSServer?"],
+        ["6", "Powodzie prawdopodobne-I cykl", "https://wody.isok.gov.pl/gpservices/KZGW/ISOK_WORP_v2/MapServer/WMSServer?"],
+        ["8", "Powodzie historyczne II cykl-poligon", "https://wody.isok.gov.pl/gpservices/KZGW/ISOK_WORP_v2/MapServer/WMSServer?"],
+        ["11", "Powodzie historyczne I cykl-poligon", "https://wody.isok.gov.pl/gpservices/KZGW/ISOK_WORP_v2/MapServer/WMSServer?"]]
 
-        mzp1 = [["1", "MZP-od morza-0,2%(raz na 500 lat)-głębokość wody w [m]", "https://wody.isok.gov.pl/gpservices/KZGW/MZP20_Glebokosc_NiskiePrawdopodPowodzi/MapServer/WMSServer?"],
-        ["2", "MZP-od morza-0,2%(raz na 500 lat)-obszar zagrożenia powodziowego", "https://wody.isok.gov.pl/gpservices/KZGW/MZP20_Glebokosc_NiskiePrawdopodPowodzi/MapServer/WMSServer?"],
-        ["3", "MZP-od morza-0,2%(raz na 500 lat)-cieki naturalne i kanały", "https://wody.isok.gov.pl/gpservices/KZGW/MZP20_Glebokosc_NiskiePrawdopodPowodzi/MapServer/WMSServer?"],
-        ["4", "MZP-od morza-0,2%(raz na 500 lat)-wody powierzchniowe", "https://wody.isok.gov.pl/gpservices/KZGW/MZP20_Glebokosc_NiskiePrawdopodPowodzi/MapServer/WMSServer?"],
-        ["5", "MZP-od morza-0,2%(raz na 500 lat)-wał przeciwpowodziowy, przeciwsztormowy", "https://wody.isok.gov.pl/gpservices/KZGW/MZP20_Glebokosc_NiskiePrawdopodPowodzi/MapServer/WMSServer?"],
-        ["6", "MZP-od morza-0,2%(raz na 500 lat)-miejsca przelania się wód przez wał przeciwpowodziowy, przeciwsztormowy", "https://wody.isok.gov.pl/gpservices/KZGW/MZP20_Glebokosc_NiskiePrawdopodPowodzi/MapServer/WMSServer?"],
-        ["7", "MZP-od morza-0,2%(raz na 500 lat)-granica portu i przystani morskiej", "https://wody.isok.gov.pl/gpservices/KZGW/MZP20_Glebokosc_NiskiePrawdopodPowodzi/MapServer/WMSServer?"],
-        ["8", "MZP-od morza-0,2%(raz na 500 lat)-granica pasa technicznego brzegu morskiego", "https://wody.isok.gov.pl/gpservices/KZGW/MZP20_Glebokosc_NiskiePrawdopodPowodzi/MapServer/WMSServer?"],
-        ["9", "MZP-od morza-0,2%(raz na 500 lat)-granica pasa ochronnego brzegu morskiego", "https://wody.isok.gov.pl/gpservices/KZGW/MZP20_Glebokosc_NiskiePrawdopodPowodzi/MapServer/WMSServer?"],
-        ["10", "MZP-od morza-0,2%(raz na 500 lat)-kilometraż brzegu morskiego", "https://wody.isok.gov.pl/gpservices/KZGW/MZP20_Glebokosc_NiskiePrawdopodPowodzi/MapServer/WMSServer?"],
-        ["11", "MZP-od morza-0,2%(raz na 500 lat)-kilometraż rzeki", "https://wody.isok.gov.pl/gpservices/KZGW/MZP20_Glebokosc_NiskiePrawdopodPowodzi/MapServer/WMSServer?"],
-        ["12", "MZP-od morza-0,2%(raz na 500 lat)-rzędna korony wału przeciwpowodziowego, przeciwsztormowego", "https://wody.isok.gov.pl/gpservices/KZGW/MZP20_Glebokosc_NiskiePrawdopodPowodzi/MapServer/WMSServer?"],
-        ["13", "MZP-od morza-0,2%(raz na 500 lat)-maksymalna rzędna zwierciadła wody", "https://wody.isok.gov.pl/gpservices/KZGW/MZP20_Glebokosc_NiskiePrawdopodPowodzi/MapServer/WMSServer?"],
-        ["14", "MZP-od morza-0,2%(raz na 500 lat)-skorowidz arkuszy", "https://wody.isok.gov.pl/gpservices/KZGW/MZP20_Glebokosc_NiskiePrawdopodPowodzi/MapServer/WMSServer?"],
-        ["16", "MZP-0,2%(raz na 500 lat)-głębokość wody w [m]", "https://wody.isok.gov.pl/gpservices/KZGW/MZP20_Glebokosc_NiskiePrawdopodPowodzi/MapServer/WMSServer?"],
-        ["17", "MZP-0,2%(raz na 500 lat)-obszar zagrożenia powodziowego", "https://wody.isok.gov.pl/gpservices/KZGW/MZP20_Glebokosc_NiskiePrawdopodPowodzi/MapServer/WMSServer?"],
-        ["18", "MZP-0,2%(raz na 500 lat)-cieki naturalne i kanały", "https://wody.isok.gov.pl/gpservices/KZGW/MZP20_Glebokosc_NiskiePrawdopodPowodzi/MapServer/WMSServer?"],
-        ["19", "MZP-0,2%(raz na 500 lat)-wody powierzchniowe", "https://wody.isok.gov.pl/gpservices/KZGW/MZP20_Glebokosc_NiskiePrawdopodPowodzi/MapServer/WMSServer?"],
-        ["20", "MZP-0,2%(raz na 500 lat)-wał przeciwpowodziowy, zapora boczna", "https://wody.isok.gov.pl/gpservices/KZGW/MZP20_Glebokosc_NiskiePrawdopodPowodzi/MapServer/WMSServer?"],
-        ["21", "MZP-0,2%(raz na 500 lat)-miejsca przelania się wód przez wał przeciwpowodziowy lub zaporę boczną", "https://wody.isok.gov.pl/gpservices/KZGW/MZP20_Glebokosc_NiskiePrawdopodPowodzi/MapServer/WMSServer?"],
-        ["22", "MZP-0,2%(raz na 500 lat)-rzędna korony wału przeciwpowodziowego", "https://wody.isok.gov.pl/gpservices/KZGW/MZP20_Glebokosc_NiskiePrawdopodPowodzi/MapServer/WMSServer?"],
-        ["23", "MZP-0,2%(raz na 500 lat)-kilometraż rzeki", "https://wody.isok.gov.pl/gpservices/KZGW/MZP20_Glebokosc_NiskiePrawdopodPowodzi/MapServer/WMSServer?"],
-        ["24", "MZP-0,2%(raz na 500 lat)-maksymalna rzędna zwierciadła wody", "https://wody.isok.gov.pl/gpservices/KZGW/MZP20_Glebokosc_NiskiePrawdopodPowodzi/MapServer/WMSServer?"],
-        ["25", "MZP-0,2%(raz na 500 lat)-skorowidz arkuszy", "https://wody.isok.gov.pl/gpservices/KZGW/MZP20_Glebokosc_NiskiePrawdopodPowodzi/MapServer/WMSServer?"]]
+        mzp1 = [["2", "obszar zagrożenia powodziowego (MZP od morza)", "https://wody.isok.gov.pl/gpservices/KZGW/MZP20_Glebokosc_NiskiePrawdopodPowodzi/MapServer/WMSServer?"],
+        ["5", "wał przeciwpowodziowy, przeciwsztormowy (MZP od morza)", "https://wody.isok.gov.pl/gpservices/KZGW/MZP20_Glebokosc_NiskiePrawdopodPowodzi/MapServer/WMSServer?"],
+        ["6", "miejsca przelania się wód przez wał przeciwpowodziowy, przeciwsztormowy (MZP od morza)", "https://wody.isok.gov.pl/gpservices/KZGW/MZP20_Glebokosc_NiskiePrawdopodPowodzi/MapServer/WMSServer?"],
+        ["7", "granica portu i przystani morskiej (MZP od morza)", "https://wody.isok.gov.pl/gpservices/KZGW/MZP20_Glebokosc_NiskiePrawdopodPowodzi/MapServer/WMSServer?"],
+        ["8", "granica pasa technicznego brzegu morskiego (MZP od morza)", "https://wody.isok.gov.pl/gpservices/KZGW/MZP20_Glebokosc_NiskiePrawdopodPowodzi/MapServer/WMSServer?"],
+        ["9", "granica pasa ochronnego brzegu morskiego (MZP od morza)", "https://wody.isok.gov.pl/gpservices/KZGW/MZP20_Glebokosc_NiskiePrawdopodPowodzi/MapServer/WMSServer?"],
+        ["10", "kilometraż brzegu morskiego (MZP od morza)", "https://wody.isok.gov.pl/gpservices/KZGW/MZP20_Glebokosc_NiskiePrawdopodPowodzi/MapServer/WMSServer?"],
+        ["11", "kilometraż rzeki (MZP od morza)", "https://wody.isok.gov.pl/gpservices/KZGW/MZP20_Glebokosc_NiskiePrawdopodPowodzi/MapServer/WMSServer?"],
+        ["12", "rzędna korony wału przeciwpowodziowego, przeciwsztormowego (MZP od morza)", "https://wody.isok.gov.pl/gpservices/KZGW/MZP20_Glebokosc_NiskiePrawdopodPowodzi/MapServer/WMSServer?"],
+        ["13", "maksymalna rzędna zwierciadła wody (MZP od morza)", "https://wody.isok.gov.pl/gpservices/KZGW/MZP20_Glebokosc_NiskiePrawdopodPowodzi/MapServer/WMSServer?"],
+        ["14", "skorowidz arkuszy (MZP od morza)", "https://wody.isok.gov.pl/gpservices/KZGW/MZP20_Glebokosc_NiskiePrawdopodPowodzi/MapServer/WMSServer?"],
+        ["3", "cieki naturalne i kanały (MZP od morza)", "https://wody.isok.gov.pl/gpservices/KZGW/MZP20_Glebokosc_NiskiePrawdopodPowodzi/MapServer/WMSServer?"],
+        ["4", "wody powierzchniowe (MZP od morza)", "https://wody.isok.gov.pl/gpservices/KZGW/MZP20_Glebokosc_NiskiePrawdopodPowodzi/MapServer/WMSServer?"],
+        ["1", "głębokość wody w [m] (MZP od morza)", "https://wody.isok.gov.pl/gpservices/KZGW/MZP20_Glebokosc_NiskiePrawdopodPowodzi/MapServer/WMSServer?"],
+        ["17", "obszar zagrożenia powodziowego", "https://wody.isok.gov.pl/gpservices/KZGW/MZP20_Glebokosc_NiskiePrawdopodPowodzi/MapServer/WMSServer?"],
+        ["20", "wał przeciwpowodziowy, zapora boczna", "https://wody.isok.gov.pl/gpservices/KZGW/MZP20_Glebokosc_NiskiePrawdopodPowodzi/MapServer/WMSServer?"],
+        ["21", "miejsca przelania się wód przez wał przeciwpowodziowy lub zaporę boczną", "https://wody.isok.gov.pl/gpservices/KZGW/MZP20_Glebokosc_NiskiePrawdopodPowodzi/MapServer/WMSServer?"],
+        ["22", "rzędna korony wału przeciwpowodziowego", "https://wody.isok.gov.pl/gpservices/KZGW/MZP20_Glebokosc_NiskiePrawdopodPowodzi/MapServer/WMSServer?"],
+        ["23", "kilometraż rzeki", "https://wody.isok.gov.pl/gpservices/KZGW/MZP20_Glebokosc_NiskiePrawdopodPowodzi/MapServer/WMSServer?"],
+        ["24", "maksymalna rzędna zwierciadła wody", "https://wody.isok.gov.pl/gpservices/KZGW/MZP20_Glebokosc_NiskiePrawdopodPowodzi/MapServer/WMSServer?"],
+        ["25", "skorowidz arkuszy", "https://wody.isok.gov.pl/gpservices/KZGW/MZP20_Glebokosc_NiskiePrawdopodPowodzi/MapServer/WMSServer?"],
+        ["18", "cieki naturalne i kanały", "https://wody.isok.gov.pl/gpservices/KZGW/MZP20_Glebokosc_NiskiePrawdopodPowodzi/MapServer/WMSServer?"],
+        ["19", "wody powierzchniowe", "https://wody.isok.gov.pl/gpservices/KZGW/MZP20_Glebokosc_NiskiePrawdopodPowodzi/MapServer/WMSServer?"],
+        ["16", "głębokość wody w [m]", "https://wody.isok.gov.pl/gpservices/KZGW/MZP20_Glebokosc_NiskiePrawdopodPowodzi/MapServer/WMSServer?"]]
 
-        mzp2 = [["1", "MZP-od morza-1%(raz na 100 lat)-głębokość wody w [m]", "https://wody.isok.gov.pl/gpservices/KZGW/MZP20_Glebokosc_SredniePrawdopodPowodzi/MapServer/WMSServer?"],
-        ["2", "MZP-od morza-1%(raz na 100 lat)-obszar szczególnego zagrożenia powodzią", "https://wody.isok.gov.pl/gpservices/KZGW/MZP20_Glebokosc_SredniePrawdopodPowodzi/MapServer/WMSServer?"],
-        ["3", "MZP-od morza-1%(raz na 100 lat)-cieki naturalne i kanały", "https://wody.isok.gov.pl/gpservices/KZGW/MZP20_Glebokosc_SredniePrawdopodPowodzi/MapServer/WMSServer?"],
-        ["4", "MZP-od morza-1%(raz na 100 lat)-wody powierzchniowe", "https://wody.isok.gov.pl/gpservices/KZGW/MZP20_Glebokosc_SredniePrawdopodPowodzi/MapServer/WMSServer?"],
-        ["5", "MZP-od morza-1%(raz na 100 lat)-wał przeciwpowodziowy, przeciwsztormowy", "https://wody.isok.gov.pl/gpservices/KZGW/MZP20_Glebokosc_SredniePrawdopodPowodzi/MapServer/WMSServer?"],
-        ["6", "MZP-od morza-1%(raz na 100 lat)-miejsca przelania się wód przez wał przeciwpowodziowy, przeciwsztormowy", "https://wody.isok.gov.pl/gpservices/KZGW/MZP20_Glebokosc_SredniePrawdopodPowodzi/MapServer/WMSServer?"],
-        ["7", "MZP-od morza-1%(raz na 100 lat)-granica portu i przystani morskiej", "https://wody.isok.gov.pl/gpservices/KZGW/MZP20_Glebokosc_SredniePrawdopodPowodzi/MapServer/WMSServer?"],
-        ["8", "MZP-od morza-1%(raz na 100 lat)-granica pasa technicznego brzegu morskiego", "https://wody.isok.gov.pl/gpservices/KZGW/MZP20_Glebokosc_SredniePrawdopodPowodzi/MapServer/WMSServer?"],
-        ["9", "MZP-od morza-1%(raz na 100 lat)-granica pasa ochronnego brzegu morskiego", "https://wody.isok.gov.pl/gpservices/KZGW/MZP20_Glebokosc_SredniePrawdopodPowodzi/MapServer/WMSServer?"],
-        ["10", "MZP-od morza-1%(raz na 100 lat)-kilometraż brzegu morskiego", "https://wody.isok.gov.pl/gpservices/KZGW/MZP20_Glebokosc_SredniePrawdopodPowodzi/MapServer/WMSServer?"],
-        ["11", "MZP-od morza-1%(raz na 100 lat)-kilometraż rzeki", "https://wody.isok.gov.pl/gpservices/KZGW/MZP20_Glebokosc_SredniePrawdopodPowodzi/MapServer/WMSServer?"],
-        ["12", "MZP-od morza-1%(raz na 100 lat)-rzędna korony wału przeciwpowodziowego, przeciwsztormowego", "https://wody.isok.gov.pl/gpservices/KZGW/MZP20_Glebokosc_SredniePrawdopodPowodzi/MapServer/WMSServer?"],
-        ["13", "MZP-od morza-1%(raz na 100 lat)-maksymalna rzędna zwierciadła wody", "https://wody.isok.gov.pl/gpservices/KZGW/MZP20_Glebokosc_SredniePrawdopodPowodzi/MapServer/WMSServer?"],
-        ["14", "MZP-od morza-1%(raz na 100 lat)-skorowidz arkuszy", "https://wody.isok.gov.pl/gpservices/KZGW/MZP20_Glebokosc_SredniePrawdopodPowodzi/MapServer/WMSServer?"],
-        ["16", "MZP-1%(raz na 100 lat)-głębokość wody w [m]", "https://wody.isok.gov.pl/gpservices/KZGW/MZP20_Glebokosc_SredniePrawdopodPowodzi/MapServer/WMSServer?"],
-        ["17", "MZP-1%(raz na 100 lat)-obszar szczególnego zagrożenia powodzią", "https://wody.isok.gov.pl/gpservices/KZGW/MZP20_Glebokosc_SredniePrawdopodPowodzi/MapServer/WMSServer?"],
-        ["18", "MZP-1%(raz na 100 lat)-cieki naturalne i kanały", "https://wody.isok.gov.pl/gpservices/KZGW/MZP20_Glebokosc_SredniePrawdopodPowodzi/MapServer/WMSServer?"],
-        ["19", "MZP-1%(raz na 100 lat)-wody powierzchniowe", "https://wody.isok.gov.pl/gpservices/KZGW/MZP20_Glebokosc_SredniePrawdopodPowodzi/MapServer/WMSServer?"],
-        ["20", "MZP-1%(raz na 100 lat)-wał przeciwpowodziowy, zapora boczna", "https://wody.isok.gov.pl/gpservices/KZGW/MZP20_Glebokosc_SredniePrawdopodPowodzi/MapServer/WMSServer?"],
-        ["21", "MZP-1%(raz na 100 lat)-miejsca przelania się wód przez wał przeciwpowodziowy lub zaporę boczną", "https://wody.isok.gov.pl/gpservices/KZGW/MZP20_Glebokosc_SredniePrawdopodPowodzi/MapServer/WMSServer?"],
-        ["22", "MZP-1%(raz na 100 lat)-kilometraż rzeki", "https://wody.isok.gov.pl/gpservices/KZGW/MZP20_Glebokosc_SredniePrawdopodPowodzi/MapServer/WMSServer?"],
-        ["23", "MZP-1%(raz na 100 lat)-rzędna korony wału przeciwpowodziowego", "https://wody.isok.gov.pl/gpservices/KZGW/MZP20_Glebokosc_SredniePrawdopodPowodzi/MapServer/WMSServer?"],
-        ["24", "MZP-1%(raz na 100 lat)-maksymalna rzędna zwierciadła wody", "https://wody.isok.gov.pl/gpservices/KZGW/MZP20_Glebokosc_SredniePrawdopodPowodzi/MapServer/WMSServer?"],
-        ["25", "MZP-1%(raz na 100 lat)-skorowidz arkuszy", "https://wody.isok.gov.pl/gpservices/KZGW/MZP20_Glebokosc_SredniePrawdopodPowodzi/MapServer/WMSServer?"]]
+        mzp2 = [["2", "obszar szczególnego zagrożenia powodzią (MZP od morza)", "https://wody.isok.gov.pl/gpservices/KZGW/MZP20_Glebokosc_SredniePrawdopodPowodzi/MapServer/WMSServer?"],
+        ["5", "wał przeciwpowodziowy, przeciwsztormowy (MZP od morza)", "https://wody.isok.gov.pl/gpservices/KZGW/MZP20_Glebokosc_SredniePrawdopodPowodzi/MapServer/WMSServer?"],
+        ["6", "miejsca przelania się wód przez wał przeciwpowodziowy, przeciwsztormowy (MZP od morza)", "https://wody.isok.gov.pl/gpservices/KZGW/MZP20_Glebokosc_SredniePrawdopodPowodzi/MapServer/WMSServer?"],
+        ["7", "granica portu i przystani morskiej (MZP od morza)", "https://wody.isok.gov.pl/gpservices/KZGW/MZP20_Glebokosc_SredniePrawdopodPowodzi/MapServer/WMSServer?"],
+        ["8", "granica pasa technicznego brzegu morskiego (MZP od morza)", "https://wody.isok.gov.pl/gpservices/KZGW/MZP20_Glebokosc_SredniePrawdopodPowodzi/MapServer/WMSServer?"],
+        ["9", "granica pasa ochronnego brzegu morskiego (MZP od morza)", "https://wody.isok.gov.pl/gpservices/KZGW/MZP20_Glebokosc_SredniePrawdopodPowodzi/MapServer/WMSServer?"],
+        ["10", "kilometraż brzegu morskiego (MZP od morza)", "https://wody.isok.gov.pl/gpservices/KZGW/MZP20_Glebokosc_SredniePrawdopodPowodzi/MapServer/WMSServer?"],
+        ["11", "kilometraż rzeki (MZP od morza)", "https://wody.isok.gov.pl/gpservices/KZGW/MZP20_Glebokosc_SredniePrawdopodPowodzi/MapServer/WMSServer?"],
+        ["12", "rzędna korony wału przeciwpowodziowego, przeciwsztormowego (MZP od morza)", "https://wody.isok.gov.pl/gpservices/KZGW/MZP20_Glebokosc_SredniePrawdopodPowodzi/MapServer/WMSServer?"],
+        ["13", "maksymalna rzędna zwierciadła wody (MZP od morza)", "https://wody.isok.gov.pl/gpservices/KZGW/MZP20_Glebokosc_SredniePrawdopodPowodzi/MapServer/WMSServer?"],
+        ["14", "skorowidz arkuszy (MZP od morza)", "https://wody.isok.gov.pl/gpservices/KZGW/MZP20_Glebokosc_SredniePrawdopodPowodzi/MapServer/WMSServer?"],
+        ["3", "cieki naturalne i kanały (MZP od morza)", "https://wody.isok.gov.pl/gpservices/KZGW/MZP20_Glebokosc_SredniePrawdopodPowodzi/MapServer/WMSServer?"],
+        ["4", "wody powierzchniowe (MZP od morza)", "https://wody.isok.gov.pl/gpservices/KZGW/MZP20_Glebokosc_SredniePrawdopodPowodzi/MapServer/WMSServer?"],
+        ["1", "głębokość wody w [m] (MZP od morza)", "https://wody.isok.gov.pl/gpservices/KZGW/MZP20_Glebokosc_SredniePrawdopodPowodzi/MapServer/WMSServer?"],
+        ["17", "obszar szczególnego zagrożenia powodzią", "https://wody.isok.gov.pl/gpservices/KZGW/MZP20_Glebokosc_SredniePrawdopodPowodzi/MapServer/WMSServer?"],
+        ["20", "wał przeciwpowodziowy, zapora boczna", "https://wody.isok.gov.pl/gpservices/KZGW/MZP20_Glebokosc_SredniePrawdopodPowodzi/MapServer/WMSServer?"],
+        ["21", "miejsca przelania się wód przez wał przeciwpowodziowy lub zaporę boczną", "https://wody.isok.gov.pl/gpservices/KZGW/MZP20_Glebokosc_SredniePrawdopodPowodzi/MapServer/WMSServer?"],
+        ["22", "kilometraż rzeki", "https://wody.isok.gov.pl/gpservices/KZGW/MZP20_Glebokosc_SredniePrawdopodPowodzi/MapServer/WMSServer?"],
+        ["23", "rzędna korony wału przeciwpowodziowego", "https://wody.isok.gov.pl/gpservices/KZGW/MZP20_Glebokosc_SredniePrawdopodPowodzi/MapServer/WMSServer?"],
+        ["24", "maksymalna rzędna zwierciadła wody", "https://wody.isok.gov.pl/gpservices/KZGW/MZP20_Glebokosc_SredniePrawdopodPowodzi/MapServer/WMSServer?"],
+        ["25", "skorowidz arkuszy", "https://wody.isok.gov.pl/gpservices/KZGW/MZP20_Glebokosc_SredniePrawdopodPowodzi/MapServer/WMSServer?"],
+        ["18", "cieki naturalne i kanały", "https://wody.isok.gov.pl/gpservices/KZGW/MZP20_Glebokosc_SredniePrawdopodPowodzi/MapServer/WMSServer?"],
+        ["19", "wody powierzchniowe", "https://wody.isok.gov.pl/gpservices/KZGW/MZP20_Glebokosc_SredniePrawdopodPowodzi/MapServer/WMSServer?"],
+        ["16", "głębokość wody w [m]", "https://wody.isok.gov.pl/gpservices/KZGW/MZP20_Glebokosc_SredniePrawdopodPowodzi/MapServer/WMSServer?"]]
 
-        mzp3 = [["1", "MZP-10%(raz na 10 lat)-głębokość wody w [m]", "https://wody.isok.gov.pl/gpservices/KZGW/MZP20_Glebokosc_WysokiePrawdopodPowodzi/MapServer/WMSServer"],
-        ["2", "MZP-10%(raz na 10 lat)-obszar szczególnego zagrożenia powodzią", "https://wody.isok.gov.pl/gpservices/KZGW/MZP20_Glebokosc_WysokiePrawdopodPowodzi/MapServer/WMSServer"],
-        ["3", "MZP-10%(raz na 10 lat)-cieki naturalne i kanały", "https://wody.isok.gov.pl/gpservices/KZGW/MZP20_Glebokosc_WysokiePrawdopodPowodzi/MapServer/WMSServer"],
-        ["4", "MZP-10%(raz na 10 lat)-wody powierzchniowe", "https://wody.isok.gov.pl/gpservices/KZGW/MZP20_Glebokosc_WysokiePrawdopodPowodzi/MapServer/WMSServer"],
-        ["5", "MZP-10%(raz na 10 lat)-wał przeciwpowodziowy, zapora boczna", "https://wody.isok.gov.pl/gpservices/KZGW/MZP20_Glebokosc_WysokiePrawdopodPowodzi/MapServer/WMSServer"],
-        ["6", "MZP-10%(raz na 10 lat)-miejsca przelania się wód przez wał przeciwpowodziowy lub zaporę boczną", "https://wody.isok.gov.pl/gpservices/KZGW/MZP20_Glebokosc_WysokiePrawdopodPowodzi/MapServer/WMSServer"],
-        ["7", "MZP-10%(raz na 10 lat)-kilometraż rzeki", "https://wody.isok.gov.pl/gpservices/KZGW/MZP20_Glebokosc_WysokiePrawdopodPowodzi/MapServer/WMSServer"],
-        ["8", "MZP-10%(raz na 10 lat)-rzędna korony wału przeciwpowodziowego", "https://wody.isok.gov.pl/gpservices/KZGW/MZP20_Glebokosc_WysokiePrawdopodPowodzi/MapServer/WMSServer"],
-        ["9", "MZP-10%(raz na 10 lat)-maksymalna rzędna zwierciadła wody", "https://wody.isok.gov.pl/gpservices/KZGW/MZP20_Glebokosc_WysokiePrawdopodPowodzi/MapServer/WMSServer"],
-        ["10", "MZP-10%(raz na 10 lat)-skorowidz arkuszy", "https://wody.isok.gov.pl/gpservices/KZGW/MZP20_Glebokosc_WysokiePrawdopodPowodzi/MapServer/WMSServer"]]
+        mzp3 = [["2", "obszar szczególnego zagrożenia powodzią", "https://wody.isok.gov.pl/gpservices/KZGW/MZP20_Glebokosc_WysokiePrawdopodPowodzi/MapServer/WMSServer"],
+        ["5", "wał przeciwpowodziowy, zapora boczna", "https://wody.isok.gov.pl/gpservices/KZGW/MZP20_Glebokosc_WysokiePrawdopodPowodzi/MapServer/WMSServer"],
+        ["6", "miejsca przelania się wód przez wał przeciwpowodziowy lub zaporę boczną", "https://wody.isok.gov.pl/gpservices/KZGW/MZP20_Glebokosc_WysokiePrawdopodPowodzi/MapServer/WMSServer"],
+        ["7", "kilometraż rzeki", "https://wody.isok.gov.pl/gpservices/KZGW/MZP20_Glebokosc_WysokiePrawdopodPowodzi/MapServer/WMSServer"],
+        ["8", "rzędna korony wału przeciwpowodziowego", "https://wody.isok.gov.pl/gpservices/KZGW/MZP20_Glebokosc_WysokiePrawdopodPowodzi/MapServer/WMSServer"],
+        ["9", "maksymalna rzędna zwierciadła wody", "https://wody.isok.gov.pl/gpservices/KZGW/MZP20_Glebokosc_WysokiePrawdopodPowodzi/MapServer/WMSServer"],
+        ["10", "skorowidz arkuszy", "https://wody.isok.gov.pl/gpservices/KZGW/MZP20_Glebokosc_WysokiePrawdopodPowodzi/MapServer/WMSServer"],
+        ["3", "cieki naturalne i kanały", "https://wody.isok.gov.pl/gpservices/KZGW/MZP20_Glebokosc_WysokiePrawdopodPowodzi/MapServer/WMSServer"],
+        ["4", "wody powierzchniowe", "https://wody.isok.gov.pl/gpservices/KZGW/MZP20_Glebokosc_WysokiePrawdopodPowodzi/MapServer/WMSServer"],
+        ["1", "głębokość wody w [m]", "https://wody.isok.gov.pl/gpservices/KZGW/MZP20_Glebokosc_WysokiePrawdopodPowodzi/MapServer/WMSServer"]]
 
-        mzp4 = [["1", "MZP-0,2%(raz na 500 lat)-prędkość przepływu wody [m/s]", "https://wody.isok.gov.pl/gpservices/KZGW/MZP20_Predkosc_NiskiePrawdopodPowodzi/MapServer/WMSServer?"],
-        ["2", "MZP-0,2%(raz na 500 lat)-obszar zagrożenia powodziowego", "https://wody.isok.gov.pl/gpservices/KZGW/MZP20_Predkosc_NiskiePrawdopodPowodzi/MapServer/WMSServer?"],
-        ["3", "MZP-0,2%(raz na 500 lat)-kierunki przepływu wody", "https://wody.isok.gov.pl/gpservices/KZGW/MZP20_Predkosc_NiskiePrawdopodPowodzi/MapServer/WMSServer?"],
-        ["4", "MZP-0,2%(raz na 500 lat)-cieki naturalne i kanały", "https://wody.isok.gov.pl/gpservices/KZGW/MZP20_Predkosc_NiskiePrawdopodPowodzi/MapServer/WMSServer?"],
-        ["5", "MZP-0,2%(raz na 500 lat)-wody powierzchniowe", "https://wody.isok.gov.pl/gpservices/KZGW/MZP20_Predkosc_NiskiePrawdopodPowodzi/MapServer/WMSServer?"],
-        ["6", "MZP-0,2%(raz na 500 lat)-wał przeciwpowodziowy, zapora boczna", "https://wody.isok.gov.pl/gpservices/KZGW/MZP20_Predkosc_NiskiePrawdopodPowodzi/MapServer/WMSServer?"],
-        ["7", "MZP-0,2%(raz na 500 lat)-kilometraż rzeki", "https://wody.isok.gov.pl/gpservices/KZGW/MZP20_Predkosc_NiskiePrawdopodPowodzi/MapServer/WMSServer?"],
-        ["8", "MZP-0,2%(raz na 500 lat)-rzędna korony wału przeciwpowodziowego", "https://wody.isok.gov.pl/gpservices/KZGW/MZP20_Predkosc_NiskiePrawdopodPowodzi/MapServer/WMSServer?"],
-        ["9", "MZP-0,2%(raz na 500 lat)-maksymalna rzędna zwierciadła wody", "https://wody.isok.gov.pl/gpservices/KZGW/MZP20_Predkosc_NiskiePrawdopodPowodzi/MapServer/WMSServer?"],
-        ["10", "MZP-0,2%(raz na 500 lat)-skorowidz arkuszy", "https://wody.isok.gov.pl/gpservices/KZGW/MZP20_Predkosc_NiskiePrawdopodPowodzi/MapServer/WMSServer?"]]
+        mzp4 = [["2", "obszar zagrożenia powodziowego", "https://wody.isok.gov.pl/gpservices/KZGW/MZP20_Predkosc_NiskiePrawdopodPowodzi/MapServer/WMSServer?"],
+        ["3", "kierunki przepływu wody", "https://wody.isok.gov.pl/gpservices/KZGW/MZP20_Predkosc_NiskiePrawdopodPowodzi/MapServer/WMSServer?"],
+        ["6", "wał przeciwpowodziowy, zapora boczna", "https://wody.isok.gov.pl/gpservices/KZGW/MZP20_Predkosc_NiskiePrawdopodPowodzi/MapServer/WMSServer?"],
+        ["7", "kilometraż rzeki", "https://wody.isok.gov.pl/gpservices/KZGW/MZP20_Predkosc_NiskiePrawdopodPowodzi/MapServer/WMSServer?"],
+        ["8", "rzędna korony wału przeciwpowodziowego", "https://wody.isok.gov.pl/gpservices/KZGW/MZP20_Predkosc_NiskiePrawdopodPowodzi/MapServer/WMSServer?"],
+        ["9", "maksymalna rzędna zwierciadła wody", "https://wody.isok.gov.pl/gpservices/KZGW/MZP20_Predkosc_NiskiePrawdopodPowodzi/MapServer/WMSServer?"],
+        ["10", "skorowidz arkuszy", "https://wody.isok.gov.pl/gpservices/KZGW/MZP20_Predkosc_NiskiePrawdopodPowodzi/MapServer/WMSServer?"],
+        ["4", "cieki naturalne i kanały", "https://wody.isok.gov.pl/gpservices/KZGW/MZP20_Predkosc_NiskiePrawdopodPowodzi/MapServer/WMSServer?"],
+        ["5", "wody powierzchniowe", "https://wody.isok.gov.pl/gpservices/KZGW/MZP20_Predkosc_NiskiePrawdopodPowodzi/MapServer/WMSServer?"],
+        ["1", "prędkość przepływu wody [m/s]", "https://wody.isok.gov.pl/gpservices/KZGW/MZP20_Predkosc_NiskiePrawdopodPowodzi/MapServer/WMSServer?"]]
 
-        mzp5 = [["1", "MZP-1%(raz na 100 lat)-prędkość przepływu wody [m/s]", "https://wody.isok.gov.pl/gpservices/KZGW/MZP20_Predkosc_SredniePrawdopodPowodzi/MapServer/WMSServer?"],
-        ["2", "MZP-1%(raz na 100 lat)-obszar szczególnego zagrożenia powodzią", "https://wody.isok.gov.pl/gpservices/KZGW/MZP20_Predkosc_SredniePrawdopodPowodzi/MapServer/WMSServer?"],
-        ["3", "MZP-1%(raz na 100 lat)-kierunki przepływu wody", "https://wody.isok.gov.pl/gpservices/KZGW/MZP20_Predkosc_SredniePrawdopodPowodzi/MapServer/WMSServer?"],
-        ["4", "MZP-1%(raz na 100 lat)-cieki naturalne i kanały", "https://wody.isok.gov.pl/gpservices/KZGW/MZP20_Predkosc_SredniePrawdopodPowodzi/MapServer/WMSServer?"],
-        ["5", "MZP-1%(raz na 100 lat)-wody powierzchniowe", "https://wody.isok.gov.pl/gpservices/KZGW/MZP20_Predkosc_SredniePrawdopodPowodzi/MapServer/WMSServer?"],
-        ["6", "MZP-1%(raz na 100 lat)-wał przeciwpowodziowy, zapora boczna", "https://wody.isok.gov.pl/gpservices/KZGW/MZP20_Predkosc_SredniePrawdopodPowodzi/MapServer/WMSServer?"],
-        ["7", "MZP-1%(raz na 100 lat)-kilometraż rzeki", "https://wody.isok.gov.pl/gpservices/KZGW/MZP20_Predkosc_SredniePrawdopodPowodzi/MapServer/WMSServer?"],
-        ["8", "MZP-1%(raz na 100 lat)-rzędna korony wału przeciwpowodziowego", "https://wody.isok.gov.pl/gpservices/KZGW/MZP20_Predkosc_SredniePrawdopodPowodzi/MapServer/WMSServer?"],
-        ["9", "MZP-1%(raz na 100 lat)-maksymalna rzędna zwierciadła wody", "https://wody.isok.gov.pl/gpservices/KZGW/MZP20_Predkosc_SredniePrawdopodPowodzi/MapServer/WMSServer?"],
-        ["10", "MZP-1%(raz na 100 lat)-skorowidz arkuszy", "https://wody.isok.gov.pl/gpservices/KZGW/MZP20_Predkosc_SredniePrawdopodPowodzi/MapServer/WMSServer?"]]
+        mzp5 = [["2", "obszar szczególnego zagrożenia powodzią", "https://wody.isok.gov.pl/gpservices/KZGW/MZP20_Predkosc_SredniePrawdopodPowodzi/MapServer/WMSServer?"],
+        ["3", "kierunki przepływu wody", "https://wody.isok.gov.pl/gpservices/KZGW/MZP20_Predkosc_SredniePrawdopodPowodzi/MapServer/WMSServer?"],
+        ["6", "wał przeciwpowodziowy, zapora boczna", "https://wody.isok.gov.pl/gpservices/KZGW/MZP20_Predkosc_SredniePrawdopodPowodzi/MapServer/WMSServer?"],
+        ["7", "kilometraż rzeki", "https://wody.isok.gov.pl/gpservices/KZGW/MZP20_Predkosc_SredniePrawdopodPowodzi/MapServer/WMSServer?"],
+        ["8", "rzędna korony wału przeciwpowodziowego", "https://wody.isok.gov.pl/gpservices/KZGW/MZP20_Predkosc_SredniePrawdopodPowodzi/MapServer/WMSServer?"],
+        ["9", "maksymalna rzędna zwierciadła wody", "https://wody.isok.gov.pl/gpservices/KZGW/MZP20_Predkosc_SredniePrawdopodPowodzi/MapServer/WMSServer?"],
+        ["10", "skorowidz arkuszy", "https://wody.isok.gov.pl/gpservices/KZGW/MZP20_Predkosc_SredniePrawdopodPowodzi/MapServer/WMSServer?"],
+        ["4", "cieki naturalne i kanały", "https://wody.isok.gov.pl/gpservices/KZGW/MZP20_Predkosc_SredniePrawdopodPowodzi/MapServer/WMSServer?"],
+        ["5", "wody powierzchniowe", "https://wody.isok.gov.pl/gpservices/KZGW/MZP20_Predkosc_SredniePrawdopodPowodzi/MapServer/WMSServer?"],
+        ["1", "prędkość przepływu wody [m/s]", "https://wody.isok.gov.pl/gpservices/KZGW/MZP20_Predkosc_SredniePrawdopodPowodzi/MapServer/WMSServer?"]]
 
-        mzp6 = [["1", "MZP-10%(raz na 10 lat)-prędkość przepływu wody [m/s]", "https://wody.isok.gov.pl/gpservices/KZGW/MZP20_Predkosc_WysokiePrawdopodPowodzi/MapServer/WMSServer?"],
-        ["2", "MZP-10%(raz na 10 lat)-obszar szczególnego zagrożenia powodzią", "https://wody.isok.gov.pl/gpservices/KZGW/MZP20_Predkosc_WysokiePrawdopodPowodzi/MapServer/WMSServer?"],
-        ["3", "MZP-10%(raz na 10 lat)-kierunki przepływu wody", "https://wody.isok.gov.pl/gpservices/KZGW/MZP20_Predkosc_WysokiePrawdopodPowodzi/MapServer/WMSServer?"],
-        ["4", "MZP-10%(raz na 10 lat)-cieki naturalne i kanały", "https://wody.isok.gov.pl/gpservices/KZGW/MZP20_Predkosc_WysokiePrawdopodPowodzi/MapServer/WMSServer?"],
-        ["5", "MZP-10%(raz na 10 lat)-wody powierzchniowe", "https://wody.isok.gov.pl/gpservices/KZGW/MZP20_Predkosc_WysokiePrawdopodPowodzi/MapServer/WMSServer?"],
-        ["6", "MZP-10%(raz na 10 lat)-wał przeciwpowodziowy, zapora boczna", "https://wody.isok.gov.pl/gpservices/KZGW/MZP20_Predkosc_WysokiePrawdopodPowodzi/MapServer/WMSServer?"],
-        ["7", "MZP-10%(raz na 10 lat)-kilometraż rzeki", "https://wody.isok.gov.pl/gpservices/KZGW/MZP20_Predkosc_WysokiePrawdopodPowodzi/MapServer/WMSServer?"],
-        ["8", "MZP-10%(raz na 10 lat)-rzędna korony wału przeciwpowodziowego", "https://wody.isok.gov.pl/gpservices/KZGW/MZP20_Predkosc_WysokiePrawdopodPowodzi/MapServer/WMSServer?"],
-        ["9", "MZP-10%(raz na 10 lat)-maksymalna rzędna zwierciadła wody", "https://wody.isok.gov.pl/gpservices/KZGW/MZP20_Predkosc_WysokiePrawdopodPowodzi/MapServer/WMSServer?"],
-        ["10", "MZP-10%(raz na 10 lat)-skorowidz arkuszy", "https://wody.isok.gov.pl/gpservices/KZGW/MZP20_Predkosc_WysokiePrawdopodPowodzi/MapServer/WMSServer?"]]
+        mzp6 = [["2", "obszar szczególnego zagrożenia powodzią", "https://wody.isok.gov.pl/gpservices/KZGW/MZP20_Predkosc_WysokiePrawdopodPowodzi/MapServer/WMSServer?"],
+        ["3", "kierunki przepływu wody", "https://wody.isok.gov.pl/gpservices/KZGW/MZP20_Predkosc_WysokiePrawdopodPowodzi/MapServer/WMSServer?"],
+        ["6", "wał przeciwpowodziowy, zapora boczna", "https://wody.isok.gov.pl/gpservices/KZGW/MZP20_Predkosc_WysokiePrawdopodPowodzi/MapServer/WMSServer?"],
+        ["7", "kilometraż rzeki", "https://wody.isok.gov.pl/gpservices/KZGW/MZP20_Predkosc_WysokiePrawdopodPowodzi/MapServer/WMSServer?"],
+        ["8", "rzędna korony wału przeciwpowodziowego", "https://wody.isok.gov.pl/gpservices/KZGW/MZP20_Predkosc_WysokiePrawdopodPowodzi/MapServer/WMSServer?"],
+        ["9", "maksymalna rzędna zwierciadła wody", "https://wody.isok.gov.pl/gpservices/KZGW/MZP20_Predkosc_WysokiePrawdopodPowodzi/MapServer/WMSServer?"],
+        ["10", "skorowidz arkuszy", "https://wody.isok.gov.pl/gpservices/KZGW/MZP20_Predkosc_WysokiePrawdopodPowodzi/MapServer/WMSServer?"],
+        ["4", "cieki naturalne i kanały", "https://wody.isok.gov.pl/gpservices/KZGW/MZP20_Predkosc_WysokiePrawdopodPowodzi/MapServer/WMSServer?"],
+        ["5", "wody powierzchniowe", "https://wody.isok.gov.pl/gpservices/KZGW/MZP20_Predkosc_WysokiePrawdopodPowodzi/MapServer/WMSServer?"],
+        ["1", "prędkość przepływu wody [m/s]", "https://wody.isok.gov.pl/gpservices/KZGW/MZP20_Predkosc_WysokiePrawdopodPowodzi/MapServer/WMSServer?"]]
 
-        mzp7 = [["0", "MZP-zniszczenie wału przeciwpow.-głębokość wody w [m]", "https://wody.isok.gov.pl/gpservices/KZGW/MZP20_Glebokosc_ZniszczenieWaluPowodziowego/MapServer/WMSServer?"],
-        ["1", "MZP-zniszczenie wału przeciwpow.-obszar zagrożenia powodziowego", "https://wody.isok.gov.pl/gpservices/KZGW/MZP20_Glebokosc_ZniszczenieWaluPowodziowego/MapServer/WMSServer?"],
-        ["2", "MZP-zniszczenie wału przeciwpow.-cieki naturalne i kanały", "https://wody.isok.gov.pl/gpservices/KZGW/MZP20_Glebokosc_ZniszczenieWaluPowodziowego/MapServer/WMSServer?"],
-        ["3", "MZP-zniszczenie wału przeciwpow.-wody powierzchniowe", "https://wody.isok.gov.pl/gpservices/KZGW/MZP20_Glebokosc_ZniszczenieWaluPowodziowego/MapServer/WMSServer?"],
-        ["4", "MZP-zniszczenie wału przeciwpow.-miejsce zniszczenia wału przeciwpow.", "https://wody.isok.gov.pl/gpservices/KZGW/MZP20_Glebokosc_ZniszczenieWaluPowodziowego/MapServer/WMSServer?"],
-        ["5", "MZP-zniszczenie wału przeciwpow.-kilometraż rzeki", "https://wody.isok.gov.pl/gpservices/KZGW/MZP20_Glebokosc_ZniszczenieWaluPowodziowego/MapServer/WMSServer?"],
-        ["6", "MZP-zniszczenie wału przeciwpow.-maksymalna rzędna zwierciadła wody", "https://wody.isok.gov.pl/gpservices/KZGW/MZP20_Glebokosc_ZniszczenieWaluPowodziowego/MapServer/WMSServer?"],
-        ["7", "MZP-zniszczenie wału przeciwpow.-skorowidz arkuszy", "https://wody.isok.gov.pl/gpservices/KZGW/MZP20_Glebokosc_ZniszczenieWaluPowodziowego/MapServer/WMSServer?"]]
+        mzp7 = [["1", "obszar zagrożenia powodziowego", "https://wody.isok.gov.pl/gpservices/KZGW/MZP20_Glebokosc_ZniszczenieWaluPowodziowego/MapServer/WMSServer?"],
+        ["4", "miejsce zniszczenia wału przeciwpow.", "https://wody.isok.gov.pl/gpservices/KZGW/MZP20_Glebokosc_ZniszczenieWaluPowodziowego/MapServer/WMSServer?"],
+        ["5", "kilometraż rzeki", "https://wody.isok.gov.pl/gpservices/KZGW/MZP20_Glebokosc_ZniszczenieWaluPowodziowego/MapServer/WMSServer?"],
+        ["6", "maksymalna rzędna zwierciadła wody", "https://wody.isok.gov.pl/gpservices/KZGW/MZP20_Glebokosc_ZniszczenieWaluPowodziowego/MapServer/WMSServer?"],
+        ["7", "skorowidz arkuszy", "https://wody.isok.gov.pl/gpservices/KZGW/MZP20_Glebokosc_ZniszczenieWaluPowodziowego/MapServer/WMSServer?"],
+        ["2", "cieki naturalne i kanały", "https://wody.isok.gov.pl/gpservices/KZGW/MZP20_Glebokosc_ZniszczenieWaluPowodziowego/MapServer/WMSServer?"],
+        ["3", "wody powierzchniowe", "https://wody.isok.gov.pl/gpservices/KZGW/MZP20_Glebokosc_ZniszczenieWaluPowodziowego/MapServer/WMSServer?"],
+        ["0", "głębokość wody w [m]", "https://wody.isok.gov.pl/gpservices/KZGW/MZP20_Glebokosc_ZniszczenieWaluPowodziowego/MapServer/WMSServer?"]]
 
-        mzp8 = [["1", "MZP-zniszczenie lub uszkodzenie budowli piętrzącej-warstwy referencyjne-cieki naturalne i kanały", "https://wody.isok.gov.pl/gpservices/KZGW/MZP20_Glebokosc_ZniszczenieBudowliPietrzacejj/MapServer/WMSServer?"],
-        ["2", "MZP-zniszczenie lub uszkodzenie budowli piętrzącej-warstwy referencyjne-wody powierzchniowe", "https://wody.isok.gov.pl/gpservices/KZGW/MZP20_Glebokosc_ZniszczenieBudowliPietrzacejj/MapServer/WMSServer?"],
-        ["4", "MZP-zniszczenie lub uszkodzenie budowli piętrzącej-Zbiornik Świnna Poręba-głębokość wody w [m]", "https://wody.isok.gov.pl/gpservices/KZGW/MZP20_Glebokosc_ZniszczenieBudowliPietrzacejj/MapServer/WMSServer?"],
-        ["5", "MZP-zniszczenie lub uszkodzenie budowli piętrzącej-Zbiornik Świnna Poręba-obszar zagrożenia powodziowego", "https://wody.isok.gov.pl/gpservices/KZGW/MZP20_Glebokosc_ZniszczenieBudowliPietrzacejj/MapServer/WMSServer?"],
-        ["6", "MZP-zniszczenie lub uszkodzenie budowli piętrzącej-Zbiornik Świnna Poręba-miejsce uszkodzenia budowli piętrzącej", "https://wody.isok.gov.pl/gpservices/KZGW/MZP20_Glebokosc_ZniszczenieBudowliPietrzacejj/MapServer/WMSServer?"],
-        ["7", "MZP-zniszczenie lub uszkodzenie budowli piętrzącej-Zbiornik Świnna Poręba-budowle piętrzące", "https://wody.isok.gov.pl/gpservices/KZGW/MZP20_Glebokosc_ZniszczenieBudowliPietrzacejj/MapServer/WMSServer?"],
-        ["8", "MZP-zniszczenie lub uszkodzenie budowli piętrzącej-Zbiornik Świnna Poręba-maksymalna rzędna zwierciadła wody", "https://wody.isok.gov.pl/gpservices/KZGW/MZP20_Glebokosc_ZniszczenieBudowliPietrzacejj/MapServer/WMSServer?"],
-        ["9", "MZP-zniszczenie lub uszkodzenie budowli piętrzącej-Zbiornik Świnna Poręba-skorowidz arkuszy", "https://wody.isok.gov.pl/gpservices/KZGW/MZP20_Glebokosc_ZniszczenieBudowliPietrzacejj/MapServer/WMSServer?"],
-        ["11", "MZP-zniszczenie lub uszkodzenie budowli piętrzącej-Zbiornik Słup-głębokość wody w [m]", "https://wody.isok.gov.pl/gpservices/KZGW/MZP20_Glebokosc_ZniszczenieBudowliPietrzacejj/MapServer/WMSServer?"],
-        ["12", "MZP-zniszczenie lub uszkodzenie budowli piętrzącej-Zbiornik Słup-obszar zagrożenia powodziowego", "https://wody.isok.gov.pl/gpservices/KZGW/MZP20_Glebokosc_ZniszczenieBudowliPietrzacejj/MapServer/WMSServer?"],
-        ["13", "MZP-zniszczenie lub uszkodzenie budowli piętrzącej-Zbiornik Słup-miejsce uszkodzenia budowli piętrzącej", "https://wody.isok.gov.pl/gpservices/KZGW/MZP20_Glebokosc_ZniszczenieBudowliPietrzacejj/MapServer/WMSServer?"],
-        ["14", "MZP-zniszczenie lub uszkodzenie budowli piętrzącej-Zbiornik Słup-budowle piętrzące", "https://wody.isok.gov.pl/gpservices/KZGW/MZP20_Glebokosc_ZniszczenieBudowliPietrzacejj/MapServer/WMSServer?"],
-        ["15", "MZP-zniszczenie lub uszkodzenie budowli piętrzącej-Zbiornik Słup-maksymalna rzędna zwierciadła wody", "https://wody.isok.gov.pl/gpservices/KZGW/MZP20_Glebokosc_ZniszczenieBudowliPietrzacejj/MapServer/WMSServer?"],
-        ["16", "MZP-zniszczenie lub uszkodzenie budowli piętrzącej-Zbiornik Słup-skorowidz arkuszy", "https://wody.isok.gov.pl/gpservices/KZGW/MZP20_Glebokosc_ZniszczenieBudowliPietrzacejj/MapServer/WMSServer?"],
-        ["18", "MZP-zniszczenie lub uszkodzenie budowli piętrzącej-Zbiornik Przeczyce-głębokość wody w [m]", "https://wody.isok.gov.pl/gpservices/KZGW/MZP20_Glebokosc_ZniszczenieBudowliPietrzacejj/MapServer/WMSServer?"],
-        ["19", "MZP-zniszczenie lub uszkodzenie budowli piętrzącej-Zbiornik Przeczyce-obszar zagrożenia powodziowego", "https://wody.isok.gov.pl/gpservices/KZGW/MZP20_Glebokosc_ZniszczenieBudowliPietrzacejj/MapServer/WMSServer?"],
-        ["20", "MZP-zniszczenie lub uszkodzenie budowli piętrzącej-Zbiornik Przeczyce-miejsce uszkodzenia budowli piętrzącej", "https://wody.isok.gov.pl/gpservices/KZGW/MZP20_Glebokosc_ZniszczenieBudowliPietrzacejj/MapServer/WMSServer?"],
-        ["21", "MZP-zniszczenie lub uszkodzenie budowli piętrzącej-Zbiornik Przeczyce-budowle piętrzące", "https://wody.isok.gov.pl/gpservices/KZGW/MZP20_Glebokosc_ZniszczenieBudowliPietrzacejj/MapServer/WMSServer?"],
-        ["22", "MZP-zniszczenie lub uszkodzenie budowli piętrzącej-Zbiornik Przeczyce-maksymalna rzędna zwierciadła wody", "https://wody.isok.gov.pl/gpservices/KZGW/MZP20_Glebokosc_ZniszczenieBudowliPietrzacejj/MapServer/WMSServer?"],
-        ["23", "MZP-zniszczenie lub uszkodzenie budowli piętrzącej-Zbiornik Przeczyce-skorowidz arkuszy", "https://wody.isok.gov.pl/gpservices/KZGW/MZP20_Glebokosc_ZniszczenieBudowliPietrzacejj/MapServer/WMSServer?"],
-        ["25", "MZP-zniszczenie lub uszkodzenie budowli piętrzącej-Zbiornik Mietków-głębokość wody w [m]", "https://wody.isok.gov.pl/gpservices/KZGW/MZP20_Glebokosc_ZniszczenieBudowliPietrzacejj/MapServer/WMSServer?"],
-        ["26", "MZP-zniszczenie lub uszkodzenie budowli piętrzącej-Zbiornik Mietków-obszar zagrożenia powodziowego", "https://wody.isok.gov.pl/gpservices/KZGW/MZP20_Glebokosc_ZniszczenieBudowliPietrzacejj/MapServer/WMSServer?"],
-        ["27", "MZP-zniszczenie lub uszkodzenie budowli piętrzącej-Zbiornik Mietków-miejsce uszkodzenia budowli piętrzącej", "https://wody.isok.gov.pl/gpservices/KZGW/MZP20_Glebokosc_ZniszczenieBudowliPietrzacejj/MapServer/WMSServer?"],
-        ["28", "MZP-zniszczenie lub uszkodzenie budowli piętrzącej-Zbiornik Mietków-budowle piętrzące", "https://wody.isok.gov.pl/gpservices/KZGW/MZP20_Glebokosc_ZniszczenieBudowliPietrzacejj/MapServer/WMSServer?"],
-        ["29", "MZP-zniszczenie lub uszkodzenie budowli piętrzącej-Zbiornik Mietków-maksymalna rzędna zwierciadła wody", "https://wody.isok.gov.pl/gpservices/KZGW/MZP20_Glebokosc_ZniszczenieBudowliPietrzacejj/MapServer/WMSServer?"],
-        ["30", "MZP-zniszczenie lub uszkodzenie budowli piętrzącej-Zbiornik Mietków-skorowidz arkuszy", "https://wody.isok.gov.pl/gpservices/KZGW/MZP20_Glebokosc_ZniszczenieBudowliPietrzacejj/MapServer/WMSServer?"],
-        ["32", "MZP-zniszczenie lub uszkodzenie budowli piętrzącej-Zbiornik Dobromierz-głębokość wody w [m]", "https://wody.isok.gov.pl/gpservices/KZGW/MZP20_Glebokosc_ZniszczenieBudowliPietrzacejj/MapServer/WMSServer?"],
-        ["33", "MZP-zniszczenie lub uszkodzenie budowli piętrzącej-Zbiornik Dobromierz-obszar zagrożenia powodziowego", "https://wody.isok.gov.pl/gpservices/KZGW/MZP20_Glebokosc_ZniszczenieBudowliPietrzacejj/MapServer/WMSServer?"],
-        ["34", "MZP-zniszczenie lub uszkodzenie budowli piętrzącej-Zbiornik Dobromierz-miejsce uszkodzenia budowli piętrzącej", "https://wody.isok.gov.pl/gpservices/KZGW/MZP20_Glebokosc_ZniszczenieBudowliPietrzacejj/MapServer/WMSServer?"],
-        ["35", "MZP-zniszczenie lub uszkodzenie budowli piętrzącej-Zbiornik Dobromierz-budowle piętrzące", "https://wody.isok.gov.pl/gpservices/KZGW/MZP20_Glebokosc_ZniszczenieBudowliPietrzacejj/MapServer/WMSServer?"],
-        ["36", "MZP-zniszczenie lub uszkodzenie budowli piętrzącej-Zbiornik Dobromierz-maksymalna rzędna zwierciadła wody", "https://wody.isok.gov.pl/gpservices/KZGW/MZP20_Glebokosc_ZniszczenieBudowliPietrzacejj/MapServer/WMSServer?"],
-        ["37", "MZP-zniszczenie lub uszkodzenie budowli piętrzącej-Zbiornik Dobromierz-skorowidz arkuszy", "https://wody.isok.gov.pl/gpservices/KZGW/MZP20_Glebokosc_ZniszczenieBudowliPietrzacejj/MapServer/WMSServer?"],
-        ["39", "MZP-zniszczenie lub uszkodzenie budowli piętrzącej-Zbiornik Chańcza-głębokość wody w [m]", "https://wody.isok.gov.pl/gpservices/KZGW/MZP20_Glebokosc_ZniszczenieBudowliPietrzacejj/MapServer/WMSServer?"],
-        ["40", "MZP-zniszczenie lub uszkodzenie budowli piętrzącej-Zbiornik Chańcza-obszar zagrożenia powodziowego", "https://wody.isok.gov.pl/gpservices/KZGW/MZP20_Glebokosc_ZniszczenieBudowliPietrzacejj/MapServer/WMSServer?"],
-        ["41", "MZP-zniszczenie lub uszkodzenie budowli piętrzącej-Zbiornik Chańcza-miejsce uszkodzenia budowli piętrzącej", "https://wody.isok.gov.pl/gpservices/KZGW/MZP20_Glebokosc_ZniszczenieBudowliPietrzacejj/MapServer/WMSServer?"],
-        ["42", "MZP-zniszczenie lub uszkodzenie budowli piętrzącej-Zbiornik Chańcza-budowle piętrzące", "https://wody.isok.gov.pl/gpservices/KZGW/MZP20_Glebokosc_ZniszczenieBudowliPietrzacejj/MapServer/WMSServer?"],
-        ["43", "MZP-zniszczenie lub uszkodzenie budowli piętrzącej-Zbiornik Chańcza-maksymalna rzędna zwierciadła wody", "https://wody.isok.gov.pl/gpservices/KZGW/MZP20_Glebokosc_ZniszczenieBudowliPietrzacejj/MapServer/WMSServer?"],
-        ["44", "MZP-zniszczenie lub uszkodzenie budowli piętrzącej-Zbiornik Chańcza-skorowidz arkuszy", "https://wody.isok.gov.pl/gpservices/KZGW/MZP20_Glebokosc_ZniszczenieBudowliPietrzacejj/MapServer/WMSServer?"],
-        ["46", "MZP-zniszczenie lub uszkodzenie budowli piętrzącej-Zbiornik Besko-głębokość wody w [m]", "https://wody.isok.gov.pl/gpservices/KZGW/MZP20_Glebokosc_ZniszczenieBudowliPietrzacejj/MapServer/WMSServer?"],
-        ["47", "MZP-zniszczenie lub uszkodzenie budowli piętrzącej-Zbiornik Besko-obszar zagrożenia powodziowego", "https://wody.isok.gov.pl/gpservices/KZGW/MZP20_Glebokosc_ZniszczenieBudowliPietrzacejj/MapServer/WMSServer?"],
-        ["48", "MZP-zniszczenie lub uszkodzenie budowli piętrzącej-Zbiornik Besko-miejsce uszkodzenia budowli piętrzącej", "https://wody.isok.gov.pl/gpservices/KZGW/MZP20_Glebokosc_ZniszczenieBudowliPietrzacejj/MapServer/WMSServer?"],
-        ["49", "MZP-zniszczenie lub uszkodzenie budowli piętrzącej-Zbiornik Besko-budowle piętrzące", "https://wody.isok.gov.pl/gpservices/KZGW/MZP20_Glebokosc_ZniszczenieBudowliPietrzacejj/MapServer/WMSServer?"],
-        ["50", "MZP-zniszczenie lub uszkodzenie budowli piętrzącej-Zbiornik Besko-maksymalna rzędna zwierciadła wody", "https://wody.isok.gov.pl/gpservices/KZGW/MZP20_Glebokosc_ZniszczenieBudowliPietrzacejj/MapServer/WMSServer?"],
-        ["51", "MZP-zniszczenie lub uszkodzenie budowli piętrzącej-Zbiornik Besko-skorowidz arkuszy", "https://wody.isok.gov.pl/gpservices/KZGW/MZP20_Glebokosc_ZniszczenieBudowliPietrzacejj/MapServer/WMSServer?"],
-        ["53", "MZP-zniszczenie lub uszkodzenie budowli piętrzącej-Warstwy wspólne-wały przeciwpowodziowe", "https://wody.isok.gov.pl/gpservices/KZGW/MZP20_Glebokosc_ZniszczenieBudowliPietrzacejj/MapServer/WMSServer?"],
-        ["54", "MZP-zniszczenie lub uszkodzenie budowli piętrzącej-Warstwy wspólne-rzędna korony wału przeciwpowodziowego", "https://wody.isok.gov.pl/gpservices/KZGW/MZP20_Glebokosc_ZniszczenieBudowliPietrzacejj/MapServer/WMSServer?"],
-        ["55", "MZP-zniszczenie lub uszkodzenie budowli piętrzącej-Warstwy wspólne-kilometraż rzeki", "https://wody.isok.gov.pl/gpservices/KZGW/MZP20_Glebokosc_ZniszczenieBudowliPietrzacejj/MapServer/WMSServer?"]]
-
-        mzp9 = [["0", "MZP od morza-całkowite zniszczenie wału przeciwsztormowego-głębokość wody w [m]", "https://wody.isok.gov.pl/gpservices/KZGW/MZP20_Glebokosc_ZniszczenieWaluSztormowego/MapServer/WMSServer?"],
-        ["1", "MZP od morza-całkowite zniszczenie wału przeciwsztormowego-obszar zagrożenia powodziowego", "https://wody.isok.gov.pl/gpservices/KZGW/MZP20_Glebokosc_ZniszczenieWaluSztormowego/MapServer/WMSServer?"],
-        ["2", "MZP od morza-całkowite zniszczenie wału przeciwsztormowego-cieki naturalne i kanały", "https://wody.isok.gov.pl/gpservices/KZGW/MZP20_Glebokosc_ZniszczenieWaluSztormowego/MapServer/WMSServer?"],
-        ["3", "MZP od morza-całkowite zniszczenie wału przeciwsztormowego-wody powierzchniowe", "https://wody.isok.gov.pl/gpservices/KZGW/MZP20_Glebokosc_ZniszczenieWaluSztormowego/MapServer/WMSServer?"],
-        ["4", "MZP od morza-całkowite zniszczenie wału przeciwsztormowego-miejsce zniszczenia wału przeciwpowodziowego, przeciwsztormowego", "https://wody.isok.gov.pl/gpservices/KZGW/MZP20_Glebokosc_ZniszczenieWaluSztormowego/MapServer/WMSServer?"],
-        ["5", "MZP od morza-całkowite zniszczenie wału przeciwsztormowego-granica portu i przystani morskiej", "https://wody.isok.gov.pl/gpservices/KZGW/MZP20_Glebokosc_ZniszczenieWaluSztormowego/MapServer/WMSServer?"],
-        ["6", "MZP od morza-całkowite zniszczenie wału przeciwsztormowego-granica pasa technicznego brzegu morskiego", "https://wody.isok.gov.pl/gpservices/KZGW/MZP20_Glebokosc_ZniszczenieWaluSztormowego/MapServer/WMSServer?"],
-        ["7", "MZP od morza-całkowite zniszczenie wału przeciwsztormowego-granica pasa ochronnego brzegu morskiego", "https://wody.isok.gov.pl/gpservices/KZGW/MZP20_Glebokosc_ZniszczenieWaluSztormowego/MapServer/WMSServer?"],
-        ["8", "MZP od morza-całkowite zniszczenie wału przeciwsztormowego-kilometraż brzegu morskiego", "https://wody.isok.gov.pl/gpservices/KZGW/MZP20_Glebokosc_ZniszczenieWaluSztormowego/MapServer/WMSServer?"],
-        ["9", "MZP od morza-całkowite zniszczenie wału przeciwsztormowego-kilometraż rzeki", "https://wody.isok.gov.pl/gpservices/KZGW/MZP20_Glebokosc_ZniszczenieWaluSztormowego/MapServer/WMSServer?"],
-        ["10", "MZP od morza-całkowite zniszczenie wału przeciwsztormowego-rzędna korony wału przeciwpowodziowego, przeciwsztormowego", "https://wody.isok.gov.pl/gpservices/KZGW/MZP20_Glebokosc_ZniszczenieWaluSztormowego/MapServer/WMSServer?"],
-        ["11", "MZP od morza-całkowite zniszczenie wału przeciwsztormowego-maksymalna rzędna zwierciadła wody", "https://wody.isok.gov.pl/gpservices/KZGW/MZP20_Glebokosc_ZniszczenieWaluSztormowego/MapServer/WMSServer?"],
-        ["12", "MZP od morza-całkowite zniszczenie wału przeciwsztormowego-skorowidz arkuszy", "https://wody.isok.gov.pl/gpservices/KZGW/MZP20_Glebokosc_ZniszczenieWaluSztormowego/MapServer/WMSServer?"]]
-
-        mzp10 = [["0", "MZP-Obszary szczególnego zagrożenia powodzią-Odcinki rzek, na których obowiązują OSZP ze studiów ochrony przeciwpowodziowej", "https://wody.isok.gov.pl/gpservices/KZGW/MZP20_ObszarySzczegolnegoZagrozeniaPowodzia/MapServer/WMSServer?"],
-        ["1", "MZP-Obszary szczególnego zagrożenia powodzią-OSZP 1% z studiów ochrony przeciwpowodziowej", "https://wody.isok.gov.pl/gpservices/KZGW/MZP20_ObszarySzczegolnegoZagrozeniaPowodzia/MapServer/WMSServer?"],
-        ["2", "MZP-Obszary szczególnego zagrożenia powodzią-OSZP 1% z map zagrożenia powodziowego od rzeki", "https://wody.isok.gov.pl/gpservices/KZGW/MZP20_ObszarySzczegolnegoZagrozeniaPowodzia/MapServer/WMSServer?"],
-        ["3", "MZP-Obszary szczególnego zagrożenia powodzią-OSZP 1% z map zagrożenia powodziowego od morza", "https://wody.isok.gov.pl/gpservices/KZGW/MZP20_ObszarySzczegolnegoZagrozeniaPowodzia/MapServer/WMSServer?"]]
+        mzp8 = [["186", "Warstwy wspólne-zapora boczna", "https://wody.isok.gov.pl/gpservices/KZGW/MZP20_Glebokosc_ZniszczenieBudowliPietrzacejj/MapServer/WMSServer?"],
+        ["187", "Warstwy wspólne-wały przeciwpowodziowe", "https://wody.isok.gov.pl/gpservices/KZGW/MZP20_Glebokosc_ZniszczenieBudowliPietrzacejj/MapServer/WMSServer?"],
+        ["188", "Warstwy wspólne-rzędna korony wału przeciwpowodziowego", "https://wody.isok.gov.pl/gpservices/KZGW/MZP20_Glebokosc_ZniszczenieBudowliPietrzacejj/MapServer/WMSServer?"],
+        ["189", "Warstwy wspólne-kilometraż rzeki", "https://wody.isok.gov.pl/gpservices/KZGW/MZP20_Glebokosc_ZniszczenieBudowliPietrzacejj/MapServer/WMSServer?"],
+        ["1", "warstwy referencyjne-cieki naturalne i kanały", "https://wody.isok.gov.pl/gpservices/KZGW/MZP20_Glebokosc_ZniszczenieBudowliPietrzacejj/MapServer/WMSServer?"],
+        ["5", "Zbiornik Świnna Poręba-obszar zagrożenia powodziowego", "https://wody.isok.gov.pl/gpservices/KZGW/MZP20_Glebokosc_ZniszczenieBudowliPietrzacejj/MapServer/WMSServer?"],
+        ["6", "Zbiornik Świnna Poręba-miejsce uszkodzenia budowli piętrzącej", "https://wody.isok.gov.pl/gpservices/KZGW/MZP20_Glebokosc_ZniszczenieBudowliPietrzacejj/MapServer/WMSServer?"],
+        ["7", "Zbiornik Świnna Poręba-budowle piętrzące", "https://wody.isok.gov.pl/gpservices/KZGW/MZP20_Glebokosc_ZniszczenieBudowliPietrzacejj/MapServer/WMSServer?"],
+        ["8", "Zbiornik Świnna Poręba-maksymalna rzędna zwierciadła wody", "https://wody.isok.gov.pl/gpservices/KZGW/MZP20_Glebokosc_ZniszczenieBudowliPietrzacejj/MapServer/WMSServer?"],
+        ["9", "Zbiornik Świnna Poręba-skorowidz arkuszy", "https://wody.isok.gov.pl/gpservices/KZGW/MZP20_Glebokosc_ZniszczenieBudowliPietrzacejj/MapServer/WMSServer?"],
+        ["4", "Zbiornik Świnna Poręba-głębokość wody w [m]", "https://wody.isok.gov.pl/gpservices/KZGW/MZP20_Glebokosc_ZniszczenieBudowliPietrzacejj/MapServer/WMSServer?"],
+        ["12", "Zbiornik Słup-obszar zagrożenia powodziowego", "https://wody.isok.gov.pl/gpservices/KZGW/MZP20_Glebokosc_ZniszczenieBudowliPietrzacejj/MapServer/WMSServer?"],
+        ["13", "Zbiornik Słup-miejsce uszkodzenia budowli piętrzącej", "https://wody.isok.gov.pl/gpservices/KZGW/MZP20_Glebokosc_ZniszczenieBudowliPietrzacejj/MapServer/WMSServer?"],
+        ["14", "Zbiornik Słup-budowle piętrzące", "https://wody.isok.gov.pl/gpservices/KZGW/MZP20_Glebokosc_ZniszczenieBudowliPietrzacejj/MapServer/WMSServer?"],
+        ["15", "Zbiornik Słup-maksymalna rzędna zwierciadła wody", "https://wody.isok.gov.pl/gpservices/KZGW/MZP20_Glebokosc_ZniszczenieBudowliPietrzacejj/MapServer/WMSServer?"],
+        ["16", "Zbiornik Słup-skorowidz arkuszy", "https://wody.isok.gov.pl/gpservices/KZGW/MZP20_Glebokosc_ZniszczenieBudowliPietrzacejj/MapServer/WMSServer?"],
+        ["11", "Zbiornik Słup-głębokość wody w [m]", "https://wody.isok.gov.pl/gpservices/KZGW/MZP20_Glebokosc_ZniszczenieBudowliPietrzacejj/MapServer/WMSServer?"],
+        ["19", "Zbiornik Przeczyce-obszar zagrożenia powodziowego", "https://wody.isok.gov.pl/gpservices/KZGW/MZP20_Glebokosc_ZniszczenieBudowliPietrzacejj/MapServer/WMSServer?"],
+        ["20", "Zbiornik Przeczyce-miejsce uszkodzenia budowli piętrzącej", "https://wody.isok.gov.pl/gpservices/KZGW/MZP20_Glebokosc_ZniszczenieBudowliPietrzacejj/MapServer/WMSServer?"],
+        ["21", "Zbiornik Przeczyce-budowle piętrzące", "https://wody.isok.gov.pl/gpservices/KZGW/MZP20_Glebokosc_ZniszczenieBudowliPietrzacejj/MapServer/WMSServer?"],
+        ["22", "Zbiornik Przeczyce-maksymalna rzędna zwierciadła wody", "https://wody.isok.gov.pl/gpservices/KZGW/MZP20_Glebokosc_ZniszczenieBudowliPietrzacejj/MapServer/WMSServer?"],
+        ["23", "Zbiornik Przeczyce-skorowidz arkuszy", "https://wody.isok.gov.pl/gpservices/KZGW/MZP20_Glebokosc_ZniszczenieBudowliPietrzacejj/MapServer/WMSServer?"],
+        ["18", "Zbiornik Przeczyce-głębokość wody w [m]", "https://wody.isok.gov.pl/gpservices/KZGW/MZP20_Glebokosc_ZniszczenieBudowliPietrzacejj/MapServer/WMSServer?"],
+        ["26", "Zbiornik Mietków-obszar zagrożenia powodziowego", "https://wody.isok.gov.pl/gpservices/KZGW/MZP20_Glebokosc_ZniszczenieBudowliPietrzacejj/MapServer/WMSServer?"],
+        ["27", "Zbiornik Mietków-miejsce uszkodzenia budowli piętrzącej", "https://wody.isok.gov.pl/gpservices/KZGW/MZP20_Glebokosc_ZniszczenieBudowliPietrzacejj/MapServer/WMSServer?"],
+        ["28", "Zbiornik Mietków-budowle piętrzące", "https://wody.isok.gov.pl/gpservices/KZGW/MZP20_Glebokosc_ZniszczenieBudowliPietrzacejj/MapServer/WMSServer?"],
+        ["29", "Zbiornik Mietków-maksymalna rzędna zwierciadła wody", "https://wody.isok.gov.pl/gpservices/KZGW/MZP20_Glebokosc_ZniszczenieBudowliPietrzacejj/MapServer/WMSServer?"],
+        ["30", "Zbiornik Mietków-skorowidz arkuszy", "https://wody.isok.gov.pl/gpservices/KZGW/MZP20_Glebokosc_ZniszczenieBudowliPietrzacejj/MapServer/WMSServer?"],
+        ["25", "Zbiornik Mietków-głębokość wody w [m]", "https://wody.isok.gov.pl/gpservices/KZGW/MZP20_Glebokosc_ZniszczenieBudowliPietrzacejj/MapServer/WMSServer?"],
+        ["33", "Zbiornik Dobromierz-obszar zagrożenia powodziowego", "https://wody.isok.gov.pl/gpservices/KZGW/MZP20_Glebokosc_ZniszczenieBudowliPietrzacejj/MapServer/WMSServer?"],
+        ["34", "Zbiornik Dobromierz-miejsce uszkodzenia budowli piętrzącej", "https://wody.isok.gov.pl/gpservices/KZGW/MZP20_Glebokosc_ZniszczenieBudowliPietrzacejj/MapServer/WMSServer?"],
+        ["35", "Zbiornik Dobromierz-budowle piętrzące", "https://wody.isok.gov.pl/gpservices/KZGW/MZP20_Glebokosc_ZniszczenieBudowliPietrzacejj/MapServer/WMSServer?"],
+        ["36", "Zbiornik Dobromierz-maksymalna rzędna zwierciadła wody", "https://wody.isok.gov.pl/gpservices/KZGW/MZP20_Glebokosc_ZniszczenieBudowliPietrzacejj/MapServer/WMSServer?"],
+        ["37", "Zbiornik Dobromierz-skorowidz arkuszy", "https://wody.isok.gov.pl/gpservices/KZGW/MZP20_Glebokosc_ZniszczenieBudowliPietrzacejj/MapServer/WMSServer?"],
+        ["32", "Zbiornik Dobromierz-głębokość wody w [m]", "https://wody.isok.gov.pl/gpservices/KZGW/MZP20_Glebokosc_ZniszczenieBudowliPietrzacejj/MapServer/WMSServer?"],
+        ["40", "Zbiornik Chańcza-obszar zagrożenia powodziowego", "https://wody.isok.gov.pl/gpservices/KZGW/MZP20_Glebokosc_ZniszczenieBudowliPietrzacejj/MapServer/WMSServer?"],
+        ["41", "Zbiornik Chańcza-miejsce uszkodzenia budowli piętrzącej", "https://wody.isok.gov.pl/gpservices/KZGW/MZP20_Glebokosc_ZniszczenieBudowliPietrzacejj/MapServer/WMSServer?"],
+        ["42", "Zbiornik Chańcza-budowle piętrzące", "https://wody.isok.gov.pl/gpservices/KZGW/MZP20_Glebokosc_ZniszczenieBudowliPietrzacejj/MapServer/WMSServer?"],
+        ["43", "Zbiornik Chańcza-maksymalna rzędna zwierciadła wody", "https://wody.isok.gov.pl/gpservices/KZGW/MZP20_Glebokosc_ZniszczenieBudowliPietrzacejj/MapServer/WMSServer?"],
+        ["44", "Zbiornik Chańcza-skorowidz arkuszy", "https://wody.isok.gov.pl/gpservices/KZGW/MZP20_Glebokosc_ZniszczenieBudowliPietrzacejj/MapServer/WMSServer?"],
+        ["39", "Zbiornik Chańcza-głębokość wody w [m]", "https://wody.isok.gov.pl/gpservices/KZGW/MZP20_Glebokosc_ZniszczenieBudowliPietrzacejj/MapServer/WMSServer?"],
+        ["47", "Zbiornik Besko-obszar zagrożenia powodziowego", "https://wody.isok.gov.pl/gpservices/KZGW/MZP20_Glebokosc_ZniszczenieBudowliPietrzacejj/MapServer/WMSServer?"],
+        ["48", "Zbiornik Besko-miejsce uszkodzenia budowli piętrzącej", "https://wody.isok.gov.pl/gpservices/KZGW/MZP20_Glebokosc_ZniszczenieBudowliPietrzacejj/MapServer/WMSServer?"],
+        ["49", "Zbiornik Besko-budowle piętrzące", "https://wody.isok.gov.pl/gpservices/KZGW/MZP20_Glebokosc_ZniszczenieBudowliPietrzacejj/MapServer/WMSServer?"],
+        ["50", "Zbiornik Besko-maksymalna rzędna zwierciadła wody", "https://wody.isok.gov.pl/gpservices/KZGW/MZP20_Glebokosc_ZniszczenieBudowliPietrzacejj/MapServer/WMSServer?"],
+        ["51", "Zbiornik Besko-skorowidz arkuszy", "https://wody.isok.gov.pl/gpservices/KZGW/MZP20_Glebokosc_ZniszczenieBudowliPietrzacejj/MapServer/WMSServer?"],
+        ["46", "Zbiornik Besko-głębokość wody w [m]", "https://wody.isok.gov.pl/gpservices/KZGW/MZP20_Glebokosc_ZniszczenieBudowliPietrzacejj/MapServer/WMSServer?"],
+        ["54", "Zbiornik Bukówka-obszar zagrożenia powodziowego", "https://wody.isok.gov.pl/gpservices/KZGW/MZP20_Glebokosc_ZniszczenieBudowliPietrzacejj/MapServer/WMSServer?"],
+        ["55", "Zbiornik Bukówka-miejsce uszkodzenia budowli piętrzącej", "https://wody.isok.gov.pl/gpservices/KZGW/MZP20_Glebokosc_ZniszczenieBudowliPietrzacejj/MapServer/WMSServer?"],
+        ["56", "Zbiornik Bukówka-budowle piętrzące", "https://wody.isok.gov.pl/gpservices/KZGW/MZP20_Glebokosc_ZniszczenieBudowliPietrzacejj/MapServer/WMSServer?"],
+        ["57", "Zbiornik Bukówka-maksymalna rzędna zwierciadła wody", "https://wody.isok.gov.pl/gpservices/KZGW/MZP20_Glebokosc_ZniszczenieBudowliPietrzacejj/MapServer/WMSServer?"],
+        ["58", "Zbiornik Bukówka-skorowidz arkuszy", "https://wody.isok.gov.pl/gpservices/KZGW/MZP20_Glebokosc_ZniszczenieBudowliPietrzacejj/MapServer/WMSServer?"],
+        ["53", "Zbiornik Bukówka-głębokość wody w [m]", "https://wody.isok.gov.pl/gpservices/KZGW/MZP20_Glebokosc_ZniszczenieBudowliPietrzacejj/MapServer/WMSServer?"],
+        ["61", "Zbiornik Czorsztyn-obszar zagrożenia powodziowego", "https://wody.isok.gov.pl/gpservices/KZGW/MZP20_Glebokosc_ZniszczenieBudowliPietrzacejj/MapServer/WMSServer?"],
+        ["62", "Zbiornik Czorsztyn-miejsce uszkodzenia budowli piętrzącej", "https://wody.isok.gov.pl/gpservices/KZGW/MZP20_Glebokosc_ZniszczenieBudowliPietrzacejj/MapServer/WMSServer?"],
+        ["63", "Zbiornik Czorsztyn-budowle piętrzące", "https://wody.isok.gov.pl/gpservices/KZGW/MZP20_Glebokosc_ZniszczenieBudowliPietrzacejj/MapServer/WMSServer?"],
+        ["64", "Zbiornik Czorsztyn-maksymalna rzędna zwierciadła wody", "https://wody.isok.gov.pl/gpservices/KZGW/MZP20_Glebokosc_ZniszczenieBudowliPietrzacejj/MapServer/WMSServer?"],
+        ["65", "Zbiornik Czorsztyn-skorowidz arkuszy", "https://wody.isok.gov.pl/gpservices/KZGW/MZP20_Glebokosc_ZniszczenieBudowliPietrzacejj/MapServer/WMSServer?"],
+        ["60", "Zbiornik Czorsztyn-głębokość wody w [m]", "https://wody.isok.gov.pl/gpservices/KZGW/MZP20_Glebokosc_ZniszczenieBudowliPietrzacejj/MapServer/WMSServer?"],
+        ["68", "Zbiornik Dębe-obszar zagrożenia powodziowego", "https://wody.isok.gov.pl/gpservices/KZGW/MZP20_Glebokosc_ZniszczenieBudowliPietrzacejj/MapServer/WMSServer?"],
+        ["69", "Zbiornik Dębe-miejsce uszkodzenia budowli piętrzącej", "https://wody.isok.gov.pl/gpservices/KZGW/MZP20_Glebokosc_ZniszczenieBudowliPietrzacejj/MapServer/WMSServer?"],
+        ["70", "Zbiornik Dębe-budowle piętrzące", "https://wody.isok.gov.pl/gpservices/KZGW/MZP20_Glebokosc_ZniszczenieBudowliPietrzacejj/MapServer/WMSServer?"],
+        ["71", "Zbiornik Dębe-maksymalna rzędna zwierciadła wody", "https://wody.isok.gov.pl/gpservices/KZGW/MZP20_Glebokosc_ZniszczenieBudowliPietrzacejj/MapServer/WMSServer?"],
+        ["72", "Zbiornik Dębe-skorowidz arkuszy", "https://wody.isok.gov.pl/gpservices/KZGW/MZP20_Glebokosc_ZniszczenieBudowliPietrzacejj/MapServer/WMSServer?"],
+        ["67", "Zbiornik Dębe-głębokość wody w [m]", "https://wody.isok.gov.pl/gpservices/KZGW/MZP20_Glebokosc_ZniszczenieBudowliPietrzacejj/MapServer/WMSServer?"],
+        ["75", "Zbiornik Dobczyce-obszar zagrożenia powodziowego", "https://wody.isok.gov.pl/gpservices/KZGW/MZP20_Glebokosc_ZniszczenieBudowliPietrzacejj/MapServer/WMSServer?"],
+        ["76", "Zbiornik Dobczyce-miejsce uszkodzenia budowli piętrzącej", "https://wody.isok.gov.pl/gpservices/KZGW/MZP20_Glebokosc_ZniszczenieBudowliPietrzacejj/MapServer/WMSServer?"],
+        ["77", "Zbiornik Dobczyce-budowle piętrzące", "https://wody.isok.gov.pl/gpservices/KZGW/MZP20_Glebokosc_ZniszczenieBudowliPietrzacejj/MapServer/WMSServer?"],
+        ["78", "Zbiornik Dobczyce-maksymalna rzędna zwierciadła wody", "https://wody.isok.gov.pl/gpservices/KZGW/MZP20_Glebokosc_ZniszczenieBudowliPietrzacejj/MapServer/WMSServer?"],
+        ["79", "Zbiornik Dobczyce-skorowidz arkuszy", "https://wody.isok.gov.pl/gpservices/KZGW/MZP20_Glebokosc_ZniszczenieBudowliPietrzacejj/MapServer/WMSServer?"],
+        ["74", "Zbiornik Dobczyce-głębokość wody w [m]", "https://wody.isok.gov.pl/gpservices/KZGW/MZP20_Glebokosc_ZniszczenieBudowliPietrzacejj/MapServer/WMSServer?"],
+        ["82", "Zbiornik Goczałkowice-obszar zagrożenia powodziowego", "https://wody.isok.gov.pl/gpservices/KZGW/MZP20_Glebokosc_ZniszczenieBudowliPietrzacejj/MapServer/WMSServer?"],
+        ["83", "Zbiornik Goczałkowice-miejsce uszkodzenia budowli piętrzącej", "https://wody.isok.gov.pl/gpservices/KZGW/MZP20_Glebokosc_ZniszczenieBudowliPietrzacejj/MapServer/WMSServer?"],
+        ["84", "Zbiornik Goczałkowice-budowle piętrzące", "https://wody.isok.gov.pl/gpservices/KZGW/MZP20_Glebokosc_ZniszczenieBudowliPietrzacejj/MapServer/WMSServer?"],
+        ["85", "Zbiornik Goczałkowice-maksymalna rzędna zwierciadła wody", "https://wody.isok.gov.pl/gpservices/KZGW/MZP20_Glebokosc_ZniszczenieBudowliPietrzacejj/MapServer/WMSServer?"],
+        ["86", "Zbiornik Goczałkowice-skorowidz arkuszy", "https://wody.isok.gov.pl/gpservices/KZGW/MZP20_Glebokosc_ZniszczenieBudowliPietrzacejj/MapServer/WMSServer?"],
+        ["81", "Zbiornik Goczałkowice-głębokość wody w [m]", "https://wody.isok.gov.pl/gpservices/KZGW/MZP20_Glebokosc_ZniszczenieBudowliPietrzacejj/MapServer/WMSServer?"],
+        ["89", "Zbiornik Jeziorsko-obszar zagrożenia powodziowego", "https://wody.isok.gov.pl/gpservices/KZGW/MZP20_Glebokosc_ZniszczenieBudowliPietrzacejj/MapServer/WMSServer?"],
+        ["90", "Zbiornik Jeziorsko-miejsce uszkodzenia budowli piętrzącej", "https://wody.isok.gov.pl/gpservices/KZGW/MZP20_Glebokosc_ZniszczenieBudowliPietrzacejj/MapServer/WMSServer?"],
+        ["91", "Zbiornik Jeziorsko-budowle piętrzące", "https://wody.isok.gov.pl/gpservices/KZGW/MZP20_Glebokosc_ZniszczenieBudowliPietrzacejj/MapServer/WMSServer?"],
+        ["92", "Zbiornik Jeziorsko-maksymalna rzędna zwierciadła wody", "https://wody.isok.gov.pl/gpservices/KZGW/MZP20_Glebokosc_ZniszczenieBudowliPietrzacejj/MapServer/WMSServer?"],
+        ["93", "Zbiornik Jeziorsko-skorowidz arkuszy", "https://wody.isok.gov.pl/gpservices/KZGW/MZP20_Glebokosc_ZniszczenieBudowliPietrzacejj/MapServer/WMSServer?"],
+        ["88", "Zbiornik Jeziorsko-głębokość wody w [m]", "https://wody.isok.gov.pl/gpservices/KZGW/MZP20_Glebokosc_ZniszczenieBudowliPietrzacejj/MapServer/WMSServer?"],
+        ["96", "Zbiornik Koronowo-obszar zagrożenia powodziowego", "https://wody.isok.gov.pl/gpservices/KZGW/MZP20_Glebokosc_ZniszczenieBudowliPietrzacejj/MapServer/WMSServer?"],
+        ["97", "Zbiornik Koronowo-miejsce uszkodzenia budowli piętrzącej", "https://wody.isok.gov.pl/gpservices/KZGW/MZP20_Glebokosc_ZniszczenieBudowliPietrzacejj/MapServer/WMSServer?"],
+        ["98", "Zbiornik Koronowo-budowle piętrzące", "https://wody.isok.gov.pl/gpservices/KZGW/MZP20_Glebokosc_ZniszczenieBudowliPietrzacejj/MapServer/WMSServer?"],
+        ["99", "Zbiornik Koronowo-maksymalna rzędna zwierciadła wody", "https://wody.isok.gov.pl/gpservices/KZGW/MZP20_Glebokosc_ZniszczenieBudowliPietrzacejj/MapServer/WMSServer?"],
+        ["100", "Zbiornik Koronowo-skorowidz arkuszy", "https://wody.isok.gov.pl/gpservices/KZGW/MZP20_Glebokosc_ZniszczenieBudowliPietrzacejj/MapServer/WMSServer?"],
+        ["95", "Zbiornik Koronowo-głębokość wody w [m]", "https://wody.isok.gov.pl/gpservices/KZGW/MZP20_Glebokosc_ZniszczenieBudowliPietrzacejj/MapServer/WMSServer?"],
+        ["103", "Zbiornik Mylof-obszar zagrożenia powodziowego", "https://wody.isok.gov.pl/gpservices/KZGW/MZP20_Glebokosc_ZniszczenieBudowliPietrzacejj/MapServer/WMSServer?"],
+        ["104", "Zbiornik Mylof-miejsce uszkodzenia budowli piętrzącej", "https://wody.isok.gov.pl/gpservices/KZGW/MZP20_Glebokosc_ZniszczenieBudowliPietrzacejj/MapServer/WMSServer?"],
+        ["105", "Zbiornik Mylof-budowle piętrzące", "https://wody.isok.gov.pl/gpservices/KZGW/MZP20_Glebokosc_ZniszczenieBudowliPietrzacejj/MapServer/WMSServer?"],
+        ["106", "Zbiornik Mylof-maksymalna rzędna zwierciadła wody", "https://wody.isok.gov.pl/gpservices/KZGW/MZP20_Glebokosc_ZniszczenieBudowliPietrzacejj/MapServer/WMSServer?"],
+        ["107", "Zbiornik Mylof-skorowidz arkuszy", "https://wody.isok.gov.pl/gpservices/KZGW/MZP20_Glebokosc_ZniszczenieBudowliPietrzacejj/MapServer/WMSServer?"],
+        ["102", "Zbiornik Mylof-głębokość wody w [m]", "https://wody.isok.gov.pl/gpservices/KZGW/MZP20_Glebokosc_ZniszczenieBudowliPietrzacejj/MapServer/WMSServer?"],
+        ["110", "Zbiornik Nysa-obszar zagrożenia powodziowego", "https://wody.isok.gov.pl/gpservices/KZGW/MZP20_Glebokosc_ZniszczenieBudowliPietrzacejj/MapServer/WMSServer?"],
+        ["111", "Zbiornik Nysa-miejsce uszkodzenia budowli piętrzącej", "https://wody.isok.gov.pl/gpservices/KZGW/MZP20_Glebokosc_ZniszczenieBudowliPietrzacejj/MapServer/WMSServer?"],
+        ["112", "Zbiornik Nysa-budowle piętrzące", "https://wody.isok.gov.pl/gpservices/KZGW/MZP20_Glebokosc_ZniszczenieBudowliPietrzacejj/MapServer/WMSServer?"],
+        ["113", "Zbiornik Nysa-maksymalna rzędna zwierciadła wody", "https://wody.isok.gov.pl/gpservices/KZGW/MZP20_Glebokosc_ZniszczenieBudowliPietrzacejj/MapServer/WMSServer?"],
+        ["114", "Zbiornik Nysa-skorowidz arkuszy", "https://wody.isok.gov.pl/gpservices/KZGW/MZP20_Glebokosc_ZniszczenieBudowliPietrzacejj/MapServer/WMSServer?"],
+        ["109", "Zbiornik Nysa-głębokość wody w [m]", "https://wody.isok.gov.pl/gpservices/KZGW/MZP20_Glebokosc_ZniszczenieBudowliPietrzacejj/MapServer/WMSServer?"],
+        ["117", "Zbiornik Otmuchów-obszar zagrożenia powodziowego", "https://wody.isok.gov.pl/gpservices/KZGW/MZP20_Glebokosc_ZniszczenieBudowliPietrzacejj/MapServer/WMSServer?"],
+        ["118", "Zbiornik Otmuchów-miejsce uszkodzenia budowli piętrzącej", "https://wody.isok.gov.pl/gpservices/KZGW/MZP20_Glebokosc_ZniszczenieBudowliPietrzacejj/MapServer/WMSServer?"],
+        ["119", "Zbiornik Otmuchów-budowle piętrzące", "https://wody.isok.gov.pl/gpservices/KZGW/MZP20_Glebokosc_ZniszczenieBudowliPietrzacejj/MapServer/WMSServer?"],
+        ["120", "Zbiornik Otmuchów-maksymalna rzędna zwierciadła wody", "https://wody.isok.gov.pl/gpservices/KZGW/MZP20_Glebokosc_ZniszczenieBudowliPietrzacejj/MapServer/WMSServer?"],
+        ["121", "Zbiornik Otmuchów-skorowidz arkuszy", "https://wody.isok.gov.pl/gpservices/KZGW/MZP20_Glebokosc_ZniszczenieBudowliPietrzacejj/MapServer/WMSServer?"],
+        ["116", "Zbiornik Otmuchów-głębokość wody w [m]", "https://wody.isok.gov.pl/gpservices/KZGW/MZP20_Glebokosc_ZniszczenieBudowliPietrzacejj/MapServer/WMSServer?"],
+        ["124", "Zbiornik Pakość-obszar zagrożenia powodziowego", "https://wody.isok.gov.pl/gpservices/KZGW/MZP20_Glebokosc_ZniszczenieBudowliPietrzacejj/MapServer/WMSServer?"],
+        ["125", "Zbiornik Pakość-miejsce uszkodzenia budowli piętrzącej", "https://wody.isok.gov.pl/gpservices/KZGW/MZP20_Glebokosc_ZniszczenieBudowliPietrzacejj/MapServer/WMSServer?"],
+        ["126", "Zbiornik Pakość-budowle piętrzące", "https://wody.isok.gov.pl/gpservices/KZGW/MZP20_Glebokosc_ZniszczenieBudowliPietrzacejj/MapServer/WMSServer?"],
+        ["127", "Zbiornik Pakość-maksymalna rzędna zwierciadła wody", "https://wody.isok.gov.pl/gpservices/KZGW/MZP20_Glebokosc_ZniszczenieBudowliPietrzacejj/MapServer/WMSServer?"],
+        ["128", "Zbiornik Pakość-skorowidz arkuszy", "https://wody.isok.gov.pl/gpservices/KZGW/MZP20_Glebokosc_ZniszczenieBudowliPietrzacejj/MapServer/WMSServer?"],
+        ["123", "Zbiornik Pakość-głębokość wody w [m]", "https://wody.isok.gov.pl/gpservices/KZGW/MZP20_Glebokosc_ZniszczenieBudowliPietrzacejj/MapServer/WMSServer?"],
+        ["131", "Zbiornik Porąbka-obszar zagrożenia powodziowego", "https://wody.isok.gov.pl/gpservices/KZGW/MZP20_Glebokosc_ZniszczenieBudowliPietrzacejj/MapServer/WMSServer?"],
+        ["132", "Zbiornik Porąbka-miejsce uszkodzenia budowli piętrzącej", "https://wody.isok.gov.pl/gpservices/KZGW/MZP20_Glebokosc_ZniszczenieBudowliPietrzacejj/MapServer/WMSServer?"],
+        ["133", "Zbiornik Porąbka-budowle piętrzące", "https://wody.isok.gov.pl/gpservices/KZGW/MZP20_Glebokosc_ZniszczenieBudowliPietrzacejj/MapServer/WMSServer?"],
+        ["134", "Zbiornik Porąbka-maksymalna rzędna zwierciadła wody", "https://wody.isok.gov.pl/gpservices/KZGW/MZP20_Glebokosc_ZniszczenieBudowliPietrzacejj/MapServer/WMSServer?"],
+        ["135", "Zbiornik Porąbka-skorowidz arkuszy", "https://wody.isok.gov.pl/gpservices/KZGW/MZP20_Glebokosc_ZniszczenieBudowliPietrzacejj/MapServer/WMSServer?"],
+        ["130", "Zbiornik Porąbka-głębokość wody w [m]", "https://wody.isok.gov.pl/gpservices/KZGW/MZP20_Glebokosc_ZniszczenieBudowliPietrzacejj/MapServer/WMSServer?"],
+        ["138", "Zbiornik Poraj-obszar zagrożenia powodziowego", "https://wody.isok.gov.pl/gpservices/KZGW/MZP20_Glebokosc_ZniszczenieBudowliPietrzacejj/MapServer/WMSServer?"],
+        ["139", "Zbiornik Poraj-miejsce uszkodzenia budowli piętrzącej", "https://wody.isok.gov.pl/gpservices/KZGW/MZP20_Glebokosc_ZniszczenieBudowliPietrzacejj/MapServer/WMSServer?"],
+        ["140", "Zbiornik Poraj-budowle piętrzące", "https://wody.isok.gov.pl/gpservices/KZGW/MZP20_Glebokosc_ZniszczenieBudowliPietrzacejj/MapServer/WMSServer?"],
+        ["141", "Zbiornik Poraj-maksymalna rzędna zwierciadła wody", "https://wody.isok.gov.pl/gpservices/KZGW/MZP20_Glebokosc_ZniszczenieBudowliPietrzacejj/MapServer/WMSServer?"],
+        ["142", "Zbiornik Poraj-skorowidz arkuszy", "https://wody.isok.gov.pl/gpservices/KZGW/MZP20_Glebokosc_ZniszczenieBudowliPietrzacejj/MapServer/WMSServer?"],
+        ["137", "Zbiornik Poraj-głębokość wody w [m]", "https://wody.isok.gov.pl/gpservices/KZGW/MZP20_Glebokosc_ZniszczenieBudowliPietrzacejj/MapServer/WMSServer?"],
+        ["145", "Zbiornik Rożnów-obszar zagrożenia powodziowego", "https://wody.isok.gov.pl/gpservices/KZGW/MZP20_Glebokosc_ZniszczenieBudowliPietrzacejj/MapServer/WMSServer?"],
+        ["146", "Zbiornik Rożnów-miejsce uszkodzenia budowli piętrzącej", "https://wody.isok.gov.pl/gpservices/KZGW/MZP20_Glebokosc_ZniszczenieBudowliPietrzacejj/MapServer/WMSServer?"],
+        ["147", "Zbiornik Rożnów-budowle piętrzące", "https://wody.isok.gov.pl/gpservices/KZGW/MZP20_Glebokosc_ZniszczenieBudowliPietrzacejj/MapServer/WMSServer?"],
+        ["148", "Zbiornik Rożnów-maksymalna rzędna zwierciadła wody", "https://wody.isok.gov.pl/gpservices/KZGW/MZP20_Glebokosc_ZniszczenieBudowliPietrzacejj/MapServer/WMSServer?"],
+        ["149", "Zbiornik Rożnów-skorowidz arkuszy", "https://wody.isok.gov.pl/gpservices/KZGW/MZP20_Glebokosc_ZniszczenieBudowliPietrzacejj/MapServer/WMSServer?"],
+        ["144", "Zbiornik Rożnów-głębokość wody w [m]", "https://wody.isok.gov.pl/gpservices/KZGW/MZP20_Glebokosc_ZniszczenieBudowliPietrzacejj/MapServer/WMSServer?"],
+        ["152", "Zbiornik Solina-obszar zagrożenia powodziowego", "https://wody.isok.gov.pl/gpservices/KZGW/MZP20_Glebokosc_ZniszczenieBudowliPietrzacejj/MapServer/WMSServer?"],
+        ["153", "Zbiornik Solina-miejsce uszkodzenia budowli piętrzącej", "https://wody.isok.gov.pl/gpservices/KZGW/MZP20_Glebokosc_ZniszczenieBudowliPietrzacejj/MapServer/WMSServer?"],
+        ["154", "Zbiornik Solina-budowle piętrzące", "https://wody.isok.gov.pl/gpservices/KZGW/MZP20_Glebokosc_ZniszczenieBudowliPietrzacejj/MapServer/WMSServer?"],
+        ["155", "Zbiornik Solina-maksymalna rzędna zwierciadła wody", "https://wody.isok.gov.pl/gpservices/KZGW/MZP20_Glebokosc_ZniszczenieBudowliPietrzacejj/MapServer/WMSServer?"],
+        ["156", "Zbiornik Solina-skorowidz arkuszy", "https://wody.isok.gov.pl/gpservices/KZGW/MZP20_Glebokosc_ZniszczenieBudowliPietrzacejj/MapServer/WMSServer?"],
+        ["151", "Zbiornik Solina-głębokość wody w [m]", "https://wody.isok.gov.pl/gpservices/KZGW/MZP20_Glebokosc_ZniszczenieBudowliPietrzacejj/MapServer/WMSServer?"],
+        ["159", "Zbiornik Sulejów-obszar zagrożenia powodziowego", "https://wody.isok.gov.pl/gpservices/KZGW/MZP20_Glebokosc_ZniszczenieBudowliPietrzacejj/MapServer/WMSServer?"],
+        ["160", "Zbiornik Sulejów-miejsce uszkodzenia budowli piętrzącej", "https://wody.isok.gov.pl/gpservices/KZGW/MZP20_Glebokosc_ZniszczenieBudowliPietrzacejj/MapServer/WMSServer?"],
+        ["161", "Zbiornik Sulejów-budowle piętrzące", "https://wody.isok.gov.pl/gpservices/KZGW/MZP20_Glebokosc_ZniszczenieBudowliPietrzacejj/MapServer/WMSServer?"],
+        ["162", "Zbiornik Sulejów-maksymalna rzędna zwierciadła wody", "https://wody.isok.gov.pl/gpservices/KZGW/MZP20_Glebokosc_ZniszczenieBudowliPietrzacejj/MapServer/WMSServer?"],
+        ["163", "Zbiornik Sulejów-skorowidz arkuszy", "https://wody.isok.gov.pl/gpservices/KZGW/MZP20_Glebokosc_ZniszczenieBudowliPietrzacejj/MapServer/WMSServer?"],
+        ["158", "Zbiornik Sulejów-głębokość wody w [m]", "https://wody.isok.gov.pl/gpservices/KZGW/MZP20_Glebokosc_ZniszczenieBudowliPietrzacejj/MapServer/WMSServer?"],
+        ["166", "Zbiornik Tresna-obszar zagrożenia powodziowego", "https://wody.isok.gov.pl/gpservices/KZGW/MZP20_Glebokosc_ZniszczenieBudowliPietrzacejj/MapServer/WMSServer?"],
+        ["167", "Zbiornik Tresna-miejsce uszkodzenia budowli piętrzącej", "https://wody.isok.gov.pl/gpservices/KZGW/MZP20_Glebokosc_ZniszczenieBudowliPietrzacejj/MapServer/WMSServer?"],
+        ["168", "Zbiornik Tresna-budowle piętrzące", "https://wody.isok.gov.pl/gpservices/KZGW/MZP20_Glebokosc_ZniszczenieBudowliPietrzacejj/MapServer/WMSServer?"],
+        ["169", "Zbiornik Tresna-maksymalna rzędna zwierciadła wody", "https://wody.isok.gov.pl/gpservices/KZGW/MZP20_Glebokosc_ZniszczenieBudowliPietrzacejj/MapServer/WMSServer?"],
+        ["170", "Zbiornik Tresna-skorowidz arkuszy", "https://wody.isok.gov.pl/gpservices/KZGW/MZP20_Glebokosc_ZniszczenieBudowliPietrzacejj/MapServer/WMSServer?"],
+        ["165", "Zbiornik Tresna-głębokość wody w [m]", "https://wody.isok.gov.pl/gpservices/KZGW/MZP20_Glebokosc_ZniszczenieBudowliPietrzacejj/MapServer/WMSServer?"],
+        ["173", "Zbiornik Turawa-obszar zagrożenia powodziowego", "https://wody.isok.gov.pl/gpservices/KZGW/MZP20_Glebokosc_ZniszczenieBudowliPietrzacejj/MapServer/WMSServer?"],
+        ["174", "Zbiornik Turawa-miejsce uszkodzenia budowli piętrzącej", "https://wody.isok.gov.pl/gpservices/KZGW/MZP20_Glebokosc_ZniszczenieBudowliPietrzacejj/MapServer/WMSServer?"],
+        ["175", "Zbiornik Turawa-budowle piętrzące", "https://wody.isok.gov.pl/gpservices/KZGW/MZP20_Glebokosc_ZniszczenieBudowliPietrzacejj/MapServer/WMSServer?"],
+        ["176", "Zbiornik Turawa-maksymalna rzędna zwierciadła wody", "https://wody.isok.gov.pl/gpservices/KZGW/MZP20_Glebokosc_ZniszczenieBudowliPietrzacejj/MapServer/WMSServer?"],
+        ["177", "Zbiornik Turawa-skorowidz arkuszy", "https://wody.isok.gov.pl/gpservices/KZGW/MZP20_Glebokosc_ZniszczenieBudowliPietrzacejj/MapServer/WMSServer?"],
+        ["172", "Zbiornik Turawa-głębokość wody w [m]", "https://wody.isok.gov.pl/gpservices/KZGW/MZP20_Glebokosc_ZniszczenieBudowliPietrzacejj/MapServer/WMSServer?"],
+        ["180", "Zbiornik Włocławek-obszar zagrożenia powodziowego", "https://wody.isok.gov.pl/gpservices/KZGW/MZP20_Glebokosc_ZniszczenieBudowliPietrzacejj/MapServer/WMSServer?"],
+        ["181", "Zbiornik Włocławek-miejsce uszkodzenia budowli piętrzącej", "https://wody.isok.gov.pl/gpservices/KZGW/MZP20_Glebokosc_ZniszczenieBudowliPietrzacejj/MapServer/WMSServer?"],
+        ["182", "Zbiornik Włocławek-budowle piętrzące", "https://wody.isok.gov.pl/gpservices/KZGW/MZP20_Glebokosc_ZniszczenieBudowliPietrzacejj/MapServer/WMSServer?"],
+        ["183", "Zbiornik Włocławek-maksymalna rzędna zwierciadła wody", "https://wody.isok.gov.pl/gpservices/KZGW/MZP20_Glebokosc_ZniszczenieBudowliPietrzacejj/MapServer/WMSServer?"],
+        ["184", "Zbiornik Włocławek-skorowidz arkuszy", "https://wody.isok.gov.pl/gpservices/KZGW/MZP20_Glebokosc_ZniszczenieBudowliPietrzacejj/MapServer/WMSServer?"],
+        ["179", "Zbiornik Włocławek-głębokość wody w [m]", "https://wody.isok.gov.pl/gpservices/KZGW/MZP20_Glebokosc_ZniszczenieBudowliPietrzacejj/MapServer/WMSServer?"],
+        ["2", "warstwy referencyjne-wody powierzchniowe", "https://wody.isok.gov.pl/gpservices/KZGW/MZP20_Glebokosc_ZniszczenieBudowliPietrzacejj/MapServer/WMSServer?"]]
         
-        mzp11 = [["0", "MZP-Mapa orientacyjna-Zasięg MZP-zniszczenie lub uszkodzenie budowli pietrzącej", "https://wody.isok.gov.pl/gpservices/KZGW/MZP20__MapaOrientacyjna/MapServer/WMSServer?"],
-        ["1", "MZP-Mapa orientacyjna-Zasięg MZP od rzek-całkowite zniszczenie wału przeciwpowodziowego", "https://wody.isok.gov.pl/gpservices/KZGW/MZP20__MapaOrientacyjna/MapServer/WMSServer?"],
-        ["2", "MZP-Mapa orientacyjna-Zasięg MZP od rzek-0,2%(raz na 500 lat)", "https://wody.isok.gov.pl/gpservices/KZGW/MZP20__MapaOrientacyjna/MapServer/WMSServer?"],
-        ["3", "MZP-Mapa orientacyjna-Zasięg MZP od rzek-1%(raz na 100 lat)", "https://wody.isok.gov.pl/gpservices/KZGW/MZP20__MapaOrientacyjna/MapServer/WMSServer?"],
-        ["4", "MZP-Mapa orientacyjna-Zasięg MZP od rzek-10%(raz na 10 lat)", "https://wody.isok.gov.pl/gpservices/KZGW/MZP20__MapaOrientacyjna/MapServer/WMSServer?"],
-        ["5", "MZP-Mapa orientacyjna-Zasięg MZP od morza-całkowite zniszczenie wału przeciwsztormowego", "https://wody.isok.gov.pl/gpservices/KZGW/MZP20__MapaOrientacyjna/MapServer/WMSServer?"],
-        ["6", "MZP-Mapa orientacyjna-Zasięg MZP od morza-0,2%(raz na 500 lat)", "https://wody.isok.gov.pl/gpservices/KZGW/MZP20__MapaOrientacyjna/MapServer/WMSServer?"],
-        ["7", "MZP-Mapa orientacyjna-Zasięg MZP od morza-1%(raz na 100 lat)", "https://wody.isok.gov.pl/gpservices/KZGW/MZP20__MapaOrientacyjna/MapServer/WMSServer?"]]
+        mzp9 = [["1", "obszar zagrożenia powodziowego", "https://wody.isok.gov.pl/gpservices/KZGW/MZP20_Glebokosc_ZniszczenieWaluSztormowego/MapServer/WMSServer?"],
+        ["4", "miejsce zniszczenia wału przeciwpowodziowego, przeciwsztormowego", "https://wody.isok.gov.pl/gpservices/KZGW/MZP20_Glebokosc_ZniszczenieWaluSztormowego/MapServer/WMSServer?"],
+        ["5", "granica portu i przystani morskiej", "https://wody.isok.gov.pl/gpservices/KZGW/MZP20_Glebokosc_ZniszczenieWaluSztormowego/MapServer/WMSServer?"],
+        ["6", "granica pasa technicznego brzegu morskiego", "https://wody.isok.gov.pl/gpservices/KZGW/MZP20_Glebokosc_ZniszczenieWaluSztormowego/MapServer/WMSServer?"],
+        ["7", "granica pasa ochronnego brzegu morskiego", "https://wody.isok.gov.pl/gpservices/KZGW/MZP20_Glebokosc_ZniszczenieWaluSztormowego/MapServer/WMSServer?"],
+        ["8", "kilometraż brzegu morskiego", "https://wody.isok.gov.pl/gpservices/KZGW/MZP20_Glebokosc_ZniszczenieWaluSztormowego/MapServer/WMSServer?"],
+        ["9", "kilometraż rzeki", "https://wody.isok.gov.pl/gpservices/KZGW/MZP20_Glebokosc_ZniszczenieWaluSztormowego/MapServer/WMSServer?"],
+        ["10", "rzędna korony wału przeciwpowodziowego, przeciwsztormowego", "https://wody.isok.gov.pl/gpservices/KZGW/MZP20_Glebokosc_ZniszczenieWaluSztormowego/MapServer/WMSServer?"],
+        ["11", "maksymalna rzędna zwierciadła wody", "https://wody.isok.gov.pl/gpservices/KZGW/MZP20_Glebokosc_ZniszczenieWaluSztormowego/MapServer/WMSServer?"],
+        ["12", "skorowidz arkuszy", "https://wody.isok.gov.pl/gpservices/KZGW/MZP20_Glebokosc_ZniszczenieWaluSztormowego/MapServer/WMSServer?"],
+        ["2", "cieki naturalne i kanały", "https://wody.isok.gov.pl/gpservices/KZGW/MZP20_Glebokosc_ZniszczenieWaluSztormowego/MapServer/WMSServer?"],
+        ["3", "wody powierzchniowe", "https://wody.isok.gov.pl/gpservices/KZGW/MZP20_Glebokosc_ZniszczenieWaluSztormowego/MapServer/WMSServer?"],
+        ["0", "głębokość wody w [m]", "https://wody.isok.gov.pl/gpservices/KZGW/MZP20_Glebokosc_ZniszczenieWaluSztormowego/MapServer/WMSServer?"]]
+
+        mzp10 = [["0", "OSZP 1% z map zagrożenia powodziowego od rzeki", "https://wody.isok.gov.pl/gpservices/KZGW/MZP20_ObszarySzczegolnegoZagrozeniaPowodzia/MapServer/WMSServer?"],
+        ["1", "OSZP 1% z map zagrożenia powodziowego od morza", "https://wody.isok.gov.pl/gpservices/KZGW/MZP20_ObszarySzczegolnegoZagrozeniaPowodzia/MapServer/WMSServer?"]]
+        #Tymczasowo wyłączona usługa
+        """mzp11 = [["0", "Zasięg MZP-zniszczenie lub uszkodzenie budowli pietrzącej", "https://wody.isok.gov.pl/gpservices/KZGW/MZP20__MapaOrientacyjna/MapServer/WMSServer?"],
+        ["1", "Zasięg MZP od rzek-całkowite zniszczenie wału przeciwpowodziowego", "https://wody.isok.gov.pl/gpservices/KZGW/MZP20__MapaOrientacyjna/MapServer/WMSServer?"],
+        ["2", "Zasięg MZP od rzek-0,2%(raz na 500 lat)", "https://wody.isok.gov.pl/gpservices/KZGW/MZP20__MapaOrientacyjna/MapServer/WMSServer?"],
+        ["3", "Zasięg MZP od rzek-1%(raz na 100 lat)", "https://wody.isok.gov.pl/gpservices/KZGW/MZP20__MapaOrientacyjna/MapServer/WMSServer?"],
+        ["4", "Zasięg MZP od rzek-10%(raz na 10 lat)", "https://wody.isok.gov.pl/gpservices/KZGW/MZP20__MapaOrientacyjna/MapServer/WMSServer?"],
+        ["5", "Zasięg MZP od morza-całkowite zniszczenie wału przeciwsztormowego", "https://wody.isok.gov.pl/gpservices/KZGW/MZP20__MapaOrientacyjna/MapServer/WMSServer?"],
+        ["6", "Zasięg MZP od morza-0,2%(raz na 500 lat)", "https://wody.isok.gov.pl/gpservices/KZGW/MZP20__MapaOrientacyjna/MapServer/WMSServer?"],
+        ["7", "Zasięg MZP od morza-1%(raz na 100 lat)", "https://wody.isok.gov.pl/gpservices/KZGW/MZP20__MapaOrientacyjna/MapServer/WMSServer?"]]"""
         
-        mrp1 = [["1", "MRP 10% (raz na 10lat) negatywne konsekwencje dla życia i zdrowia ludzi-wartości potencjalnych strat powodziowych", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiZycieZdrowiePotencjalneStraty_WysokiePrawdopodPowodzi/MapServer/WMSServer?"],
-        ["2", "MRP 10%(raz na 10lat) negatywne konsekwencje dla życia i zdrowia ludzi-cieki naturalne i kanały", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiZycieZdrowiePotencjalneStraty_WysokiePrawdopodPowodzi/MapServer/WMSServer?"],
-        ["3", "MRP 10%(raz na 10lat) negatywne konsekwencje dla życia i zdrowia ludzi-wody powierzchniowe", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiZycieZdrowiePotencjalneStraty_WysokiePrawdopodPowodzi/MapServer/WMSServer?"],
-        ["4", "MRP 10%(raz na 10lat) negatywne konsekwencje dla życia i zdrowia ludzi-obszar szczególnego zagrożenia powodzią", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiZycieZdrowiePotencjalneStraty_WysokiePrawdopodPowodzi/MapServer/WMSServer?"],
-        ["5", "MRP 10%(raz na 10lat) negatywne konsekwencje dla życia i zdrowia ludzi-wał przeciwpowodziowy, zapora boczna", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiZycieZdrowiePotencjalneStraty_WysokiePrawdopodPowodzi/MapServer/WMSServer?"],
-        ["6", "MRP 10%(raz na 10lat) negatywne konsekwencje dla życia i zdrowia ludzi-miejscowości zagrożone powodzią", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiZycieZdrowiePotencjalneStraty_WysokiePrawdopodPowodzi/MapServer/WMSServer?"],
-        ["7", "MRP 10%(raz na 10lat) negatywne konsekwencje dla życia i zdrowia ludzi-budynki", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiZycieZdrowiePotencjalneStraty_WysokiePrawdopodPowodzi/MapServer/WMSServer?"],
-        ["8", "MRP 10%(raz na 10lat) negatywne konsekwencje dla życia i zdrowia ludzi-kilometraż rzeki", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiZycieZdrowiePotencjalneStraty_WysokiePrawdopodPowodzi/MapServer/WMSServer?"],
-        ["9", "MRP 10%(raz na 10lat) negatywne konsekwencje dla życia i zdrowia ludzi-skorowidz arkuszy", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiZycieZdrowiePotencjalneStraty_WysokiePrawdopodPowodzi/MapServer/WMSServer?"]]
+        mrp1 = [["2", "cieki naturalne i kanały", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiZycieZdrowiePotencjalneStraty_WysokiePrawdopodPowodzi/MapServer/WMSServer?"],
+        ["4", "obszar szczególnego zagrożenia powodzią", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiZycieZdrowiePotencjalneStraty_WysokiePrawdopodPowodzi/MapServer/WMSServer?"],
+        ["5", "wał przeciwpowodziowy, zapora boczna", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiZycieZdrowiePotencjalneStraty_WysokiePrawdopodPowodzi/MapServer/WMSServer?"],
+        ["6", "miejscowości zagrożone powodzią", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiZycieZdrowiePotencjalneStraty_WysokiePrawdopodPowodzi/MapServer/WMSServer?"],
+        ["7", "budynki", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiZycieZdrowiePotencjalneStraty_WysokiePrawdopodPowodzi/MapServer/WMSServer?"],
+        ["8", "kilometraż rzeki", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiZycieZdrowiePotencjalneStraty_WysokiePrawdopodPowodzi/MapServer/WMSServer?"],
+        ["9", "skorowidz arkuszy", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiZycieZdrowiePotencjalneStraty_WysokiePrawdopodPowodzi/MapServer/WMSServer?"],
+        ["3", "wody powierzchniowe", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiZycieZdrowiePotencjalneStraty_WysokiePrawdopodPowodzi/MapServer/WMSServer?"],
+        ["1", "wartości potencjalnych strat powodziowych", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiZycieZdrowiePotencjalneStraty_WysokiePrawdopodPowodzi/MapServer/WMSServer?"]]
         
-        mrp2 = [["1", "MRP 1%(raz na 100lat) negatywne konsekwencje dla życia i zdrowia ludzi-wartości potencjalnych strat powodziowych", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiZycieZdrowiePotencjalneStraty_SredniePrawdopodPowodzi/MapServer/WMSServer?"],
-        ["2", "MRP od morza 1%(raz na 100lat) negatywne konsekwencje dla życia i zdrowia ludzi-cieki naturalne i kanały", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiZycieZdrowiePotencjalneStraty_SredniePrawdopodPowodzi/MapServer/WMSServer?"],
-        ["3", "MRP od morza 1%(raz na 100lat) negatywne konsekwencje dla życia i zdrowia ludzi-wody powierzchniowe", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiZycieZdrowiePotencjalneStraty_SredniePrawdopodPowodzi/MapServer/WMSServer?"],
-        ["4", "MRP od morza 1%(raz na 100lat) negatywne konsekwencje dla życia i zdrowia ludzi-obszar szczególnego zagrożenia powodzią", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiZycieZdrowiePotencjalneStraty_SredniePrawdopodPowodzi/MapServer/WMSServer?"],
-        ["5", "MRP od morza 1%(raz na 100lat) negatywne konsekwencje dla życia i zdrowia ludzi-wał przeciwpowodziowy, przeciwsztormowy", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiZycieZdrowiePotencjalneStraty_SredniePrawdopodPowodzi/MapServer/WMSServer?"],
-        ["6", "MRP od morza 1%(raz na 100lat) negatywne konsekwencje dla życia i zdrowia ludzi-miejscowości zagrożone powodzią", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiZycieZdrowiePotencjalneStraty_SredniePrawdopodPowodzi/MapServer/WMSServer?"],
-        ["7", "MRP od morza 1%(raz na 100lat) negatywne konsekwencje dla życia i zdrowia ludzi-budynki", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiZycieZdrowiePotencjalneStraty_SredniePrawdopodPowodzi/MapServer/WMSServer?"],
-        ["8", "MRP od morza 1%(raz na 100lat) negatywne konsekwencje dla życia i zdrowia ludzi-granica portu i przystani morskiej", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiZycieZdrowiePotencjalneStraty_SredniePrawdopodPowodzi/MapServer/WMSServer?"],
-        ["9", "MRP od morza 1%(raz na 100lat) negatywne konsekwencje dla życia i zdrowia ludzi-granica pasa technicznego brzegu morskiego", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiZycieZdrowiePotencjalneStraty_SredniePrawdopodPowodzi/MapServer/WMSServer?"],
-        ["10", "MRP od morza 1%(raz na 100lat) negatywne konsekwencje dla życia i zdrowia ludzi-granica pasa ochronnego brzegu morskiego", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiZycieZdrowiePotencjalneStraty_SredniePrawdopodPowodzi/MapServer/WMSServer?"],
-        ["11", "MRP od morza 1%(raz na 100lat) negatywne konsekwencje dla życia i zdrowia ludzi-kilometraż brzegu morskiego", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiZycieZdrowiePotencjalneStraty_SredniePrawdopodPowodzi/MapServer/WMSServer?"],
-        ["12", "MRP od morza 1%(raz na 100lat) negatywne konsekwencje dla życia i zdrowia ludzi-kilometraż rzeki", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiZycieZdrowiePotencjalneStraty_SredniePrawdopodPowodzi/MapServer/WMSServer?"],
-        ["13", "MRP od morza 1%(raz na 100lat) negatywne konsekwencje dla życia i zdrowia ludzi-skorowidz arkuszy", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiZycieZdrowiePotencjalneStraty_SredniePrawdopodPowodzi/MapServer/WMSServer?"],
-        ["15", "MRP 1%(raz na 100lat) negatywne konsekwencje dla życia i zdrowia ludzi-wartości potencjalnych strat powodziowych", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiZycieZdrowiePotencjalneStraty_SredniePrawdopodPowodzi/MapServer/WMSServer?"],
-        ["16", "MRP 1%(raz na 100lat) negatywne konsekwencje dla życia i zdrowia ludzi-cieki naturalne i kanały", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiZycieZdrowiePotencjalneStraty_SredniePrawdopodPowodzi/MapServer/WMSServer?"],
-        ["17", "MRP 1%(raz na 100lat) negatywne konsekwencje dla życia i zdrowia ludzi-wody powierzchniowe", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiZycieZdrowiePotencjalneStraty_SredniePrawdopodPowodzi/MapServer/WMSServer?"],
-        ["18", "MRP 1%(raz na 100lat) negatywne konsekwencje dla życia i zdrowia ludzi-obszar szczególnego zagrożenia powodzią", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiZycieZdrowiePotencjalneStraty_SredniePrawdopodPowodzi/MapServer/WMSServer?"],
-        ["19", "MRP 1%(raz na 100lat) negatywne konsekwencje dla życia i zdrowia ludzi-wał przeciwpowodziowy, zapora boczna", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiZycieZdrowiePotencjalneStraty_SredniePrawdopodPowodzi/MapServer/WMSServer?"],
-        ["20", "MRP 1%(raz na 100lat) negatywne konsekwencje dla życia i zdrowia ludzi-miejscowości zagrożone powodzią", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiZycieZdrowiePotencjalneStraty_SredniePrawdopodPowodzi/MapServer/WMSServer?"],
-        ["21", "MRP 1%(raz na 100lat) negatywne konsekwencje dla życia i zdrowia ludzi-budynki", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiZycieZdrowiePotencjalneStraty_SredniePrawdopodPowodzi/MapServer/WMSServer?"],
-        ["22", "MRP 1%(raz na 100lat) negatywne konsekwencje dla życia i zdrowia ludzi-kilometraż rzeki", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiZycieZdrowiePotencjalneStraty_SredniePrawdopodPowodzi/MapServer/WMSServer?"],
-        ["23", "MRP 1%(raz na 100lat) negatywne konsekwencje dla życia i zdrowia ludzi-skorowidz arkuszy", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiZycieZdrowiePotencjalneStraty_SredniePrawdopodPowodzi/MapServer/WMSServer?"]]
+        mrp2 = [["2", "cieki naturalne i kanały (MRP od morza)", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiZycieZdrowiePotencjalneStraty_SredniePrawdopodPowodzi/MapServer/WMSServer?"],
+        ["4", "obszar szczególnego zagrożenia powodzią (MRP od morza)", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiZycieZdrowiePotencjalneStraty_SredniePrawdopodPowodzi/MapServer/WMSServer?"],
+        ["8", "wał przeciwpowodziowy, przeciwsztormowy (MRP od morza)", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiZycieZdrowiePotencjalneStraty_SredniePrawdopodPowodzi/MapServer/WMSServer?"],
+        ["5", "miejscowości zagrożone powodzią (MRP od morza)", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiZycieZdrowiePotencjalneStraty_SredniePrawdopodPowodzi/MapServer/WMSServer?"],
+        ["6", "budynki (MRP od morza)", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiZycieZdrowiePotencjalneStraty_SredniePrawdopodPowodzi/MapServer/WMSServer?"],
+        ["9", "granica portu i przystani morskiej (MRP od morza)", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiZycieZdrowiePotencjalneStraty_SredniePrawdopodPowodzi/MapServer/WMSServer?"],
+        ["10", "granica pasa technicznego brzegu morskiego (MRP od morza)", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiZycieZdrowiePotencjalneStraty_SredniePrawdopodPowodzi/MapServer/WMSServer?"],
+        ["11", "granica pasa ochronnego brzegu morskiego (MRP od morza)", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiZycieZdrowiePotencjalneStraty_SredniePrawdopodPowodzi/MapServer/WMSServer?"],
+        ["12", "kilometraż brzegu morskiego (MRP od morza)", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiZycieZdrowiePotencjalneStraty_SredniePrawdopodPowodzi/MapServer/WMSServer?"],
+        ["13", "kilometraż rzeki (MRP od morza)", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiZycieZdrowiePotencjalneStraty_SredniePrawdopodPowodzi/MapServer/WMSServer?"],
+        ["7", "skorowidz arkuszy (MRP od morza)", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiZycieZdrowiePotencjalneStraty_SredniePrawdopodPowodzi/MapServer/WMSServer?"],
+        ["3", "wody powierzchniowe (MRP od morza)", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiZycieZdrowiePotencjalneStraty_SredniePrawdopodPowodzi/MapServer/WMSServer?"],
+        ["1", "wartości potencjalnych strat powodziowych (MRP od morza)", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiZycieZdrowiePotencjalneStraty_SredniePrawdopodPowodzi/MapServer/WMSServer?"],
+        ["16", "cieki naturalne i kanały", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiZycieZdrowiePotencjalneStraty_SredniePrawdopodPowodzi/MapServer/WMSServer?"],
+        ["18", "obszar szczególnego zagrożenia powodzią", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiZycieZdrowiePotencjalneStraty_SredniePrawdopodPowodzi/MapServer/WMSServer?"],
+        ["19", "wał przeciwpowodziowy, zapora boczna", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiZycieZdrowiePotencjalneStraty_SredniePrawdopodPowodzi/MapServer/WMSServer?"],
+        ["20", "miejscowości zagrożone powodzią", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiZycieZdrowiePotencjalneStraty_SredniePrawdopodPowodzi/MapServer/WMSServer?"],
+        ["21", "budynki", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiZycieZdrowiePotencjalneStraty_SredniePrawdopodPowodzi/MapServer/WMSServer?"],
+        ["22", "kilometraż rzeki", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiZycieZdrowiePotencjalneStraty_SredniePrawdopodPowodzi/MapServer/WMSServer?"],
+        ["23", "skorowidz arkuszy", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiZycieZdrowiePotencjalneStraty_SredniePrawdopodPowodzi/MapServer/WMSServer?"],
+        ["17", "wody powierzchniowe", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiZycieZdrowiePotencjalneStraty_SredniePrawdopodPowodzi/MapServer/WMSServer?"],
+        ["15", "wartości potencjalnych strat powodziowych", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiZycieZdrowiePotencjalneStraty_SredniePrawdopodPowodzi/MapServer/WMSServer?"]]
         
-        mrp3 = [["1", "MRP od morza 0,2%(raz na 500lat) negatywne konsekwencje dla życia i zdrowia ludzi-wartości potencjalnych strat powodziowych", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiZycieZdrowiePotencjalneStraty_NiskiePrawdopodPowodzi/MapServer/WMSServer?"],
-        ["2", "MRP od morza 0,2%(raz na 500lat) negatywne konsekwencje dla życia i zdrowia ludzi-cieki naturalne i kanały", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiZycieZdrowiePotencjalneStraty_NiskiePrawdopodPowodzi/MapServer/WMSServer?"],
-        ["3", "MRP od morza 0,2%(raz na 500lat) negatywne konsekwencje dla życia i zdrowia ludzi-wody powierzchniowe", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiZycieZdrowiePotencjalneStraty_NiskiePrawdopodPowodzi/MapServer/WMSServer?"],
-        ["4", "MRP od morza 0,2%(raz na 500lat) negatywne konsekwencje dla życia i zdrowia ludzi-obszar zagrożenia powodziowego", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiZycieZdrowiePotencjalneStraty_NiskiePrawdopodPowodzi/MapServer/WMSServer?"],
-        ["5", "MRP od morza 0,2%(raz na 500lat) negatywne konsekwencje dla życia i zdrowia ludzi-wał przeciwpowodziowy, przeciwsztormowy", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiZycieZdrowiePotencjalneStraty_NiskiePrawdopodPowodzi/MapServer/WMSServer?"],
-        ["6", "MRP od morza 0,2%(raz na 500lat) negatywne konsekwencje dla życia i zdrowia ludzi-miejscowości zagrożone powodzią", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiZycieZdrowiePotencjalneStraty_NiskiePrawdopodPowodzi/MapServer/WMSServer?"],
-        ["7", "MRP od morza 0,2%(raz na 500lat) negatywne konsekwencje dla życia i zdrowia ludzi-budynki", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiZycieZdrowiePotencjalneStraty_NiskiePrawdopodPowodzi/MapServer/WMSServer?"],
-        ["8", "MRP od morza 0,2%(raz na 500lat) negatywne konsekwencje dla życia i zdrowia ludzi-granica portu i przystani morskiej", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiZycieZdrowiePotencjalneStraty_NiskiePrawdopodPowodzi/MapServer/WMSServer?"],
-        ["9", "MRP od morza 0,2%(raz na 500lat) negatywne konsekwencje dla życia i zdrowia ludzi-granica pasa technicznego brzegu morskiego", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiZycieZdrowiePotencjalneStraty_NiskiePrawdopodPowodzi/MapServer/WMSServer?"],
-        ["10", "MRP od morza 0,2%(raz na 500lat) negatywne konsekwencje dla życia i zdrowia ludzi-granica pasa ochronnego brzegu morskiego", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiZycieZdrowiePotencjalneStraty_NiskiePrawdopodPowodzi/MapServer/WMSServer?"],
-        ["11", "MRP od morza 0,2%(raz na 500lat) negatywne konsekwencje dla życia i zdrowia ludzi-kilometraż brzegu morskiego", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiZycieZdrowiePotencjalneStraty_NiskiePrawdopodPowodzi/MapServer/WMSServer?"],
-        ["12", "MRP od morza 0,2%(raz na 500lat) negatywne konsekwencje dla życia i zdrowia ludzi-kilometraż rzeki", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiZycieZdrowiePotencjalneStraty_NiskiePrawdopodPowodzi/MapServer/WMSServer?"],
-        ["13", "MRP od morza 0,2%(raz na 500lat) negatywne konsekwencje dla życia i zdrowia ludzi-skorowidz arkuszy", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiZycieZdrowiePotencjalneStraty_NiskiePrawdopodPowodzi/MapServer/WMSServer?"],
-        ["15", "MRP 0,2%(raz na 500lat) negatywne konsekwencje dla życia i zdrowia ludzi-wartości potencjalnych strat powodziowych", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiZycieZdrowiePotencjalneStraty_NiskiePrawdopodPowodzi/MapServer/WMSServer?"],
-        ["16", "MRP 0,2%(raz na 500lat) negatywne konsekwencje dla życia i zdrowia ludzi-cieki naturalne i kanały", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiZycieZdrowiePotencjalneStraty_NiskiePrawdopodPowodzi/MapServer/WMSServer?"],
-        ["17", "MRP 0,2%(raz na 500lat) negatywne konsekwencje dla życia i zdrowia ludzi-wody powierzchniowe", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiZycieZdrowiePotencjalneStraty_NiskiePrawdopodPowodzi/MapServer/WMSServer?"],
-        ["18", "MRP 0,2%(raz na 500lat) negatywne konsekwencje dla życia i zdrowia ludzi-obszar zagrożenia powodziowego", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiZycieZdrowiePotencjalneStraty_NiskiePrawdopodPowodzi/MapServer/WMSServer?"],
-        ["19", "MRP 0,2%(raz na 500lat) negatywne konsekwencje dla życia i zdrowia ludzi-wał przeciwpowodziowy, zapora boczna", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiZycieZdrowiePotencjalneStraty_NiskiePrawdopodPowodzi/MapServer/WMSServer?"],
-        ["20", "MRP 0,2%(raz na 500lat) negatywne konsekwencje dla życia i zdrowia ludzi-miejscowości zagrożone powodzią", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiZycieZdrowiePotencjalneStraty_NiskiePrawdopodPowodzi/MapServer/WMSServer?"],
-        ["21", "MRP 0,2%(raz na 500lat) negatywne konsekwencje dla życia i zdrowia ludzi-budynki", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiZycieZdrowiePotencjalneStraty_NiskiePrawdopodPowodzi/MapServer/WMSServer?"],
-        ["22", "MRP 0,2%(raz na 500lat) negatywne konsekwencje dla życia i zdrowia ludzi-kilometraż rzeki", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiZycieZdrowiePotencjalneStraty_NiskiePrawdopodPowodzi/MapServer/WMSServer?"],
-        ["23", "MRP 0,2%(raz na 500lat) negatywne konsekwencje dla życia i zdrowia ludzi-skorowidz arkuszy", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiZycieZdrowiePotencjalneStraty_NiskiePrawdopodPowodzi/MapServer/WMSServer?"]]
+        mrp3 = [["2", "cieki naturalne i kanały (MRP od morza)", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiZycieZdrowiePotencjalneStraty_NiskiePrawdopodPowodzi/MapServer/WMSServer?"],
+        ["4", "obszar zagrożenia powodziowego (MRP od morza)", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiZycieZdrowiePotencjalneStraty_NiskiePrawdopodPowodzi/MapServer/WMSServer?"],
+        ["5", "wał przeciwpowodziowy, przeciwsztormowy (MRP od morza)", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiZycieZdrowiePotencjalneStraty_NiskiePrawdopodPowodzi/MapServer/WMSServer?"],
+        ["6", "miejscowości zagrożone powodzią (MRP od morza)", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiZycieZdrowiePotencjalneStraty_NiskiePrawdopodPowodzi/MapServer/WMSServer?"],
+        ["7", "budynki (MRP od morza)", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiZycieZdrowiePotencjalneStraty_NiskiePrawdopodPowodzi/MapServer/WMSServer?"],
+        ["8", "granica portu i przystani morskiej (MRP od morza)", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiZycieZdrowiePotencjalneStraty_NiskiePrawdopodPowodzi/MapServer/WMSServer?"],
+        ["9", "granica pasa technicznego brzegu morskiego (MRP od morza)", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiZycieZdrowiePotencjalneStraty_NiskiePrawdopodPowodzi/MapServer/WMSServer?"],
+        ["10", "granica pasa ochronnego brzegu morskiego (MRP od morza)", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiZycieZdrowiePotencjalneStraty_NiskiePrawdopodPowodzi/MapServer/WMSServer?"],
+        ["11", "kilometraż brzegu morskiego (MRP od morza)", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiZycieZdrowiePotencjalneStraty_NiskiePrawdopodPowodzi/MapServer/WMSServer?"],
+        ["12", "kilometraż rzeki (MRP od morza)", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiZycieZdrowiePotencjalneStraty_NiskiePrawdopodPowodzi/MapServer/WMSServer?"],
+        ["13", "skorowidz arkuszy (MRP od morza)", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiZycieZdrowiePotencjalneStraty_NiskiePrawdopodPowodzi/MapServer/WMSServer?"],
+        ["3", "wody powierzchniowe (MRP od morza)", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiZycieZdrowiePotencjalneStraty_NiskiePrawdopodPowodzi/MapServer/WMSServer?"],
+        ["1", "wartości potencjalnych strat powodziowych (MRP od morza)", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiZycieZdrowiePotencjalneStraty_NiskiePrawdopodPowodzi/MapServer/WMSServer?"],
+        ["16", "cieki naturalne i kanały", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiZycieZdrowiePotencjalneStraty_NiskiePrawdopodPowodzi/MapServer/WMSServer?"],
+        ["18", "obszar zagrożenia powodziowego", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiZycieZdrowiePotencjalneStraty_NiskiePrawdopodPowodzi/MapServer/WMSServer?"],
+        ["19", "wał przeciwpowodziowy, zapora boczna", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiZycieZdrowiePotencjalneStraty_NiskiePrawdopodPowodzi/MapServer/WMSServer?"],
+        ["20", "miejscowości zagrożone powodzią", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiZycieZdrowiePotencjalneStraty_NiskiePrawdopodPowodzi/MapServer/WMSServer?"],
+        ["21", "budynki", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiZycieZdrowiePotencjalneStraty_NiskiePrawdopodPowodzi/MapServer/WMSServer?"],
+        ["22", "kilometraż rzeki", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiZycieZdrowiePotencjalneStraty_NiskiePrawdopodPowodzi/MapServer/WMSServer?"],
+        ["23", "skorowidz arkuszy", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiZycieZdrowiePotencjalneStraty_NiskiePrawdopodPowodzi/MapServer/WMSServer?"],
+        ["17", "wody powierzchniowe", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiZycieZdrowiePotencjalneStraty_NiskiePrawdopodPowodzi/MapServer/WMSServer?"],
+        ["15", "wartości potencjalnych strat powodziowych", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiZycieZdrowiePotencjalneStraty_NiskiePrawdopodPowodzi/MapServer/WMSServer?"]]
         
-        mrp4 = [["0", "MRP-zniszczenie wału przeciwpow.-negatywne skutki dla życia i zdrowia ludzi-wartości potencjalnych strat powodziowych", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiZycieZdrowiePotencjalneStraty_ZniszczenieWaluPowodziowego/MapServer/WMSServer?"],
-        ["1", "MRP-zniszczenie wału przeciwpow.-negatywne skutki dla życia i zdrowia ludzi-cieki naturalne i kanały", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiZycieZdrowiePotencjalneStraty_ZniszczenieWaluPowodziowego/MapServer/WMSServer?"],
-        ["2", "MRP-zniszczenie wału przeciwpow.-negatywne skutki dla życia i zdrowia ludzi-wody powierzchniowe", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiZycieZdrowiePotencjalneStraty_ZniszczenieWaluPowodziowego/MapServer/WMSServer?"],
-        ["3", "MRP-zniszczenie wału przeciwpow.-negatywne skutki dla życia i zdrowia ludzi-obszar zagrożenia powodziowego", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiZycieZdrowiePotencjalneStraty_ZniszczenieWaluPowodziowego/MapServer/WMSServer?"],
-        ["4", "MRP-zniszczenie wału przeciwpow.-negatywne skutki dla życia i zdrowia ludzi-miejsce zniszczenia wału przeciwpowodziowego", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiZycieZdrowiePotencjalneStraty_ZniszczenieWaluPowodziowego/MapServer/WMSServer?"],
-        ["5", "MRP-zniszczenie wału przeciwpow.-negatywne skutki dla życia i zdrowia ludzi-miejscowości zagrożone powodzią", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiZycieZdrowiePotencjalneStraty_ZniszczenieWaluPowodziowego/MapServer/WMSServer?"],
-        ["6", "MRP-zniszczenie wału przeciwpow.-negatywne skutki dla życia i zdrowia ludzi-budynki", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiZycieZdrowiePotencjalneStraty_ZniszczenieWaluPowodziowego/MapServer/WMSServer?"],
-        ["7", "MRP-zniszczenie wału przeciwpow.-negatywne skutki dla życia i zdrowia ludzi-kilometraż rzeki", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiZycieZdrowiePotencjalneStraty_ZniszczenieWaluPowodziowego/MapServer/WMSServer?"],
-        ["8", "MRP-zniszczenie wału przeciwpow.-negatywne skutki dla życia i zdrowia ludzi-skorowidz arkuszy", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiZycieZdrowiePotencjalneStraty_ZniszczenieWaluPowodziowego/MapServer/WMSServer?"]]
+        mrp4 = [["1", "cieki naturalne i kanały", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiZycieZdrowiePotencjalneStraty_ZniszczenieWaluPowodziowego/MapServer/WMSServer?"],
+        ["3", "obszar zagrożenia powodziowego", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiZycieZdrowiePotencjalneStraty_ZniszczenieWaluPowodziowego/MapServer/WMSServer?"],
+        ["4", "miejsce zniszczenia wału przeciwpowodziowego", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiZycieZdrowiePotencjalneStraty_ZniszczenieWaluPowodziowego/MapServer/WMSServer?"],
+        ["5", "miejscowości zagrożone powodzią", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiZycieZdrowiePotencjalneStraty_ZniszczenieWaluPowodziowego/MapServer/WMSServer?"],
+        ["6", "budynki", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiZycieZdrowiePotencjalneStraty_ZniszczenieWaluPowodziowego/MapServer/WMSServer?"],
+        ["7", "kilometraż rzeki", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiZycieZdrowiePotencjalneStraty_ZniszczenieWaluPowodziowego/MapServer/WMSServer?"],
+        ["8", "skorowidz arkuszy", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiZycieZdrowiePotencjalneStraty_ZniszczenieWaluPowodziowego/MapServer/WMSServer?"],
+        ["2", "wody powierzchniowe", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiZycieZdrowiePotencjalneStraty_ZniszczenieWaluPowodziowego/MapServer/WMSServer?"],
+        ["0", "wartości potencjalnych strat powodziowych", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiZycieZdrowiePotencjalneStraty_ZniszczenieWaluPowodziowego/MapServer/WMSServer?"]]
         
-        mrp5 = [["0", "MRP-zniszczenie wału przeciwsztormowego-potencjalne negatywne skutki dla życia i zdrowia ludzi-wartości potencjalnych strat powodziowych", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiZycieZdrowiePotencjalneStraty_ZniszczenieWaluSztormowego/MapServer/WMSServer?"],
-        ["1", "MRP-zniszczenie wału przeciwsztormowego-negatywne skutki dla życia i zdrowia ludzi-cieki naturalne i kanały", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiZycieZdrowiePotencjalneStraty_ZniszczenieWaluSztormowego/MapServer/WMSServer?"],
-        ["2", "MRP-zniszczenie wału przeciwsztormowego-negatywne skutki dla życia i zdrowia ludzi-wody powierzchniowe", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiZycieZdrowiePotencjalneStraty_ZniszczenieWaluSztormowego/MapServer/WMSServer?"],
-        ["3", "MRP-zniszczenie wału przeciwsztormowego-negatywne skutki dla życia i zdrowia ludzi-obszar zagrożenia powodziowego", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiZycieZdrowiePotencjalneStraty_ZniszczenieWaluSztormowego/MapServer/WMSServer?"],
-        ["4", "MRP-zniszczenie wału przeciwsztormowego-negatywne skutki dla życia i zdrowia ludzi-wał przeciwpowodziowy, przeciwsztormowy", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiZycieZdrowiePotencjalneStraty_ZniszczenieWaluSztormowego/MapServer/WMSServer?"],
-        ["5", "MRP-zniszczenie wału przeciwsztormowego-negatywne skutki dla życia i zdrowia ludzi-miejscowości zagrożone powodzią", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiZycieZdrowiePotencjalneStraty_ZniszczenieWaluSztormowego/MapServer/WMSServer?"],
-        ["6", "MRP-zniszczenie wału przeciwsztormowego-negatywne skutki dla życia i zdrowia ludzi-budynki", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiZycieZdrowiePotencjalneStraty_ZniszczenieWaluSztormowego/MapServer/WMSServer?"],
-        ["7", "MRP-zniszczenie wału przeciwsztormowego-negatywne skutki dla życia i zdrowia ludzi-granica portu i przystani morskiej", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiZycieZdrowiePotencjalneStraty_ZniszczenieWaluSztormowego/MapServer/WMSServer?"],
-        ["8", "MRP-zniszczenie wału przeciwsztormowego-negatywne skutki dla życia i zdrowia ludzi-granica pasa technicznego brzegu morskiego", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiZycieZdrowiePotencjalneStraty_ZniszczenieWaluSztormowego/MapServer/WMSServer?"],
-        ["9", "MRP-zniszczenie wału przeciwsztormowego-negatywne skutki dla życia i zdrowia ludzi-granica pasa ochronnego brzegu morskiego", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiZycieZdrowiePotencjalneStraty_ZniszczenieWaluSztormowego/MapServer/WMSServer?"],
-        ["10", "MRP-zniszczenie wału przeciwsztormowego-negatywne skutki dla życia i zdrowia ludzi-kilometraż brzegu morskiego", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiZycieZdrowiePotencjalneStraty_ZniszczenieWaluSztormowego/MapServer/WMSServer?"],
-        ["11", "MRP-zniszczenie wału przeciwsztormowego-negatywne skutki dla życia i zdrowia ludzi-kilometraż rzeki", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiZycieZdrowiePotencjalneStraty_ZniszczenieWaluSztormowego/MapServer/WMSServer?"],
-        ["12", "MRP-zniszczenie wału przeciwsztormowego-negatywne skutki dla życia i zdrowia ludzi-skorowidz arkuszy", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiZycieZdrowiePotencjalneStraty_ZniszczenieWaluSztormowego/MapServer/WMSServer?"]]
+        mrp5 = [["1", "cieki naturalne i kanały", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiZycieZdrowiePotencjalneStraty_ZniszczenieWaluSztormowego/MapServer/WMSServer?"],
+        ["3", "obszar zagrożenia powodziowego", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiZycieZdrowiePotencjalneStraty_ZniszczenieWaluSztormowego/MapServer/WMSServer?"],
+        ["6", "wał przeciwpowodziowy, przeciwsztormowy", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiZycieZdrowiePotencjalneStraty_ZniszczenieWaluSztormowego/MapServer/WMSServer?"],
+        ["3", "miejscowości zagrożone powodzią", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiZycieZdrowiePotencjalneStraty_ZniszczenieWaluSztormowego/MapServer/WMSServer?"],
+        ["4", "budynki", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiZycieZdrowiePotencjalneStraty_ZniszczenieWaluSztormowego/MapServer/WMSServer?"],
+        ["7", "granica portu i przystani morskiej", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiZycieZdrowiePotencjalneStraty_ZniszczenieWaluSztormowego/MapServer/WMSServer?"],
+        ["8", "granica pasa technicznego brzegu morskiego", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiZycieZdrowiePotencjalneStraty_ZniszczenieWaluSztormowego/MapServer/WMSServer?"],
+        ["9", "granica pasa ochronnego brzegu morskiego", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiZycieZdrowiePotencjalneStraty_ZniszczenieWaluSztormowego/MapServer/WMSServer?"],
+        ["10", "kilometraż brzegu morskiego", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiZycieZdrowiePotencjalneStraty_ZniszczenieWaluSztormowego/MapServer/WMSServer?"],
+        ["11", "kilometraż rzeki", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiZycieZdrowiePotencjalneStraty_ZniszczenieWaluSztormowego/MapServer/WMSServer?"],
+        ["12", "skorowidz arkuszy", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiZycieZdrowiePotencjalneStraty_ZniszczenieWaluSztormowego/MapServer/WMSServer?"],
+        ["2", "wody powierzchniowe", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiZycieZdrowiePotencjalneStraty_ZniszczenieWaluSztormowego/MapServer/WMSServer?"],
+        ["0", "wartości potencjalnych strat powodziowych", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiZycieZdrowiePotencjalneStraty_ZniszczenieWaluSztormowego/MapServer/WMSServer?"]]
         
-        mrp6 = [["1", "MRP 10%(raz na 10lat) negatywne konsekwencje dla środowiska, dziedzictwa kulturowego i działalności gosp.-klasy użytkowania terenu", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiSrodowiskoKulturaGospodarka_WysokiePrawdopodPowodzi/MapServer/WMSServer?"],
-        ["2", "MRP 10%(raz na 10lat) negatywne konsekwencje dla środowiska, dziedzictwa kult. i działalności gosp.-cieki naturalne i kanały", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiSrodowiskoKulturaGospodarka_WysokiePrawdopodPowodzi/MapServer/WMSServer?"],
-        ["3", "MRP 10%(raz na 10lat) negatywne konsekwencje dla środowiska, dziedzictwa kult. i działalności gosp.-wody powierzchniowe", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiSrodowiskoKulturaGospodarka_WysokiePrawdopodPowodzi/MapServer/WMSServer?"],
-        ["4", "MRP 10%(raz na 10lat) negatywne konsekwencje dla środowiska, dziedzictwa kult. i działalności gosp.-obszar szczególnego zagrożenia powodzią", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiSrodowiskoKulturaGospodarka_WysokiePrawdopodPowodzi/MapServer/WMSServer?"],
-        ["5", "MRP 10%(raz na 10lat) negatywne konsekwencje dla środowiska, dziedzictwa kult. i działalności gosp.-ogród zoologiczny", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiSrodowiskoKulturaGospodarka_WysokiePrawdopodPowodzi/MapServer/WMSServer?"],
-        ["6", "MRP 10%(raz na 10lat) negatywne konsekwencje dla środowiska, dziedzictwa kult. i działalności gosp.-obszar cenny kulturowo", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiSrodowiskoKulturaGospodarka_WysokiePrawdopodPowodzi/MapServer/WMSServer?"],
-        ["7", "MRP 10%(raz na 10lat) negatywne konsekwencje dla środowiska, dziedzictwa kult. i działalności gosp.-składowisko odpadów", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiSrodowiskoKulturaGospodarka_WysokiePrawdopodPowodzi/MapServer/WMSServer?"],
-        ["8", "MRP 10%(raz na 10lat) negatywne konsekwencje dla środowiska, dziedzictwa kult. i działalności gosp.-cmentarz", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiSrodowiskoKulturaGospodarka_WysokiePrawdopodPowodzi/MapServer/WMSServer?"],
-        ["9", "MRP 10%(raz na 10lat) negatywne konsekwencje dla środowiska, dziedzictwa kult. i działalności gosp.-strefa ochronna ujęcia wody", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiSrodowiskoKulturaGospodarka_WysokiePrawdopodPowodzi/MapServer/WMSServer?"],
-        ["10", "MRP 10%(raz na 10lat) negatywne konsekwencje dla środowiska, dziedzictwa kult. i działalności gosp.-formy ochrony przyrody", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiSrodowiskoKulturaGospodarka_WysokiePrawdopodPowodzi/MapServer/WMSServer?"],
-        ["11", "MRP 10%(raz na 10lat) negatywne konsekwencje dla środowiska, dziedzictwa kult. i działalności gosp.-wał przeciwpowodziowy, zapora boczna", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiSrodowiskoKulturaGospodarka_WysokiePrawdopodPowodzi/MapServer/WMSServer?"],
-        ["12", "MRP 10%(raz na 10lat) negatywne konsekwencje dla środowiska, dziedzictwa kult. i działalności gosp.-oczyszczalnia, przepompownia", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiSrodowiskoKulturaGospodarka_WysokiePrawdopodPowodzi/MapServer/WMSServer?"],
-        ["13", "MRP 10%(raz na 10lat) negatywne konsekwencje dla środowiska, dziedzictwa kult. i działalności gosp.-zakład przemysłowy", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiSrodowiskoKulturaGospodarka_WysokiePrawdopodPowodzi/MapServer/WMSServer?"],
-        ["14", "MRP 10%(raz na 10lat) negatywne konsekwencje dla środowiska, dziedzictwa kult. i działalności gosp.-obiekt cenny kulturowo", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiSrodowiskoKulturaGospodarka_WysokiePrawdopodPowodzi/MapServer/WMSServer?"],
-        ["15", "MRP 10%(raz na 10lat) negatywne konsekwencje dla środowiska, dziedzictwa kult. i działalności gosp.-kąpielisko", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiSrodowiskoKulturaGospodarka_WysokiePrawdopodPowodzi/MapServer/WMSServer?"],
-        ["16", "MRP 10%(raz na 10lat) negatywne konsekwencje dla środowiska, dziedzictwa kult. i działalności gosp.-ujęcie wody", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiSrodowiskoKulturaGospodarka_WysokiePrawdopodPowodzi/MapServer/WMSServer?"],
-        ["17", "MRP 10%(raz na 10lat) negatywne konsekwencje dla środowiska, dziedzictwa kult. i działalności gosp.-kilometraż rzeki", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiSrodowiskoKulturaGospodarka_WysokiePrawdopodPowodzi/MapServer/WMSServer?"],
-        ["18", "MRP 10%(raz na 10lat) negatywne konsekwencje dla środowiska, dziedzictwa kult. i działalności gosp.-skorowidz arkuszy", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiSrodowiskoKulturaGospodarka_WysokiePrawdopodPowodzi/MapServer/WMSServer?"]]
+        mrp6 = [["2", "cieki naturalne i kanały", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiSrodowiskoKulturaGospodarka_WysokiePrawdopodPowodzi/MapServer/WMSServer?"],
+        ["4", "obszar szczególnego zagrożenia powodzią", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiSrodowiskoKulturaGospodarka_WysokiePrawdopodPowodzi/MapServer/WMSServer?"],
+        ["5", "ogród zoologiczny", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiSrodowiskoKulturaGospodarka_WysokiePrawdopodPowodzi/MapServer/WMSServer?"],
+        ["6", "obszar cenny kulturowo", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiSrodowiskoKulturaGospodarka_WysokiePrawdopodPowodzi/MapServer/WMSServer?"],
+        ["7", "składowisko odpadów", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiSrodowiskoKulturaGospodarka_WysokiePrawdopodPowodzi/MapServer/WMSServer?"],
+        ["8", "cmentarz", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiSrodowiskoKulturaGospodarka_WysokiePrawdopodPowodzi/MapServer/WMSServer?"],
+        ["9", "strefa ochronna ujęcia wody", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiSrodowiskoKulturaGospodarka_WysokiePrawdopodPowodzi/MapServer/WMSServer?"],
+        ["10", "formy ochrony przyrody", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiSrodowiskoKulturaGospodarka_WysokiePrawdopodPowodzi/MapServer/WMSServer?"],
+        ["11", "wał przeciwpowodziowy, zapora boczna", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiSrodowiskoKulturaGospodarka_WysokiePrawdopodPowodzi/MapServer/WMSServer?"],
+        ["12", "oczyszczalnia, przepompownia", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiSrodowiskoKulturaGospodarka_WysokiePrawdopodPowodzi/MapServer/WMSServer?"],
+        ["13", "zakład przemysłowy", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiSrodowiskoKulturaGospodarka_WysokiePrawdopodPowodzi/MapServer/WMSServer?"],
+        ["14", "obiekt cenny kulturowo", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiSrodowiskoKulturaGospodarka_WysokiePrawdopodPowodzi/MapServer/WMSServer?"],
+        ["15", "kąpielisko", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiSrodowiskoKulturaGospodarka_WysokiePrawdopodPowodzi/MapServer/WMSServer?"],
+        ["16", "ujęcie wody", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiSrodowiskoKulturaGospodarka_WysokiePrawdopodPowodzi/MapServer/WMSServer?"],
+        ["17", "kilometraż rzeki", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiSrodowiskoKulturaGospodarka_WysokiePrawdopodPowodzi/MapServer/WMSServer?"],
+        ["18", "skorowidz arkuszy", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiSrodowiskoKulturaGospodarka_WysokiePrawdopodPowodzi/MapServer/WMSServer?"],
+        ["3", "wody powierzchniowe", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiSrodowiskoKulturaGospodarka_WysokiePrawdopodPowodzi/MapServer/WMSServer?"],
+        ["1", "klasy użytkowania terenu", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiSrodowiskoKulturaGospodarka_WysokiePrawdopodPowodzi/MapServer/WMSServer?"]]
         
-        mrp7 = [["1", "MRP od morza 1%(raz na 100lat) negatywne konsekwencje dla środowiska, dziedzictwa kult. i działalności gosp.-klasy użytkowania terenu", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiSrodowiskoKulturaGospodarka_SredniePrawdopodPowodzi/MapServer/WMSServer?"],
-        ["2", "MRP od morza 1%(raz na 100lat) negatywne konsekwencje dla środowiska, dziedzictwa kult. i działalności gosp.-cieki naturalne i kanały", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiSrodowiskoKulturaGospodarka_SredniePrawdopodPowodzi/MapServer/WMSServer?"],
-        ["3", "MRP od morza 1%(raz na 100lat) negatywne konsekwencje dla środowiska, dziedzictwa kult. i działalności gosp.-wody powierzchniowe", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiSrodowiskoKulturaGospodarka_SredniePrawdopodPowodzi/MapServer/WMSServer?"],
-        ["4", "MRP od morza 1%(raz na 100lat) negatywne konsekwencje dla środowiska, dziedzictwa kult. i działalności gosp.-obszar szczególnego zagrożenia powodzią", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiSrodowiskoKulturaGospodarka_SredniePrawdopodPowodzi/MapServer/WMSServer?"],
-        ["5", "MRP od morza 1%(raz na 100lat) negatywne konsekwencje dla środowiska, dziedzictwa kult. i działalności gosp.-ogród zoologiczny", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiSrodowiskoKulturaGospodarka_SredniePrawdopodPowodzi/MapServer/WMSServer?"],
-        ["6", "MRP od morza 1%(raz na 100lat) negatywne konsekwencje dla środowiska, dziedzictwa kult. i działalności gosp.-obszar cenny kulturowo", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiSrodowiskoKulturaGospodarka_SredniePrawdopodPowodzi/MapServer/WMSServer?"],
-        ["7", "MRP od morza 1%(raz na 100lat) negatywne konsekwencje dla środowiska, dziedzictwa kult. i działalności gosp.-składowisko odpadow", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiSrodowiskoKulturaGospodarka_SredniePrawdopodPowodzi/MapServer/WMSServer?"],
-        ["8", "MRP od morza 1%(raz na 100lat) negatywne konsekwencje dla środowiska, dziedzictwa kult. i działalności gosp.-cmentarz", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiSrodowiskoKulturaGospodarka_SredniePrawdopodPowodzi/MapServer/WMSServer?"],
-        ["9", "MRP od morza 1%(raz na 100lat) negatywne konsekwencje dla środowiska, dziedzictwa kult. i działalności gosp.-strefa ochronna ujęcia wody", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiSrodowiskoKulturaGospodarka_SredniePrawdopodPowodzi/MapServer/WMSServer?"],
-        ["10", "MRP od morza 1%(raz na 100lat) negatywne konsekwencje dla środowiska, dziedzictwa kult. i działalności gosp.-formy ochrony przyrody", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiSrodowiskoKulturaGospodarka_SredniePrawdopodPowodzi/MapServer/WMSServer?"],
-        ["11", "MRP od morza 1%(raz na 100lat) negatywne konsekwencje dla środowiska, dziedzictwa kult. i działalności gosp.-wał przeciwpowodziowy, przeciwsztormowy", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiSrodowiskoKulturaGospodarka_SredniePrawdopodPowodzi/MapServer/WMSServer?"],
-        ["12", "MRP od morza 1%(raz na 100lat) negatywne konsekwencje dla środowiska, dziedzictwa kult. i działalności gosp.-granica portu i przystani morskiej", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiSrodowiskoKulturaGospodarka_SredniePrawdopodPowodzi/MapServer/WMSServer?"],
-        ["13", "MRP od morza 1%(raz na 100lat) negatywne konsekwencje dla środowiska, dziedzictwa kult. i działalności gosp.-granica pasa technicznego brzegu morskiego", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiSrodowiskoKulturaGospodarka_SredniePrawdopodPowodzi/MapServer/WMSServer?"],
-        ["14", "MRP od morza 1%(raz na 100lat) negatywne konsekwencje dla środowiska, dziedzictwa kult. i działalności gosp.-granica pasa ochronnego brzegu morskiego", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiSrodowiskoKulturaGospodarka_SredniePrawdopodPowodzi/MapServer/WMSServer?"],
-        ["15", "MRP od morza 1%(raz na 100lat) negatywne konsekwencje dla środowiska, dziedzictwa kult. i działalności gosp.-oczyszczalnia, przepompownia", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiSrodowiskoKulturaGospodarka_SredniePrawdopodPowodzi/MapServer/WMSServer?"],
-        ["16", "MRP od morza 1%(raz na 100lat) negatywne konsekwencje dla środowiska, dziedzictwa kult. i działalności gosp.-zakład przemysłowy", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiSrodowiskoKulturaGospodarka_SredniePrawdopodPowodzi/MapServer/WMSServer?"],
-        ["17", "MRP od morza 1%(raz na 100lat) negatywne konsekwencje dla środowiska, dziedzictwa kult. i działalności gosp.-obiekt cenny kulturowo", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiSrodowiskoKulturaGospodarka_SredniePrawdopodPowodzi/MapServer/WMSServer?"],
-        ["18", "MRP od morza 1%(raz na 100lat) negatywne konsekwencje dla środowiska, dziedzictwa kult. i działalności gosp.-kąpielisko", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiSrodowiskoKulturaGospodarka_SredniePrawdopodPowodzi/MapServer/WMSServer?"],
-        ["19", "MRP od morza 1%(raz na 100lat) negatywne konsekwencje dla środowiska, dziedzictwa kult. i działalności gosp.-ujęcie wody", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiSrodowiskoKulturaGospodarka_SredniePrawdopodPowodzi/MapServer/WMSServer?"],
-        ["20", "MRP od morza 1%(raz na 100lat) negatywne konsekwencje dla środowiska, dziedzictwa kult. i działalności gosp.-kilometraż brzegu morskiego", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiSrodowiskoKulturaGospodarka_SredniePrawdopodPowodzi/MapServer/WMSServer?"],
-        ["21", "MRP od morza 1%(raz na 100lat) negatywne konsekwencje dla środowiska, dziedzictwa kult. i działalności gosp.-kilometraż rzeki", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiSrodowiskoKulturaGospodarka_SredniePrawdopodPowodzi/MapServer/WMSServer?"],
-        ["22", "MRP od morza 1%(raz na 100lat) negatywne konsekwencje dla środowiska, dziedzictwa kult. i działalności gosp.-skorowidz arkuszy", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiSrodowiskoKulturaGospodarka_SredniePrawdopodPowodzi/MapServer/WMSServer?"],
-        ["24", "MRP 1%(raz na 100lat) negatywne konsekwencje dla środowiska, dziedzictwa kult. i działalności gosp.-klasy użytkowania terenu", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiSrodowiskoKulturaGospodarka_SredniePrawdopodPowodzi/MapServer/WMSServer?"],
-        ["25", "MRP 1%(raz na 100lat) negatywne konsekwencje dla środowiska, dziedzictwa kult. i działalności gosp.-cieki naturalne i kanały", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiSrodowiskoKulturaGospodarka_SredniePrawdopodPowodzi/MapServer/WMSServer?"],
-        ["26", "MRP 1%(raz na 100lat) negatywne konsekwencje dla środowiska, dziedzictwa kult. i działalności gosp.-wody powierzchniowe", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiSrodowiskoKulturaGospodarka_SredniePrawdopodPowodzi/MapServer/WMSServer?"],
-        ["27", "MRP 1%(raz na 100lat) negatywne konsekwencje dla środowiska, dziedzictwa kult. i działalności gosp.-obszar szczególnego zagrożenia powodzią", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiSrodowiskoKulturaGospodarka_SredniePrawdopodPowodzi/MapServer/WMSServer?"],
-        ["28", "MRP 1%(raz na 100lat) negatywne konsekwencje dla środowiska, dziedzictwa kult. i działalności gosp.-ogród zoologiczny", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiSrodowiskoKulturaGospodarka_SredniePrawdopodPowodzi/MapServer/WMSServer?"],
-        ["29", "MRP 1%(raz na 100lat) negatywne konsekwencje dla środowiska, dziedzictwa kult. i działalności gosp.-obszar cenny kulturowo", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiSrodowiskoKulturaGospodarka_SredniePrawdopodPowodzi/MapServer/WMSServer?"],
-        ["30", "MRP 1%(raz na 100lat) negatywne konsekwencje dla środowiska, dziedzictwa kult. i działalności gosp.-składowisko odpadów", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiSrodowiskoKulturaGospodarka_SredniePrawdopodPowodzi/MapServer/WMSServer?"],
-        ["31", "MRP 1%(raz na 100lat) negatywne konsekwencje dla środowiska, dziedzictwa kult. i działalności gosp.-cmentarz", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiSrodowiskoKulturaGospodarka_SredniePrawdopodPowodzi/MapServer/WMSServer?"],
-        ["32", "MRP 1%(raz na 100lat) negatywne konsekwencje dla środowiska, dziedzictwa kult. i działalności gosp.-strefa ochronna ujęcia wody", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiSrodowiskoKulturaGospodarka_SredniePrawdopodPowodzi/MapServer/WMSServer?"],
-        ["33", "MRP 1%(raz na 100lat) negatywne konsekwencje dla środowiska, dziedzictwa kult. i działalności gosp.-formy ochrony przyrody", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiSrodowiskoKulturaGospodarka_SredniePrawdopodPowodzi/MapServer/WMSServer?"],
-        ["34", "MRP 1%(raz na 100lat) negatywne konsekwencje dla środowiska, dziedzictwa kult. i działalności gosp.-wał przeciwpowodziowy, zapora boczna", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiSrodowiskoKulturaGospodarka_SredniePrawdopodPowodzi/MapServer/WMSServer?"],
-        ["35", "MRP 1%(raz na 100lat) negatywne konsekwencje dla środowiska, dziedzictwa kult. i działalności gosp.-oczyszczalnia, przepompownia", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiSrodowiskoKulturaGospodarka_SredniePrawdopodPowodzi/MapServer/WMSServer?"],
-        ["36", "MRP 1%(raz na 100lat) negatywne konsekwencje dla środowiska, dziedzictwa kult. i działalności gosp.-zakład przemysłowy", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiSrodowiskoKulturaGospodarka_SredniePrawdopodPowodzi/MapServer/WMSServer?"],
-        ["37", "MRP 1%(raz na 100lat) negatywne konsekwencje dla środowiska, dziedzictwa kult. i działalności gosp.-obiekt cenny kulturowo", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiSrodowiskoKulturaGospodarka_SredniePrawdopodPowodzi/MapServer/WMSServer?"],
-        ["38", "MRP 1%(raz na 100lat) negatywne konsekwencje dla środowiska, dziedzictwa kult. i działalności gosp.-kąpielisko", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiSrodowiskoKulturaGospodarka_SredniePrawdopodPowodzi/MapServer/WMSServer?"],
-        ["39", "MRP 1%(raz na 100lat) negatywne konsekwencje dla środowiska, dziedzictwa kult. i działalności gosp.-ujęcie wody", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiSrodowiskoKulturaGospodarka_SredniePrawdopodPowodzi/MapServer/WMSServer?"],
-        ["40", "MRP 1%(raz na 100lat) negatywne konsekwencje dla środowiska, dziedzictwa kult. i działalności gosp.-kilometraż rzeki", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiSrodowiskoKulturaGospodarka_SredniePrawdopodPowodzi/MapServer/WMSServer?"],
-        ["41", "MRP 1%(raz na 100lat) negatywne konsekwencje dla środowiska, dziedzictwa kult. i działalności gosp.-skorowidz arkuszy", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiSrodowiskoKulturaGospodarka_SredniePrawdopodPowodzi/MapServer/WMSServer?"]]
+        mrp7 = [["2", "cieki naturalne i kanały (MRP od morza)", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiSrodowiskoKulturaGospodarka_SredniePrawdopodPowodzi/MapServer/WMSServer?"],
+        ["4", "obszar szczególnego zagrożenia powodzią (MRP od morza)", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiSrodowiskoKulturaGospodarka_SredniePrawdopodPowodzi/MapServer/WMSServer?"],
+        ["5", "ogród zoologiczny (MRP od morza)", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiSrodowiskoKulturaGospodarka_SredniePrawdopodPowodzi/MapServer/WMSServer?"],
+        ["6", "obszar cenny kulturowo (MRP od morza)", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiSrodowiskoKulturaGospodarka_SredniePrawdopodPowodzi/MapServer/WMSServer?"],
+        ["7", "składowisko odpadow (MRP od morza)", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiSrodowiskoKulturaGospodarka_SredniePrawdopodPowodzi/MapServer/WMSServer?"],
+        ["8", "cmentarz (MRP od morza)", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiSrodowiskoKulturaGospodarka_SredniePrawdopodPowodzi/MapServer/WMSServer?"],
+        ["9", "strefa ochronna ujęcia wody (MRP od morza)", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiSrodowiskoKulturaGospodarka_SredniePrawdopodPowodzi/MapServer/WMSServer?"],
+        ["10", "formy ochrony przyrody (MRP od morza)", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiSrodowiskoKulturaGospodarka_SredniePrawdopodPowodzi/MapServer/WMSServer?"],
+        ["12", "wał przeciwpowodziowy, przeciwsztormowy (MRP od morza)", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiSrodowiskoKulturaGospodarka_SredniePrawdopodPowodzi/MapServer/WMSServer?"],
+        ["13", "granica portu i przystani morskiej (MRP od morza)", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiSrodowiskoKulturaGospodarka_SredniePrawdopodPowodzi/MapServer/WMSServer?"],
+        ["14", "granica pasa technicznego brzegu morskiego (MRP od morza)", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiSrodowiskoKulturaGospodarka_SredniePrawdopodPowodzi/MapServer/WMSServer?"],
+        ["15", "granica pasa ochronnego brzegu morskiego (MRP od morza)", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiSrodowiskoKulturaGospodarka_SredniePrawdopodPowodzi/MapServer/WMSServer?"],
+        ["16", "oczyszczalnia, przepompownia (MRP od morza)", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiSrodowiskoKulturaGospodarka_SredniePrawdopodPowodzi/MapServer/WMSServer?"],
+        ["17", "zakład przemysłowy (MRP od morza)", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiSrodowiskoKulturaGospodarka_SredniePrawdopodPowodzi/MapServer/WMSServer?"],
+        ["18", "obiekt cenny kulturowo (MRP od morza)", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiSrodowiskoKulturaGospodarka_SredniePrawdopodPowodzi/MapServer/WMSServer?"],
+        ["19", "kąpielisko (MRP od morza)", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiSrodowiskoKulturaGospodarka_SredniePrawdopodPowodzi/MapServer/WMSServer?"],
+        ["20", "ujęcie wody (MRP od morza)", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiSrodowiskoKulturaGospodarka_SredniePrawdopodPowodzi/MapServer/WMSServer?"],
+        ["21", "kilometraż brzegu morskiego (MRP od morza)", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiSrodowiskoKulturaGospodarka_SredniePrawdopodPowodzi/MapServer/WMSServer?"],
+        ["22", "kilometraż rzeki (MRP od morza)", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiSrodowiskoKulturaGospodarka_SredniePrawdopodPowodzi/MapServer/WMSServer?"],
+        ["11", "skorowidz arkuszy (MRP od morza)", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiSrodowiskoKulturaGospodarka_SredniePrawdopodPowodzi/MapServer/WMSServer?"],
+        ["3", "wody powierzchniowe (MRP od morza)", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiSrodowiskoKulturaGospodarka_SredniePrawdopodPowodzi/MapServer/WMSServer?"],
+        ["1", "klasy użytkowania terenu (MRP od morza)", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiSrodowiskoKulturaGospodarka_SredniePrawdopodPowodzi/MapServer/WMSServer?"],
+        ["25", "cieki naturalne i kanały", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiSrodowiskoKulturaGospodarka_SredniePrawdopodPowodzi/MapServer/WMSServer?"],
+        ["27", "obszar szczególnego zagrożenia powodzią", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiSrodowiskoKulturaGospodarka_SredniePrawdopodPowodzi/MapServer/WMSServer?"],
+        ["28", "ogród zoologiczny", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiSrodowiskoKulturaGospodarka_SredniePrawdopodPowodzi/MapServer/WMSServer?"],
+        ["29", "obszar cenny kulturowo", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiSrodowiskoKulturaGospodarka_SredniePrawdopodPowodzi/MapServer/WMSServer?"],
+        ["30", "składowisko odpadów", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiSrodowiskoKulturaGospodarka_SredniePrawdopodPowodzi/MapServer/WMSServer?"],
+        ["31", "cmentarz", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiSrodowiskoKulturaGospodarka_SredniePrawdopodPowodzi/MapServer/WMSServer?"],
+        ["32", "strefa ochronna ujęcia wody", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiSrodowiskoKulturaGospodarka_SredniePrawdopodPowodzi/MapServer/WMSServer?"],
+        ["33", "formy ochrony przyrody", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiSrodowiskoKulturaGospodarka_SredniePrawdopodPowodzi/MapServer/WMSServer?"],
+        ["34", "wał przeciwpowodziowy, zapora boczna", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiSrodowiskoKulturaGospodarka_SredniePrawdopodPowodzi/MapServer/WMSServer?"],
+        ["35", "oczyszczalnia, przepompownia", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiSrodowiskoKulturaGospodarka_SredniePrawdopodPowodzi/MapServer/WMSServer?"],
+        ["36", "zakład przemysłowy", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiSrodowiskoKulturaGospodarka_SredniePrawdopodPowodzi/MapServer/WMSServer?"],
+        ["37", "obiekt cenny kulturowo", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiSrodowiskoKulturaGospodarka_SredniePrawdopodPowodzi/MapServer/WMSServer?"],
+        ["38", "kąpielisko", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiSrodowiskoKulturaGospodarka_SredniePrawdopodPowodzi/MapServer/WMSServer?"],
+        ["39", "ujęcie wody", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiSrodowiskoKulturaGospodarka_SredniePrawdopodPowodzi/MapServer/WMSServer?"],
+        ["40", "kilometraż rzeki", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiSrodowiskoKulturaGospodarka_SredniePrawdopodPowodzi/MapServer/WMSServer?"],
+        ["41", "skorowidz arkuszy", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiSrodowiskoKulturaGospodarka_SredniePrawdopodPowodzi/MapServer/WMSServer?"],
+        ["26", "wody powierzchniowe", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiSrodowiskoKulturaGospodarka_SredniePrawdopodPowodzi/MapServer/WMSServer?"],
+        ["24", "klasy użytkowania terenu", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiSrodowiskoKulturaGospodarka_SredniePrawdopodPowodzi/MapServer/WMSServer?"]]
         
-        mrp8 = [["1", "MRP od morza 0,2%(raz na 500lat) negatywne konsekwencje dla środowiska, dziedzictwa kult. i działalności gosp.-klasy użytkowania terenu", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiSrodowiskoKulturaGospodarka_NiskiePrawdopodPowodzi/MapServer/WMSServer?"],
-        ["2", "MRP od morza 0,2%(raz na 500lat) negatywne konsekwencje dla środowiska, dziedzictwa kult. i działalności gosp.-cieki naturalne i kanały", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiSrodowiskoKulturaGospodarka_NiskiePrawdopodPowodzi/MapServer/WMSServer?"],
-        ["3", "MRP od morza 0,2%(raz na 500lat) negatywne konsekwencje dla środowiska, dziedzictwa kult. i działalności gosp.-wody powierzchniowe", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiSrodowiskoKulturaGospodarka_NiskiePrawdopodPowodzi/MapServer/WMSServer?"],
-        ["4", "MRP od morza 0,2%(raz na 500lat) negatywne konsekwencje dla środowiska, dziedzictwa kult. i działalności gosp.-obszar zagrożenia powodziowego", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiSrodowiskoKulturaGospodarka_NiskiePrawdopodPowodzi/MapServer/WMSServer?"],
-        ["5", "MRP od morza 0,2%(raz na 500lat) negatywne konsekwencje dla środowiska, dziedzictwa kult. i działalności gosp.-ogród zoologiczny", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiSrodowiskoKulturaGospodarka_NiskiePrawdopodPowodzi/MapServer/WMSServer?"],
-        ["6", "MRP od morza 0,2%(raz na 500lat) negatywne konsekwencje dla środowiska, dziedzictwa kult. i działalności gosp.-obszar cenny kulturowo", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiSrodowiskoKulturaGospodarka_NiskiePrawdopodPowodzi/MapServer/WMSServer?"],
-        ["7", "MRP od morza 0,2%(raz na 500lat) negatywne konsekwencje dla środowiska, dziedzictwa kult. i działalności gosp.-składowisko odpadow", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiSrodowiskoKulturaGospodarka_NiskiePrawdopodPowodzi/MapServer/WMSServer?"],
-        ["8", "MRP od morza 0,2%(raz na 500lat) negatywne konsekwencje dla środowiska, dziedzictwa kult. i działalności gosp.-cmentarz", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiSrodowiskoKulturaGospodarka_NiskiePrawdopodPowodzi/MapServer/WMSServer?"],
-        ["9", "MRP od morza 0,2%(raz na 500lat) negatywne konsekwencje dla środowiska, dziedzictwa kult. i działalności gosp.-strefa ochronna ujęcia wody", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiSrodowiskoKulturaGospodarka_NiskiePrawdopodPowodzi/MapServer/WMSServer?"],
-        ["10", "MRP od morza 0,2%(raz na 500lat) negatywne konsekwencje dla środowiska, dziedzictwa kult. i działalności gosp.-formy ochrony przyrody", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiSrodowiskoKulturaGospodarka_NiskiePrawdopodPowodzi/MapServer/WMSServer?"],
-        ["11", "MRP od morza 0,2%(raz na 500lat) negatywne konsekwencje dla środowiska, dziedzictwa kult. i działalności gosp.-wał przeciwpowodziowy, przeciwsztormowy", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiSrodowiskoKulturaGospodarka_NiskiePrawdopodPowodzi/MapServer/WMSServer?"],
-        ["12", "MRP od morza 0,2%(raz na 500lat) negatywne konsekwencje dla środowiska, dziedzictwa kult. i działalności gosp.-granica portu i przystani morskiej", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiSrodowiskoKulturaGospodarka_NiskiePrawdopodPowodzi/MapServer/WMSServer?"],
-        ["13", "MRP od morza 0,2%(raz na 500lat) negatywne konsekwencje dla środowiska, dziedzictwa kult. i działalności gosp.-granica pasa technicznego brzegu morskiego", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiSrodowiskoKulturaGospodarka_NiskiePrawdopodPowodzi/MapServer/WMSServer?"],
-        ["14", "MRP od morza 0,2%(raz na 500lat) negatywne konsekwencje dla środowiska, dziedzictwa kult. i działalności gosp.-granica pasa ochronnego brzegu morskiego", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiSrodowiskoKulturaGospodarka_NiskiePrawdopodPowodzi/MapServer/WMSServer?"],
-        ["15", "MRP od morza 0,2%(raz na 500lat) negatywne konsekwencje dla środowiska, dziedzictwa kult. i działalności gosp.-oczyszczalnia, przepompownia", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiSrodowiskoKulturaGospodarka_NiskiePrawdopodPowodzi/MapServer/WMSServer?"],
-        ["16", "MRP od morza 0,2%(raz na 500lat) negatywne konsekwencje dla środowiska, dziedzictwa kult. i działalności gosp.-zakład przemysłowy", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiSrodowiskoKulturaGospodarka_NiskiePrawdopodPowodzi/MapServer/WMSServer?"],
-        ["17", "MRP od morza 0,2%(raz na 500lat) negatywne konsekwencje dla środowiska, dziedzictwa kult. i działalności gosp.-obiekt cenny kulturowo", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiSrodowiskoKulturaGospodarka_NiskiePrawdopodPowodzi/MapServer/WMSServer?"],
-        ["18", "MRP od morza 0,2%(raz na 500lat) negatywne konsekwencje dla środowiska, dziedzictwa kult. i działalności gosp.-kąpielisko", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiSrodowiskoKulturaGospodarka_NiskiePrawdopodPowodzi/MapServer/WMSServer?"],
-        ["19", "MRP od morza 0,2%(raz na 500lat) negatywne konsekwencje dla środowiska, dziedzictwa kult. i działalności gosp.-ujęcie wody", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiSrodowiskoKulturaGospodarka_NiskiePrawdopodPowodzi/MapServer/WMSServer?"],
-        ["20", "MRP od morza 0,2%(raz na 500lat) negatywne konsekwencje dla środowiska, dziedzictwa kult. i działalności gosp.-kilometraż brzegu morskiego", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiSrodowiskoKulturaGospodarka_NiskiePrawdopodPowodzi/MapServer/WMSServer?"],
-        ["21", "MRP od morza 0,2%(raz na 500lat) negatywne konsekwencje dla środowiska, dziedzictwa kult. i działalności gosp.-kilometraż rzeki", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiSrodowiskoKulturaGospodarka_NiskiePrawdopodPowodzi/MapServer/WMSServer?"],
-        ["22", "MRP od morza 0,2%(raz na 500lat) negatywne konsekwencje dla środowiska, dziedzictwa kult. i działalności gosp.-skorowidz arkuszy", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiSrodowiskoKulturaGospodarka_NiskiePrawdopodPowodzi/MapServer/WMSServer?"],
-        ["24", "MRP 0,2%(raz na 500lat) negatywne konsekwencje dla środowiska, dziedzictwa kult. i działalności gosp.-klasy użytkowania terenu", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiSrodowiskoKulturaGospodarka_NiskiePrawdopodPowodzi/MapServer/WMSServer?"],
-        ["25", "MRP 0,2%(raz na 500lat) negatywne konsekwencje dla środowiska, dziedzictwa kult. i działalności gosp.-cieki naturalne i kanały", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiSrodowiskoKulturaGospodarka_NiskiePrawdopodPowodzi/MapServer/WMSServer?"],
-        ["26", "MRP 0,2%(raz na 500lat) negatywne konsekwencje dla środowiska, dziedzictwa kult. i działalności gosp.-wody powierzchniowe", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiSrodowiskoKulturaGospodarka_NiskiePrawdopodPowodzi/MapServer/WMSServer?"],
-        ["27", "MRP 0,2%(raz na 500lat) negatywne konsekwencje dla środowiska, dziedzictwa kult. i działalności gosp.-obszar zagrożenia powodziowego", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiSrodowiskoKulturaGospodarka_NiskiePrawdopodPowodzi/MapServer/WMSServer?"],
-        ["28", "MRP 0,2%(raz na 500lat) negatywne konsekwencje dla środowiska, dziedzictwa kult. i działalności gosp.-ogród zoologiczny", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiSrodowiskoKulturaGospodarka_NiskiePrawdopodPowodzi/MapServer/WMSServer?"],
-        ["29", "MRP 0,2%(raz na 500lat) negatywne konsekwencje dla środowiska, dziedzictwa kult. i działalności gosp.-obszar cenny kulturowo", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiSrodowiskoKulturaGospodarka_NiskiePrawdopodPowodzi/MapServer/WMSServer?"],
-        ["30", "MRP 0,2%(raz na 500lat) negatywne konsekwencje dla środowiska, dziedzictwa kult. i działalności gosp.-składowisko odpadów", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiSrodowiskoKulturaGospodarka_NiskiePrawdopodPowodzi/MapServer/WMSServer?"],
-        ["31", "MRP 0,2%(raz na 500lat) negatywne konsekwencje dla środowiska, dziedzictwa kult. i działalności gosp.-cmentarz", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiSrodowiskoKulturaGospodarka_NiskiePrawdopodPowodzi/MapServer/WMSServer?"],
-        ["32", "MRP 0,2%(raz na 500lat) negatywne konsekwencje dla środowiska, dziedzictwa kult. i działalności gosp.-strefa ochronna ujęcia wody", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiSrodowiskoKulturaGospodarka_NiskiePrawdopodPowodzi/MapServer/WMSServer?"],
-        ["33", "MRP 0,2%(raz na 500lat) negatywne konsekwencje dla środowiska, dziedzictwa kult. i działalności gosp.-formy ochrony przyrody", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiSrodowiskoKulturaGospodarka_NiskiePrawdopodPowodzi/MapServer/WMSServer?"],
-        ["34", "MRP 0,2%(raz na 500lat) negatywne konsekwencje dla środowiska, dziedzictwa kult. i działalności gosp.-wał przeciwpowodziowy, zapora boczna", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiSrodowiskoKulturaGospodarka_NiskiePrawdopodPowodzi/MapServer/WMSServer?"],
-        ["35", "MRP 0,2%(raz na 500lat) negatywne konsekwencje dla środowiska, dziedzictwa kult. i działalności gosp.-oczyszczalnia, przepompownia", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiSrodowiskoKulturaGospodarka_NiskiePrawdopodPowodzi/MapServer/WMSServer?"],
-        ["36", "MRP 0,2%(raz na 500lat) negatywne konsekwencje dla środowiska, dziedzictwa kult. i działalności gosp.-zakład przemysłowy", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiSrodowiskoKulturaGospodarka_NiskiePrawdopodPowodzi/MapServer/WMSServer?"],
-        ["37", "MRP 0,2%(raz na 500lat) negatywne konsekwencje dla środowiska, dziedzictwa kult. i działalności gosp.-obiekt cenny kulturowo", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiSrodowiskoKulturaGospodarka_NiskiePrawdopodPowodzi/MapServer/WMSServer?"],
-        ["38", "MRP 0,2%(raz na 500lat) negatywne konsekwencje dla środowiska, dziedzictwa kult. i działalności gosp.-kąpielisko", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiSrodowiskoKulturaGospodarka_NiskiePrawdopodPowodzi/MapServer/WMSServer?"],
-        ["39", "MRP 0,2%(raz na 500lat) negatywne konsekwencje dla środowiska, dziedzictwa kult. i działalności gosp.-ujęcie wody", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiSrodowiskoKulturaGospodarka_NiskiePrawdopodPowodzi/MapServer/WMSServer?"],
-        ["40", "MRP 0,2%(raz na 500lat) negatywne konsekwencje dla środowiska, dziedzictwa kult. i działalności gosp.-kilometraż rzeki", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiSrodowiskoKulturaGospodarka_NiskiePrawdopodPowodzi/MapServer/WMSServer?"],
-        ["41", "MRP 0,2%(raz na 500lat) negatywne konsekwencje dla środowiska, dziedzictwa kult. i działalności gosp.-skorowidz arkuszy", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiSrodowiskoKulturaGospodarka_NiskiePrawdopodPowodzi/MapServer/WMSServer?"]]
+        mrp8 = [["11", "cieki naturalne i kanały (MRP od morza)", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiSrodowiskoKulturaGospodarka_NiskiePrawdopodPowodzi/MapServer/WMSServer?"],
+        ["3", "obszar zagrożenia powodziowego (MRP od morza)", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiSrodowiskoKulturaGospodarka_NiskiePrawdopodPowodzi/MapServer/WMSServer?"],
+        ["4", "ogród zoologiczny (MRP od morza)", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiSrodowiskoKulturaGospodarka_NiskiePrawdopodPowodzi/MapServer/WMSServer?"],
+        ["5", "obszar cenny kulturowo (MRP od morza)", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiSrodowiskoKulturaGospodarka_NiskiePrawdopodPowodzi/MapServer/WMSServer?"],
+        ["6", "składowisko odpadow (MRP od morza)", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiSrodowiskoKulturaGospodarka_NiskiePrawdopodPowodzi/MapServer/WMSServer?"],
+        ["7", "cmentarz (MRP od morza)", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiSrodowiskoKulturaGospodarka_NiskiePrawdopodPowodzi/MapServer/WMSServer?"],
+        ["8", "strefa ochronna ujęcia wody (MRP od morza)", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiSrodowiskoKulturaGospodarka_NiskiePrawdopodPowodzi/MapServer/WMSServer?"],
+        ["9", "formy ochrony przyrody (MRP od morza)", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiSrodowiskoKulturaGospodarka_NiskiePrawdopodPowodzi/MapServer/WMSServer?"],
+        ["12", "wał przeciwpowodziowy, przeciwsztormowy (MRP od morza)", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiSrodowiskoKulturaGospodarka_NiskiePrawdopodPowodzi/MapServer/WMSServer?"],
+        ["13", "granica portu i przystani morskiej (MRP od morza)", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiSrodowiskoKulturaGospodarka_NiskiePrawdopodPowodzi/MapServer/WMSServer?"],
+        ["14", "granica pasa technicznego brzegu morskiego (MRP od morza)", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiSrodowiskoKulturaGospodarka_NiskiePrawdopodPowodzi/MapServer/WMSServer?"],
+        ["15", "granica pasa ochronnego brzegu morskiego (MRP od morza)", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiSrodowiskoKulturaGospodarka_NiskiePrawdopodPowodzi/MapServer/WMSServer?"],
+        ["16", "oczyszczalnia, przepompownia (MRP od morza)", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiSrodowiskoKulturaGospodarka_NiskiePrawdopodPowodzi/MapServer/WMSServer?"],
+        ["17", "zakład przemysłowy (MRP od morza)", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiSrodowiskoKulturaGospodarka_NiskiePrawdopodPowodzi/MapServer/WMSServer?"],
+        ["18", "obiekt cenny kulturowo (MRP od morza)", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiSrodowiskoKulturaGospodarka_NiskiePrawdopodPowodzi/MapServer/WMSServer?"],
+        ["19", "kąpielisko (MRP od morza)", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiSrodowiskoKulturaGospodarka_NiskiePrawdopodPowodzi/MapServer/WMSServer?"],
+        ["20", "ujęcie wody (MRP od morza)", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiSrodowiskoKulturaGospodarka_NiskiePrawdopodPowodzi/MapServer/WMSServer?"],
+        ["21", "kilometraż brzegu morskiego (MRP od morza)", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiSrodowiskoKulturaGospodarka_NiskiePrawdopodPowodzi/MapServer/WMSServer?"],
+        ["22", "kilometraż rzeki (MRP od morza)", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiSrodowiskoKulturaGospodarka_NiskiePrawdopodPowodzi/MapServer/WMSServer?"],
+        ["10", "skorowidz arkuszy (MRP od morza)", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiSrodowiskoKulturaGospodarka_NiskiePrawdopodPowodzi/MapServer/WMSServer?"],
+        ["2", "wody powierzchniowe (MRP od morza)", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiSrodowiskoKulturaGospodarka_NiskiePrawdopodPowodzi/MapServer/WMSServer?"],
+        ["1", "klasy użytkowania terenu (MRP od morza)", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiSrodowiskoKulturaGospodarka_NiskiePrawdopodPowodzi/MapServer/WMSServer?"],
+        ["25", "cieki naturalne i kanały", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiSrodowiskoKulturaGospodarka_NiskiePrawdopodPowodzi/MapServer/WMSServer?"],
+        ["27", "obszar zagrożenia powodziowego", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiSrodowiskoKulturaGospodarka_NiskiePrawdopodPowodzi/MapServer/WMSServer?"],
+        ["28", "ogród zoologiczny", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiSrodowiskoKulturaGospodarka_NiskiePrawdopodPowodzi/MapServer/WMSServer?"],
+        ["29", "obszar cenny kulturowo", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiSrodowiskoKulturaGospodarka_NiskiePrawdopodPowodzi/MapServer/WMSServer?"],
+        ["30", "składowisko odpadów", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiSrodowiskoKulturaGospodarka_NiskiePrawdopodPowodzi/MapServer/WMSServer?"],
+        ["31", "cmentarz", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiSrodowiskoKulturaGospodarka_NiskiePrawdopodPowodzi/MapServer/WMSServer?"],
+        ["32", "strefa ochronna ujęcia wody", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiSrodowiskoKulturaGospodarka_NiskiePrawdopodPowodzi/MapServer/WMSServer?"],
+        ["33", "formy ochrony przyrody", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiSrodowiskoKulturaGospodarka_NiskiePrawdopodPowodzi/MapServer/WMSServer?"],
+        ["34", "wał przeciwpowodziowy, zapora boczna", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiSrodowiskoKulturaGospodarka_NiskiePrawdopodPowodzi/MapServer/WMSServer?"],
+        ["35", "oczyszczalnia, przepompownia", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiSrodowiskoKulturaGospodarka_NiskiePrawdopodPowodzi/MapServer/WMSServer?"],
+        ["36", "zakład przemysłowy", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiSrodowiskoKulturaGospodarka_NiskiePrawdopodPowodzi/MapServer/WMSServer?"],
+        ["37", "obiekt cenny kulturowo", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiSrodowiskoKulturaGospodarka_NiskiePrawdopodPowodzi/MapServer/WMSServer?"],
+        ["38", "kąpielisko", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiSrodowiskoKulturaGospodarka_NiskiePrawdopodPowodzi/MapServer/WMSServer?"],
+        ["39", "ujęcie wody", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiSrodowiskoKulturaGospodarka_NiskiePrawdopodPowodzi/MapServer/WMSServer?"],
+        ["40", "kilometraż rzeki", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiSrodowiskoKulturaGospodarka_NiskiePrawdopodPowodzi/MapServer/WMSServer?"],
+        ["41", "skorowidz arkuszy", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiSrodowiskoKulturaGospodarka_NiskiePrawdopodPowodzi/MapServer/WMSServer?"],
+        ["26", "wody powierzchniowe", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiSrodowiskoKulturaGospodarka_NiskiePrawdopodPowodzi/MapServer/WMSServer?"],
+        ["24", "klasy użytkowania terenu", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiSrodowiskoKulturaGospodarka_NiskiePrawdopodPowodzi/MapServer/WMSServer?"]]
         
-        mrp9 = [["0", "MRP-zniszczenie wału przeciwpow.-negatywne skutki dla środowiska, dziedzictwa kult. i działalności gosp.-klasy użytkowania terenu", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiSrodowiskoKulturaGospodarka_ZniszczenieWaluPowodziowego/MapServer/WMSServer?"],
-        ["1", "MRP-zniszczenie wału przeciwpow.-negatywne skutki dla środowiska, dziedzictwa kult. i działalności gosp.-cieki naturalne i kanały", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiSrodowiskoKulturaGospodarka_ZniszczenieWaluPowodziowego/MapServer/WMSServer?"],
-        ["2", "MRP-zniszczenie wału przeciwpow.-negatywne skutki dla środowiska, dziedzictwa kult. i działalności gosp.-wody powierzchniowe", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiSrodowiskoKulturaGospodarka_ZniszczenieWaluPowodziowego/MapServer/WMSServer?"],
-        ["3", "MRP-zniszczenie wału przeciwpow.-negatywne skutki dla środowiska, dziedzictwa kult. i działalności gosp.-obszar zagrożenia powodziowego", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiSrodowiskoKulturaGospodarka_ZniszczenieWaluPowodziowego/MapServer/WMSServer?"],
-        ["4", "MRP-zniszczenie wału przeciwpow.-negatywne skutki dla środowiska, dziedzictwa kult. i działalności gosp.-ogród zoologiczny", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiSrodowiskoKulturaGospodarka_ZniszczenieWaluPowodziowego/MapServer/WMSServer?"],
-        ["5", "MRP-zniszczenie wału przeciwpow.-negatywne skutki dla środowiska, dziedzictwa kult. i działalności gosp.-obszar cenny kulturowo", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiSrodowiskoKulturaGospodarka_ZniszczenieWaluPowodziowego/MapServer/WMSServer?"],
-        ["6", "MRP-zniszczenie wału przeciwpow.-negatywne skutki dla środowiska, dziedzictwa kult. i działalności gosp.-składowisko odpadow", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiSrodowiskoKulturaGospodarka_ZniszczenieWaluPowodziowego/MapServer/WMSServer?"],
-        ["7", "MRP-zniszczenie wału przeciwpow.-negatywne skutki dla środowiska, dziedzictwa kult. i działalności gosp.-cmentarz", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiSrodowiskoKulturaGospodarka_ZniszczenieWaluPowodziowego/MapServer/WMSServer?"],
-        ["8", "MRP-zniszczenie wału przeciwpow.-negatywne skutki dla środowiska, dziedzictwa kult. i działalności gosp.-strefa ochronna ujęcia wody", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiSrodowiskoKulturaGospodarka_ZniszczenieWaluPowodziowego/MapServer/WMSServer?"],
-        ["9", "MRP-zniszczenie wału przeciwpow.-negatywne skutki dla środowiska, dziedzictwa kult. i działalności gosp.-formy ochrony przyrody", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiSrodowiskoKulturaGospodarka_ZniszczenieWaluPowodziowego/MapServer/WMSServer?"],
-        ["10", "MRP-zniszczenie wału przeciwpow.-negatywne skutki dla środowiska, dziedzictwa kult. i działalności gosp.-miejsce zniszczenia wału przeciwpowodziowego", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiSrodowiskoKulturaGospodarka_ZniszczenieWaluPowodziowego/MapServer/WMSServer?"],
-        ["11", "MRP-zniszczenie wału przeciwpow.-negatywne skutki dla środowiska, dziedzictwa kult. i działalności gosp.-oczyszczalnia, przepompownia", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiSrodowiskoKulturaGospodarka_ZniszczenieWaluPowodziowego/MapServer/WMSServer?"],
-        ["12", "MRP-zniszczenie wału przeciwpow.-negatywne skutki dla środowiska, dziedzictwa kult. i działalności gosp.-zakład przemysłowy", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiSrodowiskoKulturaGospodarka_ZniszczenieWaluPowodziowego/MapServer/WMSServer?"],
-        ["13", "MRP-zniszczenie wału przeciwpow.-negatywne skutki dla środowiska, dziedzictwa kult. i działalności gosp.-obiekt cenny kulturowo", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiSrodowiskoKulturaGospodarka_ZniszczenieWaluPowodziowego/MapServer/WMSServer?"],
-        ["14", "MRP-zniszczenie wału przeciwpow.-negatywne skutki dla środowiska, dziedzictwa kult. i działalności gosp.-kąpielisko", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiSrodowiskoKulturaGospodarka_ZniszczenieWaluPowodziowego/MapServer/WMSServer?"],
-        ["15", "MRP-zniszczenie wału przeciwpow.-negatywne skutki dla środowiska, dziedzictwa kult. i działalności gosp.-ujęcie wody", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiSrodowiskoKulturaGospodarka_ZniszczenieWaluPowodziowego/MapServer/WMSServer?"],
-        ["16", "MRP-zniszczenie wału przeciwpow.-negatywne skutki dla środowiska, dziedzictwa kult. i działalności gosp.-kilometraż rzeki", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiSrodowiskoKulturaGospodarka_ZniszczenieWaluPowodziowego/MapServer/WMSServer?"],
-        ["17", "MRP-zniszczenie wału przeciwpow.-negatywne skutki dla środowiska, dziedzictwa kult. i działalności gosp.-skorowidz arkuszy", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiSrodowiskoKulturaGospodarka_ZniszczenieWaluPowodziowego/MapServer/WMSServer?"]]
+        mrp9 = [["1", "cieki naturalne i kanały", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiSrodowiskoKulturaGospodarka_ZniszczenieWaluPowodziowego/MapServer/WMSServer?"],
+        ["3", "obszar zagrożenia powodziowego", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiSrodowiskoKulturaGospodarka_ZniszczenieWaluPowodziowego/MapServer/WMSServer?"],
+        ["4", "ogród zoologiczny", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiSrodowiskoKulturaGospodarka_ZniszczenieWaluPowodziowego/MapServer/WMSServer?"],
+        ["5", "obszar cenny kulturowo", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiSrodowiskoKulturaGospodarka_ZniszczenieWaluPowodziowego/MapServer/WMSServer?"],
+        ["6", "składowisko odpadow", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiSrodowiskoKulturaGospodarka_ZniszczenieWaluPowodziowego/MapServer/WMSServer?"],
+        ["7", "cmentarz", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiSrodowiskoKulturaGospodarka_ZniszczenieWaluPowodziowego/MapServer/WMSServer?"],
+        ["8", "strefa ochronna ujęcia wody", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiSrodowiskoKulturaGospodarka_ZniszczenieWaluPowodziowego/MapServer/WMSServer?"],
+        ["9", "formy ochrony przyrody", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiSrodowiskoKulturaGospodarka_ZniszczenieWaluPowodziowego/MapServer/WMSServer?"],
+        ["10", "miejsce zniszczenia wału przeciwpowodziowego", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiSrodowiskoKulturaGospodarka_ZniszczenieWaluPowodziowego/MapServer/WMSServer?"],
+        ["11", "oczyszczalnia, przepompownia", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiSrodowiskoKulturaGospodarka_ZniszczenieWaluPowodziowego/MapServer/WMSServer?"],
+        ["12", "zakład przemysłowy", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiSrodowiskoKulturaGospodarka_ZniszczenieWaluPowodziowego/MapServer/WMSServer?"],
+        ["13", "obiekt cenny kulturowo", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiSrodowiskoKulturaGospodarka_ZniszczenieWaluPowodziowego/MapServer/WMSServer?"],
+        ["14", "kąpielisko", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiSrodowiskoKulturaGospodarka_ZniszczenieWaluPowodziowego/MapServer/WMSServer?"],
+        ["15", "ujęcie wody", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiSrodowiskoKulturaGospodarka_ZniszczenieWaluPowodziowego/MapServer/WMSServer?"],
+        ["16", "kilometraż rzeki", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiSrodowiskoKulturaGospodarka_ZniszczenieWaluPowodziowego/MapServer/WMSServer?"],
+        ["17", "skorowidz arkuszy", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiSrodowiskoKulturaGospodarka_ZniszczenieWaluPowodziowego/MapServer/WMSServer?"],
+        ["2", "wody powierzchniowe", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiSrodowiskoKulturaGospodarka_ZniszczenieWaluPowodziowego/MapServer/WMSServer?"],
+        ["0", "klasy użytkowania terenu", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiSrodowiskoKulturaGospodarka_ZniszczenieWaluPowodziowego/MapServer/WMSServer?"]]
         
-        mrp10 = [["0", "MRP-zniszczenie wału przeciwsztormowego-negatywne skutki dla środowiska, dziedzictwa kult. i działalności gosp.-klasy użytkowania terenu", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiSrodowiskoKulturaGospodarka_ZniszczenieWaluSztormowego/MapServer/WMSServer?"],
-        ["1", "MRP-zniszczenie wału przeciwsztormowego-negatywne skutki dla środowiska, dziedzictwa kult. i działalności gosp.-cieki naturalne i kanały", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiSrodowiskoKulturaGospodarka_ZniszczenieWaluSztormowego/MapServer/WMSServer?"],
-        ["2", "MRP-zniszczenie wału przeciwsztormowego-negatywne skutki dla środowiska, dziedzictwa kult. i działalności gosp.-wody powierzchniowe", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiSrodowiskoKulturaGospodarka_ZniszczenieWaluSztormowego/MapServer/WMSServer?"],
-        ["3", "MRP-zniszczenie wału przeciwsztormowego-negatywne skutki dla środowiska, dziedzictwa kult. i działalności gosp.-obszar zagrożenia powodziowego", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiSrodowiskoKulturaGospodarka_ZniszczenieWaluSztormowego/MapServer/WMSServer?"],
-        ["4", "MRP-zniszczenie wału przeciwsztormowego-negatywne skutki dla środowiska, dziedzictwa kult. i działalności gosp.-ogród zoologiczny", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiSrodowiskoKulturaGospodarka_ZniszczenieWaluSztormowego/MapServer/WMSServer?"],
-        ["5", "MRP-zniszczenie wału przeciwsztormowego-negatywne skutki dla środowiska, dziedzictwa kult. i działalności gosp.-obszar cenny kulturowo", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiSrodowiskoKulturaGospodarka_ZniszczenieWaluSztormowego/MapServer/WMSServer?"],
-        ["6", "MRP-zniszczenie wału przeciwsztormowego-negatywne skutki dla środowiska, dziedzictwa kult. i działalności gosp.-składowisko odpadów", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiSrodowiskoKulturaGospodarka_ZniszczenieWaluSztormowego/MapServer/WMSServer?"],
-        ["7", "MRP-zniszczenie wału przeciwsztormowego-negatywne skutki dla środowiska, dziedzictwa kult. i działalności gosp.-cmentarz", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiSrodowiskoKulturaGospodarka_ZniszczenieWaluSztormowego/MapServer/WMSServer?"],
-        ["8", "MRP-zniszczenie wału przeciwsztormowego-negatywne skutki dla środowiska, dziedzictwa kult. i działalności gosp.-strefa ochronna ujęcia wody", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiSrodowiskoKulturaGospodarka_ZniszczenieWaluSztormowego/MapServer/WMSServer?"],
-        ["9", "MRP-zniszczenie wału przeciwsztormowego-negatywne skutki dla środowiska, dziedzictwa kult. i działalności gosp.-formy ochrony przyrody", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiSrodowiskoKulturaGospodarka_ZniszczenieWaluSztormowego/MapServer/WMSServer?"],
-        ["10", "MRP-zniszczenie wału przeciwsztormowego-negatywne skutki dla środowiska, dziedzictwa kult. i działalności gosp.-miejsce zniszczenia wału przeciwpow., przeciwsztormowego", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiSrodowiskoKulturaGospodarka_ZniszczenieWaluSztormowego/MapServer/WMSServer?"],
-        ["11", "MRP-zniszczenie wału przeciwsztormowego-negatywne skutki dla środowiska, dziedzictwa kult. i działalności gosp.-granica portu i przystani morskiej", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiSrodowiskoKulturaGospodarka_ZniszczenieWaluSztormowego/MapServer/WMSServer?"],
-        ["12", "MRP-zniszczenie wału przeciwsztormowego-negatywne skutki dla środowiska, dziedzictwa kult. i działalności gosp.-granica pasa technicznego brzegu morskiego", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiSrodowiskoKulturaGospodarka_ZniszczenieWaluSztormowego/MapServer/WMSServer?"],
-        ["13", "MRP-zniszczenie wału przeciwsztormowego-negatywne skutki dla środowiska, dziedzictwa kult. i działalności gosp.-granica pasa ochronnego brzegu morskiego", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiSrodowiskoKulturaGospodarka_ZniszczenieWaluSztormowego/MapServer/WMSServer?"],
-        ["14", "MRP-zniszczenie wału przeciwsztormowego-negatywne skutki dla środowiska, dziedzictwa kult. i działalności gosp.-oczyszczalnia, przepompownia", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiSrodowiskoKulturaGospodarka_ZniszczenieWaluSztormowego/MapServer/WMSServer?"],
-        ["15", "MRP-zniszczenie wału przeciwsztormowego-negatywne skutki dla środowiska, dziedzictwa kult. i działalności gosp.-zakład przemysłowy", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiSrodowiskoKulturaGospodarka_ZniszczenieWaluSztormowego/MapServer/WMSServer?"],
-        ["16", "MRP-zniszczenie wału przeciwsztormowego-negatywne skutki dla środowiska, dziedzictwa kult. i działalności gosp.-obiekt cenny kulturowo", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiSrodowiskoKulturaGospodarka_ZniszczenieWaluSztormowego/MapServer/WMSServer?"],
-        ["17", "MRP-zniszczenie wału przeciwsztormowego-negatywne skutki dla środowiska, dziedzictwa kult. i działalności gosp.-kąpielisko", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiSrodowiskoKulturaGospodarka_ZniszczenieWaluSztormowego/MapServer/WMSServer?"],
-        ["18", "MRP-zniszczenie wału przeciwsztormowego-negatywne skutki dla środowiska, dziedzictwa kult. i działalności gosp.-ujęcie wody", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiSrodowiskoKulturaGospodarka_ZniszczenieWaluSztormowego/MapServer/WMSServer?"],
-        ["19", "MRP-zniszczenie wału przeciwsztormowego-negatywne skutki dla środowiska, dziedzictwa kult. i działalności gosp.-kilometraż brzegu morskiego", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiSrodowiskoKulturaGospodarka_ZniszczenieWaluSztormowego/MapServer/WMSServer?"],
-        ["20", "MRP-zniszczenie wału przeciwsztormowego-negatywne skutki dla środowiska, dziedzictwa kult. i działalności gosp.-kilometraż rzeki", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiSrodowiskoKulturaGospodarka_ZniszczenieWaluSztormowego/MapServer/WMSServer?"],
-        ["21", "MRP-zniszczenie wału przeciwsztormowego-negatywne skutki dla środowiska, dziedzictwa kult. i działalności gosp.-skorowidz arkuszy", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiSrodowiskoKulturaGospodarka_ZniszczenieWaluSztormowego/MapServer/WMSServer?"]]
+        mrp10 = [["9", "cieki naturalne i kanały", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiSrodowiskoKulturaGospodarka_ZniszczenieWaluSztormowego/MapServer/WMSServer?"],
+        ["2", "obszar zagrożenia powodziowego", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiSrodowiskoKulturaGospodarka_ZniszczenieWaluSztormowego/MapServer/WMSServer?"],
+        ["3", "ogród zoologiczny", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiSrodowiskoKulturaGospodarka_ZniszczenieWaluSztormowego/MapServer/WMSServer?"],
+        ["4", "obszar cenny kulturowo", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiSrodowiskoKulturaGospodarka_ZniszczenieWaluSztormowego/MapServer/WMSServer?"],
+        ["5", "składowisko odpadów", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiSrodowiskoKulturaGospodarka_ZniszczenieWaluSztormowego/MapServer/WMSServer?"],
+        ["6", "cmentarz", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiSrodowiskoKulturaGospodarka_ZniszczenieWaluSztormowego/MapServer/WMSServer?"],
+        ["7", "strefa ochronna ujęcia wody", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiSrodowiskoKulturaGospodarka_ZniszczenieWaluSztormowego/MapServer/WMSServer?"],
+        ["8", "formy ochrony przyrody", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiSrodowiskoKulturaGospodarka_ZniszczenieWaluSztormowego/MapServer/WMSServer?"],
+        ["10", "miejsce zniszczenia wału przeciwpow., przeciwsztormowego", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiSrodowiskoKulturaGospodarka_ZniszczenieWaluSztormowego/MapServer/WMSServer?"],
+        ["11", "granica portu i przystani morskiej", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiSrodowiskoKulturaGospodarka_ZniszczenieWaluSztormowego/MapServer/WMSServer?"],
+        ["12", "granica pasa technicznego brzegu morskiego", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiSrodowiskoKulturaGospodarka_ZniszczenieWaluSztormowego/MapServer/WMSServer?"],
+        ["13", "granica pasa ochronnego brzegu morskiego", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiSrodowiskoKulturaGospodarka_ZniszczenieWaluSztormowego/MapServer/WMSServer?"],
+        ["14", "oczyszczalnia, przepompownia", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiSrodowiskoKulturaGospodarka_ZniszczenieWaluSztormowego/MapServer/WMSServer?"],
+        ["15", "zakład przemysłowy", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiSrodowiskoKulturaGospodarka_ZniszczenieWaluSztormowego/MapServer/WMSServer?"],
+        ["16", "obiekt cenny kulturowo", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiSrodowiskoKulturaGospodarka_ZniszczenieWaluSztormowego/MapServer/WMSServer?"],
+        ["17", "kąpielisko", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiSrodowiskoKulturaGospodarka_ZniszczenieWaluSztormowego/MapServer/WMSServer?"],
+        ["18", "ujęcie wody", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiSrodowiskoKulturaGospodarka_ZniszczenieWaluSztormowego/MapServer/WMSServer?"],
+        ["19", "kilometraż brzegu morskiego", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiSrodowiskoKulturaGospodarka_ZniszczenieWaluSztormowego/MapServer/WMSServer?"],
+        ["20", "kilometraż rzeki", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiSrodowiskoKulturaGospodarka_ZniszczenieWaluSztormowego/MapServer/WMSServer?"],
+        ["21", "skorowidz arkuszy", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiSrodowiskoKulturaGospodarka_ZniszczenieWaluSztormowego/MapServer/WMSServer?"],
+        ["1", "wody powierzchniowe", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiSrodowiskoKulturaGospodarka_ZniszczenieWaluSztormowego/MapServer/WMSServer?"],
+        ["0", "klasy użytkowania terenu", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiSrodowiskoKulturaGospodarka_ZniszczenieWaluSztormowego/MapServer/WMSServer?"]]
+        
+        mrp11 = [["2", "warstwy referencyjne-cieki naturalne i kanały", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiZycieZdrowiePotencjalneStraty_ZniszczenieBudowliPietrzacej/MapServer/WMSServer?"],
+        ["213", "Warstwy wspólne-zapora boczna", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiZycieZdrowiePotencjalneStraty_ZniszczenieBudowliPietrzacej/MapServer/WMSServer?"],
+        ["214", "Warstwy wspólne-wały przeciwpowodziowe", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiZycieZdrowiePotencjalneStraty_ZniszczenieBudowliPietrzacej/MapServer/WMSServer?"],
+        ["215", "Warstwy wspólne-kilometraż rzeki", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiZycieZdrowiePotencjalneStraty_ZniszczenieBudowliPietrzacej/MapServer/WMSServer?"],
+        ["6", "Zbiornik Świnna Poręba-obszar zagrożenia powodziowego", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiZycieZdrowiePotencjalneStraty_ZniszczenieBudowliPietrzacej/MapServer/WMSServer?"],
+        ["7", "Zbiornik Świnna Poręba-budynki", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiZycieZdrowiePotencjalneStraty_ZniszczenieBudowliPietrzacej/MapServer/WMSServer?"],
+        ["8", "Zbiornik Świnna Poręba-miejscowości zagrożone powodzią", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiZycieZdrowiePotencjalneStraty_ZniszczenieBudowliPietrzacej/MapServer/WMSServer?"],
+        ["9", "Zbiornik Świnna Poręba-miejsce uszkodzenia budowli piętrzącej", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiZycieZdrowiePotencjalneStraty_ZniszczenieBudowliPietrzacej/MapServer/WMSServer?"],
+        ["10", "Zbiornik Świnna Poręba-budowle piętrzące", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiZycieZdrowiePotencjalneStraty_ZniszczenieBudowliPietrzacej/MapServer/WMSServer?"],
+        ["11", "Zbiornik Świnna Poręba-skorowidz arkuszy", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiZycieZdrowiePotencjalneStraty_ZniszczenieBudowliPietrzacej/MapServer/WMSServer?"],
+        ["5", "Zbiornik Świnna Poręba-wartości potencjalnych strat powodziowych", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiZycieZdrowiePotencjalneStraty_ZniszczenieBudowliPietrzacej/MapServer/WMSServer?"],
+        ["14", "Zbiornik Słup-obszar zagrożenia powodziowego", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiZycieZdrowiePotencjalneStraty_ZniszczenieBudowliPietrzacej/MapServer/WMSServer?"],
+        ["15", "Zbiornik Słup-budynki", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiZycieZdrowiePotencjalneStraty_ZniszczenieBudowliPietrzacej/MapServer/WMSServer?"],
+        ["16", "Zbiornik Słup-miejscowości zagrożone powodzią", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiZycieZdrowiePotencjalneStraty_ZniszczenieBudowliPietrzacej/MapServer/WMSServer?"],
+        ["17", "Zbiornik Słup-miejsce uszkodzenia budowli piętrzącej", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiZycieZdrowiePotencjalneStraty_ZniszczenieBudowliPietrzacej/MapServer/WMSServer?"],
+        ["18", "Zbiornik Słup-budowle piętrzące", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiZycieZdrowiePotencjalneStraty_ZniszczenieBudowliPietrzacej/MapServer/WMSServer?"],
+        ["19", "Zbiornik Słup-skorowidz arkuszy", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiZycieZdrowiePotencjalneStraty_ZniszczenieBudowliPietrzacej/MapServer/WMSServer?"],
+        ["13", "Zbiornik Słup-wartości potencjalnych strat powodziowych", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiZycieZdrowiePotencjalneStraty_ZniszczenieBudowliPietrzacej/MapServer/WMSServer?"],
+        ["22", "Zbiornik Przeczyce-obszar zagrożenia powodziowego", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiZycieZdrowiePotencjalneStraty_ZniszczenieBudowliPietrzacej/MapServer/WMSServer?"],
+        ["23", "Zbiornik Przeczyce-budynki", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiZycieZdrowiePotencjalneStraty_ZniszczenieBudowliPietrzacej/MapServer/WMSServer?"],
+        ["24", "Zbiornik Przeczyce-miejscowości zagrożone powodzią", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiZycieZdrowiePotencjalneStraty_ZniszczenieBudowliPietrzacej/MapServer/WMSServer?"],
+        ["25", "Zbiornik Przeczyce-miejsce uszkodzenia budowli piętrzącej", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiZycieZdrowiePotencjalneStraty_ZniszczenieBudowliPietrzacej/MapServer/WMSServer?"],
+        ["26", "Zbiornik Przeczyce-budowle piętrzące", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiZycieZdrowiePotencjalneStraty_ZniszczenieBudowliPietrzacej/MapServer/WMSServer?"],
+        ["27", "Zbiornik Przeczyce-skorowidz arkuszy", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiZycieZdrowiePotencjalneStraty_ZniszczenieBudowliPietrzacej/MapServer/WMSServer?"],
+        ["21", "Zbiornik Przeczyce-wartości potencjalnych strat powodziowych", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiZycieZdrowiePotencjalneStraty_ZniszczenieBudowliPietrzacej/MapServer/WMSServer?"],
+        ["30", "Zbiornik Mietków-obszar zagrożenia powodziowego", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiZycieZdrowiePotencjalneStraty_ZniszczenieBudowliPietrzacej/MapServer/WMSServer?"],
+        ["31", "Zbiornik Mietków-budynki", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiZycieZdrowiePotencjalneStraty_ZniszczenieBudowliPietrzacej/MapServer/WMSServer?"],
+        ["32", "Zbiornik Mietków-miejscowości zagrożone powodzią", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiZycieZdrowiePotencjalneStraty_ZniszczenieBudowliPietrzacej/MapServer/WMSServer?"],
+        ["33", "Zbiornik Mietków-miejsce uszkodzenia budowli piętrzącej", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiZycieZdrowiePotencjalneStraty_ZniszczenieBudowliPietrzacej/MapServer/WMSServer?"],
+        ["34", "Zbiornik Mietków-budowle piętrzące", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiZycieZdrowiePotencjalneStraty_ZniszczenieBudowliPietrzacej/MapServer/WMSServer?"],
+        ["35", "Zbiornik Mietków-skorowidz arkuszy", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiZycieZdrowiePotencjalneStraty_ZniszczenieBudowliPietrzacej/MapServer/WMSServer?"],
+        ["29", "Zbiornik Mietków-wartości potencjalnych strat powodziowych", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiZycieZdrowiePotencjalneStraty_ZniszczenieBudowliPietrzacej/MapServer/WMSServer?"],
+        ["38", "Zbiornik Dobromierz-obszar zagrożenia powodziowego", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiZycieZdrowiePotencjalneStraty_ZniszczenieBudowliPietrzacej/MapServer/WMSServer?"],
+        ["39", "Zbiornik Dobromierz-budynki", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiZycieZdrowiePotencjalneStraty_ZniszczenieBudowliPietrzacej/MapServer/WMSServer?"],
+        ["40", "Zbiornik Dobromierz-miejscowości zagrożone powodzią", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiZycieZdrowiePotencjalneStraty_ZniszczenieBudowliPietrzacej/MapServer/WMSServer?"],
+        ["41", "Zbiornik Dobromierz-miejsce uszkodzenia budowli piętrzącej", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiZycieZdrowiePotencjalneStraty_ZniszczenieBudowliPietrzacej/MapServer/WMSServer?"],
+        ["42", "Zbiornik Dobromierz-budowle piętrzące", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiZycieZdrowiePotencjalneStraty_ZniszczenieBudowliPietrzacej/MapServer/WMSServer?"],
+        ["43", "Zbiornik Dobromierz-skorowidz arkuszy", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiZycieZdrowiePotencjalneStraty_ZniszczenieBudowliPietrzacej/MapServer/WMSServer?"],
+        ["37", "Zbiornik Dobromierz-wartości potencjalnych strat powodziowych", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiZycieZdrowiePotencjalneStraty_ZniszczenieBudowliPietrzacej/MapServer/WMSServer?"],
+        ["46", "Zbiornik Chańcza-obszar zagrożenia powodziowego", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiZycieZdrowiePotencjalneStraty_ZniszczenieBudowliPietrzacej/MapServer/WMSServer?"],
+        ["47", "Zbiornik Chańcza-budynki", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiZycieZdrowiePotencjalneStraty_ZniszczenieBudowliPietrzacej/MapServer/WMSServer?"],
+        ["48", "Zbiornik Chańcza-miejscowości zagrożone powodzią", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiZycieZdrowiePotencjalneStraty_ZniszczenieBudowliPietrzacej/MapServer/WMSServer?"],
+        ["49", "Zbiornik Chańcza-miejsce uszkodzenia budowli piętrzącej", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiZycieZdrowiePotencjalneStraty_ZniszczenieBudowliPietrzacej/MapServer/WMSServer?"],
+        ["50", "Zbiornik Chańcza-budowle piętrzące", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiZycieZdrowiePotencjalneStraty_ZniszczenieBudowliPietrzacej/MapServer/WMSServer?"],
+        ["51", "Zbiornik Chańcza-skorowidz arkuszy", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiZycieZdrowiePotencjalneStraty_ZniszczenieBudowliPietrzacej/MapServer/WMSServer?"],
+        ["45", "Zbiornik Chańcza-wartości potencjalnych strat powodziowych", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiZycieZdrowiePotencjalneStraty_ZniszczenieBudowliPietrzacej/MapServer/WMSServer?"],
+        ["54", "Zbiornik Besko-obszar zagrożenia powodziowego", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiZycieZdrowiePotencjalneStraty_ZniszczenieBudowliPietrzacej/MapServer/WMSServer?"],
+        ["55", "Zbiornik Besko-budynki", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiZycieZdrowiePotencjalneStraty_ZniszczenieBudowliPietrzacej/MapServer/WMSServer?"],
+        ["56", "Zbiornik Besko-miejscowości zagrożone powodzią", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiZycieZdrowiePotencjalneStraty_ZniszczenieBudowliPietrzacej/MapServer/WMSServer?"],
+        ["57", "Zbiornik Besko-miejsce uszkodzenia budowli piętrzącej", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiZycieZdrowiePotencjalneStraty_ZniszczenieBudowliPietrzacej/MapServer/WMSServer?"],
+        ["58", "Zbiornik Besko-budowle piętrzące", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiZycieZdrowiePotencjalneStraty_ZniszczenieBudowliPietrzacej/MapServer/WMSServer?"],
+        ["59", "Zbiornik Besko-skorowidz arkuszy", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiZycieZdrowiePotencjalneStraty_ZniszczenieBudowliPietrzacej/MapServer/WMSServer?"],
+        ["53", "Zbiornik Besko-wartości potencjalnych strat powodziowych", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiZycieZdrowiePotencjalneStraty_ZniszczenieBudowliPietrzacej/MapServer/WMSServer?"],
+        ["62", "Zbiornik Bukówka-obszar zagrożenia powodziowego", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiZycieZdrowiePotencjalneStraty_ZniszczenieBudowliPietrzacej/MapServer/WMSServer?"],
+        ["63", "Zbiornik Bukówka-budynki", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiZycieZdrowiePotencjalneStraty_ZniszczenieBudowliPietrzacej/MapServer/WMSServer?"],
+        ["64", "Zbiornik Bukówka-miejscowości zagrożone powodzią", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiZycieZdrowiePotencjalneStraty_ZniszczenieBudowliPietrzacej/MapServer/WMSServer?"],
+        ["65", "Zbiornik Bukówka-miejsce uszkodzenia budowli piętrzącej", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiZycieZdrowiePotencjalneStraty_ZniszczenieBudowliPietrzacej/MapServer/WMSServer?"],
+        ["66", "Zbiornik Bukówka-budowle piętrzące", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiZycieZdrowiePotencjalneStraty_ZniszczenieBudowliPietrzacej/MapServer/WMSServer?"],
+        ["67", "Zbiornik Bukówka-skorowidz arkuszy", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiZycieZdrowiePotencjalneStraty_ZniszczenieBudowliPietrzacej/MapServer/WMSServer?"],
+        ["61", "Zbiornik Bukówka-wartości potencjalnych strat powodziowych", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiZycieZdrowiePotencjalneStraty_ZniszczenieBudowliPietrzacej/MapServer/WMSServer?"],
+        ["70", "Zbiornik Czorsztyn-obszar zagrożenia powodziowego", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiZycieZdrowiePotencjalneStraty_ZniszczenieBudowliPietrzacej/MapServer/WMSServer?"],
+        ["71", "Zbiornik Czorsztyn-budynki", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiZycieZdrowiePotencjalneStraty_ZniszczenieBudowliPietrzacej/MapServer/WMSServer?"],
+        ["72", "Zbiornik Czorsztyn-miejscowości zagrożone powodzią", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiZycieZdrowiePotencjalneStraty_ZniszczenieBudowliPietrzacej/MapServer/WMSServer?"],
+        ["73", "Zbiornik Czorsztyn-miejsce uszkodzenia budowli piętrzącej", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiZycieZdrowiePotencjalneStraty_ZniszczenieBudowliPietrzacej/MapServer/WMSServer?"],
+        ["74", "Zbiornik Czorsztyn-budowle piętrzące", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiZycieZdrowiePotencjalneStraty_ZniszczenieBudowliPietrzacej/MapServer/WMSServer?"],
+        ["75", "Zbiornik Czorsztyn-skorowidz arkuszy", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiZycieZdrowiePotencjalneStraty_ZniszczenieBudowliPietrzacej/MapServer/WMSServer?"],
+        ["69", "Zbiornik Czorsztyn-wartości potencjalnych strat powodziowych", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiZycieZdrowiePotencjalneStraty_ZniszczenieBudowliPietrzacej/MapServer/WMSServer?"],
+        ["78", "Zbiornik Dębe-obszar zagrożenia powodziowego", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiZycieZdrowiePotencjalneStraty_ZniszczenieBudowliPietrzacej/MapServer/WMSServer?"],
+        ["79", "Zbiornik Dębe-budynki", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiZycieZdrowiePotencjalneStraty_ZniszczenieBudowliPietrzacej/MapServer/WMSServer?"],
+        ["80", "Zbiornik Dębe-miejscowości zagrożone powodzią", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiZycieZdrowiePotencjalneStraty_ZniszczenieBudowliPietrzacej/MapServer/WMSServer?"],
+        ["81", "Zbiornik Dębe-miejsce uszkodzenia budowli piętrzącej", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiZycieZdrowiePotencjalneStraty_ZniszczenieBudowliPietrzacej/MapServer/WMSServer?"],
+        ["82", "Zbiornik Dębe-budowle piętrzące", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiZycieZdrowiePotencjalneStraty_ZniszczenieBudowliPietrzacej/MapServer/WMSServer?"],
+        ["83", "Zbiornik Dębe-skorowidz arkuszy", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiZycieZdrowiePotencjalneStraty_ZniszczenieBudowliPietrzacej/MapServer/WMSServer?"],
+        ["77", "Zbiornik Dębe-wartości potencjalnych strat powodziowych", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiZycieZdrowiePotencjalneStraty_ZniszczenieBudowliPietrzacej/MapServer/WMSServer?"],
+        ["86", "Zbiornik Dobczyce-obszar zagrożenia powodziowego", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiZycieZdrowiePotencjalneStraty_ZniszczenieBudowliPietrzacej/MapServer/WMSServer?"],
+        ["87", "Zbiornik Dobczyce-budynki", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiZycieZdrowiePotencjalneStraty_ZniszczenieBudowliPietrzacej/MapServer/WMSServer?"],
+        ["88", "Zbiornik Dobczyce-miejscowości zagrożone powodzią", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiZycieZdrowiePotencjalneStraty_ZniszczenieBudowliPietrzacej/MapServer/WMSServer?"],
+        ["89", "Zbiornik Dobczyce-miejsce uszkodzenia budowli piętrzącej", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiZycieZdrowiePotencjalneStraty_ZniszczenieBudowliPietrzacej/MapServer/WMSServer?"],
+        ["90", "Zbiornik Dobczyce-budowle piętrzące", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiZycieZdrowiePotencjalneStraty_ZniszczenieBudowliPietrzacej/MapServer/WMSServer?"],
+        ["91", "Zbiornik Dobczyce-skorowidz arkuszy", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiZycieZdrowiePotencjalneStraty_ZniszczenieBudowliPietrzacej/MapServer/WMSServer?"],
+        ["85", "Zbiornik Dobczyce-wartości potencjalnych strat powodziowych", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiZycieZdrowiePotencjalneStraty_ZniszczenieBudowliPietrzacej/MapServer/WMSServer?"],
+        ["94", "Zbiornik Goczałkowice-obszar zagrożenia powodziowego", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiZycieZdrowiePotencjalneStraty_ZniszczenieBudowliPietrzacej/MapServer/WMSServer?"],
+        ["95", "Zbiornik Goczałkowice-budynki", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiZycieZdrowiePotencjalneStraty_ZniszczenieBudowliPietrzacej/MapServer/WMSServer?"],
+        ["96", "Zbiornik Goczałkowice-miejscowości zagrożone powodzią", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiZycieZdrowiePotencjalneStraty_ZniszczenieBudowliPietrzacej/MapServer/WMSServer?"],
+        ["97", "Zbiornik Goczałkowice-miejsce uszkodzenia budowli piętrzącej", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiZycieZdrowiePotencjalneStraty_ZniszczenieBudowliPietrzacej/MapServer/WMSServer?"],
+        ["98", "Zbiornik Goczałkowice-budowle piętrzące", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiZycieZdrowiePotencjalneStraty_ZniszczenieBudowliPietrzacej/MapServer/WMSServer?"],
+        ["99", "Zbiornik Goczałkowice-skorowidz arkuszy", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiZycieZdrowiePotencjalneStraty_ZniszczenieBudowliPietrzacej/MapServer/WMSServer?"],
+        ["93", "Zbiornik Goczałkowice-wartości potencjalnych strat powodziowych", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiZycieZdrowiePotencjalneStraty_ZniszczenieBudowliPietrzacej/MapServer/WMSServer?"],
+        ["102", "Zbiornik Jeziorsko-obszar zagrożenia powodziowego", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiZycieZdrowiePotencjalneStraty_ZniszczenieBudowliPietrzacej/MapServer/WMSServer?"],
+        ["103", "Zbiornik Jeziorsko-budynki", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiZycieZdrowiePotencjalneStraty_ZniszczenieBudowliPietrzacej/MapServer/WMSServer?"],
+        ["104", "Zbiornik Jeziorsko-miejscowości zagrożone powodzią", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiZycieZdrowiePotencjalneStraty_ZniszczenieBudowliPietrzacej/MapServer/WMSServer?"],
+        ["105", "Zbiornik Jeziorsko-miejsce uszkodzenia budowli piętrzącej", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiZycieZdrowiePotencjalneStraty_ZniszczenieBudowliPietrzacej/MapServer/WMSServer?"],
+        ["106", "Zbiornik Jeziorsko-budowle piętrzące", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiZycieZdrowiePotencjalneStraty_ZniszczenieBudowliPietrzacej/MapServer/WMSServer?"],
+        ["107", "Zbiornik Jeziorsko-skorowidz arkuszy", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiZycieZdrowiePotencjalneStraty_ZniszczenieBudowliPietrzacej/MapServer/WMSServer?"],
+        ["101", "Zbiornik Jeziorsko-wartości potencjalnych strat powodziowych", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiZycieZdrowiePotencjalneStraty_ZniszczenieBudowliPietrzacej/MapServer/WMSServer?"],
+        ["110", "Zbiornik Koronowo-obszar zagrożenia powodziowego", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiZycieZdrowiePotencjalneStraty_ZniszczenieBudowliPietrzacej/MapServer/WMSServer?"],
+        ["111", "Zbiornik Koronowo-budynki", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiZycieZdrowiePotencjalneStraty_ZniszczenieBudowliPietrzacej/MapServer/WMSServer?"],
+        ["112", "Zbiornik Koronowo-miejscowości zagrożone powodzią", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiZycieZdrowiePotencjalneStraty_ZniszczenieBudowliPietrzacej/MapServer/WMSServer?"],
+        ["113", "Zbiornik Koronowo-miejsce uszkodzenia budowli piętrzącej", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiZycieZdrowiePotencjalneStraty_ZniszczenieBudowliPietrzacej/MapServer/WMSServer?"],
+        ["114", "Zbiornik Koronowo-budowle piętrzące", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiZycieZdrowiePotencjalneStraty_ZniszczenieBudowliPietrzacej/MapServer/WMSServer?"],
+        ["115", "Zbiornik Koronowo-skorowidz arkuszy", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiZycieZdrowiePotencjalneStraty_ZniszczenieBudowliPietrzacej/MapServer/WMSServer?"],
+        ["109", "Zbiornik Koronowo-wartości potencjalnych strat powodziowych", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiZycieZdrowiePotencjalneStraty_ZniszczenieBudowliPietrzacej/MapServer/WMSServer?"],
+        ["118", "Zbiornik Mylof-obszar zagrożenia powodziowego", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiZycieZdrowiePotencjalneStraty_ZniszczenieBudowliPietrzacej/MapServer/WMSServer?"],
+        ["119", "Zbiornik Mylof-budynki", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiZycieZdrowiePotencjalneStraty_ZniszczenieBudowliPietrzacej/MapServer/WMSServer?"],
+        ["120", "Zbiornik Mylof-miejscowości zagrożone powodzią", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiZycieZdrowiePotencjalneStraty_ZniszczenieBudowliPietrzacej/MapServer/WMSServer?"],
+        ["121", "Zbiornik Mylof-miejsce uszkodzenia budowli piętrzącej", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiZycieZdrowiePotencjalneStraty_ZniszczenieBudowliPietrzacej/MapServer/WMSServer?"],
+        ["122", "Zbiornik Mylof-budowle piętrzące", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiZycieZdrowiePotencjalneStraty_ZniszczenieBudowliPietrzacej/MapServer/WMSServer?"],
+        ["123", "Zbiornik Mylof-skorowidz arkuszy", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiZycieZdrowiePotencjalneStraty_ZniszczenieBudowliPietrzacej/MapServer/WMSServer?"],
+        ["117", "Zbiornik Mylof-wartości potencjalnych strat powodziowych", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiZycieZdrowiePotencjalneStraty_ZniszczenieBudowliPietrzacej/MapServer/WMSServer?"],
+        ["126", "Zbiornik Nysa-obszar zagrożenia powodziowego", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiZycieZdrowiePotencjalneStraty_ZniszczenieBudowliPietrzacej/MapServer/WMSServer?"],
+        ["127", "Zbiornik Nysa-budynki", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiZycieZdrowiePotencjalneStraty_ZniszczenieBudowliPietrzacej/MapServer/WMSServer?"],
+        ["128", "Zbiornik Nysa-miejscowości zagrożone powodzią", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiZycieZdrowiePotencjalneStraty_ZniszczenieBudowliPietrzacej/MapServer/WMSServer?"],
+        ["129", "Zbiornik Nysa-miejsce uszkodzenia budowli piętrzącej", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiZycieZdrowiePotencjalneStraty_ZniszczenieBudowliPietrzacej/MapServer/WMSServer?"],
+        ["130", "Zbiornik Nysa-budowle piętrzące", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiZycieZdrowiePotencjalneStraty_ZniszczenieBudowliPietrzacej/MapServer/WMSServer?"],
+        ["131", "Zbiornik Nysa-skorowidz arkuszy", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiZycieZdrowiePotencjalneStraty_ZniszczenieBudowliPietrzacej/MapServer/WMSServer?"],
+        ["125", "Zbiornik Nysa-wartości potencjalnych strat powodziowych", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiZycieZdrowiePotencjalneStraty_ZniszczenieBudowliPietrzacej/MapServer/WMSServer?"],
+        ["134", "Zbiornik Otmuchów-obszar zagrożenia powodziowego", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiZycieZdrowiePotencjalneStraty_ZniszczenieBudowliPietrzacej/MapServer/WMSServer?"],
+        ["135", "Zbiornik Otmuchów-budynki", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiZycieZdrowiePotencjalneStraty_ZniszczenieBudowliPietrzacej/MapServer/WMSServer?"],
+        ["136", "Zbiornik Otmuchów-miejscowości zagrożone powodzią", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiZycieZdrowiePotencjalneStraty_ZniszczenieBudowliPietrzacej/MapServer/WMSServer?"],
+        ["137", "Zbiornik Otmuchów-miejsce uszkodzenia budowli piętrzącej", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiZycieZdrowiePotencjalneStraty_ZniszczenieBudowliPietrzacej/MapServer/WMSServer?"],
+        ["138", "Zbiornik Otmuchów-budowle piętrzące", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiZycieZdrowiePotencjalneStraty_ZniszczenieBudowliPietrzacej/MapServer/WMSServer?"],
+        ["139", "Zbiornik Otmuchów-skorowidz arkuszy", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiZycieZdrowiePotencjalneStraty_ZniszczenieBudowliPietrzacej/MapServer/WMSServer?"],
+        ["133", "Zbiornik Otmuchów-wartości potencjalnych strat powodziowych", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiZycieZdrowiePotencjalneStraty_ZniszczenieBudowliPietrzacej/MapServer/WMSServer?"],
+        ["142", "Zbiornik Pakość-obszar zagrożenia powodziowego", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiZycieZdrowiePotencjalneStraty_ZniszczenieBudowliPietrzacej/MapServer/WMSServer?"],
+        ["143", "Zbiornik Pakość-budynki", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiZycieZdrowiePotencjalneStraty_ZniszczenieBudowliPietrzacej/MapServer/WMSServer?"],
+        ["144", "Zbiornik Pakość-miejscowości zagrożone powodzią", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiZycieZdrowiePotencjalneStraty_ZniszczenieBudowliPietrzacej/MapServer/WMSServer?"],
+        ["145", "Zbiornik Pakość-miejsce uszkodzenia budowli piętrzącej", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiZycieZdrowiePotencjalneStraty_ZniszczenieBudowliPietrzacej/MapServer/WMSServer?"],
+        ["146", "Zbiornik Pakość-budowle piętrzące", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiZycieZdrowiePotencjalneStraty_ZniszczenieBudowliPietrzacej/MapServer/WMSServer?"],
+        ["147", "Zbiornik Pakość-skorowidz arkuszy", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiZycieZdrowiePotencjalneStraty_ZniszczenieBudowliPietrzacej/MapServer/WMSServer?"],
+        ["141", "Zbiornik Pakość-wartości potencjalnych strat powodziowych", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiZycieZdrowiePotencjalneStraty_ZniszczenieBudowliPietrzacej/MapServer/WMSServer?"],
+        ["150", "Zbiornik Porąbka-obszar zagrożenia powodziowego", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiZycieZdrowiePotencjalneStraty_ZniszczenieBudowliPietrzacej/MapServer/WMSServer?"],
+        ["151", "Zbiornik Porąbka-budynki", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiZycieZdrowiePotencjalneStraty_ZniszczenieBudowliPietrzacej/MapServer/WMSServer?"],
+        ["152", "Zbiornik Porąbka-miejscowości zagrożone powodzią", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiZycieZdrowiePotencjalneStraty_ZniszczenieBudowliPietrzacej/MapServer/WMSServer?"],
+        ["153", "Zbiornik Porąbka-miejsce uszkodzenia budowli piętrzącej", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiZycieZdrowiePotencjalneStraty_ZniszczenieBudowliPietrzacej/MapServer/WMSServer?"],
+        ["154", "Zbiornik Porąbka-budowle piętrzące", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiZycieZdrowiePotencjalneStraty_ZniszczenieBudowliPietrzacej/MapServer/WMSServer?"],
+        ["155", "Zbiornik Porąbka-skorowidz arkuszy", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiZycieZdrowiePotencjalneStraty_ZniszczenieBudowliPietrzacej/MapServer/WMSServer?"],
+        ["149", "Zbiornik Porąbka-wartości potencjalnych strat powodziowych", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiZycieZdrowiePotencjalneStraty_ZniszczenieBudowliPietrzacej/MapServer/WMSServer?"],
+        ["158", "Zbiornik Poraj-obszar zagrożenia powodziowego", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiZycieZdrowiePotencjalneStraty_ZniszczenieBudowliPietrzacej/MapServer/WMSServer?"],
+        ["159", "Zbiornik Poraj-budynki", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiZycieZdrowiePotencjalneStraty_ZniszczenieBudowliPietrzacej/MapServer/WMSServer?"],
+        ["160", "Zbiornik Poraj-miejscowości zagrożone powodzią", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiZycieZdrowiePotencjalneStraty_ZniszczenieBudowliPietrzacej/MapServer/WMSServer?"],
+        ["161", "Zbiornik Poraj-miejsce uszkodzenia budowli piętrzącej", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiZycieZdrowiePotencjalneStraty_ZniszczenieBudowliPietrzacej/MapServer/WMSServer?"],
+        ["162", "Zbiornik Poraj-budowle piętrzące", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiZycieZdrowiePotencjalneStraty_ZniszczenieBudowliPietrzacej/MapServer/WMSServer?"],
+        ["163", "Zbiornik Poraj-skorowidz arkuszy", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiZycieZdrowiePotencjalneStraty_ZniszczenieBudowliPietrzacej/MapServer/WMSServer?"],
+        ["157", "Zbiornik Poraj-wartości potencjalnych strat powodziowych", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiZycieZdrowiePotencjalneStraty_ZniszczenieBudowliPietrzacej/MapServer/WMSServer?"],
+        ["166", "Zbiornik Rożnów-obszar zagrożenia powodziowego", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiZycieZdrowiePotencjalneStraty_ZniszczenieBudowliPietrzacej/MapServer/WMSServer?"],
+        ["167", "Zbiornik Rożnów-budynki", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiZycieZdrowiePotencjalneStraty_ZniszczenieBudowliPietrzacej/MapServer/WMSServer?"],
+        ["168", "Zbiornik Rożnów-miejscowości zagrożone powodzią", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiZycieZdrowiePotencjalneStraty_ZniszczenieBudowliPietrzacej/MapServer/WMSServer?"],
+        ["169", "Zbiornik Rożnów-miejsce uszkodzenia budowli piętrzącej", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiZycieZdrowiePotencjalneStraty_ZniszczenieBudowliPietrzacej/MapServer/WMSServer?"],
+        ["170", "Zbiornik Rożnów-budowle piętrzące", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiZycieZdrowiePotencjalneStraty_ZniszczenieBudowliPietrzacej/MapServer/WMSServer?"],
+        ["171", "Zbiornik Rożnów-skorowidz arkuszy", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiZycieZdrowiePotencjalneStraty_ZniszczenieBudowliPietrzacej/MapServer/WMSServer?"],
+        ["165", "Zbiornik Rożnów-wartości potencjalnych strat powodziowych", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiZycieZdrowiePotencjalneStraty_ZniszczenieBudowliPietrzacej/MapServer/WMSServer?"],
+        ["174", "Zbiornik Solina-obszar zagrożenia powodziowego", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiZycieZdrowiePotencjalneStraty_ZniszczenieBudowliPietrzacej/MapServer/WMSServer?"],
+        ["175", "Zbiornik Solina-budynki", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiZycieZdrowiePotencjalneStraty_ZniszczenieBudowliPietrzacej/MapServer/WMSServer?"],
+        ["176", "Zbiornik Solina-miejscowości zagrożone powodzią", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiZycieZdrowiePotencjalneStraty_ZniszczenieBudowliPietrzacej/MapServer/WMSServer?"],
+        ["177", "Zbiornik Solina-miejsce uszkodzenia budowli piętrzącej", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiZycieZdrowiePotencjalneStraty_ZniszczenieBudowliPietrzacej/MapServer/WMSServer?"],
+        ["178", "Zbiornik Solina-budowle piętrzące", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiZycieZdrowiePotencjalneStraty_ZniszczenieBudowliPietrzacej/MapServer/WMSServer?"],
+        ["179", "Zbiornik Solina-skorowidz arkuszy", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiZycieZdrowiePotencjalneStraty_ZniszczenieBudowliPietrzacej/MapServer/WMSServer?"],
+        ["173", "Zbiornik Solina-wartości potencjalnych strat powodziowych", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiZycieZdrowiePotencjalneStraty_ZniszczenieBudowliPietrzacej/MapServer/WMSServer?"],
+        ["182", "Zbiornik Sulejów-obszar zagrożenia powodziowego", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiZycieZdrowiePotencjalneStraty_ZniszczenieBudowliPietrzacej/MapServer/WMSServer?"],
+        ["183", "Zbiornik Sulejów-budynki", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiZycieZdrowiePotencjalneStraty_ZniszczenieBudowliPietrzacej/MapServer/WMSServer?"],
+        ["184", "Zbiornik Sulejów-miejscowości zagrożone powodzią", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiZycieZdrowiePotencjalneStraty_ZniszczenieBudowliPietrzacej/MapServer/WMSServer?"],
+        ["185", "Zbiornik Sulejów-miejsce uszkodzenia budowli piętrzącej", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiZycieZdrowiePotencjalneStraty_ZniszczenieBudowliPietrzacej/MapServer/WMSServer?"],
+        ["186", "Zbiornik Sulejów-budowle piętrzące", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiZycieZdrowiePotencjalneStraty_ZniszczenieBudowliPietrzacej/MapServer/WMSServer?"],
+        ["187", "Zbiornik Sulejów-skorowidz arkuszy", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiZycieZdrowiePotencjalneStraty_ZniszczenieBudowliPietrzacej/MapServer/WMSServer?"],
+        ["181", "Zbiornik Sulejów-wartości potencjalnych strat powodziowych", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiZycieZdrowiePotencjalneStraty_ZniszczenieBudowliPietrzacej/MapServer/WMSServer?"],
+        ["190", "Zbiornik Tresna-obszar zagrożenia powodziowego", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiZycieZdrowiePotencjalneStraty_ZniszczenieBudowliPietrzacej/MapServer/WMSServer?"],
+        ["191", "Zbiornik Tresna-budynki", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiZycieZdrowiePotencjalneStraty_ZniszczenieBudowliPietrzacej/MapServer/WMSServer?"],
+        ["192", "Zbiornik Tresna-miejscowości zagrożone powodzią", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiZycieZdrowiePotencjalneStraty_ZniszczenieBudowliPietrzacej/MapServer/WMSServer?"],
+        ["193", "Zbiornik Tresna-miejsce uszkodzenia budowli piętrzącej", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiZycieZdrowiePotencjalneStraty_ZniszczenieBudowliPietrzacej/MapServer/WMSServer?"],
+        ["194", "Zbiornik Tresna-budowle piętrzące", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiZycieZdrowiePotencjalneStraty_ZniszczenieBudowliPietrzacej/MapServer/WMSServer?"],
+        ["195", "Zbiornik Tresna-skorowidz arkuszy", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiZycieZdrowiePotencjalneStraty_ZniszczenieBudowliPietrzacej/MapServer/WMSServer?"],
+        ["189", "Zbiornik Tresna-wartości potencjalnych strat powodziowych", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiZycieZdrowiePotencjalneStraty_ZniszczenieBudowliPietrzacej/MapServer/WMSServer?"],
+        ["198", "Zbiornik Turawa-obszar zagrożenia powodziowego", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiZycieZdrowiePotencjalneStraty_ZniszczenieBudowliPietrzacej/MapServer/WMSServer?"],
+        ["199", "Zbiornik Turawa-budynki", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiZycieZdrowiePotencjalneStraty_ZniszczenieBudowliPietrzacej/MapServer/WMSServer?"],
+        ["200", "Zbiornik Turawa-miejscowości zagrożone powodzią", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiZycieZdrowiePotencjalneStraty_ZniszczenieBudowliPietrzacej/MapServer/WMSServer?"],
+        ["201", "Zbiornik Turawa-miejsce uszkodzenia budowli piętrzącej", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiZycieZdrowiePotencjalneStraty_ZniszczenieBudowliPietrzacej/MapServer/WMSServer?"],
+        ["202", "Zbiornik Turawa-budowle piętrzące", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiZycieZdrowiePotencjalneStraty_ZniszczenieBudowliPietrzacej/MapServer/WMSServer?"],
+        ["203", "Zbiornik Turawa-skorowidz arkuszy", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiZycieZdrowiePotencjalneStraty_ZniszczenieBudowliPietrzacej/MapServer/WMSServer?"],
+        ["197", "Zbiornik Turawa-wartości potencjalnych strat powodziowych", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiZycieZdrowiePotencjalneStraty_ZniszczenieBudowliPietrzacej/MapServer/WMSServer?"],
+        ["206", "Zbiornik Włocławek-obszar zagrożenia powodziowego", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiZycieZdrowiePotencjalneStraty_ZniszczenieBudowliPietrzacej/MapServer/WMSServer?"],
+        ["207", "Zbiornik Włocławek-budynki", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiZycieZdrowiePotencjalneStraty_ZniszczenieBudowliPietrzacej/MapServer/WMSServer?"],
+        ["208", "Zbiornik Włocławek-miejscowości zagrożone powodzią", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiZycieZdrowiePotencjalneStraty_ZniszczenieBudowliPietrzacej/MapServer/WMSServer?"],
+        ["209", "Zbiornik Włocławek-miejsce uszkodzenia budowli piętrzącej", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiZycieZdrowiePotencjalneStraty_ZniszczenieBudowliPietrzacej/MapServer/WMSServer?"],
+        ["210", "Zbiornik Włocławek-budowle piętrzące", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiZycieZdrowiePotencjalneStraty_ZniszczenieBudowliPietrzacej/MapServer/WMSServer?"],
+        ["211", "Zbiornik Włocławek-skorowidz arkuszy", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiZycieZdrowiePotencjalneStraty_ZniszczenieBudowliPietrzacej/MapServer/WMSServer?"],
+        ["205", "Zbiornik Włocławek-wartości potencjalnych strat powodziowych", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiZycieZdrowiePotencjalneStraty_ZniszczenieBudowliPietrzacej/MapServer/WMSServer?"],
+        ["3", "warstwy referencyjne-wody powierzchniowe", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiZycieZdrowiePotencjalneStraty_ZniszczenieBudowliPietrzacej/MapServer/WMSServer?"]]
+        #UWAGA! Wykorzystano adres z mrp11 dla wartswy 2 w mrp12 (usługa w mrp12 nie wywietlała danych geometrycznych w zakresie cieków naturalnych i kanałów)
+        mrp12 = [["2", "warstwy referencyjne-cieki naturalne i kanały", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiZycieZdrowiePotencjalneStraty_ZniszczenieBudowliPietrzacej/MapServer/WMSServer?"],
+        ["161", "Warstwy wspólne-ogrody zoologiczne", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiSrodowiskoKulturaGospodarka_ZniszczenieBudowliPietrzacej/MapServer/WMSServer?"],
+        ["162", "Warstwy wspólne-obszary cenne kulturowo", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiSrodowiskoKulturaGospodarka_ZniszczenieBudowliPietrzacej/MapServer/WMSServer?"],
+        ["163", "Warstwy wspólne-składowisko odpadów", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiSrodowiskoKulturaGospodarka_ZniszczenieBudowliPietrzacej/MapServer/WMSServer?"],
+        ["164", "Warstwy wspólne-cmentarze", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiSrodowiskoKulturaGospodarka_ZniszczenieBudowliPietrzacej/MapServer/WMSServer?"],
+        ["165", "Warstwy wspólne-strefy ochronne ujęcia wody", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiSrodowiskoKulturaGospodarka_ZniszczenieBudowliPietrzacej/MapServer/WMSServer?"],
+        ["166", "Warstwy wspólne-formy ochrony przyrody", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiSrodowiskoKulturaGospodarka_ZniszczenieBudowliPietrzacej/MapServer/WMSServer?"],
+        ["167", "Warstwy wspólne-zapora boczna", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiSrodowiskoKulturaGospodarka_ZniszczenieBudowliPietrzacej/MapServer/WMSServer?"],
+        ["168", "Warstwy wspólne-wały przeciwpowodziowe", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiSrodowiskoKulturaGospodarka_ZniszczenieBudowliPietrzacej/MapServer/WMSServer?"],
+        ["169", "Warstwy wspólne-oczyszczalnie i przepompownie", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiSrodowiskoKulturaGospodarka_ZniszczenieBudowliPietrzacej/MapServer/WMSServer?"],
+        ["170", "Warstwy wspólne-zakłady przemysłowe", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiSrodowiskoKulturaGospodarka_ZniszczenieBudowliPietrzacej/MapServer/WMSServer?"],
+        ["171", "Warstwy wspólne-obiekty cenne kulturowo", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiSrodowiskoKulturaGospodarka_ZniszczenieBudowliPietrzacej/MapServer/WMSServer?"],
+        ["172", "Warstwy wspólne-kąpieliska", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiSrodowiskoKulturaGospodarka_ZniszczenieBudowliPietrzacej/MapServer/WMSServer?"],
+        ["173", "Warstwy wspólne-ujęcia wody", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiSrodowiskoKulturaGospodarka_ZniszczenieBudowliPietrzacej/MapServer/WMSServer?"],
+        ["174", "Warstwy wspólne-kilometraż rzeki", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiSrodowiskoKulturaGospodarka_ZniszczenieBudowliPietrzacej/MapServer/WMSServer?"],
+        ["6", "Zbiornik Świnna Poręba-obszar zagrożenia powodziowego", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiSrodowiskoKulturaGospodarka_ZniszczenieBudowliPietrzacej/MapServer/WMSServer?"],
+        ["7", "Zbiornik Świnna Poręba-miejsce uszkodzenia budowli piętrzącej", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiSrodowiskoKulturaGospodarka_ZniszczenieBudowliPietrzacej/MapServer/WMSServer?"],
+        ["8", "Zbiornik Świnna Poręba-budowle piętrzące", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiSrodowiskoKulturaGospodarka_ZniszczenieBudowliPietrzacej/MapServer/WMSServer?"],
+        ["9", "Zbiornik Świnna Poręba-skorowidz arkuszy", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiSrodowiskoKulturaGospodarka_ZniszczenieBudowliPietrzacej/MapServer/WMSServer?"],
+        ["5", "Zbiornik Świnna Poręba-klasy użytkowania terenu", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiSrodowiskoKulturaGospodarka_ZniszczenieBudowliPietrzacej/MapServer/WMSServer?"],
+        ["12", "Zbiornik Słup-obszar zagrożenia powodziowego", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiSrodowiskoKulturaGospodarka_ZniszczenieBudowliPietrzacej/MapServer/WMSServer?"],
+        ["13", "Zbiornik Słup-miejsce uszkodzenia budowli piętrzącej", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiSrodowiskoKulturaGospodarka_ZniszczenieBudowliPietrzacej/MapServer/WMSServer?"],
+        ["14", "Zbiornik Słup-budowle piętrzące", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiSrodowiskoKulturaGospodarka_ZniszczenieBudowliPietrzacej/MapServer/WMSServer?"],
+        ["15", "Zbiornik Słup-skorowidz arkuszy", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiSrodowiskoKulturaGospodarka_ZniszczenieBudowliPietrzacej/MapServer/WMSServer?"],
+        ["11", "Zbiornik Słup-klasy użytkowania terenu", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiSrodowiskoKulturaGospodarka_ZniszczenieBudowliPietrzacej/MapServer/WMSServer?"],
+        ["18", "Zbiornik Przeczyce-obszar zagrożenia powodziowego", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiSrodowiskoKulturaGospodarka_ZniszczenieBudowliPietrzacej/MapServer/WMSServer?"],
+        ["19", "Zbiornik Przeczyce-miejsce uszkodzenia budowli piętrzącej", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiSrodowiskoKulturaGospodarka_ZniszczenieBudowliPietrzacej/MapServer/WMSServer?"],
+        ["20", "Zbiornik Przeczyce-budowle piętrzące", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiSrodowiskoKulturaGospodarka_ZniszczenieBudowliPietrzacej/MapServer/WMSServer?"],
+        ["21", "Zbiornik Przeczyce-skorowidz arkuszy", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiSrodowiskoKulturaGospodarka_ZniszczenieBudowliPietrzacej/MapServer/WMSServer?"],
+        ["17", "Zbiornik Przeczyce-klasy użytkowania terenu", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiSrodowiskoKulturaGospodarka_ZniszczenieBudowliPietrzacej/MapServer/WMSServer?"],
+        ["24", "Zbiornik Mietków-obszar zagrożenia powodziowego", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiSrodowiskoKulturaGospodarka_ZniszczenieBudowliPietrzacej/MapServer/WMSServer?"],
+        ["25", "Zbiornik Mietków-miejsce uszkodzenia budowli piętrzącej", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiSrodowiskoKulturaGospodarka_ZniszczenieBudowliPietrzacej/MapServer/WMSServer?"],
+        ["26", "Zbiornik Mietków-budowle piętrzące", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiSrodowiskoKulturaGospodarka_ZniszczenieBudowliPietrzacej/MapServer/WMSServer?"],
+        ["27", "Zbiornik Mietków-skorowidz arkuszy", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiSrodowiskoKulturaGospodarka_ZniszczenieBudowliPietrzacej/MapServer/WMSServer?"],
+        ["23", "Zbiornik Mietków-klasy użytkowania terenu", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiSrodowiskoKulturaGospodarka_ZniszczenieBudowliPietrzacej/MapServer/WMSServer?"],
+        ["30", "Zbiornik Dobromierz-obszar zagrożenia powodziowego", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiSrodowiskoKulturaGospodarka_ZniszczenieBudowliPietrzacej/MapServer/WMSServer?"],
+        ["31", "Zbiornik Dobromierz-miejsce uszkodzenia budowli piętrzącej", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiSrodowiskoKulturaGospodarka_ZniszczenieBudowliPietrzacej/MapServer/WMSServer?"],
+        ["32", "Zbiornik Dobromierz-budowle piętrzące", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiSrodowiskoKulturaGospodarka_ZniszczenieBudowliPietrzacej/MapServer/WMSServer?"],
+        ["33", "Zbiornik Dobromierz-skorowidz arkuszy", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiSrodowiskoKulturaGospodarka_ZniszczenieBudowliPietrzacej/MapServer/WMSServer?"],
+        ["29", "Zbiornik Dobromierz-klasy użytkowania terenu", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiSrodowiskoKulturaGospodarka_ZniszczenieBudowliPietrzacej/MapServer/WMSServer?"],
+        ["36", "Zbiornik Chańcza-obszar zagrożenia powodziowego", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiSrodowiskoKulturaGospodarka_ZniszczenieBudowliPietrzacej/MapServer/WMSServer?"],
+        ["37", "Zbiornik Chańcza-miejsce uszkodzenia budowli piętrzącej", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiSrodowiskoKulturaGospodarka_ZniszczenieBudowliPietrzacej/MapServer/WMSServer?"],
+        ["38", "Zbiornik Chańcza-budowle piętrzące", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiSrodowiskoKulturaGospodarka_ZniszczenieBudowliPietrzacej/MapServer/WMSServer?"],
+        ["39", "Zbiornik Chańcza-skorowidz arkuszy", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiSrodowiskoKulturaGospodarka_ZniszczenieBudowliPietrzacej/MapServer/WMSServer?"],
+        ["35", "Zbiornik Chańcza-klasy użytkowania terenu", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiSrodowiskoKulturaGospodarka_ZniszczenieBudowliPietrzacej/MapServer/WMSServer?"],
+        ["42", "Zbiornik Besko-obszar zagrożenia powodziowego", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiSrodowiskoKulturaGospodarka_ZniszczenieBudowliPietrzacej/MapServer/WMSServer?"],
+        ["43", "Zbiornik Besko-miejsce uszkodzenia budowli piętrzącej", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiSrodowiskoKulturaGospodarka_ZniszczenieBudowliPietrzacej/MapServer/WMSServer?"],
+        ["44", "Zbiornik Besko-budowle piętrzące", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiSrodowiskoKulturaGospodarka_ZniszczenieBudowliPietrzacej/MapServer/WMSServer?"],
+        ["45", "Zbiornik Besko-skorowidz arkuszy", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiSrodowiskoKulturaGospodarka_ZniszczenieBudowliPietrzacej/MapServer/WMSServer?"],
+        ["41", "Zbiornik Besko-klasy użytkowania terenu", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiSrodowiskoKulturaGospodarka_ZniszczenieBudowliPietrzacej/MapServer/WMSServer?"],
+        ["48", "Zbiornik Bukówka-obszar zagrożenia powodziowego", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiSrodowiskoKulturaGospodarka_ZniszczenieBudowliPietrzacej/MapServer/WMSServer?"],
+        ["49", "Zbiornik Bukówka-miejsce uszkodzenia budowli piętrzącej", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiSrodowiskoKulturaGospodarka_ZniszczenieBudowliPietrzacej/MapServer/WMSServer?"],
+        ["50", "Zbiornik Bukówka-budowle piętrzące", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiSrodowiskoKulturaGospodarka_ZniszczenieBudowliPietrzacej/MapServer/WMSServer?"],
+        ["51", "Zbiornik Bukówka-skorowidz arkuszy", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiSrodowiskoKulturaGospodarka_ZniszczenieBudowliPietrzacej/MapServer/WMSServer?"],
+        ["47", "Zbiornik Bukówka-klasy użytkowania terenu", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiSrodowiskoKulturaGospodarka_ZniszczenieBudowliPietrzacej/MapServer/WMSServer?"],
+        ["54", "Zbiornik Czorsztyn-obszar zagrożenia powodziowego", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiSrodowiskoKulturaGospodarka_ZniszczenieBudowliPietrzacej/MapServer/WMSServer?"],
+        ["55", "Zbiornik Czorsztyn-miejsce uszkodzenia budowli piętrzącej", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiSrodowiskoKulturaGospodarka_ZniszczenieBudowliPietrzacej/MapServer/WMSServer?"],
+        ["56", "Zbiornik Czorsztyn-budowle piętrzące", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiSrodowiskoKulturaGospodarka_ZniszczenieBudowliPietrzacej/MapServer/WMSServer?"],
+        ["57", "Zbiornik Czorsztyn-skorowidz arkuszy", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiSrodowiskoKulturaGospodarka_ZniszczenieBudowliPietrzacej/MapServer/WMSServer?"],
+        ["53", "Zbiornik Czorsztyn-klasy użytkowania terenu", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiSrodowiskoKulturaGospodarka_ZniszczenieBudowliPietrzacej/MapServer/WMSServer?"],
+        ["60", "Zbiornik Dębe-obszar zagrożenia powodziowego", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiSrodowiskoKulturaGospodarka_ZniszczenieBudowliPietrzacej/MapServer/WMSServer?"],
+        ["61", "Zbiornik Dębe-miejsce uszkodzenia budowli piętrzącej", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiSrodowiskoKulturaGospodarka_ZniszczenieBudowliPietrzacej/MapServer/WMSServer?"],
+        ["62", "Zbiornik Dębe-budowle piętrzące", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiSrodowiskoKulturaGospodarka_ZniszczenieBudowliPietrzacej/MapServer/WMSServer?"],
+        ["63", "Zbiornik Dębe-skorowidz arkuszy", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiSrodowiskoKulturaGospodarka_ZniszczenieBudowliPietrzacej/MapServer/WMSServer?"],
+        ["59", "Zbiornik Dębe-klasy użytkowania terenu", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiSrodowiskoKulturaGospodarka_ZniszczenieBudowliPietrzacej/MapServer/WMSServer?"],
+        ["66", "Zbiornik Dobczyce-obszar zagrożenia powodziowego", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiSrodowiskoKulturaGospodarka_ZniszczenieBudowliPietrzacej/MapServer/WMSServer?"],
+        ["67", "Zbiornik Dobczyce-miejsce uszkodzenia budowli piętrzącej", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiSrodowiskoKulturaGospodarka_ZniszczenieBudowliPietrzacej/MapServer/WMSServer?"],
+        ["68", "Zbiornik Dobczyce-budowle piętrzące", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiSrodowiskoKulturaGospodarka_ZniszczenieBudowliPietrzacej/MapServer/WMSServer?"],
+        ["69", "Zbiornik Dobczyce-skorowidz arkuszy", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiSrodowiskoKulturaGospodarka_ZniszczenieBudowliPietrzacej/MapServer/WMSServer?"],
+        ["65", "Zbiornik Dobczyce-klasy użytkowania terenu", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiSrodowiskoKulturaGospodarka_ZniszczenieBudowliPietrzacej/MapServer/WMSServer?"],
+        ["72", "Zbiornik Goczałkowice-obszar zagrożenia powodziowego", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiSrodowiskoKulturaGospodarka_ZniszczenieBudowliPietrzacej/MapServer/WMSServer?"],
+        ["73", "Zbiornik Goczałkowice-miejsce uszkodzenia budowli piętrzącej", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiSrodowiskoKulturaGospodarka_ZniszczenieBudowliPietrzacej/MapServer/WMSServer?"],
+        ["74", "Zbiornik Goczałkowice-budowle piętrzące", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiSrodowiskoKulturaGospodarka_ZniszczenieBudowliPietrzacej/MapServer/WMSServer?"],
+        ["75", "Zbiornik Goczałkowice-skorowidz arkuszy", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiSrodowiskoKulturaGospodarka_ZniszczenieBudowliPietrzacej/MapServer/WMSServer?"],
+        ["71", "Zbiornik Goczałkowice-klasy użytkowania terenu", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiSrodowiskoKulturaGospodarka_ZniszczenieBudowliPietrzacej/MapServer/WMSServer?"],
+        ["78", "Zbiornik Jeziorsko-obszar zagrożenia powodziowego", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiSrodowiskoKulturaGospodarka_ZniszczenieBudowliPietrzacej/MapServer/WMSServer?"],
+        ["79", "Zbiornik Jeziorsko-miejsce uszkodzenia budowli piętrzącej", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiSrodowiskoKulturaGospodarka_ZniszczenieBudowliPietrzacej/MapServer/WMSServer?"],
+        ["80", "Zbiornik Jeziorsko-budowle piętrzące", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiSrodowiskoKulturaGospodarka_ZniszczenieBudowliPietrzacej/MapServer/WMSServer?"],
+        ["81", "Zbiornik Jeziorsko-skorowidz arkuszy", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiSrodowiskoKulturaGospodarka_ZniszczenieBudowliPietrzacej/MapServer/WMSServer?"],
+        ["77", "Zbiornik Jeziorsko-klasy użytkowania terenu", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiSrodowiskoKulturaGospodarka_ZniszczenieBudowliPietrzacej/MapServer/WMSServer?"],
+        ["84", "Zbiornik Koronowo-obszar zagrożenia powodziowego", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiSrodowiskoKulturaGospodarka_ZniszczenieBudowliPietrzacej/MapServer/WMSServer?"],
+        ["85", "Zbiornik Koronowo-miejsce uszkodzenia budowli piętrzącej", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiSrodowiskoKulturaGospodarka_ZniszczenieBudowliPietrzacej/MapServer/WMSServer?"],
+        ["86", "Zbiornik Koronowo-budowle piętrzące", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiSrodowiskoKulturaGospodarka_ZniszczenieBudowliPietrzacej/MapServer/WMSServer?"],
+        ["87", "Zbiornik Koronowo-skorowidz arkuszy", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiSrodowiskoKulturaGospodarka_ZniszczenieBudowliPietrzacej/MapServer/WMSServer?"],
+        ["83", "Zbiornik Koronowo-klasy użytkowania terenu", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiSrodowiskoKulturaGospodarka_ZniszczenieBudowliPietrzacej/MapServer/WMSServer?"],
+        ["90", "Zbiornik Mylof-obszar zagrożenia powodziowego", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiSrodowiskoKulturaGospodarka_ZniszczenieBudowliPietrzacej/MapServer/WMSServer?"],
+        ["91", "Zbiornik Mylof-miejsce uszkodzenia budowli piętrzącej", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiSrodowiskoKulturaGospodarka_ZniszczenieBudowliPietrzacej/MapServer/WMSServer?"],
+        ["92", "Zbiornik Mylof-budowle piętrzące", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiSrodowiskoKulturaGospodarka_ZniszczenieBudowliPietrzacej/MapServer/WMSServer?"],
+        ["93", "Zbiornik Mylof-skorowidz arkuszy", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiSrodowiskoKulturaGospodarka_ZniszczenieBudowliPietrzacej/MapServer/WMSServer?"],
+        ["89", "Zbiornik Mylof-klasy użytkowania terenu", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiSrodowiskoKulturaGospodarka_ZniszczenieBudowliPietrzacej/MapServer/WMSServer?"],
+        ["96", "Zbiornik Nysa-obszar zagrożenia powodziowego", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiSrodowiskoKulturaGospodarka_ZniszczenieBudowliPietrzacej/MapServer/WMSServer?"],
+        ["97", "Zbiornik Nysa-miejsce uszkodzenia budowli piętrzącej", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiSrodowiskoKulturaGospodarka_ZniszczenieBudowliPietrzacej/MapServer/WMSServer?"],
+        ["98", "Zbiornik Nysa-budowle piętrzące", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiSrodowiskoKulturaGospodarka_ZniszczenieBudowliPietrzacej/MapServer/WMSServer?"],
+        ["99", "Zbiornik Nysa-skorowidz arkuszy", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiSrodowiskoKulturaGospodarka_ZniszczenieBudowliPietrzacej/MapServer/WMSServer?"],
+        ["95", "Zbiornik Nysa-klasy użytkowania terenu", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiSrodowiskoKulturaGospodarka_ZniszczenieBudowliPietrzacej/MapServer/WMSServer?"],
+        ["102", "Zbiornik Otmuchów-obszar zagrożenia powodziowego", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiSrodowiskoKulturaGospodarka_ZniszczenieBudowliPietrzacej/MapServer/WMSServer?"],
+        ["103", "Zbiornik Otmuchów-miejsce uszkodzenia budowli piętrzącej", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiSrodowiskoKulturaGospodarka_ZniszczenieBudowliPietrzacej/MapServer/WMSServer?"],
+        ["104", "Zbiornik Otmuchów-budowle piętrzące", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiSrodowiskoKulturaGospodarka_ZniszczenieBudowliPietrzacej/MapServer/WMSServer?"],
+        ["105", "Zbiornik Otmuchów-skorowidz arkuszy", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiSrodowiskoKulturaGospodarka_ZniszczenieBudowliPietrzacej/MapServer/WMSServer?"],
+        ["101", "Zbiornik Otmuchów-klasy użytkowania terenu", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiSrodowiskoKulturaGospodarka_ZniszczenieBudowliPietrzacej/MapServer/WMSServer?"],
+        ["108", "Zbiornik Pakość-obszar zagrożenia powodziowego", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiSrodowiskoKulturaGospodarka_ZniszczenieBudowliPietrzacej/MapServer/WMSServer?"],
+        ["109", "Zbiornik Pakość-miejsce uszkodzenia budowli piętrzącej", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiSrodowiskoKulturaGospodarka_ZniszczenieBudowliPietrzacej/MapServer/WMSServer?"],
+        ["110", "Zbiornik Pakość-budowle piętrzące", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiSrodowiskoKulturaGospodarka_ZniszczenieBudowliPietrzacej/MapServer/WMSServer?"],
+        ["111", "Zbiornik Pakość-skorowidz arkuszy", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiSrodowiskoKulturaGospodarka_ZniszczenieBudowliPietrzacej/MapServer/WMSServer?"],
+        ["107", "Zbiornik Pakość-klasy użytkowania terenu", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiSrodowiskoKulturaGospodarka_ZniszczenieBudowliPietrzacej/MapServer/WMSServer?"],
+        ["114", "Zbiornik Porąbka-obszar zagrożenia powodziowego", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiSrodowiskoKulturaGospodarka_ZniszczenieBudowliPietrzacej/MapServer/WMSServer?"],
+        ["115", "Zbiornik Porąbka-miejsce uszkodzenia budowli piętrzącej", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiSrodowiskoKulturaGospodarka_ZniszczenieBudowliPietrzacej/MapServer/WMSServer?"],
+        ["116", "Zbiornik Porąbka-budowle piętrzące", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiSrodowiskoKulturaGospodarka_ZniszczenieBudowliPietrzacej/MapServer/WMSServer?"],
+        ["117", "Zbiornik Porąbka-skorowidz arkuszy", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiSrodowiskoKulturaGospodarka_ZniszczenieBudowliPietrzacej/MapServer/WMSServer?"],
+        ["113", "Zbiornik Porąbka-klasy użytkowania terenu", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiSrodowiskoKulturaGospodarka_ZniszczenieBudowliPietrzacej/MapServer/WMSServer?"],
+        ["120", "Zbiornik Poraj-obszar zagrożenia powodziowego", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiSrodowiskoKulturaGospodarka_ZniszczenieBudowliPietrzacej/MapServer/WMSServer?"],
+        ["121", "Zbiornik Poraj-miejsce uszkodzenia budowli piętrzącej", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiSrodowiskoKulturaGospodarka_ZniszczenieBudowliPietrzacej/MapServer/WMSServer?"],
+        ["122", "Zbiornik Poraj-budowle piętrzące", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiSrodowiskoKulturaGospodarka_ZniszczenieBudowliPietrzacej/MapServer/WMSServer?"],
+        ["123", "Zbiornik Poraj-skorowidz arkuszy", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiSrodowiskoKulturaGospodarka_ZniszczenieBudowliPietrzacej/MapServer/WMSServer?"],
+        ["119", "Zbiornik Poraj-klasy użytkowania terenu", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiSrodowiskoKulturaGospodarka_ZniszczenieBudowliPietrzacej/MapServer/WMSServer?"],
+        ["126", "Zbiornik Rożnów-obszar zagrożenia powodziowego", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiSrodowiskoKulturaGospodarka_ZniszczenieBudowliPietrzacej/MapServer/WMSServer?"],
+        ["127", "Zbiornik Rożnów-miejsce uszkodzenia budowli piętrzącej", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiSrodowiskoKulturaGospodarka_ZniszczenieBudowliPietrzacej/MapServer/WMSServer?"],
+        ["128", "Zbiornik Rożnów-budowle piętrzące", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiSrodowiskoKulturaGospodarka_ZniszczenieBudowliPietrzacej/MapServer/WMSServer?"],
+        ["129", "Zbiornik Rożnów-skorowidz arkuszy", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiSrodowiskoKulturaGospodarka_ZniszczenieBudowliPietrzacej/MapServer/WMSServer?"],
+        ["125", "Zbiornik Rożnów-klasy użytkowania terenu", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiSrodowiskoKulturaGospodarka_ZniszczenieBudowliPietrzacej/MapServer/WMSServer?"],
+        ["132", "Zbiornik Solina-obszar zagrożenia powodziowego", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiSrodowiskoKulturaGospodarka_ZniszczenieBudowliPietrzacej/MapServer/WMSServer?"],
+        ["133", "Zbiornik Solina-miejsce uszkodzenia budowli piętrzącej", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiSrodowiskoKulturaGospodarka_ZniszczenieBudowliPietrzacej/MapServer/WMSServer?"],
+        ["134", "Zbiornik Solina-budowle piętrzące", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiSrodowiskoKulturaGospodarka_ZniszczenieBudowliPietrzacej/MapServer/WMSServer?"],
+        ["135", "Zbiornik Solina-skorowidz arkuszy", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiSrodowiskoKulturaGospodarka_ZniszczenieBudowliPietrzacej/MapServer/WMSServer?"],
+        ["131", "Zbiornik Solina-klasy użytkowania terenu", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiSrodowiskoKulturaGospodarka_ZniszczenieBudowliPietrzacej/MapServer/WMSServer?"],
+        ["138", "Zbiornik Sulejów-obszar zagrożenia powodziowego", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiSrodowiskoKulturaGospodarka_ZniszczenieBudowliPietrzacej/MapServer/WMSServer?"],
+        ["139", "Zbiornik Sulejów-miejsce uszkodzenia budowli piętrzącej", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiSrodowiskoKulturaGospodarka_ZniszczenieBudowliPietrzacej/MapServer/WMSServer?"],
+        ["140", "Zbiornik Sulejów-budowle piętrzące", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiSrodowiskoKulturaGospodarka_ZniszczenieBudowliPietrzacej/MapServer/WMSServer?"],
+        ["141", "Zbiornik Sulejów-skorowidz arkuszy", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiSrodowiskoKulturaGospodarka_ZniszczenieBudowliPietrzacej/MapServer/WMSServer?"],
+        ["137", "Zbiornik Sulejów-klasy użytkowania terenu", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiSrodowiskoKulturaGospodarka_ZniszczenieBudowliPietrzacej/MapServer/WMSServer?"],
+        ["144", "Zbiornik Tresna-obszar zagrożenia powodziowego", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiSrodowiskoKulturaGospodarka_ZniszczenieBudowliPietrzacej/MapServer/WMSServer?"],
+        ["145", "Zbiornik Tresna-miejsce uszkodzenia budowli piętrzącej", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiSrodowiskoKulturaGospodarka_ZniszczenieBudowliPietrzacej/MapServer/WMSServer?"],
+        ["146", "Zbiornik Tresna-budowle piętrzące", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiSrodowiskoKulturaGospodarka_ZniszczenieBudowliPietrzacej/MapServer/WMSServer?"],
+        ["147", "Zbiornik Tresna-skorowidz arkuszy", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiSrodowiskoKulturaGospodarka_ZniszczenieBudowliPietrzacej/MapServer/WMSServer?"],
+        ["143", "Zbiornik Tresna-klasy użytkowania terenu", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiSrodowiskoKulturaGospodarka_ZniszczenieBudowliPietrzacej/MapServer/WMSServer?"],
+        ["150", "Zbiornik Turawa-obszar zagrożenia powodziowego", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiSrodowiskoKulturaGospodarka_ZniszczenieBudowliPietrzacej/MapServer/WMSServer?"],
+        ["151", "Zbiornik Turawa-miejsce uszkodzenia budowli piętrzącej", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiSrodowiskoKulturaGospodarka_ZniszczenieBudowliPietrzacej/MapServer/WMSServer?"],
+        ["152", "Zbiornik Turawa-budowle piętrzące", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiSrodowiskoKulturaGospodarka_ZniszczenieBudowliPietrzacej/MapServer/WMSServer?"],
+        ["153", "Zbiornik Turawa-skorowidz arkuszy", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiSrodowiskoKulturaGospodarka_ZniszczenieBudowliPietrzacej/MapServer/WMSServer?"],
+        ["149", "Zbiornik Turawa-klasy użytkowania terenu", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiSrodowiskoKulturaGospodarka_ZniszczenieBudowliPietrzacej/MapServer/WMSServer?"],
+        ["156", "Zbiornik Włocławek-obszar zagrożenia powodziowego", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiSrodowiskoKulturaGospodarka_ZniszczenieBudowliPietrzacej/MapServer/WMSServer?"],
+        ["157", "Zbiornik Włocławek-miejsce uszkodzenia budowli piętrzącej", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiSrodowiskoKulturaGospodarka_ZniszczenieBudowliPietrzacej/MapServer/WMSServer?"],
+        ["158", "Zbiornik Włocławek-budowle piętrzące", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiSrodowiskoKulturaGospodarka_ZniszczenieBudowliPietrzacej/MapServer/WMSServer?"],
+        ["159", "Zbiornik Włocławek-skorowidz arkuszy", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiSrodowiskoKulturaGospodarka_ZniszczenieBudowliPietrzacej/MapServer/WMSServer?"],
+        ["155", "Zbiornik Włocławek-klasy użytkowania terenu", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiSrodowiskoKulturaGospodarka_ZniszczenieBudowliPietrzacej/MapServer/WMSServer?"],
+        ["3", "warstwy referencyjne-wody powierzchniowe", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiSrodowiskoKulturaGospodarka_ZniszczenieBudowliPietrzacej/MapServer/WMSServer?"]]
+        
+        ppss = [["7", "Lista zadań inwestycyjnych związanych ze zwiększeniem retencji korytowej w zlewniach na obszarach wiejskich-Załącznik 2", "https://wody.isok.gov.pl/gpservices/KZGW/ISOK_PPSS_WMS/MapServer/WMSServer?"],
+        ["8", "Lista zadań inwestycyjnych z PPI służących zwiększeniu retencji oraz wspierających przeciwdziałanie skutkom susz-Załącznik 1", "https://wody.isok.gov.pl/gpservices/KZGW/ISOK_PPSS_WMS/MapServer/WMSServer?"],
+        ["0", "Łączne zagrożenie suszą", "https://wody.isok.gov.pl/gpservices/KZGW/ISOK_PPSS_WMS/MapServer/WMSServer"],
+        ["1", "Zagrożenie suszą hydrogeologiczną", "https://wody.isok.gov.pl/gpservices/KZGW/ISOK_PPSS_WMS/MapServer/WMSServer?"],
+        ["2", "Zagrożenie suszą hydrologiczną", "https://wody.isok.gov.pl/gpservices/KZGW/ISOK_PPSS_WMS/MapServer/WMSServer?"],
+        ["3", "Zagrożenie suszą rolniczą", "https://wody.isok.gov.pl/gpservices/KZGW/ISOK_PPSS_WMS/MapServer/WMSServer?"],
+        ["4", "Zagrożenie suszą atmosferyczną", "https://wody.isok.gov.pl/gpservices/KZGW/ISOK_PPSS_WMS/MapServer/WMSServer?"],
+        ["6", "Lista zadań inwestycyjnych zgłoszonych przez podmioty zew. (spoza PGWWP)-Załącznik 3", "https://wody.isok.gov.pl/gpservices/KZGW/ISOK_PPSS_WMS/MapServer/WMSServer?"]]
         
         """Run method that performs all the real work"""
         
@@ -658,6 +1116,12 @@ class WodyPolskieWMS:
             self.first_start = False
             self.dlg = WodyPolskieWMSDialog()
             #MPHP10k - wywołanie funkcji przycisków
+            self.dlg.pbMPHP.clicked.connect(self.add_group_mphp)
+            self.dlg.pbMPHP.clicked.connect(self.add_wms_mphp_sekcje)
+            self.dlg.pbMPHP.clicked.connect(self.add_wms_mphp_nazwy_ciek)
+            self.dlg.pbMPHP.clicked.connect(self.add_wms_mphp_nazwy_jezior)
+            self.dlg.pbMPHP.clicked.connect(self.add_wms_mphp_wezly_dzial)
+            self.dlg.pbMPHP.clicked.connect(self.add_wms_mphp_wezly_ciek)
             self.dlg.pbMPHP.clicked.connect(self.add_wms_mphp_dzialy)
             self.dlg.pbMPHP.clicked.connect(self.add_wms_mphp_zlewnie1)
             self.dlg.pbMPHP.clicked.connect(self.add_wms_mphp_zlewnie2)
@@ -679,66 +1143,69 @@ class WodyPolskieWMS:
             self.dlg.pbMPHP.clicked.connect(self.add_wms_mphp_cieki_s)
             self.dlg.pbMPHP.clicked.connect(self.add_wms_mphp_jeziora)
             self.dlg.pbMPHP.clicked.connect(self.add_wms_mphp_morza)
-            self.dlg.pbMPHP.clicked.connect(self.add_wms_mphp_wezly_dzial)
-            self.dlg.pbMPHP.clicked.connect(self.add_wms_mphp_wezly_ciek)
-            self.dlg.pbMPHP.clicked.connect(self.add_wms_mphp_sekcje)
-            self.dlg.pbMPHP.clicked.connect(self.add_wms_mphp_nazwy_ciek)
-            self.dlg.pbMPHP.clicked.connect(self.add_wms_mphp_nazwy_jezior)
             
             #Granice PGWWP - wywołanie funkcji przycisku
-            self.dlg.pbPGWWP.clicked.connect(lambda: self.add_wms(PGWWP))
+            #self.dlg.pbPGWWP.clicked.connect(self.add_group_pgwwp)
+            self.dlg.pbPGWWP.clicked.connect(lambda: self.add_wms(PGWWP, "PGWWP"))
             #aPGW - wywołanie funkcji przycisków
-            self.dlg.pbaPGW.clicked.connect(lambda: self.add_wms(aPGW))
+            #self.dlg.pbaPGW.clicked.connect(self.add_group_apgw)
+            self.dlg.pbaPGW.clicked.connect(lambda: self.add_wms(aPGW, "aPGW"))
             #WORP1 - od morza - wywołanie funkcji przycisku
-            self.dlg.pbWORP1.clicked.connect(lambda: self.add_wms(worp1))
+            self.dlg.pbWORP1.clicked.connect(lambda: self.add_wms(worp1, "WORP-ONNP-od morza"))
             #WORP2 - rzeczne - wywołanie funkcji przycisków
-            self.dlg.pbWORP2.clicked.connect(lambda: self.add_wms(worp2))
+            self.dlg.pbWORP2.clicked.connect(lambda: self.add_wms(worp2, "WORP-ONNP-rzeczne"))
             #WORP3 - zniszczenie budowli piętrzących - wywołanie funkcji przycisku
-            self.dlg.pbWORP3.clicked.connect(lambda: self.add_wms(worp3))
+            self.dlg.pbWORP3.clicked.connect(lambda: self.add_wms(worp3, "WORP-ONNP-zniszczenie budowli piętrzących"))
             #WORP4 - Powodzie historyczne, powodzie prawdopodobne - wywołanie funkcji przycisku
-            self.dlg.pbWORP4.clicked.connect(lambda: self.add_wms(worp4))
+            self.dlg.pbWORP4.clicked.connect(lambda: self.add_wms(worp4, "WORP-powodzie historyczne, prawdopodobne"))
             #MZP1 - MZP z głębokością wody 0,2%, raz na 500 lat dla powodzi rzecznych oraz od strony morza - wywołanie funkcji przyciskuw 
-            self.dlg.pbMZP1.clicked.connect(lambda: self.add_wms(mzp1))
+            self.dlg.pbMZP1.clicked.connect(lambda: self.add_wms(mzp1, "MZP z głębokością wody-0,2%(raz na 500 lat)"))
             #MZP2 - MZP z głębokością wody 1%, raz na 100 lat dla powodzi rzecznych oraz od strony morza - wywołanie funkcji przycisków 
-            self.dlg.pbMZP2.clicked.connect(lambda: self.add_wms(mzp2))
+            self.dlg.pbMZP2.clicked.connect(lambda: self.add_wms(mzp2, "MZP z głębokością wody-1%(raz na 100 lat)"))
             #MZP3 - MZP z głębokością wody 10%, raz na 10 lat - wywołanie funkcji przycisków 
-            self.dlg.pbMZP3.clicked.connect(lambda: self.add_wms(mzp3))
+            self.dlg.pbMZP3.clicked.connect(lambda: self.add_wms(mzp3, "MZP z głębokością wody-10%(raz na 10 lat)"))
             #MZP4 - MZP z prędkością przepływu wody 0,2%, raz na 500 lat - wywołanie funkcji przycisków 
-            self.dlg.pbMZP4.clicked.connect(lambda: self.add_wms(mzp4))
+            self.dlg.pbMZP4.clicked.connect(lambda: self.add_wms(mzp4, "MZP z prędkością wody-0,2%(raz na 500 lat)"))
             #MZP5 - MZP z prędkością przepływu wody 1%, raz na 100 lat - wywołanie funkcji przycisków 
-            self.dlg.pbMZP5.clicked.connect(lambda: self.add_wms(mzp5))
+            self.dlg.pbMZP5.clicked.connect(lambda: self.add_wms(mzp5, "MZP z prędkością wody-1%(raz na 100 lat)"))
             #MZP6 - MZP z prędkością przepływu wody 10%, raz na 10 lat - wywołanie funkcji przycisków 
-            self.dlg.pbMZP6.clicked.connect(lambda: self.add_wms(mzp6))
+            self.dlg.pbMZP6.clicked.connect(lambda: self.add_wms(mzp6, "MZP z prędkością wody-10%(raz na 10 lat)"))
             #MZP7 - MZP - całkowite zniszczenie wału przeciwpowodziowego - wywołanie funkcji przycisków 
-            self.dlg.pbMZP7.clicked.connect(lambda: self.add_wms(mzp7))
+            self.dlg.pbMZP7.clicked.connect(lambda: self.add_wms(mzp7, "MZP-zniszczenie wału przeciwpowodziowego"))
             #MZP8 - MZP - zniszczenie lub uszkodzenie budowli piętrzącej - wywołanie funkcji przycisków 
-            self.dlg.pbMZP8.clicked.connect(lambda: self.add_wms(mzp8))
+            self.dlg.pbMZP8.clicked.connect(lambda: self.add_wms(mzp8, "MZP-zniszczenie lub uszkodzenie budowli piętrzącej"))
             #MZP9 - MZP od strony morza - całkowite zniszczenie wału przeciwsztormowego - wywołanie funkcji przycisków 
-            self.dlg.pbMZP9.clicked.connect(lambda: self.add_wms(mzp9))
+            self.dlg.pbMZP9.clicked.connect(lambda: self.add_wms(mzp9, "MZP od strony morza-całkowite zniszczenie wału przeciwsztormowego"))
             #MZP10 - MZP - Obszary szczególnego zagrożenia powodzią
-            self.dlg.pbMZP10.clicked.connect(lambda: self.add_wms(mzp10))
+            self.dlg.pbMZP10.clicked.connect(lambda: self.add_wms(mzp10, "MZP-Obszary szczególnego zagrożenia powodzią"))
             #MZP11 - MZP - Mapa orientacyjna
-            self.dlg.pbMZP11.clicked.connect(lambda: self.add_wms(mzp11))
+            #self.dlg.pbMZP11.clicked.connect(lambda: self.add_wms(mzp11, "MZP-Mapa orientacyjna"))
             #MRP1 - MRP - MRP 10% potencjalne negatywne konsekwencje dla życia i zdrowia ludzi oraz wartości potencjalnych strat
-            self.dlg.pbMRP1.clicked.connect(lambda: self.add_wms(mrp1))
+            self.dlg.pbMRP1.clicked.connect(lambda: self.add_wms(mrp1, "MRP 10% (raz na 10lat) negatywne konsekwencje dla życia i zdrowia ludzi"))
             #MRP2 - MRP - MRP 1% potencjalne negatywne konsekwencje dla życia i zdrowia ludzi oraz wartości potencjalnych strat
-            self.dlg.pbMRP2.clicked.connect(lambda: self.add_wms(mrp2))
+            self.dlg.pbMRP2.clicked.connect(lambda: self.add_wms(mrp2, "MRP 1% (raz na 100lat) negatywne konsekwencje dla życia i zdrowia ludzi"))
             #MRP3 - MRP - MRP 0,2% potencjalne negatywne konsekwencje dla życia i zdrowia ludzi oraz wartości potencjalnych strat
-            self.dlg.pbMRP3.clicked.connect(lambda: self.add_wms(mrp3))
+            self.dlg.pbMRP3.clicked.connect(lambda: self.add_wms(mrp3, "MRP 0,2% (raz na 500lat) negatywne konsekwencje dla życia i zdrowia ludzi"))
             #MRP4 - MRP - całkowite zniszczenie wału przeciwpowodziowego - potencjalne negatywne skutki dla życia i zdrowia ludzi oraz wartości potencjalnych strat powodziowych
-            self.dlg.pbMRP4.clicked.connect(lambda: self.add_wms(mrp4))
+            self.dlg.pbMRP4.clicked.connect(lambda: self.add_wms(mrp4, "MRP-zniszczenie wału przeciwpow.-negatywne skutki dla życia i zdrowia ludzi"))
             #MRP5 - MRP - całkowite zniszczenie wału przeciwsztormowego - potencjalne negatywne skutki dla życia i zdrowia ludzi oraz wartości potencjalnych strat powodziowych
-            self.dlg.pbMRP5.clicked.connect(lambda: self.add_wms(mrp5))
+            self.dlg.pbMRP5.clicked.connect(lambda: self.add_wms(mrp5, "MRP-zniszczenie wału przeciwsztorm.-negatywne skutki dla życia i zdrowia ludzi"))
             #MRP6 - MRP 10% negatywne konsekwencje dla środowiska, dziedzictwa kulturowego i działalności gospodarczej
-            self.dlg.pbMRP6.clicked.connect(lambda: self.add_wms(mrp6))
+            self.dlg.pbMRP6.clicked.connect(lambda: self.add_wms(mrp6, "MRP 10%(raz na 10lat) negatywne konsekwencje dla środowiska, dziedzictwa kulturowego i działalności gosp."))
             #MRP7 - MRP 1% negatywne konsekwencje dla środowiska, dziedzictwa kulturowego i działalności gospodarczej
-            self.dlg.pbMRP7.clicked.connect(lambda: self.add_wms(mrp7))
+            self.dlg.pbMRP7.clicked.connect(lambda: self.add_wms(mrp7, "MRP 1%(raz na 100lat) negatywne konsekwencje dla środowiska, dziedzictwa kult. i działalności gosp."))
             #MRP8 - MRP 0,2% negatywne konsekwencje dla środowiska, dziedzictwa kulturowego i działalności gospodarczej
-            self.dlg.pbMRP8.clicked.connect(lambda: self.add_wms(mrp8))
+            self.dlg.pbMRP8.clicked.connect(lambda: self.add_wms(mrp8, "MRP 0,2%(raz na 500lat) negatywne konsekwencje dla środowiska, dziedzictwa kult. i działalności gosp."))
             #MRP9 - MRP - całkowite zniszczenie wału powodziowego - potencjalne negatywne skutki dla środowiska, dziedzictwa kulturowego i działalności gospodarczej
-            self.dlg.pbMRP9.clicked.connect(lambda: self.add_wms(mrp9))
+            self.dlg.pbMRP9.clicked.connect(lambda: self.add_wms(mrp9, "MRP-zniszczenie wału przeciwpow.-negatywne skutki dla środowiska, dziedzictwa kult. i działalności gosp."))
             #MRP10 - MRP - całkowite zniszczenie wału powodziowego - potencjalne negatywne skutki dla środowiska, dziedzictwa kulturowego i działalności gospodarczej
-            self.dlg.pbMRP10.clicked.connect(lambda: self.add_wms(mrp10))
+            self.dlg.pbMRP10.clicked.connect(lambda: self.add_wms(mrp10, "MRP-zniszczenie wału przeciwsztorm.-negatywne skutki dla środowiska, dziedzictwa kult. i działalności gosp."))
+            #MRP11 - MRP-zniszczenie lub uszkodzenie budowli piętrzącej-negatywne skutki dla życia i zdrowia ludzi
+            self.dlg.pbMRP11.clicked.connect(lambda: self.add_wms(mrp11, "MRP-zniszczenie lub uszkodzenie budowli piętrzącej-negatywne skutki dla życia i zdrowia ludzi"))
+            #MRP12 - MRP-zniszczenie lub uszkodzenie budowli piętrzącej-negatywne skutki dla środowiska, dziedzictwa kult. i działalności gosp.
+            self.dlg.pbMRP12.clicked.connect(lambda: self.add_wms(mrp12, "MRP-zniszczenie lub uszkodzenie budowli piętrzącej-negatywne skutki dla środowiska, dziedzictwa kult. i działalności gosp."))
+            #PPSS
+            self.dlg.pbPPSS.clicked.connect(lambda: self.add_wms(ppss, "PPSS"))
             
         # show the dialog
         self.dlg.show()
@@ -749,8 +1216,18 @@ class WodyPolskieWMS:
             # Do something useful here - delete the line containing pass and
             # substitute with your code.
             pass
+    def add_group_apgw(self):
+            global root
+            root = QgsProject.instance().layerTreeRoot()
+            global aPGW
+            aPGW = root.addGroup("aPGW")
+
+
             
-    def add_wms(self, usluga):
+    def add_wms(self, usluga, nazwa):
+            root = QgsProject.instance().layerTreeRoot()
+            global grupa
+            grupa = root.addGroup(nazwa)
             for warstwa in usluga:
                     url = ("contextualWMSLegend=0&"
                             "crs=EPSG:2180&"
@@ -763,296 +1240,17 @@ class WodyPolskieWMS:
                     layer = QgsRasterLayer(url, warstwa[1], 'wms')
                     layer.setCustomProperty("PGWWP", "wms_pgwwp_layer")
                     self.wms_pgwwp_layer = layer
-                    QgsProject.instance().addMapLayer(self.wms_pgwwp_layer)
+                    grupa.addLayer(QgsProject.instance().addMapLayer(self.wms_pgwwp_layer, False))
+                    #aPGW.addLayer(self.wms_pgwwp_layer)
+                    #PGWWP.addLayer(self.wms_pgwwp_layer)
                     self.dlg.pbPGWWP.setEnabled(True)
                     
-    #MPHP10k - działy wodne
-    def add_wms_mphp_dzialy(self):
-            url = ("contextualWMSLegend=0&"
-                    "crs=EPSG:2180&"
-                    "dpiMode=7&"
-                    "format=image/png&"
-                    "layers=0&"
-                    "styles=&"
-                    "version=1.3.0&"
-                    "url=https://wody.isok.gov.pl/gpservices/KZGW/ISOK_MPHP/MapServer/WMSServer")
-            layer = QgsRasterLayer(url, 'MPHP10k-działy wodne', 'wms')
-            layer.setCustomProperty("MPHP10k", "wms_mphp_layer")
-            self.wms_mphp_layer = layer
-            QgsProject.instance().addMapLayer(self.wms_mphp_layer)
-            self.dlg.pbMPHP.setEnabled(True)
-            
-    #MPHP10k - Zlewnie poziomu 1      
-    def add_wms_mphp_zlewnie1(self):
-            url = ("contextualWMSLegend=0&"
-                    "crs=EPSG:2180&"
-                    "dpiMode=7&"
-                    "format=image/png&"
-                    "layers=1&"
-                    "styles=&"
-                    "version=1.3.0&"
-                    "url=https://wody.isok.gov.pl/gpservices/KZGW/ISOK_MPHP/MapServer/WMSServer")
-            layer = QgsRasterLayer(url, 'MPHP10k-zlewnie poziomu 1', 'wms')
-            layer.setCustomProperty("MPHP10k", "wms_mphp_layer")
-            self.wms_mphp_layer = layer
-            QgsProject.instance().addMapLayer(self.wms_mphp_layer)
-            self.dlg.pbMPHP.setEnabled(True)
-            
-    #MPHP10k - Zlewnie poziomu 2      
-    def add_wms_mphp_zlewnie2(self):
-            url = ("contextualWMSLegend=0&"
-                    "crs=EPSG:2180&"
-                    "dpiMode=7&"
-                    "format=image/png&"
-                    "layers=2&"
-                    "styles=&"
-                    "version=1.3.0&"
-                    "url=https://wody.isok.gov.pl/gpservices/KZGW/ISOK_MPHP/MapServer/WMSServer")
-            layer = QgsRasterLayer(url, 'MPHP10k-zlewnie poziomu 2', 'wms')
-            layer.setCustomProperty("MPHP10k", "wms_mphp_layer")
-            self.wms_mphp_layer = layer
-            QgsProject.instance().addMapLayer(self.wms_mphp_layer)
-            self.dlg.pbMPHP.setEnabled(True)
-            
-    #MPHP10k - Zlewnie poziomu 3      
-    def add_wms_mphp_zlewnie3(self):
-            url = ("contextualWMSLegend=0&"
-                    "crs=EPSG:2180&"
-                    "dpiMode=7&"
-                    "format=image/png&"
-                    "layers=3&"
-                    "styles=&"
-                    "version=1.3.0&"
-                    "url=https://wody.isok.gov.pl/gpservices/KZGW/ISOK_MPHP/MapServer/WMSServer")
-            layer = QgsRasterLayer(url, 'MPHP10k-zlewnie poziomu 3', 'wms')
-            layer.setCustomProperty("MPHP10k", "wms_mphp_layer")
-            self.wms_mphp_layer = layer
-            QgsProject.instance().addMapLayer(self.wms_mphp_layer)
-            self.dlg.pbMPHP.setEnabled(True)
-            
-    #MPHP10k - Zlewnie poziomu 4      
-    def add_wms_mphp_zlewnie4(self):
-            url = ("contextualWMSLegend=0&"
-                    "crs=EPSG:2180&"
-                    "dpiMode=7&"
-                    "format=image/png&"
-                    "layers=4&"
-                    "styles=&"
-                    "version=1.3.0&"
-                    "url=https://wody.isok.gov.pl/gpservices/KZGW/ISOK_MPHP/MapServer/WMSServer")
-            layer = QgsRasterLayer(url, 'MPHP10k-zlewnie poziomu 4', 'wms')
-            layer.setCustomProperty("MPHP10k", "wms_mphp_layer")
-            self.wms_mphp_layer = layer
-            QgsProject.instance().addMapLayer(self.wms_mphp_layer)
-            self.dlg.pbMPHP.setEnabled(True)
-            
-    #MPHP10k - Zlewnie poziomu 5      
-    def add_wms_mphp_zlewnie5(self):
-            url = ("contextualWMSLegend=0&"
-                    "crs=EPSG:2180&"
-                    "dpiMode=7&"
-                    "format=image/png&"
-                    "layers=5&"
-                    "styles=&"
-                    "version=1.3.0&"
-                    "url=https://wody.isok.gov.pl/gpservices/KZGW/ISOK_MPHP/MapServer/WMSServer")
-            layer = QgsRasterLayer(url, 'MPHP10k-zlewnie poziomu 5', 'wms')
-            layer.setCustomProperty("MPHP10k", "wms_mphp_layer")
-            self.wms_mphp_layer = layer
-            QgsProject.instance().addMapLayer(self.wms_mphp_layer)
-            self.dlg.pbMPHP.setEnabled(True)
-            
-    #MPHP10k - Zlewnie poziomu 6      
-    def add_wms_mphp_zlewnie6(self):
-            url = ("contextualWMSLegend=0&"
-                    "crs=EPSG:2180&"
-                    "dpiMode=7&"
-                    "format=image/png&"
-                    "layers=6&"
-                    "styles=&"
-                    "version=1.3.0&"
-                    "url=https://wody.isok.gov.pl/gpservices/KZGW/ISOK_MPHP/MapServer/WMSServer")
-            layer = QgsRasterLayer(url, 'MPHP10k-zlewnie poziomu 6', 'wms')
-            layer.setCustomProperty("MPHP10k", "wms_mphp_layer")
-            self.wms_mphp_layer = layer
-            QgsProject.instance().addMapLayer(self.wms_mphp_layer)
-            self.dlg.pbMPHP.setEnabled(True)
-            
-    #MPHP10k - Zlewnie poziomu 7      
-    def add_wms_mphp_zlewnie7(self):
-            url = ("contextualWMSLegend=0&"
-                    "crs=EPSG:2180&"
-                    "dpiMode=7&"
-                    "format=image/png&"
-                    "layers=7&"
-                    "styles=&"
-                    "version=1.3.0&"
-                    "url=https://wody.isok.gov.pl/gpservices/KZGW/ISOK_MPHP/MapServer/WMSServer")
-            layer = QgsRasterLayer(url, 'MPHP10k-zlewnie poziomu 7', 'wms')
-            layer.setCustomProperty("MPHP10k", "wms_mphp_layer")
-            self.wms_mphp_layer = layer
-            QgsProject.instance().addMapLayer(self.wms_mphp_layer)
-            self.dlg.pbMPHP.setEnabled(True)
-            
-                #MPHP10k - Zlewnie poziomu 8      
-    def add_wms_mphp_zlewnie8(self):
-            url = ("contextualWMSLegend=0&"
-                    "crs=EPSG:2180&"
-                    "dpiMode=7&"
-                    "format=image/png&"
-                    "layers=8&"
-                    "styles=&"
-                    "version=1.3.0&"
-                    "url=https://wody.isok.gov.pl/gpservices/KZGW/ISOK_MPHP/MapServer/WMSServer")
-            layer = QgsRasterLayer(url, 'MPHP10k-zlewnie poziomu 8', 'wms')
-            layer.setCustomProperty("MPHP10k", "wms_mphp_layer")
-            self.wms_mphp_layer = layer
-            QgsProject.instance().addMapLayer(self.wms_mphp_layer)
-            self.dlg.pbMPHP.setEnabled(True)
-            
-    #MPHP10k - Zlewnie poziomu 9      
-    def add_wms_mphp_zlewnie9(self):
-            url = ("contextualWMSLegend=0&"
-                    "crs=EPSG:2180&"
-                    "dpiMode=7&"
-                    "format=image/png&"
-                    "layers=9&"
-                    "styles=&"
-                    "version=1.3.0&"
-                    "url=https://wody.isok.gov.pl/gpservices/KZGW/ISOK_MPHP/MapServer/WMSServer")
-            layer = QgsRasterLayer(url, 'MPHP10k-zlewnie poziomu 9', 'wms')
-            layer.setCustomProperty("MPHP10k", "wms_mphp_layer")
-            self.wms_mphp_layer = layer
-            QgsProject.instance().addMapLayer(self.wms_mphp_layer)
-            self.dlg.pbMPHP.setEnabled(True)
-            
-    #MPHP10k - Zlewnie poziomu 10      
-    def add_wms_mphp_zlewnie10(self):
-            url = ("contextualWMSLegend=0&"
-                    "crs=EPSG:2180&"
-                    "dpiMode=7&"
-                    "format=image/png&"
-                    "layers=10&"
-                    "styles=&"
-                    "version=1.3.0&"
-                    "url=https://wody.isok.gov.pl/gpservices/KZGW/ISOK_MPHP/MapServer/WMSServer")
-            layer = QgsRasterLayer(url, 'MPHP10k-zlewnie poziomu 10', 'wms')
-            layer.setCustomProperty("MPHP10k", "wms_mphp_layer")
-            self.wms_mphp_layer = layer
-            QgsProject.instance().addMapLayer(self.wms_mphp_layer)
-            self.dlg.pbMPHP.setEnabled(True)
-            
-    #MPHP10k - Zlewnie poziomu 11      
-    def add_wms_mphp_zlewnie11(self):
-            url = ("contextualWMSLegend=0&"
-                    "crs=EPSG:2180&"
-                    "dpiMode=7&"
-                    "format=image/png&"
-                    "layers=11&"
-                    "styles=&"
-                    "version=1.3.0&"
-                    "url=https://wody.isok.gov.pl/gpservices/KZGW/ISOK_MPHP/MapServer/WMSServer")
-            layer = QgsRasterLayer(url, 'MPHP10k-zlewnie poziomu 11', 'wms')
-            layer.setCustomProperty("MPHP10k", "wms_mphp_layer")
-            self.wms_mphp_layer = layer
-            QgsProject.instance().addMapLayer(self.wms_mphp_layer)
-            self.dlg.pbMPHP.setEnabled(True)
-            
-    #MPHP10k - Zlewnie poziomu 12      
-    def add_wms_mphp_zlewnie12(self):
-            url = ("contextualWMSLegend=0&"
-                    "crs=EPSG:2180&"
-                    "dpiMode=7&"
-                    "format=image/png&"
-                    "layers=12&"
-                    "styles=&"
-                    "version=1.3.0&"
-                    "url=https://wody.isok.gov.pl/gpservices/KZGW/ISOK_MPHP/MapServer/WMSServer")
-            layer = QgsRasterLayer(url, 'MPHP10k-zlewnie poziomu 12', 'wms')
-            layer.setCustomProperty("MPHP10k", "wms_mphp_layer")
-            self.wms_mphp_layer = layer
-            QgsProject.instance().addMapLayer(self.wms_mphp_layer)
-            self.dlg.pbMPHP.setEnabled(True)
-            
-    #MPHP10k - Zlewnie poziomu 13      
-    def add_wms_mphp_zlewnie13(self):
-            url = ("contextualWMSLegend=0&"
-                    "crs=EPSG:2180&"
-                    "dpiMode=7&"
-                    "format=image/png&"
-                    "layers=13&"
-                    "styles=&"
-                    "version=1.3.0&"
-                    "url=https://wody.isok.gov.pl/gpservices/KZGW/ISOK_MPHP/MapServer/WMSServer")
-            layer = QgsRasterLayer(url, 'MPHP10k-zlewnie poziomu 13', 'wms')
-            layer.setCustomProperty("MPHP10k", "wms_mphp_layer")
-            self.wms_mphp_layer = layer
-            QgsProject.instance().addMapLayer(self.wms_mphp_layer)
-            self.dlg.pbMPHP.setEnabled(True)
-            
-    #MPHP10k - Zlewnie poziomu 14      
-    def add_wms_mphp_zlewnie14(self):
-            url = ("contextualWMSLegend=0&"
-                    "crs=EPSG:2180&"
-                    "dpiMode=7&"
-                    "format=image/png&"
-                    "layers=14&"
-                    "styles=&"
-                    "version=1.3.0&"
-                    "url=https://wody.isok.gov.pl/gpservices/KZGW/ISOK_MPHP/MapServer/WMSServer")
-            layer = QgsRasterLayer(url, 'MPHP10k-zlewnie poziomu 14', 'wms')
-            layer.setCustomProperty("MPHP10k", "wms_mphp_layer")
-            self.wms_mphp_layer = layer
-            QgsProject.instance().addMapLayer(self.wms_mphp_layer)
-            self.dlg.pbMPHP.setEnabled(True)
-            
-    #MPHP10k - zlewnie elementarne      
-    def add_wms_mphp_zlew_element(self):
-            url = ("contextualWMSLegend=0&"
-                    "crs=EPSG:2180&"
-                    "dpiMode=7&"
-                    "format=image/png&"
-                    "layers=15&"
-                    "styles=&"
-                    "version=1.3.0&"
-                    "url=https://wody.isok.gov.pl/gpservices/KZGW/ISOK_MPHP/MapServer/WMSServer")
-            layer = QgsRasterLayer(url, 'MPHP10k-zlewnie elementarne', 'wms')
-            layer.setCustomProperty("MPHP10k", "wms_mphp_layer")
-            self.wms_mphp_layer = layer
-            QgsProject.instance().addMapLayer(self.wms_mphp_layer)
-            self.dlg.pbMPHP.setEnabled(True)
-
-    #MPHP10k - cieki  
-    def add_wms_mphp_cieki(self):
-            url = ("contextualWMSLegend=0&"
-                    "crs=EPSG:2180&"
-                    "dpiMode=7&"
-                    "format=image/png&"
-                    "layers=16&layers=17&layers=18&"
-                    "styles=&styles=&styles=&"
-                    "version=1.3.0&"
-                    "url=https://wody.isok.gov.pl/gpservices/KZGW/ISOK_MPHP/MapServer/WMSServer")
-            layer = QgsRasterLayer(url, 'MPHP10k-cieki', 'wms')
-            layer.setCustomProperty("MPHP10k", "wms_mphp_layer")
-            self.wms_mphp_layer = layer
-            QgsProject.instance().addMapLayer(self.wms_mphp_layer)
-            self.dlg.pbMPHP.setEnabled(True)
-            
-    #MPHP10k - odcinki cieków  
-    def add_wms_mphp_odcinki_ciek(self):
-            url = ("contextualWMSLegend=0&"
-                    "crs=EPSG:2180&"
-                    "dpiMode=7&"
-                    "format=image/png&"
-                    "layers=19&"
-                    "styles=&"
-                    "version=1.3.0&"
-                    "url=https://wody.isok.gov.pl/gpservices/KZGW/ISOK_MPHP/MapServer/WMSServer")
-            layer = QgsRasterLayer(url, 'MPHP10k-odcinki cieków (skala od 75k)', 'wms')
-            layer.setCustomProperty("MPHP10k", "wms_mphp_layer")
-            self.wms_mphp_layer = layer
-            QgsProject.instance().addMapLayer(self.wms_mphp_layer)
-            self.dlg.pbMPHP.setEnabled(True)
+                    
+    def add_group_mphp(self):
+            global root
+            root = QgsProject.instance().layerTreeRoot()
+            global MPHP10k
+            MPHP10k = root.addGroup("MPHP10k")
             
     #MPHP10k - cieki szerokie 
     def add_wms_mphp_cieki_s(self):
@@ -1064,12 +1262,12 @@ class WodyPolskieWMS:
                     "styles=&"
                     "version=1.3.0&"
                     "url=https://wody.isok.gov.pl/gpservices/KZGW/ISOK_MPHP/MapServer/WMSServer")
-            layer = QgsRasterLayer(url, 'MPHP10k-cieki szerokie (skala od 75k)', 'wms')
+            layer = QgsRasterLayer(url, 'Cieki szerokie (skala od 75k)', 'wms')
             layer.setCustomProperty("MPHP10k", "wms_mphp_layer")
             self.wms_mphp_layer = layer
-            QgsProject.instance().addMapLayer(self.wms_mphp_layer)
+            QgsProject.instance().addMapLayer(self.wms_mphp_layer, False)
+            MPHP10k.addLayer(self.wms_mphp_layer)
             self.dlg.pbMPHP.setEnabled(True)
-            
     #MPHP10k - jeziora 
     def add_wms_mphp_jeziora(self):
             url = ("contextualWMSLegend=0&"
@@ -1080,10 +1278,11 @@ class WodyPolskieWMS:
                     "styles=&styles=&"
                     "version=1.3.0&"
                     "url=https://wody.isok.gov.pl/gpservices/KZGW/ISOK_MPHP/MapServer/WMSServer")
-            layer = QgsRasterLayer(url, 'MPHP10k-jeziora', 'wms')
+            layer = QgsRasterLayer(url, 'Jeziora', 'wms')
             layer.setCustomProperty("MPHP10k", "wms_mphp_layer")
             self.wms_mphp_layer = layer
-            QgsProject.instance().addMapLayer(self.wms_mphp_layer)
+            QgsProject.instance().addMapLayer(self.wms_mphp_layer, False)
+            MPHP10k.addLayer(self.wms_mphp_layer)
             self.dlg.pbMPHP.setEnabled(True)
                         
     #MPHP10k - Morza i zatoki 
@@ -1096,11 +1295,322 @@ class WodyPolskieWMS:
                     "styles=&"
                     "version=1.3.0&"
                     "url=https://wody.isok.gov.pl/gpservices/KZGW/ISOK_MPHP/MapServer/WMSServer")
-            layer = QgsRasterLayer(url, 'MPHP10k-morza i zatoki', 'wms')
+            layer = QgsRasterLayer(url, 'Morza i zatoki', 'wms')
             layer.setCustomProperty("MPHP10k", "wms_mphp_layer")
             self.wms_mphp_layer = layer
-            QgsProject.instance().addMapLayer(self.wms_mphp_layer)
+            QgsProject.instance().addMapLayer(self.wms_mphp_layer, False)
+            MPHP10k.addLayer(self.wms_mphp_layer)
             self.dlg.pbMPHP.setEnabled(True)
+    #MPHP10k - działy wodne
+    def add_wms_mphp_dzialy(self):
+            url = ("contextualWMSLegend=0&"
+                    "crs=EPSG:2180&"
+                    "dpiMode=7&"
+                    "format=image/png&"
+                    "layers=0&"
+                    "styles=&"
+                    "version=1.3.0&"
+                    "url=https://wody.isok.gov.pl/gpservices/KZGW/ISOK_MPHP/MapServer/WMSServer")
+            layer = QgsRasterLayer(url, 'Działy wodne', 'wms')
+            layer.setCustomProperty("MPHP10k", "wms_mphp_layer")
+            self.wms_mphp_layer = layer
+            QgsProject.instance().addMapLayer(self.wms_mphp_layer, False)
+            MPHP10k.addLayer(self.wms_mphp_layer)
+            self.dlg.pbMPHP.setEnabled(True)
+            
+    #MPHP10k - Zlewnie poziomu 1      
+    def add_wms_mphp_zlewnie1(self):
+            #root = QgsProject.instance().layerTreeRoot()
+            #MPHP10k = root.addGroup("MPHP10k")
+            url = ("contextualWMSLegend=0&"
+                    "crs=EPSG:2180&"
+                    "dpiMode=7&"
+                    "format=image/png&"
+                    "layers=1&"
+                    "styles=&"
+                    "version=1.3.0&"
+                    "url=https://wody.isok.gov.pl/gpservices/KZGW/ISOK_MPHP/MapServer/WMSServer")
+            layer = QgsRasterLayer(url, 'Zlewnie poziomu 1', 'wms')
+            layer.setCustomProperty("MPHP10k", "wms_mphp_layer")
+            self.wms_mphp_layer = layer
+            QgsProject.instance().addMapLayer(self.wms_mphp_layer, False)
+            MPHP10k.addLayer(self.wms_mphp_layer)
+            self.dlg.pbMPHP.setEnabled(True)
+            
+            
+    #MPHP10k - Zlewnie poziomu 2      
+    def add_wms_mphp_zlewnie2(self):
+            url = ("contextualWMSLegend=0&"
+                    "crs=EPSG:2180&"
+                    "dpiMode=7&"
+                    "format=image/png&"
+                    "layers=2&"
+                    "styles=&"
+                    "version=1.3.0&"
+                    "url=https://wody.isok.gov.pl/gpservices/KZGW/ISOK_MPHP/MapServer/WMSServer")
+            layer = QgsRasterLayer(url, 'Zlewnie poziomu 2', 'wms')
+            layer.setCustomProperty("MPHP10k", "wms_mphp_layer")
+            self.wms_mphp_layer = layer
+            QgsProject.instance().addMapLayer(self.wms_mphp_layer, False)
+            MPHP10k.addLayer(self.wms_mphp_layer)
+            self.dlg.pbMPHP.setEnabled(True)
+            
+    #MPHP10k - Zlewnie poziomu 3      
+    def add_wms_mphp_zlewnie3(self):
+            url = ("contextualWMSLegend=0&"
+                    "crs=EPSG:2180&"
+                    "dpiMode=7&"
+                    "format=image/png&"
+                    "layers=3&"
+                    "styles=&"
+                    "version=1.3.0&"
+                    "url=https://wody.isok.gov.pl/gpservices/KZGW/ISOK_MPHP/MapServer/WMSServer")
+            layer = QgsRasterLayer(url, 'Zlewnie poziomu 3', 'wms')
+            layer.setCustomProperty("MPHP10k", "wms_mphp_layer")
+            self.wms_mphp_layer = layer
+            QgsProject.instance().addMapLayer(self.wms_mphp_layer, False)
+            MPHP10k.addLayer(self.wms_mphp_layer)
+            self.dlg.pbMPHP.setEnabled(True)
+            
+    #MPHP10k - Zlewnie poziomu 4      
+    def add_wms_mphp_zlewnie4(self):
+            url = ("contextualWMSLegend=0&"
+                    "crs=EPSG:2180&"
+                    "dpiMode=7&"
+                    "format=image/png&"
+                    "layers=4&"
+                    "styles=&"
+                    "version=1.3.0&"
+                    "url=https://wody.isok.gov.pl/gpservices/KZGW/ISOK_MPHP/MapServer/WMSServer")
+            layer = QgsRasterLayer(url, 'Zlewnie poziomu 4', 'wms')
+            layer.setCustomProperty("MPHP10k", "wms_mphp_layer")
+            self.wms_mphp_layer = layer
+            QgsProject.instance().addMapLayer(self.wms_mphp_layer, False)
+            MPHP10k.addLayer(self.wms_mphp_layer)
+            self.dlg.pbMPHP.setEnabled(True)
+            
+    #MPHP10k - Zlewnie poziomu 5      
+    def add_wms_mphp_zlewnie5(self):
+            url = ("contextualWMSLegend=0&"
+                    "crs=EPSG:2180&"
+                    "dpiMode=7&"
+                    "format=image/png&"
+                    "layers=5&"
+                    "styles=&"
+                    "version=1.3.0&"
+                    "url=https://wody.isok.gov.pl/gpservices/KZGW/ISOK_MPHP/MapServer/WMSServer")
+            layer = QgsRasterLayer(url, 'Zlewnie poziomu 5', 'wms')
+            layer.setCustomProperty("MPHP10k", "wms_mphp_layer")
+            self.wms_mphp_layer = layer
+            QgsProject.instance().addMapLayer(self.wms_mphp_layer, False)
+            MPHP10k.addLayer(self.wms_mphp_layer)
+            self.dlg.pbMPHP.setEnabled(True)
+            
+    #MPHP10k - Zlewnie poziomu 6      
+    def add_wms_mphp_zlewnie6(self):
+            url = ("contextualWMSLegend=0&"
+                    "crs=EPSG:2180&"
+                    "dpiMode=7&"
+                    "format=image/png&"
+                    "layers=6&"
+                    "styles=&"
+                    "version=1.3.0&"
+                    "url=https://wody.isok.gov.pl/gpservices/KZGW/ISOK_MPHP/MapServer/WMSServer")
+            layer = QgsRasterLayer(url, 'Zlewnie poziomu 6', 'wms')
+            layer.setCustomProperty("MPHP10k", "wms_mphp_layer")
+            self.wms_mphp_layer = layer
+            QgsProject.instance().addMapLayer(self.wms_mphp_layer, False)
+            MPHP10k.addLayer(self.wms_mphp_layer)
+            self.dlg.pbMPHP.setEnabled(True)
+            
+    #MPHP10k - Zlewnie poziomu 7      
+    def add_wms_mphp_zlewnie7(self):
+            url = ("contextualWMSLegend=0&"
+                    "crs=EPSG:2180&"
+                    "dpiMode=7&"
+                    "format=image/png&"
+                    "layers=7&"
+                    "styles=&"
+                    "version=1.3.0&"
+                    "url=https://wody.isok.gov.pl/gpservices/KZGW/ISOK_MPHP/MapServer/WMSServer")
+            layer = QgsRasterLayer(url, 'Zlewnie poziomu 7', 'wms')
+            layer.setCustomProperty("MPHP10k", "wms_mphp_layer")
+            self.wms_mphp_layer = layer
+            QgsProject.instance().addMapLayer(self.wms_mphp_layer, False)
+            MPHP10k.addLayer(self.wms_mphp_layer)
+            self.dlg.pbMPHP.setEnabled(True)
+            
+                #MPHP10k - Zlewnie poziomu 8      
+    def add_wms_mphp_zlewnie8(self):
+            url = ("contextualWMSLegend=0&"
+                    "crs=EPSG:2180&"
+                    "dpiMode=7&"
+                    "format=image/png&"
+                    "layers=8&"
+                    "styles=&"
+                    "version=1.3.0&"
+                    "url=https://wody.isok.gov.pl/gpservices/KZGW/ISOK_MPHP/MapServer/WMSServer")
+            layer = QgsRasterLayer(url, 'Zlewnie poziomu 8', 'wms')
+            layer.setCustomProperty("MPHP10k", "wms_mphp_layer")
+            self.wms_mphp_layer = layer
+            QgsProject.instance().addMapLayer(self.wms_mphp_layer, False)
+            MPHP10k.addLayer(self.wms_mphp_layer)
+            self.dlg.pbMPHP.setEnabled(True)
+            
+    #MPHP10k - Zlewnie poziomu 9      
+    def add_wms_mphp_zlewnie9(self):
+            url = ("contextualWMSLegend=0&"
+                    "crs=EPSG:2180&"
+                    "dpiMode=7&"
+                    "format=image/png&"
+                    "layers=9&"
+                    "styles=&"
+                    "version=1.3.0&"
+                    "url=https://wody.isok.gov.pl/gpservices/KZGW/ISOK_MPHP/MapServer/WMSServer")
+            layer = QgsRasterLayer(url, 'Zlewnie poziomu 9', 'wms')
+            layer.setCustomProperty("MPHP10k", "wms_mphp_layer")
+            self.wms_mphp_layer = layer
+            QgsProject.instance().addMapLayer(self.wms_mphp_layer, False)
+            MPHP10k.addLayer(self.wms_mphp_layer)
+            self.dlg.pbMPHP.setEnabled(True)
+            
+    #MPHP10k - Zlewnie poziomu 10      
+    def add_wms_mphp_zlewnie10(self):
+            url = ("contextualWMSLegend=0&"
+                    "crs=EPSG:2180&"
+                    "dpiMode=7&"
+                    "format=image/png&"
+                    "layers=10&"
+                    "styles=&"
+                    "version=1.3.0&"
+                    "url=https://wody.isok.gov.pl/gpservices/KZGW/ISOK_MPHP/MapServer/WMSServer")
+            layer = QgsRasterLayer(url, 'Zlewnie poziomu 10', 'wms')
+            layer.setCustomProperty("MPHP10k", "wms_mphp_layer")
+            self.wms_mphp_layer = layer
+            QgsProject.instance().addMapLayer(self.wms_mphp_layer, False)
+            MPHP10k.addLayer(self.wms_mphp_layer)
+            self.dlg.pbMPHP.setEnabled(True)
+            
+    #MPHP10k - Zlewnie poziomu 11      
+    def add_wms_mphp_zlewnie11(self):
+            url = ("contextualWMSLegend=0&"
+                    "crs=EPSG:2180&"
+                    "dpiMode=7&"
+                    "format=image/png&"
+                    "layers=11&"
+                    "styles=&"
+                    "version=1.3.0&"
+                    "url=https://wody.isok.gov.pl/gpservices/KZGW/ISOK_MPHP/MapServer/WMSServer")
+            layer = QgsRasterLayer(url, 'Zlewnie poziomu 11', 'wms')
+            layer.setCustomProperty("MPHP10k", "wms_mphp_layer")
+            self.wms_mphp_layer = layer
+            QgsProject.instance().addMapLayer(self.wms_mphp_layer, False)
+            MPHP10k.addLayer(self.wms_mphp_layer)
+            self.dlg.pbMPHP.setEnabled(True)
+            
+    #MPHP10k - Zlewnie poziomu 12      
+    def add_wms_mphp_zlewnie12(self):
+            url = ("contextualWMSLegend=0&"
+                    "crs=EPSG:2180&"
+                    "dpiMode=7&"
+                    "format=image/png&"
+                    "layers=12&"
+                    "styles=&"
+                    "version=1.3.0&"
+                    "url=https://wody.isok.gov.pl/gpservices/KZGW/ISOK_MPHP/MapServer/WMSServer")
+            layer = QgsRasterLayer(url, 'Zlewnie poziomu 12', 'wms')
+            layer.setCustomProperty("MPHP10k", "wms_mphp_layer")
+            self.wms_mphp_layer = layer
+            QgsProject.instance().addMapLayer(self.wms_mphp_layer, False)
+            MPHP10k.addLayer(self.wms_mphp_layer)
+            self.dlg.pbMPHP.setEnabled(True)
+            
+    #MPHP10k - Zlewnie poziomu 13      
+    def add_wms_mphp_zlewnie13(self):
+            url = ("contextualWMSLegend=0&"
+                    "crs=EPSG:2180&"
+                    "dpiMode=7&"
+                    "format=image/png&"
+                    "layers=13&"
+                    "styles=&"
+                    "version=1.3.0&"
+                    "url=https://wody.isok.gov.pl/gpservices/KZGW/ISOK_MPHP/MapServer/WMSServer")
+            layer = QgsRasterLayer(url, 'Zlewnie poziomu 13', 'wms')
+            layer.setCustomProperty("MPHP10k", "wms_mphp_layer")
+            self.wms_mphp_layer = layer
+            QgsProject.instance().addMapLayer(self.wms_mphp_layer, False)
+            MPHP10k.addLayer(self.wms_mphp_layer)
+            self.dlg.pbMPHP.setEnabled(True)
+            
+    #MPHP10k - Zlewnie poziomu 14      
+    def add_wms_mphp_zlewnie14(self):
+            url = ("contextualWMSLegend=0&"
+                    "crs=EPSG:2180&"
+                    "dpiMode=7&"
+                    "format=image/png&"
+                    "layers=14&"
+                    "styles=&"
+                    "version=1.3.0&"
+                    "url=https://wody.isok.gov.pl/gpservices/KZGW/ISOK_MPHP/MapServer/WMSServer")
+            layer = QgsRasterLayer(url, 'Zlewnie poziomu 14', 'wms')
+            layer.setCustomProperty("MPHP10k", "wms_mphp_layer")
+            self.wms_mphp_layer = layer
+            QgsProject.instance().addMapLayer(self.wms_mphp_layer, False)
+            MPHP10k.addLayer(self.wms_mphp_layer)
+            self.dlg.pbMPHP.setEnabled(True)
+            
+    #MPHP10k - zlewnie elementarne      
+    def add_wms_mphp_zlew_element(self):
+            url = ("contextualWMSLegend=0&"
+                    "crs=EPSG:2180&"
+                    "dpiMode=7&"
+                    "format=image/png&"
+                    "layers=15&"
+                    "styles=&"
+                    "version=1.3.0&"
+                    "url=https://wody.isok.gov.pl/gpservices/KZGW/ISOK_MPHP/MapServer/WMSServer")
+            layer = QgsRasterLayer(url, 'Zlewnie elementarne', 'wms')
+            layer.setCustomProperty("MPHP10k", "wms_mphp_layer")
+            self.wms_mphp_layer = layer
+            QgsProject.instance().addMapLayer(self.wms_mphp_layer, False)
+            MPHP10k.addLayer(self.wms_mphp_layer)
+            self.dlg.pbMPHP.setEnabled(True)
+
+    #MPHP10k - cieki  
+    def add_wms_mphp_cieki(self):
+            url = ("contextualWMSLegend=0&"
+                    "crs=EPSG:2180&"
+                    "dpiMode=7&"
+                    "format=image/png&"
+                    "layers=16&layers=17&layers=18&"
+                    "styles=&styles=&styles=&"
+                    "version=1.3.0&"
+                    "url=https://wody.isok.gov.pl/gpservices/KZGW/ISOK_MPHP/MapServer/WMSServer")
+            layer = QgsRasterLayer(url, 'Cieki', 'wms')
+            layer.setCustomProperty("MPHP10k", "wms_mphp_layer")
+            self.wms_mphp_layer = layer
+            QgsProject.instance().addMapLayer(self.wms_mphp_layer, False)
+            MPHP10k.addLayer(self.wms_mphp_layer)
+            self.dlg.pbMPHP.setEnabled(True)
+            
+    #MPHP10k - odcinki cieków  
+    def add_wms_mphp_odcinki_ciek(self):
+            url = ("contextualWMSLegend=0&"
+                    "crs=EPSG:2180&"
+                    "dpiMode=7&"
+                    "format=image/png&"
+                    "layers=19&"
+                    "styles=&"
+                    "version=1.3.0&"
+                    "url=https://wody.isok.gov.pl/gpservices/KZGW/ISOK_MPHP/MapServer/WMSServer")
+            layer = QgsRasterLayer(url, 'Odcinki cieków (skala od 75k)', 'wms')
+            layer.setCustomProperty("MPHP10k", "wms_mphp_layer")
+            self.wms_mphp_layer = layer
+            QgsProject.instance().addMapLayer(self.wms_mphp_layer, False)
+            MPHP10k.addLayer(self.wms_mphp_layer)
+            self.dlg.pbMPHP.setEnabled(True)
+            
+
             
     #MPHP10k - Węzły na działach wodnych 
     def add_wms_mphp_wezly_dzial(self):
@@ -1112,10 +1622,11 @@ class WodyPolskieWMS:
                     "styles=&"
                     "version=1.3.0&"
                     "url=https://wody.isok.gov.pl/gpservices/KZGW/ISOK_MPHP/MapServer/WMSServer")
-            layer = QgsRasterLayer(url, 'MPHP10k-węzły na działach wodnych', 'wms')
+            layer = QgsRasterLayer(url, 'Węzły na działach wodnych', 'wms')
             layer.setCustomProperty("MPHP10k", "wms_mphp_layer")
             self.wms_mphp_layer = layer
-            QgsProject.instance().addMapLayer(self.wms_mphp_layer)
+            QgsProject.instance().addMapLayer(self.wms_mphp_layer, False)
+            MPHP10k.addLayer(self.wms_mphp_layer)
             self.dlg.pbMPHP.setEnabled(True)
             
     #MPHP10k - Węzły na ciekach wyróżnionych 
@@ -1128,10 +1639,11 @@ class WodyPolskieWMS:
                     "styles=&"
                     "version=1.3.0&"
                     "url=https://wody.isok.gov.pl/gpservices/KZGW/ISOK_MPHP/MapServer/WMSServer")
-            layer = QgsRasterLayer(url, 'MPHP10k-węzły na ciekach wyróżnionych', 'wms')
+            layer = QgsRasterLayer(url, 'Węzły na ciekach wyróżnionych', 'wms')
             layer.setCustomProperty("MPHP10k", "wms_mphp_layer")
             self.wms_mphp_layer = layer
-            QgsProject.instance().addMapLayer(self.wms_mphp_layer)
+            QgsProject.instance().addMapLayer(self.wms_mphp_layer, False)
+            MPHP10k.addLayer(self.wms_mphp_layer)
             self.dlg.pbMPHP.setEnabled(True)
             
     #MPHP10k - Sekcje mapy 
@@ -1144,10 +1656,11 @@ class WodyPolskieWMS:
                     "styles=&"
                     "version=1.3.0&"
                     "url=https://wody.isok.gov.pl/gpservices/KZGW/ISOK_MPHP/MapServer/WMSServer")
-            layer = QgsRasterLayer(url, 'MPHP10k-sekcje mapy', 'wms')
+            layer = QgsRasterLayer(url, 'Sekcje mapy', 'wms')
             layer.setCustomProperty("MPHP10k", "wms_mphp_layer")
             self.wms_mphp_layer = layer
-            QgsProject.instance().addMapLayer(self.wms_mphp_layer)
+            QgsProject.instance().addMapLayer(self.wms_mphp_layer, False)
+            MPHP10k.addLayer(self.wms_mphp_layer)
             self.dlg.pbMPHP.setEnabled(True)
             
     #MPHP10k - Nazwy cieków 
@@ -1160,10 +1673,11 @@ class WodyPolskieWMS:
                     "styles=&"
                     "version=1.3.0&"
                     "url=https://wody.isok.gov.pl/gpservices/KZGW/ISOK_MPHP/MapServer/WMSServer")
-            layer = QgsRasterLayer(url, 'MPHP10k-nazwy cieków', 'wms')
+            layer = QgsRasterLayer(url, 'Nazwy cieków', 'wms')
             layer.setCustomProperty("MPHP10k", "wms_mphp_layer")
             self.wms_mphp_layer = layer
-            QgsProject.instance().addMapLayer(self.wms_mphp_layer)
+            QgsProject.instance().addMapLayer(self.wms_mphp_layer, False)
+            MPHP10k.addLayer(self.wms_mphp_layer)
             self.dlg.pbMPHP.setEnabled(True)
             
     #MPHP10k - Nazwy jezior 
@@ -1176,8 +1690,9 @@ class WodyPolskieWMS:
                     "styles=&"
                     "version=1.3.0&"
                     "url=https://wody.isok.gov.pl/gpservices/KZGW/ISOK_MPHP/MapServer/WMSServer")
-            layer = QgsRasterLayer(url, 'MPHP10k-nazwy jezior', 'wms')
+            layer = QgsRasterLayer(url, 'Nazwy jezior', 'wms')
             layer.setCustomProperty("MPHP10k", "wms_mphp_layer")
             self.wms_mphp_layer = layer
-            QgsProject.instance().addMapLayer(self.wms_mphp_layer)
+            QgsProject.instance().addMapLayer(self.wms_mphp_layer, False)
+            MPHP10k.addLayer(self.wms_mphp_layer)
             self.dlg.pbMPHP.setEnabled(True)

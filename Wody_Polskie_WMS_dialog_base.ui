@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1000</width>
-    <height>641</height>
+    <width>995</width>
+    <height>640</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -23,44 +23,9 @@
    <bool>false</bool>
   </property>
   <layout class="QGridLayout" name="gridLayout">
-   <item row="1" column="0">
-    <widget class="QLabel" name="label_stopka">
-     <property name="font">
-      <font>
-       <weight>50</weight>
-       <italic>false</italic>
-       <bold>false</bold>
-       <strikeout>false</strikeout>
-       <kerning>true</kerning>
-      </font>
-     </property>
-     <property name="frameShape">
-      <enum>QFrame::StyledPanel</enum>
-     </property>
-     <property name="frameShadow">
-      <enum>QFrame::Plain</enum>
-     </property>
-     <property name="text">
-      <string>Wody Polskie - Baza WMS v 1.0.1            Państwowe Gospodarstwo Wodne Wody Polskie / Krajowy Zarząd Gospodarki Wodnej / Wydział Systemu Informacyjnego Gospodarowania Wodami</string>
-     </property>
-     <property name="alignment">
-      <set>Qt::AlignCenter</set>
-     </property>
-    </widget>
-   </item>
    <item row="0" column="0">
     <widget class="QWidget" name="widget" native="true">
      <layout class="QGridLayout" name="gridLayout_2">
-      <item row="2" column="0">
-       <widget class="QDialogButtonBox" name="button_box">
-        <property name="orientation">
-         <enum>Qt::Horizontal</enum>
-        </property>
-        <property name="standardButtons">
-         <set>QDialogButtonBox::Cancel|QDialogButtonBox::Ok</set>
-        </property>
-       </widget>
-      </item>
       <item row="0" column="0">
        <layout class="QVBoxLayout" name="verticalLayout">
         <item>
@@ -272,7 +237,7 @@
                <string>
 
 
-Usługa przeglądania (WMS) prezentuje dane dotyczace planów gospodarowania wodami zgodnie z drugim cyklem planistycznym (2016-2020)</string>
+Usługa przeglądania (WMS) prezentuje dane dotyczące planów gospodarowania wodami zgodnie z cyklem planistycznym 2016-2021</string>
               </property>
              </widget>
             </item>
@@ -525,7 +490,7 @@ Usługa przeglądania (WMS) prezentuje dane dotyczace planów gospodarowania wod
                </font>
               </property>
               <property name="text">
-               <string>Mapa zagrożenia powodziowego (MZP)</string>
+               <string>Mapy zagrożenia powodziowego (MZP)</string>
               </property>
              </widget>
             </item>
@@ -726,20 +691,6 @@ Usługa przeglądania (WMS) prezentuje dane dotyczace planów gospodarowania wod
               </property>
              </widget>
             </item>
-            <item row="13" column="0">
-             <widget class="QPushButton" name="pbMZP11">
-              <property name="text">
-               <string>Dodaj</string>
-              </property>
-             </widget>
-            </item>
-            <item row="13" column="1">
-             <widget class="QLabel" name="label_MZP9_2">
-              <property name="text">
-               <string>-  MZP - Mapa orientacyjna</string>
-              </property>
-             </widget>
-            </item>
            </layout>
            <zorder>label_MZP1</zorder>
            <zorder>pbMZP1</zorder>
@@ -762,16 +713,14 @@ Usługa przeglądania (WMS) prezentuje dane dotyczace planów gospodarowania wod
            <zorder>label_MZP2</zorder>
            <zorder>label_MZP8_2</zorder>
            <zorder>pbMZP10</zorder>
-           <zorder>label_MZP9_2</zorder>
-           <zorder>pbMZP11</zorder>
            <zorder>label_46</zorder>
           </widget>
           <widget class="QWidget" name="tab_MRP">
            <attribute name="title">
             <string>MRP</string>
            </attribute>
-           <layout class="QFormLayout" name="formLayout_3">
-            <item row="0" column="0" colspan="2">
+           <layout class="QFormLayout" name="formLayout_37">
+            <item row="0" column="0">
              <widget class="QLabel" name="label_68">
               <property name="font">
                <font>
@@ -781,9 +730,232 @@ Usługa przeglądania (WMS) prezentuje dane dotyczace planów gospodarowania wod
                </font>
               </property>
               <property name="text">
-               <string>Mapa ryzyka powodziowego (MRP)</string>
+               <string>Mapy ryzyka powodziowego (MRP)</string>
               </property>
              </widget>
+            </item>
+            <item row="2" column="0">
+             <widget class="QLabel" name="label_67">
+              <property name="text">
+               <string>Dodaj WMS do mapy:</string>
+              </property>
+             </widget>
+            </item>
+            <item row="3" column="0">
+             <layout class="QFormLayout" name="formLayout_3">
+              <item row="0" column="0">
+               <widget class="QPushButton" name="pbMRP1">
+                <property name="text">
+                 <string>Dodaj</string>
+                </property>
+               </widget>
+              </item>
+              <item row="0" column="1">
+               <widget class="QLabel" name="label_MRP1">
+                <property name="text">
+                 <string>-  MRP 10% potencjalne negatywne konsekwencje dla życia i zdrowia ludzi oraz wartości potencjalnych strat powodziowych</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </item>
+            <item row="4" column="0">
+             <layout class="QFormLayout" name="formLayout_8">
+              <item row="0" column="0">
+               <widget class="QPushButton" name="pbMRP2">
+                <property name="text">
+                 <string>Dodaj</string>
+                </property>
+               </widget>
+              </item>
+              <item row="0" column="1">
+               <widget class="QLabel" name="label_MRP2">
+                <property name="text">
+                 <string>-  MRP 1% potencjalne negatywne konsekwencje dla życia i zdrowia ludzi oraz wartości potencjalnych strat powodziowych dla powodzi rzecznych oraz od strony morza</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </item>
+            <item row="5" column="0">
+             <layout class="QFormLayout" name="formLayout_9">
+              <item row="0" column="0">
+               <widget class="QPushButton" name="pbMRP3">
+                <property name="text">
+                 <string>Dodaj</string>
+                </property>
+               </widget>
+              </item>
+              <item row="0" column="1">
+               <widget class="QLabel" name="label_MRP3">
+                <property name="text">
+                 <string>-  MRP 0,2% potencjalne negatywne konsekwencje dla życia i zdrowia ludzi oraz wartości potencjalnych strat powodziowych dla powodzi rzecznych oraz od strony morza</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </item>
+            <item row="6" column="0">
+             <layout class="QFormLayout" name="formLayout_10">
+              <item row="0" column="0">
+               <widget class="QPushButton" name="pbMRP4">
+                <property name="text">
+                 <string>Dodaj</string>
+                </property>
+               </widget>
+              </item>
+              <item row="0" column="1">
+               <widget class="QLabel" name="label_MRP4">
+                <property name="text">
+                 <string>-  MRP - całkowite zniszczenie wału przeciwpowodziowego - potencjalne negatywne skutki dla życia i zdrowia ludzi oraz wartości potencjalnych strat powodziowych</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </item>
+            <item row="7" column="0">
+             <layout class="QFormLayout" name="formLayout_11">
+              <item row="0" column="0">
+               <widget class="QPushButton" name="pbMRP5">
+                <property name="text">
+                 <string>Dodaj</string>
+                </property>
+               </widget>
+              </item>
+              <item row="0" column="1">
+               <widget class="QLabel" name="label_MRP5">
+                <property name="text">
+                 <string>-  MRP - całkowite zniszczenie wału przeciwsztormowego - potencjalne negatywne skutki dla życia i zdrowia ludzi oraz wartości potencjalnych strat powodziowych</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </item>
+            <item row="8" column="0">
+             <layout class="QFormLayout" name="formLayout_12">
+              <item row="0" column="0">
+               <widget class="QPushButton" name="pbMRP6">
+                <property name="text">
+                 <string>Dodaj</string>
+                </property>
+               </widget>
+              </item>
+              <item row="0" column="1">
+               <widget class="QLabel" name="label_MRP6">
+                <property name="text">
+                 <string>-  MRP 10% negatywne konsekwencje dla środowiska, dziedzictwa kulturowego i działalności gospodarczej</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </item>
+            <item row="9" column="0">
+             <layout class="QFormLayout" name="formLayout_13">
+              <item row="0" column="0">
+               <widget class="QPushButton" name="pbMRP7">
+                <property name="text">
+                 <string>Dodaj</string>
+                </property>
+               </widget>
+              </item>
+              <item row="0" column="1">
+               <widget class="QLabel" name="label_MRP7">
+                <property name="text">
+                 <string>-  MRP 1% negatywne konsekwencje dla środowiska, dziedzictwa kulturowego i działalności gospodarczej dla powodzi rzecznych oraz od strony morza</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </item>
+            <item row="10" column="0">
+             <layout class="QFormLayout" name="formLayout_14">
+              <item row="0" column="0">
+               <widget class="QPushButton" name="pbMRP8">
+                <property name="text">
+                 <string>Dodaj</string>
+                </property>
+               </widget>
+              </item>
+              <item row="0" column="1">
+               <widget class="QLabel" name="label_MRP8">
+                <property name="text">
+                 <string>-  MRP 0,2% negatywne konsekwencje dla środowiska, dziedzictwa kulturowego i działalności gospodarczej dla powodzi rzecznych oraz od strony morza</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </item>
+            <item row="11" column="0">
+             <layout class="QFormLayout" name="formLayout_15">
+              <item row="0" column="0">
+               <widget class="QPushButton" name="pbMRP9">
+                <property name="text">
+                 <string>Dodaj</string>
+                </property>
+               </widget>
+              </item>
+              <item row="0" column="1">
+               <widget class="QLabel" name="label_MRP9">
+                <property name="text">
+                 <string>-  MRP - całkowite zniszczenie wału przeciwpowodziowego - potencjalne negatywne skutki dla środowiska, dziedzictwa kulturowego i działalności gospodarczej</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </item>
+            <item row="12" column="0">
+             <layout class="QFormLayout" name="formLayout_16">
+              <item row="0" column="0">
+               <widget class="QPushButton" name="pbMRP10">
+                <property name="text">
+                 <string>Dodaj</string>
+                </property>
+               </widget>
+              </item>
+              <item row="0" column="1">
+               <widget class="QLabel" name="label_MRP10">
+                <property name="text">
+                 <string>-  MRP - całkowite zniszczenie wału przeciwsztormowego - potencjalne negatywne skutki dla środowiska, dziedzictwa kulturowego i działalności gospodarczej</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </item>
+            <item row="13" column="0">
+             <layout class="QFormLayout" name="formLayout_17">
+              <item row="0" column="0">
+               <widget class="QPushButton" name="pbMRP11">
+                <property name="text">
+                 <string>Dodaj</string>
+                </property>
+               </widget>
+              </item>
+              <item row="0" column="1">
+               <widget class="QLabel" name="label_MRP11">
+                <property name="text">
+                 <string>-  MRP-zniszczenie lub uszkodzenie budowli piętrzącej-negatywne skutki dla życia i zdrowia ludzi</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </item>
+            <item row="14" column="0">
+             <layout class="QFormLayout" name="formLayout_18">
+              <item row="0" column="0">
+               <widget class="QPushButton" name="pbMRP12">
+                <property name="text">
+                 <string>Dodaj</string>
+                </property>
+               </widget>
+              </item>
+              <item row="0" column="1">
+               <widget class="QLabel" name="label_MRP10_">
+                <property name="text">
+                 <string>-  MRP-zniszczenie lub uszkodzenie budowli piętrzącej-negatywne skutki dla środowiska, dziedzictwa kult. i działalności gosp.</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
             </item>
             <item row="1" column="0" colspan="2">
              <layout class="QHBoxLayout" name="horizontalLayout_3">
@@ -835,158 +1007,117 @@ Usługa przeglądania (WMS) prezentuje dane dotyczace planów gospodarowania wod
               </item>
              </layout>
             </item>
-            <item row="2" column="0" colspan="2">
-             <widget class="QLabel" name="label_67">
+           </layout>
+          </widget>
+          <widget class="QWidget" name="tab_PPSS">
+           <attribute name="title">
+            <string>PPSS</string>
+           </attribute>
+           <layout class="QFormLayout" name="formLayout_7">
+            <item row="0" column="0">
+             <widget class="QLabel" name="label_75">
+              <property name="font">
+               <font>
+                <pointsize>13</pointsize>
+                <weight>75</weight>
+                <bold>true</bold>
+               </font>
+              </property>
+              <property name="text">
+               <string>Plan przeciwdziała skutkom suszy (PPSS)</string>
+              </property>
+             </widget>
+            </item>
+            <item row="2" column="0">
+             <widget class="QLabel" name="label_77">
               <property name="text">
                <string>Dodaj WMS do mapy:</string>
               </property>
              </widget>
             </item>
             <item row="3" column="0">
-             <widget class="QPushButton" name="pbMRP1">
-              <property name="text">
-               <string>Dodaj</string>
-              </property>
-             </widget>
+             <layout class="QHBoxLayout" name="horizontalLayout">
+              <item>
+               <widget class="QPushButton" name="pbPPSS">
+                <property name="text">
+                 <string>Dodaj</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QLabel" name="label_aPGW_2">
+                <property name="text">
+                 <string>-  Plan przeciwdziałania skutkom suszy (PPSS)</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
             </item>
-            <item row="3" column="1">
-             <widget class="QLabel" name="label_MRP1">
-              <property name="text">
-               <string>-  MRP 10% potencjalne negatywne konsekwencje dla życia i zdrowia ludzi oraz wartości potencjalnych strat powodziowych</string>
-              </property>
-             </widget>
-            </item>
-            <item row="4" column="0">
-             <widget class="QPushButton" name="pbMRP2">
-              <property name="text">
-               <string>Dodaj</string>
-              </property>
-             </widget>
-            </item>
-            <item row="4" column="1">
-             <widget class="QLabel" name="label_MRP2">
-              <property name="text">
-               <string>-  MRP 1% potencjalne negatywne konsekwencje dla życia i zdrowia ludzi oraz wartości potencjalnych strat powodziowych dla powodzi rzecznych oraz od strony morza</string>
-              </property>
-             </widget>
-            </item>
-            <item row="5" column="0">
-             <widget class="QPushButton" name="pbMRP3">
-              <property name="text">
-               <string>Dodaj</string>
-              </property>
-             </widget>
-            </item>
-            <item row="5" column="1">
-             <widget class="QLabel" name="label_MRP3">
-              <property name="text">
-               <string>-  MRP 0,2% potencjalne negatywne konsekwencje dla życia i zdrowia ludzi oraz wartości potencjalnych strat powodziowych dla powodzi rzecznych oraz od strony morza</string>
-              </property>
-             </widget>
-            </item>
-            <item row="6" column="0">
-             <widget class="QPushButton" name="pbMRP4">
-              <property name="text">
-               <string>Dodaj</string>
-              </property>
-             </widget>
-            </item>
-            <item row="6" column="1">
-             <widget class="QLabel" name="label_MRP4">
-              <property name="text">
-               <string>-  MRP - całkowite zniszczenie wału przeciwpowodziowego - potencjalne negatywne skutki dla życia i zdrowia ludzi oraz wartości potencjalnych strat powodziowych</string>
-              </property>
-             </widget>
-            </item>
-            <item row="7" column="0">
-             <widget class="QPushButton" name="pbMRP5">
-              <property name="text">
-               <string>Dodaj</string>
-              </property>
-             </widget>
-            </item>
-            <item row="7" column="1">
-             <widget class="QLabel" name="label_MRP5">
-              <property name="text">
-               <string>-  MRP - całkowite zniszczenie wału przeciwsztormowego - potencjalne negatywne skutki dla życia i zdrowia ludzi oraz wartości potencjalnych strat powodziowych</string>
-              </property>
-             </widget>
-            </item>
-            <item row="8" column="0">
-             <widget class="QPushButton" name="pbMRP6">
-              <property name="text">
-               <string>Dodaj</string>
-              </property>
-             </widget>
-            </item>
-            <item row="8" column="1">
-             <widget class="QLabel" name="label_MRP6">
-              <property name="text">
-               <string>-  MRP 10% negatywne konsekwencje dla środowiska, dziedzictwa kulturowego i działalności gospodarczej</string>
-              </property>
-             </widget>
-            </item>
-            <item row="9" column="0">
-             <widget class="QPushButton" name="pbMRP7">
-              <property name="text">
-               <string>Dodaj</string>
-              </property>
-             </widget>
-            </item>
-            <item row="9" column="1">
-             <widget class="QLabel" name="label_MRP7">
-              <property name="text">
-               <string>-  MRP 1% negatywne konsekwencje dla środowiska, dziedzictwa kulturowego i działalności gospodarczej dla powodzi rzecznych oraz od strony morza</string>
-              </property>
-             </widget>
-            </item>
-            <item row="10" column="0">
-             <widget class="QPushButton" name="pbMRP8">
-              <property name="text">
-               <string>Dodaj</string>
-              </property>
-             </widget>
-            </item>
-            <item row="10" column="1">
-             <widget class="QLabel" name="label_MRP8">
-              <property name="text">
-               <string>-  MRP 0,2% negatywne konsekwencje dla środowiska, dziedzictwa kulturowego i działalności gospodarczej dla powodzi rzecznych oraz od strony morza</string>
-              </property>
-             </widget>
-            </item>
-            <item row="11" column="0">
-             <widget class="QPushButton" name="pbMRP9">
-              <property name="text">
-               <string>Dodaj</string>
-              </property>
-             </widget>
-            </item>
-            <item row="11" column="1">
-             <widget class="QLabel" name="label_MRP9">
-              <property name="text">
-               <string>-  MRP - całkowite zniszczenie wału przeciwpowodziowego - potencjalne negatywne skutki dla środowiska, dziedzictwa kulturowego i działalności gospodarczej</string>
-              </property>
-             </widget>
-            </item>
-            <item row="12" column="0">
-             <widget class="QPushButton" name="pbMRP10">
-              <property name="text">
-               <string>Dodaj</string>
-              </property>
-             </widget>
-            </item>
-            <item row="12" column="1">
-             <widget class="QLabel" name="label_MRP10">
-              <property name="text">
-               <string>-  MRP - całkowite zniszczenie wału przeciwsztormowego - potencjalne negatywne skutki dla środowiska, dziedzictwa kulturowego i działalności gospodarczej</string>
-              </property>
-             </widget>
+            <item row="1" column="0" colspan="2">
+             <layout class="QHBoxLayout" name="horizontalLayout_9">
+              <item>
+               <widget class="QLabel" name="label_33">
+                <property name="text">
+                 <string>
+
+
+
+
+</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QLabel" name="label_34">
+                <property name="text">
+                 <string/>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QLabel" name="label_35">
+                <property name="text">
+                 <string/>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QLabel" name="label_18">
+                <property name="text">
+                 <string/>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QLabel" name="label_86">
+                <property name="styleSheet">
+                 <string notr="true">image: url(:/plugins/Wody_Polskie_WMS/icon.png);</string>
+                </property>
+                <property name="text">
+                 <string/>
+                </property>
+                <property name="alignment">
+                 <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+                </property>
+               </widget>
+              </item>
+             </layout>
             </item>
            </layout>
           </widget>
          </widget>
         </item>
        </layout>
+      </item>
+      <item row="2" column="0">
+       <widget class="QDialogButtonBox" name="button_box">
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+        <property name="standardButtons">
+         <set>QDialogButtonBox::Cancel|QDialogButtonBox::Ok</set>
+        </property>
+       </widget>
       </item>
       <item row="1" column="0">
        <widget class="QLabel" name="label_26">
@@ -1009,6 +1140,31 @@ Usługa przeglądania (WMS) prezentuje dane dotyczace planów gospodarowania wod
        </widget>
       </item>
      </layout>
+    </widget>
+   </item>
+   <item row="1" column="0">
+    <widget class="QLabel" name="label_stopka">
+     <property name="font">
+      <font>
+       <weight>50</weight>
+       <italic>false</italic>
+       <bold>false</bold>
+       <strikeout>false</strikeout>
+       <kerning>true</kerning>
+      </font>
+     </property>
+     <property name="frameShape">
+      <enum>QFrame::StyledPanel</enum>
+     </property>
+     <property name="frameShadow">
+      <enum>QFrame::Plain</enum>
+     </property>
+     <property name="text">
+      <string>  Państwowe Gospodarstwo Wodne Wody Polskie / Krajowy Zarząd Gospodarki Wodnej / Wydział Systemu Informacyjnego Gospodarowania Wodami</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
     </widget>
    </item>
   </layout>
