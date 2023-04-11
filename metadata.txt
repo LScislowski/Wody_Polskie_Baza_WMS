@@ -6,11 +6,11 @@
 name=Wody Polskie - Baza WMS
 qgisMinimumVersion=3.0
 description=Baza usług WMS publikowanych przez Państwowe Gospodarstwo Wodne Wody Polskie
-version=1.0.1
+version=1.0.2
 author=Łukasz Ścisłowski - Państwowe Gospodarstwo Wodne Wody Polskie - KZGW - Wydział SIGW
 email=lukasz.scislowski@wody.gov.pl
 
-about=Wtyczka Wody Polskie - Baza WMS umożliwia szybki dostęp do usług sieciowych publikowanych przez Państwowe Gospodarstwo Wodne Wody Polskie (28 usług i ponad 400 warstw tematycznych). Publikowane usługi dla: Mapa Podziału Hydrograficznego Polski w skali 1:10000 (MPHP10k), Aktualizacja Planów Gospodarowania Wodami (aPGW), Jednostki organizacyjne PGW Wody Polskie, Wstępna ocena ryzyka powodziowego (WORP), Mapa zagrożenia powodziowego (MZP), Mapa ryzyka powodziowego (MRP).Zasięg przestrzenny: Polska.   ENG: This plugin allows quick access to web map services published by the State Water Holding Polish Waters (28 services and over 400 thematic layers). Spatial coverage: Poland.
+about=Wtyczka Wody Polskie - Baza WMS umożliwia szybki dostęp do usług sieciowych publikowanych przez Państwowe Gospodarstwo Wodne Wody Polskie (30 usług i ponad 800 warstw tematycznych). Publikowane usługi dla: Mapa Podziału Hydrograficznego Polski w skali 1:10000 (MPHP10k), Aktualizacja Planów Gospodarowania Wodami (aPGW), Jednostki organizacyjne PGW Wody Polskie, Wstępna ocena ryzyka powodziowego (WORP), Mapy zagrożenia powodziowego (MZP), Mapy ryzyka powodziowego (MRP), Plan przeciwdziałania skutkom suszy (PPSS).Zasięg przestrzenny: Polska.   ENG: This plugin allows quick access to web map services published by the State Water Holding Polish Waters (30 services and over 800 thematic layers). Spatial coverage: Poland.
 
 tracker=https://github.com/LScislowski/Wody_Polskie_Baza_WMS/issues
 repository=https://github.com/LScislowski/Wody_Polskie_Baza_WMS
@@ -20,10 +20,10 @@ repository=https://github.com/LScislowski/Wody_Polskie_Baza_WMS
 
 hasProcessingProvider=no
 # Uncomment the following line and add your changelog:
-# changelog=
+changelog=Wersja 1.0.1 *Poprawki redakcyjne, Wersja 1.0.2 *dodano automatyczne grupowanie warstw, dodano warstwy PPSS, poprawiono kolejność wyświetlania się warstw
 
 # Tags are comma separated with spaces allowed
-tags=wms, python, pgwwp, mphp, apgw, mzp, mrp, worp, water, hydrography, water management plans, flood hazard map, flood risk map.
+tags=wms, python, pgwwp, mphp, apgw, mzp, mrp, worp, ppss, water, hydrography, water management plans, flood hazard map, flood risk map, drought, woda, hydrografia, susza, powódź, plany, wody polskie
 
 homepage=https://www.wody.gov.pl/strefa-klienta/110-strefa-klienta/1677-udostepnianie-danych-z-systemu-informacyjnego-gospodarowania-wodami-2
 category=Plugins
