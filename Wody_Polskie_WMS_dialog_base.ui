@@ -23,6 +23,31 @@
    <bool>false</bool>
   </property>
   <layout class="QGridLayout" name="gridLayout">
+   <item row="1" column="0">
+    <widget class="QLabel" name="label_stopka">
+     <property name="font">
+      <font>
+       <weight>50</weight>
+       <italic>false</italic>
+       <bold>false</bold>
+       <strikeout>false</strikeout>
+       <kerning>true</kerning>
+      </font>
+     </property>
+     <property name="frameShape">
+      <enum>QFrame::StyledPanel</enum>
+     </property>
+     <property name="frameShadow">
+      <enum>QFrame::Plain</enum>
+     </property>
+     <property name="text">
+      <string>  Państwowe Gospodarstwo Wodne Wody Polskie / Krajowy Zarząd Gospodarki Wodnej / Wydział Systemu Informacyjnego Gospodarowania Wodami</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+   </item>
    <item row="0" column="0">
     <widget class="QWidget" name="widget" native="true">
      <layout class="QGridLayout" name="gridLayout_2">
@@ -38,6 +63,12 @@
           </property>
           <property name="currentIndex">
            <number>0</number>
+          </property>
+          <property name="documentMode">
+           <bool>false</bool>
+          </property>
+          <property name="movable">
+           <bool>false</bool>
           </property>
           <property name="tabBarAutoHide">
            <bool>true</bool>
@@ -143,10 +174,10 @@
           </widget>
           <widget class="QWidget" name="tab_aPGW">
            <attribute name="title">
-            <string>aPGW</string>
+            <string>PGW</string>
            </attribute>
            <layout class="QFormLayout" name="formLayout_5">
-            <item row="0" column="0" colspan="2">
+            <item row="0" column="0">
              <widget class="QLabel" name="label_74">
               <property name="font">
                <font>
@@ -156,9 +187,52 @@
                </font>
               </property>
               <property name="text">
-               <string>Aktualizacja Planów Gospodarowania Wodami (aPGW)</string>
+               <string>Plany Gospodarowania Wodami (PGW)</string>
               </property>
              </widget>
+            </item>
+            <item row="2" column="0">
+             <widget class="QLabel" name="label_73">
+              <property name="text">
+               <string>Dodaj WMS do mapy:</string>
+              </property>
+             </widget>
+            </item>
+            <item row="4" column="0">
+             <layout class="QHBoxLayout" name="horizontalLayout_4">
+              <item>
+               <widget class="QPushButton" name="pb2aPGW">
+                <property name="text">
+                 <string>Dodaj</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QLabel" name="label_2aPGW">
+                <property name="text">
+                 <string>-  II aktualizacja Planów Gospodarowania Wodami (IIaPGW) obowiązująca od 2023 r.</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </item>
+            <item row="5" column="0">
+             <layout class="QHBoxLayout" name="horizontalLayout_10">
+              <item>
+               <widget class="QPushButton" name="pbaPGW">
+                <property name="text">
+                 <string>Dodaj</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QLabel" name="label_aPGW">
+                <property name="text">
+                 <string>-  Aktualizacja Planów Gospodarowania Wodami (aPGW) cykl planistyczny 2016 - 2022 (dane historyczne)</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
             </item>
             <item row="1" column="0" colspan="2">
              <layout class="QHBoxLayout" name="horizontalLayout_5">
@@ -210,44 +284,10 @@
               </item>
              </layout>
             </item>
-            <item row="2" column="0" colspan="2">
-             <widget class="QLabel" name="label_73">
-              <property name="text">
-               <string>Dodaj WMS do mapy:</string>
-              </property>
-             </widget>
-            </item>
-            <item row="3" column="0">
-             <widget class="QPushButton" name="pbaPGW">
-              <property name="text">
-               <string>Dodaj</string>
-              </property>
-             </widget>
-            </item>
-            <item row="3" column="1">
-             <widget class="QLabel" name="label_aPGW">
-              <property name="text">
-               <string>-  Aktualizacja Planów Gospodarowania Wodami (aPGW)</string>
-              </property>
-             </widget>
-            </item>
-            <item row="4" column="1">
-             <widget class="QLabel" name="label_27">
-              <property name="text">
-               <string>
-
-
-Usługa przeglądania (WMS) prezentuje dane dotyczące planów gospodarowania wodami zgodnie z cyklem planistycznym 2016-2021</string>
-              </property>
-             </widget>
-            </item>
            </layout>
            <zorder>label_74</zorder>
-           <zorder>label_aPGW</zorder>
            <zorder>label_73</zorder>
-           <zorder>pbaPGW</zorder>
            <zorder></zorder>
-           <zorder>label_27</zorder>
           </widget>
           <widget class="QWidget" name="tab_PGWWP">
            <attribute name="title">
@@ -1009,6 +1049,102 @@ Usługa przeglądania (WMS) prezentuje dane dotyczące planów gospodarowania wo
             </item>
            </layout>
           </widget>
+          <widget class="QWidget" name="tab_PZRP">
+           <attribute name="title">
+            <string>PZRP</string>
+           </attribute>
+           <layout class="QFormLayout" name="formLayout_39">
+            <item row="0" column="0">
+             <widget class="QLabel" name="label_102">
+              <property name="font">
+               <font>
+                <pointsize>13</pointsize>
+                <weight>75</weight>
+                <bold>true</bold>
+               </font>
+              </property>
+              <property name="text">
+               <string>Plany zarządzania ryzykiem powodziowym (PZRP)</string>
+              </property>
+             </widget>
+            </item>
+            <item row="2" column="0">
+             <widget class="QLabel" name="label_103">
+              <property name="text">
+               <string>Dodaj WMS do mapy:</string>
+              </property>
+             </widget>
+            </item>
+            <item row="3" column="0">
+             <layout class="QHBoxLayout" name="horizontalLayout_21">
+              <item>
+               <widget class="QPushButton" name="pbPZRP">
+                <property name="text">
+                 <string>Dodaj</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QLabel" name="label_PZRP">
+                <property name="text">
+                 <string>-  Plany zarządzania ryzykiem powodziowym (PZRP)</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </item>
+            <item row="1" column="0" colspan="2">
+             <layout class="QHBoxLayout" name="horizontalLayout_22">
+              <item>
+               <widget class="QLabel" name="label_104">
+                <property name="text">
+                 <string>
+
+
+
+
+</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QLabel" name="label_105">
+                <property name="text">
+                 <string/>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QLabel" name="label_106">
+                <property name="text">
+                 <string/>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QLabel" name="label_107">
+                <property name="text">
+                 <string/>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QLabel" name="label_108">
+                <property name="styleSheet">
+                 <string notr="true">image: url(:/plugins/Wody_Polskie_WMS/icon.png);</string>
+                </property>
+                <property name="text">
+                 <string/>
+                </property>
+                <property name="alignment">
+                 <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </item>
+           </layout>
+          </widget>
           <widget class="QWidget" name="tab_PPSS">
            <attribute name="title">
             <string>PPSS</string>
@@ -1024,7 +1160,7 @@ Usługa przeglądania (WMS) prezentuje dane dotyczące planów gospodarowania wo
                </font>
               </property>
               <property name="text">
-               <string>Plan przeciwdziała skutkom suszy (PPSS)</string>
+               <string>Plan przeciwdziałania skutkom suszy (PPSS)</string>
               </property>
              </widget>
             </item>
@@ -1045,7 +1181,7 @@ Usługa przeglądania (WMS) prezentuje dane dotyczące planów gospodarowania wo
                </widget>
               </item>
               <item>
-               <widget class="QLabel" name="label_aPGW_2">
+               <widget class="QLabel" name="label_PPSS">
                 <property name="text">
                  <string>-  Plan przeciwdziałania skutkom suszy (PPSS)</string>
                 </property>
@@ -1105,19 +1241,474 @@ Usługa przeglądania (WMS) prezentuje dane dotyczące planów gospodarowania wo
             </item>
            </layout>
           </widget>
+          <widget class="QWidget" name="tab_Dane">
+           <attribute name="title">
+            <string>Dane do pobrania</string>
+           </attribute>
+           <layout class="QVBoxLayout" name="verticalLayout_2">
+            <item>
+             <widget class="QLabel" name="label_81">
+              <property name="font">
+               <font>
+                <pointsize>13</pointsize>
+                <weight>75</weight>
+                <bold>true</bold>
+               </font>
+              </property>
+              <property name="text">
+               <string>Dane do pobrania</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <layout class="QHBoxLayout" name="horizontalLayout_25">
+              <item>
+               <widget class="QLabel" name="label_121">
+                <property name="text">
+                 <string>
+
+
+
+
+</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QLabel" name="label_125">
+                <property name="text">
+                 <string/>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QLabel" name="label_126">
+                <property name="text">
+                 <string/>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QLabel" name="label_127">
+                <property name="text">
+                 <string/>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QLabel" name="label_128">
+                <property name="styleSheet">
+                 <string notr="true">image: url(:/plugins/Wody_Polskie_WMS/icon.png);</string>
+                </property>
+                <property name="text">
+                 <string/>
+                </property>
+                <property name="alignment">
+                 <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </item>
+            <item>
+             <widget class="QToolBox" name="toolBox">
+              <property name="currentIndex">
+               <number>0</number>
+              </property>
+              <widget class="QWidget" name="page_4">
+               <property name="geometry">
+                <rect>
+                 <x>0</x>
+                 <y>0</y>
+                 <width>933</width>
+                 <height>265</height>
+                </rect>
+               </property>
+               <attribute name="label">
+                <string>Geobaza</string>
+               </attribute>
+               <layout class="QVBoxLayout" name="verticalLayout_6">
+                <item>
+                 <widget class="QGroupBox" name="groupBox">
+                  <property name="title">
+                   <string/>
+                  </property>
+                  <property name="flat">
+                   <bool>false</bool>
+                  </property>
+                  <property name="checkable">
+                   <bool>false</bool>
+                  </property>
+                  <property name="checked">
+                   <bool>false</bool>
+                  </property>
+                  <layout class="QVBoxLayout" name="verticalLayout_5">
+                   <item>
+                    <layout class="QFormLayout" name="formLayout_19">
+                     <item row="0" column="0">
+                      <widget class="QPushButton" name="pb2aPGW_dane">
+                       <property name="text">
+                        <string>Pobierz geobazę</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="0" column="1">
+                      <widget class="QLabel" name="label_2aPGW_3">
+                       <property name="text">
+                        <string>-  Plany Gospodarowania Wodami (PGW) </string>
+                       </property>
+                      </widget>
+                     </item>
+                    </layout>
+                   </item>
+                   <item>
+                    <layout class="QFormLayout" name="formLayout_20">
+                     <item row="0" column="0">
+                      <widget class="QPushButton" name="pbPGWWP_dane">
+                       <property name="text">
+                        <string>Pobierz geobazę</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="0" column="1">
+                      <widget class="QLabel" name="label_2aPGW_4">
+                       <property name="text">
+                        <string>-  Granice jednostek organizacyjnych PGW WP </string>
+                       </property>
+                      </widget>
+                     </item>
+                    </layout>
+                   </item>
+                   <item>
+                    <layout class="QFormLayout" name="formLayout_21">
+                     <item row="0" column="0">
+                      <widget class="QPushButton" name="pbWORP_dane">
+                       <property name="text">
+                        <string>Pobierz geobazę</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="0" column="1">
+                      <widget class="QLabel" name="label_2aPGW_5">
+                       <property name="text">
+                        <string>-  Wstępna ocena ryzyka powodziowego (WORP) </string>
+                       </property>
+                      </widget>
+                     </item>
+                    </layout>
+                   </item>
+                   <item>
+                    <layout class="QFormLayout" name="formLayout_22">
+                     <item row="0" column="0">
+                      <widget class="QPushButton" name="pbPZRP_dane">
+                       <property name="text">
+                        <string>Pobierz geobazę</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="0" column="1">
+                      <widget class="QLabel" name="label_2aPGW_6">
+                       <property name="text">
+                        <string>-  Plany zarządzania ryzykiem powodziowym (PZRP) </string>
+                       </property>
+                      </widget>
+                     </item>
+                    </layout>
+                   </item>
+                  </layout>
+                 </widget>
+                </item>
+               </layout>
+              </widget>
+              <widget class="QWidget" name="page_5">
+               <property name="geometry">
+                <rect>
+                 <x>0</x>
+                 <y>0</y>
+                 <width>933</width>
+                 <height>265</height>
+                </rect>
+               </property>
+               <attribute name="label">
+                <string>Warstwy Shapefile - Plan przeciwdziałania skutkom suszy</string>
+               </attribute>
+               <layout class="QVBoxLayout" name="verticalLayout_3">
+                <item>
+                 <widget class="QGroupBox" name="groupBox_2">
+                  <property name="title">
+                   <string/>
+                  </property>
+                  <layout class="QVBoxLayout" name="verticalLayout_7">
+                   <item>
+                    <layout class="QFormLayout" name="formLayout_46">
+                     <item row="0" column="0">
+                      <widget class="QPushButton" name="pbPPSS_L_dane">
+                       <property name="text">
+                        <string>Pobierz SHP</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="0" column="1">
+                      <widget class="QLabel" name="label_2aPGW_8">
+                       <property name="text">
+                        <string>-  Łączne zagrożenie suszą</string>
+                       </property>
+                      </widget>
+                     </item>
+                    </layout>
+                   </item>
+                   <item>
+                    <layout class="QFormLayout" name="formLayout_47">
+                     <item row="0" column="0">
+                      <widget class="QPushButton" name="pbPPSS_S_A_dane">
+                       <property name="text">
+                        <string>Pobierz SHP</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="0" column="1">
+                      <widget class="QLabel" name="label_2aPGW_9">
+                       <property name="text">
+                        <string>-  Zagrożenia suszą atmosferyczną</string>
+                       </property>
+                      </widget>
+                     </item>
+                    </layout>
+                   </item>
+                   <item>
+                    <layout class="QFormLayout" name="formLayout_48">
+                     <item row="0" column="0">
+                      <widget class="QPushButton" name="pbPPSS_S_HG_dane">
+                       <property name="text">
+                        <string>Pobierz SHP</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="0" column="1">
+                      <widget class="QLabel" name="label_2aPGW_10">
+                       <property name="text">
+                        <string>-  Zagrożenia suszą hydrogeologiczną</string>
+                       </property>
+                      </widget>
+                     </item>
+                    </layout>
+                   </item>
+                   <item>
+                    <layout class="QFormLayout" name="formLayout_49">
+                     <item row="0" column="0">
+                      <widget class="QPushButton" name="pbPPSS_S_R_dane">
+                       <property name="text">
+                        <string>Pobierz SHP</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="0" column="1">
+                      <widget class="QLabel" name="label_2aPGW_11">
+                       <property name="text">
+                        <string>-  Zagrożenia suszą rolniczą</string>
+                       </property>
+                      </widget>
+                     </item>
+                    </layout>
+                   </item>
+                   <item>
+                    <layout class="QFormLayout" name="formLayout_50">
+                     <item row="0" column="0">
+                      <widget class="QPushButton" name="pbPPSS_S_H_dane">
+                       <property name="text">
+                        <string>Pobierz SHP</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="0" column="1">
+                      <widget class="QLabel" name="label_2aPGW_12">
+                       <property name="text">
+                        <string>-  Zagrożenia suszą hydrologiczną</string>
+                       </property>
+                      </widget>
+                     </item>
+                    </layout>
+                   </item>
+                   <item>
+                    <layout class="QFormLayout" name="formLayout_59">
+                     <item row="0" column="0">
+                      <widget class="QPushButton" name="pbPPSS_I_dane">
+                       <property name="text">
+                        <string>Pobierz SHP</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="0" column="1">
+                      <widget class="QLabel" name="label_2aPGW_20">
+                       <property name="text">
+                        <string>-  Inwestycje PPSS</string>
+                       </property>
+                      </widget>
+                     </item>
+                    </layout>
+                   </item>
+                  </layout>
+                 </widget>
+                </item>
+               </layout>
+              </widget>
+              <widget class="QWidget" name="page_6">
+               <property name="geometry">
+                <rect>
+                 <x>0</x>
+                 <y>0</y>
+                 <width>933</width>
+                 <height>265</height>
+                </rect>
+               </property>
+               <attribute name="label">
+                <string>Wartswy Shapefile - Obszary zagrożenia powodziowego z map zagrożenia powodziowego</string>
+               </attribute>
+               <layout class="QVBoxLayout" name="verticalLayout_4">
+                <item>
+                 <widget class="QGroupBox" name="groupBox_3">
+                  <property name="title">
+                   <string/>
+                  </property>
+                  <layout class="QVBoxLayout" name="verticalLayout_8">
+                   <item>
+                    <layout class="QFormLayout" name="formLayout_53">
+                     <item row="0" column="0">
+                      <widget class="QPushButton" name="pbOZP02_dane">
+                       <property name="text">
+                        <string>Pobierz SHP</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="0" column="1">
+                      <widget class="QLabel" name="label_2aPGW_15">
+                       <property name="text">
+                        <string>-  Obszary zagrożenia powodziowego 0,2%</string>
+                       </property>
+                      </widget>
+                     </item>
+                    </layout>
+                   </item>
+                   <item>
+                    <layout class="QFormLayout" name="formLayout_54">
+                     <item row="0" column="0">
+                      <widget class="QPushButton" name="pbOZP1_dane">
+                       <property name="text">
+                        <string>Pobierz SHP</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="0" column="1">
+                      <widget class="QLabel" name="label_2aPGW_16">
+                       <property name="text">
+                        <string>-  Obszary zagrożenia powodziowego 1%</string>
+                       </property>
+                      </widget>
+                     </item>
+                    </layout>
+                   </item>
+                   <item>
+                    <layout class="QFormLayout" name="formLayout_55">
+                     <item row="0" column="0">
+                      <widget class="QPushButton" name="pbOZP10_dane">
+                       <property name="text">
+                        <string>Pobierz SHP</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="0" column="1">
+                      <widget class="QLabel" name="label_2aPGW_17">
+                       <property name="text">
+                        <string>-  Obszary zagrożenia powodziowego 10%</string>
+                       </property>
+                      </widget>
+                     </item>
+                    </layout>
+                   </item>
+                   <item>
+                    <layout class="QFormLayout" name="formLayout_51">
+                     <item row="0" column="0">
+                      <widget class="QPushButton" name="pbOZP_ZWPP_dane">
+                       <property name="text">
+                        <string>Pobierz SHP</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="0" column="1">
+                      <widget class="QLabel" name="label_2aPGW_13">
+                       <property name="text">
+                        <string>-  Obszary zagrożenia powodziowego w przypadku zniszczenia wału przeciwpow.</string>
+                       </property>
+                      </widget>
+                     </item>
+                    </layout>
+                   </item>
+                   <item>
+                    <layout class="QFormLayout" name="formLayout_52">
+                     <item row="0" column="0">
+                      <widget class="QPushButton" name="pbOZP_M02_dane">
+                       <property name="text">
+                        <string>Pobierz SHP</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="0" column="1">
+                      <widget class="QLabel" name="label_2aPGW_14">
+                       <property name="text">
+                        <string>-  Obszary zagrożenia powodziowego od strony morza 0,2%</string>
+                       </property>
+                      </widget>
+                     </item>
+                    </layout>
+                   </item>
+                   <item>
+                    <layout class="QFormLayout" name="formLayout_56">
+                     <item row="0" column="0">
+                      <widget class="QPushButton" name="pbOZP_M1_dane">
+                       <property name="text">
+                        <string>Pobierz SHP</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="0" column="1">
+                      <widget class="QLabel" name="label_2aPGW_18">
+                       <property name="text">
+                        <string>-  Obszary zagrożenia powodziowego od strony morza 1%</string>
+                       </property>
+                      </widget>
+                     </item>
+                    </layout>
+                   </item>
+                   <item>
+                    <layout class="QFormLayout" name="formLayout_57">
+                     <item row="0" column="0">
+                      <widget class="QPushButton" name="pbOZP_ZWPS_dane">
+                       <property name="text">
+                        <string>Pobierz SHP</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="0" column="1">
+                      <widget class="QLabel" name="label_2aPGW_19">
+                       <property name="text">
+                        <string>-  Obszary zagrożenia powodziowego w przypadku zniszczenia wału przeciwsztorm.</string>
+                       </property>
+                      </widget>
+                     </item>
+                    </layout>
+                   </item>
+                  </layout>
+                 </widget>
+                </item>
+               </layout>
+              </widget>
+             </widget>
+            </item>
+           </layout>
+          </widget>
          </widget>
         </item>
        </layout>
-      </item>
-      <item row="2" column="0">
-       <widget class="QDialogButtonBox" name="button_box">
-        <property name="orientation">
-         <enum>Qt::Horizontal</enum>
-        </property>
-        <property name="standardButtons">
-         <set>QDialogButtonBox::Cancel|QDialogButtonBox::Ok</set>
-        </property>
-       </widget>
       </item>
       <item row="1" column="0">
        <widget class="QLabel" name="label_26">
@@ -1139,32 +1730,17 @@ Usługa przeglądania (WMS) prezentuje dane dotyczące planów gospodarowania wo
         </property>
        </widget>
       </item>
+      <item row="2" column="0">
+       <widget class="QDialogButtonBox" name="button_box">
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+        <property name="standardButtons">
+         <set>QDialogButtonBox::Cancel|QDialogButtonBox::Ok</set>
+        </property>
+       </widget>
+      </item>
      </layout>
-    </widget>
-   </item>
-   <item row="1" column="0">
-    <widget class="QLabel" name="label_stopka">
-     <property name="font">
-      <font>
-       <weight>50</weight>
-       <italic>false</italic>
-       <bold>false</bold>
-       <strikeout>false</strikeout>
-       <kerning>true</kerning>
-      </font>
-     </property>
-     <property name="frameShape">
-      <enum>QFrame::StyledPanel</enum>
-     </property>
-     <property name="frameShadow">
-      <enum>QFrame::Plain</enum>
-     </property>
-     <property name="text">
-      <string>  Państwowe Gospodarstwo Wodne Wody Polskie / Krajowy Zarząd Gospodarki Wodnej / Wydział Systemu Informacyjnego Gospodarowania Wodami</string>
-     </property>
-     <property name="alignment">
-      <set>Qt::AlignCenter</set>
-     </property>
     </widget>
    </item>
   </layout>

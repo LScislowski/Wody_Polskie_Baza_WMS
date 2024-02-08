@@ -1,8 +1,3 @@
-Wtyczka Wody Polskie - Baza WMS umożliwia szybki dostęp do usług sieciowych publikowanych przez Państwowe Gospodarstwo Wodne Wody Polskie (30 usług i ponad 800 warstw tematycznych).
-Publikowane usługi dla: Mapa Podziału Hydrograficznego Polski w skali 1:10000 (MPHP10k), Aktualizacja Planów Gospodarowania Wodami (aPGW), Jednostki organizacyjne PGW Wody Polskie,
-Wstępna ocena ryzyka powodziowego (WORP), Mapa zagrożenia powodziowego (MZP), Mapa ryzyka powodziowego (MRP), Plan przeciwdziałania skutkom suszy (PPSS).
-Zasięg przestrzenny: Polska.
+Wtyczka Wody Polskie - Baza WMS umożliwia szybki dostęp do usług sieciowych publikowanych przez Państwowe Gospodarstwo Wodne Wody Polskie (32 usług). Dodatkowo wtyczka umożliwia pobieranie wybranych danych przestrzennych. Publikowane usługi dla: Mapa Podziału Hydrograficznego Polski w skali 1:10000 (MPHP10k), Plany Gospodarowania Wodami (PGW), Jednostki organizacyjne PGW Wody Polskie, Wstępna ocena ryzyka powodziowego (WORP), Mapy zagrożenia powodziowego (MZP), Mapy ryzyka powodziowego (MRP), Plany zarządzania ryzykiem powodziowym (PZRP), Plan przeciwdziałania skutkom suszy (PPSS).Zasięg przestrzenny: Polska.   
 
-
-ENG: This plugin allows quick access to web map services published by the State Water Holding Polish Waters (30 services and over 800 thematic layers).
-Spatial coverage: Poland.
+ENG: This plugin allows quick access to web map services published by the State Water Holding Polish Waters (32 services) and download selected spatial data. Spatial coverage: Poland.

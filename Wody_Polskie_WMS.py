@@ -25,8 +25,9 @@ from qgis.PyQt.QtCore import QSettings, QTranslator, QCoreApplication
 from qgis.PyQt.QtGui import QIcon
 from qgis.PyQt.QtWidgets import QAction
 
-from PyQt5.QtCore import (QCoreApplication, QSettings, Qt, QTranslator,
+from PyQt5.QtCore import (QCoreApplication, QSettings, Qt, QUrl, QTranslator,
                           QVariant, qVersion)
+from PyQt5.QtGui import QDesktopServices
 from PyQt5.QtGui import *
 from PyQt5.QtWidgets import QAction, QShortcut
 from qgis.core import *
@@ -228,8 +229,26 @@ class WodyPolskieWMS:
         ["2", "Regiony wodne", "https://wody.isok.gov.pl/gpservices/KZGW/ISOK_PGW/MapServer/WMSServer?"],
         ["1", "Obszary Dorzeczy", "https://wody.isok.gov.pl/gpservices/KZGW/ISOK_PGW/MapServer/WMSServer?"],
         ["3", "Zlewnie JCWP", "https://wody.isok.gov.pl/gpservices/KZGW/ISOK_PGW/MapServer/WMSServer?"],
-        ["4", "Jednolite Części Wód Podziemnych", "https://wody.isok.gov.pl/gpservices/KZGW/ISOK_PGW/MapServer/WMSServer?"]
-]
+        ["4", "Jednolite Części Wód Podziemnych", "https://wody.isok.gov.pl/gpservices/KZGW/ISOK_PGW/MapServer/WMSServer?"]]
+        
+        aPGW2 = [["0", "Ekoregiony", "https://wody.isok.gov.pl/gpservices/KZGW/ISOK_IIaPGW2023/MapServer/WMSServer?"],
+        ["1", "Regiony wodne", "https://wody.isok.gov.pl/gpservices/KZGW/ISOK_IIaPGW2023/MapServer/WMSServer?"],
+        ["2", "Obszary Dorzeczy", "https://wody.isok.gov.pl/gpservices/KZGW/ISOK_IIaPGW2023/MapServer/WMSServer?"],    
+        ["16", "JCWP rzecznych", "https://wody.isok.gov.pl/gpservices/KZGW/ISOK_IIaPGW2023/MapServer/WMSServer?"],        
+        ["12", "JCWP zbiornikowych", "https://wody.isok.gov.pl/gpservices/KZGW/ISOK_IIaPGW2023/MapServer/WMSServer?"],   
+        ["13", "JCWP przybrzeżnych", "https://wody.isok.gov.pl/gpservices/KZGW/ISOK_IIaPGW2023/MapServer/WMSServer?"],   
+        ["14", "JCWP przejściowych", "https://wody.isok.gov.pl/gpservices/KZGW/ISOK_IIaPGW2023/MapServer/WMSServer?"],   
+        ["15", "JCWP jeziornych", "https://wody.isok.gov.pl/gpservices/KZGW/ISOK_IIaPGW2023/MapServer/WMSServer?"],   
+        ["5", "Zlewnie JCWP rzecznych", "https://wody.isok.gov.pl/gpservices/KZGW/ISOK_IIaPGW2023/MapServer/WMSServer?"],        
+        ["4", "Zlewnie JCWP zbiornikowych", "https://wody.isok.gov.pl/gpservices/KZGW/ISOK_IIaPGW2023/MapServer/WMSServer?"],   
+        ["6", "Zlewnie JCWP przybrzeżnych", "https://wody.isok.gov.pl/gpservices/KZGW/ISOK_IIaPGW2023/MapServer/WMSServer?"],    
+        ["7", "Zlewnie JCWP przejściowych", "https://wody.isok.gov.pl/gpservices/KZGW/ISOK_IIaPGW2023/MapServer/WMSServer?"],    
+        ["8", "Zlewnie JCWP jeziornych", "https://wody.isok.gov.pl/gpservices/KZGW/ISOK_IIaPGW2023/MapServer/WMSServer?"],  
+        ["3", "Pozostałe obszary zlewni", "https://wody.isok.gov.pl/gpservices/KZGW/ISOK_IIaPGW2023/MapServer/WMSServer?"],  
+        ["11", "JCWPd", "https://wody.isok.gov.pl/gpservices/KZGW/ISOK_IIaPGW2023/MapServer/WMSServer?"],
+        ["10", "Nieaktualne JCWP", "https://wody.isok.gov.pl/gpservices/KZGW/ISOK_IIaPGW2023/MapServer/WMSServer?"],
+        ["9", "Nieaktualne JCWPd", "https://wody.isok.gov.pl/gpservices/KZGW/ISOK_IIaPGW2023/MapServer/WMSServer?"]]
+
 
         worp1 = [["1", "Obszary narażone na niebezpieczeństwo powodzi-od morza", "https://wody.isok.gov.pl/gpservices/KZGW/ISOK_WORP_ONNP_1/MapServer/WMSServer?"]]
 
@@ -1098,6 +1117,35 @@ class WodyPolskieWMS:
         ["155", "Zbiornik Włocławek-klasy użytkowania terenu", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiSrodowiskoKulturaGospodarka_ZniszczenieBudowliPietrzacej/MapServer/WMSServer?"],
         ["3", "warstwy referencyjne-wody powierzchniowe", "https://wody.isok.gov.pl/gpservices/KZGW/MRP20_SkutkiSrodowiskoKulturaGospodarka_ZniszczenieBudowliPietrzacej/MapServer/WMSServer?"]]
         
+        pzrp = [["0", "Obszary problemowe - powódź rzeczna", "https://wody.isok.gov.pl/gpservices/KZGW/ISOK_PZRP/MapServer/WMSServer?"],
+        ["1", "Obszary problemowe - powódź od strony morza", "https://wody.isok.gov.pl/gpservices/KZGW/ISOK_PZRP/MapServer/WMSServer?"],
+        ["2", "Miejsce problemowe", "https://wody.isok.gov.pl/gpservices/KZGW/ISOK_PZRP/MapServer/WMSServer?"],
+        ["3", "Inne", "https://wody.isok.gov.pl/gpservices/KZGW/ISOK_PZRP/MapServer/WMSServer?"],
+        ["4", "Relokacje", "https://wody.isok.gov.pl/gpservices/KZGW/ISOK_PZRP/MapServer/WMSServer?"],
+        ["5", "Międzywala", "https://wody.isok.gov.pl/gpservices/KZGW/ISOK_PZRP/MapServer/WMSServer?"],
+        ["6", "Poldery", "https://wody.isok.gov.pl/gpservices/KZGW/ISOK_PZRP/MapServer/WMSServer?"],
+        ["7", "Retencje naturalne", "https://wody.isok.gov.pl/gpservices/KZGW/ISOK_PZRP/MapServer/WMSServer?"],
+        ["8", "Zbiorniki", "https://wody.isok.gov.pl/gpservices/KZGW/ISOK_PZRP/MapServer/WMSServer?"],
+        ["9", "Jazy", "https://wody.isok.gov.pl/gpservices/KZGW/ISOK_PZRP/MapServer/WMSServer?"],
+        ["10", "Kanały, rowy", "https://wody.isok.gov.pl/gpservices/KZGW/ISOK_PZRP/MapServer/WMSServer?"],
+        ["11", "Kanały ulgi", "https://wody.isok.gov.pl/gpservices/KZGW/ISOK_PZRP/MapServer/WMSServer?"],
+        ["12", "Koryta", "https://wody.isok.gov.pl/gpservices/KZGW/ISOK_PZRP/MapServer/WMSServer?"],
+        ["13", "Mosty, kładki", "https://wody.isok.gov.pl/gpservices/KZGW/ISOK_PZRP/MapServer/WMSServer?"],
+        ["14", "Nabrzeza, bulwary, falochrony, opaski", "https://wody.isok.gov.pl/gpservices/KZGW/ISOK_PZRP/MapServer/WMSServer?"],
+        ["15", "Opaski brzegowe", "https://wody.isok.gov.pl/gpservices/KZGW/ISOK_PZRP/MapServer/WMSServer?"],
+        ["16", "Ostrogi", "https://wody.isok.gov.pl/gpservices/KZGW/ISOK_PZRP/MapServer/WMSServer?"],
+        ["17", "Ostrogi, tamy", "https://wody.isok.gov.pl/gpservices/KZGW/ISOK_PZRP/MapServer/WMSServer?"],
+        ["18", "Przepusty", "https://wody.isok.gov.pl/gpservices/KZGW/ISOK_PZRP/MapServer/WMSServer?"],
+        ["19", "Wały", "https://wody.isok.gov.pl/gpservices/KZGW/ISOK_PZRP/MapServer/WMSServer?"],
+        ["20", "Wrota sztormowe", "https://wody.isok.gov.pl/gpservices/KZGW/ISOK_PZRP/MapServer/WMSServer?"],
+        ["21", "Bramy powodziowe", "https://wody.isok.gov.pl/gpservices/KZGW/ISOK_PZRP/MapServer/WMSServer?"],
+        ["22", "Pompownie", "https://wody.isok.gov.pl/gpservices/KZGW/ISOK_PZRP/MapServer/WMSServer?"],
+        ["23", "Progi, kaskady, stopnie", "https://wody.isok.gov.pl/gpservices/KZGW/ISOK_PZRP/MapServer/WMSServer?"],
+        ["24", "Zapory boczne", "https://wody.isok.gov.pl/gpservices/KZGW/ISOK_PZRP/MapServer/WMSServer?"],
+        ["25", "Działania od strony morza - dorzecze Wisły", "https://wody.isok.gov.pl/gpservices/KZGW/ISOK_PZRP/MapServer/WMSServer?"],
+        ["26", "Działania od strony morza - dorzecze Odry", "https://wody.isok.gov.pl/gpservices/KZGW/ISOK_PZRP/MapServer/WMSServer?"]]
+       
+        
         ppss = [["7", "Lista zadań inwestycyjnych związanych ze zwiększeniem retencji korytowej w zlewniach na obszarach wiejskich-Załącznik 2", "https://wody.isok.gov.pl/gpservices/KZGW/ISOK_PPSS_WMS/MapServer/WMSServer?"],
         ["8", "Lista zadań inwestycyjnych z PPI służących zwiększeniu retencji oraz wspierających przeciwdziałanie skutkom susz-Załącznik 1", "https://wody.isok.gov.pl/gpservices/KZGW/ISOK_PPSS_WMS/MapServer/WMSServer?"],
         ["0", "Łączne zagrożenie suszą", "https://wody.isok.gov.pl/gpservices/KZGW/ISOK_PPSS_WMS/MapServer/WMSServer"],
@@ -1150,6 +1198,8 @@ class WodyPolskieWMS:
             #aPGW - wywołanie funkcji przycisków
             #self.dlg.pbaPGW.clicked.connect(self.add_group_apgw)
             self.dlg.pbaPGW.clicked.connect(lambda: self.add_wms(aPGW, "aPGW"))
+            #2aPGW - wywołanie funkcji przycisków
+            self.dlg.pb2aPGW.clicked.connect(lambda: self.add_wms(aPGW2, "IIaPGW"))            
             #WORP1 - od morza - wywołanie funkcji przycisku
             self.dlg.pbWORP1.clicked.connect(lambda: self.add_wms(worp1, "WORP-ONNP-od morza"))
             #WORP2 - rzeczne - wywołanie funkcji przycisków
@@ -1204,8 +1254,48 @@ class WodyPolskieWMS:
             self.dlg.pbMRP11.clicked.connect(lambda: self.add_wms(mrp11, "MRP-zniszczenie lub uszkodzenie budowli piętrzącej-negatywne skutki dla życia i zdrowia ludzi"))
             #MRP12 - MRP-zniszczenie lub uszkodzenie budowli piętrzącej-negatywne skutki dla środowiska, dziedzictwa kult. i działalności gosp.
             self.dlg.pbMRP12.clicked.connect(lambda: self.add_wms(mrp12, "MRP-zniszczenie lub uszkodzenie budowli piętrzącej-negatywne skutki dla środowiska, dziedzictwa kult. i działalności gosp."))
+            #PZRP
+            self.dlg.pbPZRP.clicked.connect(lambda: self.add_wms(pzrp, "PZRP"))
             #PPSS
             self.dlg.pbPPSS.clicked.connect(lambda: self.add_wms(ppss, "PPSS"))
+            
+            #Pobieranie danych
+            
+            #Pobierz geobazę IIaPGW
+            self.dlg.pb2aPGW_dane.clicked.connect(lambda: self.open_url("https://wody.isok.gov.pl/api/repo-mdd/publ/download/file/bccfebcf31ac47799fe1de6294b73c29/geobaza-2apgw-ver-20230915-gdb-zip"))
+            #Pobierz geobazę granice PGWWP
+            self.dlg.pbPGWWP_dane.clicked.connect(lambda: self.open_url("https://dane.gov.pl/pl/dataset/2170,granice-jednostek-panstwowego-gospodarstwa-wodnego/resource/53970"))
+            #Pobierz geobazę WORP
+            self.dlg.pbWORP_dane.clicked.connect(lambda: self.open_url("https://powodz.gov.pl/www/powodz/aWORP/Bazadanych/WORP_baza_danych.zip"))
+            #Pobierz geobazę PZRP
+            self.dlg.pbPZRP_dane.clicked.connect(lambda: self.open_url("https://stoppowodzi.pl/wp-content/uploads/2022/10/Geobaza.zip"))
+            #Pobierz SHP PPSS - Łączne zagrożenie suszą
+            self.dlg.pbPPSS_L_dane.clicked.connect(lambda: self.open_url("https://dane.gov.pl/pl/dataset/2784,plan-przeciwdzialania-skutkom-suszy-ppss/resource/42511"))
+            #Pobierz SHP PPSS - Zagrożenia suszą atmosferyczną
+            self.dlg.pbPPSS_S_A_dane.clicked.connect(lambda: self.open_url("https://dane.gov.pl/pl/dataset/2784,plan-przeciwdzialania-skutkom-suszy-ppss/resource/42507"))
+            #Pobierz SHP PPSS - Zagrożenia suszą hydrogeologiczną
+            self.dlg.pbPPSS_S_HG_dane.clicked.connect(lambda: self.open_url("https://dane.gov.pl/pl/dataset/2784,plan-przeciwdzialania-skutkom-suszy-ppss/resource/42508"))
+            #Pobierz SHP PPSS - Zagrożenia suszą rolniczą
+            self.dlg.pbPPSS_S_R_dane.clicked.connect(lambda: self.open_url("https://dane.gov.pl/pl/dataset/2784,plan-przeciwdzialania-skutkom-suszy-ppss/resource/42510"))
+            #Pobierz SHP PPSS - Zagrożenia suszą hydrologiczną
+            self.dlg.pbPPSS_S_H_dane.clicked.connect(lambda: self.open_url("https://dane.gov.pl/pl/dataset/2784,plan-przeciwdzialania-skutkom-suszy-ppss/resource/42509"))
+            #Pobierz SHP PPSS - Łączne zagrożenie suszą
+            self.dlg.pbPPSS_I_dane.clicked.connect(lambda: self.open_url("https://dane.gov.pl/pl/dataset/2784,plan-przeciwdzialania-skutkom-suszy-ppss/resource/42506"))
+            #Pobierz SHP MZP - Obszary zagrożenia powodziowego 0,2%
+            self.dlg.pbOZP02_dane.clicked.connect(lambda: self.open_url("https://dane.gov.pl/pl/dataset/2178,mapa-zagrozenia-powodziowego-mzp/resource/42540"))
+            #Pobierz SHP MZP - Obszary zagrożenia powodziowego 1%
+            self.dlg.pbOZP1_dane.clicked.connect(lambda: self.open_url("https://dane.gov.pl/pl/dataset/2178,mapa-zagrozenia-powodziowego-mzp/resource/42539"))
+            #Pobierz SHP MZP - Obszary zagrożenia powodziowego 10%
+            self.dlg.pbOZP10_dane.clicked.connect(lambda: self.open_url("https://dane.gov.pl/pl/dataset/2178,mapa-zagrozenia-powodziowego-mzp/resource/42538"))
+            #Pobierz SHP MZP - Obszary zagrożenia powodziowego w przypadku zniszczenia wału przeciwpowodziowego
+            self.dlg.pbOZP_ZWPP_dane.clicked.connect(lambda: self.open_url("https://dane.gov.pl/pl/dataset/2178,mapa-zagrozenia-powodziowego-mzp/resource/42541"))
+            #Pobierz SHP MZP - Obszary zagrożenia powodziowego od strony morza 0,2%
+            self.dlg.pbOZP_M02_dane.clicked.connect(lambda: self.open_url("https://dane.gov.pl/pl/dataset/2178,mapa-zagrozenia-powodziowego-mzp/resource/42543"))
+            #Pobierz SHP MZP - Obszary zagrożenia powodziowego od strony morza 1%
+            self.dlg.pbOZP_M1_dane.clicked.connect(lambda: self.open_url("https://dane.gov.pl/pl/dataset/2178,mapa-zagrozenia-powodziowego-mzp/resource/42542"))
+            #Pobierz SHP MZP - Obszary zagrożenia powodziowego w przypadku zniszczenia wału przeciwsztormowego
+            self.dlg.pbOZP_ZWPS_dane.clicked.connect(lambda: self.open_url("https://dane.gov.pl/pl/dataset/2178,mapa-zagrozenia-powodziowego-mzp/resource/42544"))
+
             
         # show the dialog
         self.dlg.show()
@@ -1216,6 +1306,11 @@ class WodyPolskieWMS:
             # Do something useful here - delete the line containing pass and
             # substitute with your code.
             pass
+            
+    def open_url(self, url):
+            QDesktopServices.openUrl(QUrl(url))
+            
+            
     def add_group_apgw(self):
             global root
             root = QgsProject.instance().layerTreeRoot()
