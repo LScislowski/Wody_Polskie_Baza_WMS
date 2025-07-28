@@ -6,7 +6,7 @@
 name=Wody Polskie - Baza WMS
 qgisMinimumVersion=3.0
 description=Baza usług WMS publikowanych przez Państwowe Gospodarstwo Wodne Wody Polskie
-version=1.0.3
+version=1.0.4
 author=Łukasz Ścisłowski - Państwowe Gospodarstwo Wodne Wody Polskie - KZGW - Wydział SIGW
 email=lukasz.scislowski@wody.gov.pl
 
