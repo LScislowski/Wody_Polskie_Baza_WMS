@@ -256,16 +256,16 @@ class WodyPolskieWMS:
 
         worp3 = [["1", "Obszary narażone na niebezpieczeństwo powodzi-zniszczenie budowli piętrzących", "https://wody.isok.gov.pl/gpservices/KZGW/ISOK_WORP_ONNP_3/MapServer/WMSServer?"]]
 
-        worp4 = [["5", "Powodzie prawdopodobne II cykl-punkt", "https://wody.isok.gov.pl/gpservices/KZGW/ISOK_WORP_v2/MapServer/WMSServer?"],
-        ["9", "Powodzie historyczne II cykl-punkt", "https://wody.isok.gov.pl/gpservices/KZGW/ISOK_WORP_v2/MapServer/WMSServer?"],
-        ["12", "Powodzie historyczne I cykl-punkt", "https://wody.isok.gov.pl/gpservices/KZGW/ISOK_WORP_v2/MapServer/WMSServer?"],
-        ["4", "Powodzie prawdopodobne II cykl-linia", "https://wody.isok.gov.pl/gpservices/KZGW/ISOK_WORP_v2/MapServer/WMSServer?"],
-        ["0", "Obszary zalewowe-II cykl", "https://wody.isok.gov.pl/gpservices/KZGW/ISOK_WORP_v2/MapServer/WMSServer?"],
-        ["1", "Obszary zalewowe-I cykl", "https://wody.isok.gov.pl/gpservices/KZGW/ISOK_WORP_v2/MapServer/WMSServer?"],
-        ["3", "Powodzie prawdopodobne II cykl-poligon", "https://wody.isok.gov.pl/gpservices/KZGW/ISOK_WORP_v2/MapServer/WMSServer?"],
-        ["6", "Powodzie prawdopodobne-I cykl", "https://wody.isok.gov.pl/gpservices/KZGW/ISOK_WORP_v2/MapServer/WMSServer?"],
-        ["8", "Powodzie historyczne II cykl-poligon", "https://wody.isok.gov.pl/gpservices/KZGW/ISOK_WORP_v2/MapServer/WMSServer?"],
-        ["11", "Powodzie historyczne I cykl-poligon", "https://wody.isok.gov.pl/gpservices/KZGW/ISOK_WORP_v2/MapServer/WMSServer?"]]
+        worp4 = [["1", "Powodzie prawdopodobne od morza o mechanizmie naturalnego wezbrania", "https://wody.isok.gov.pl/gpservices/KZGW/ISOK_WORP_v2/MapServer/WMSServer?"],
+        ["2", "Powodzie prawdopodobne rzeczne w wyniku awarii budowli hydrotechnicznycht", "https://wody.isok.gov.pl/gpservices/KZGW/ISOK_WORP_v2/MapServer/WMSServer?"],
+        ["3", "Powodzie prawdopodobne rzeczne o mechanizmie naturalnego wezbrania", "https://wody.isok.gov.pl/gpservices/KZGW/ISOK_WORP_v2/MapServer/WMSServer?"],
+        ["5", "Znaczące powodzie historyczne-od morza w wyniku awarii budowli przeciwpowodziowych", "https://wody.isok.gov.pl/gpservices/KZGW/ISOK_WORP_v2/MapServer/WMSServer?"],
+        ["6", "Znaczące powodzie historyczne-od morza o mechanizmie naturalnego wezbrania", "https://wody.isok.gov.pl/gpservices/KZGW/ISOK_WORP_v2/MapServer/WMSServer?"],
+        ["7", "Znaczące powodzie historyczne-rzeczne o nieznanym mechanizmie powstania", "https://wody.isok.gov.pl/gpservices/KZGW/ISOK_WORP_v2/MapServer/WMSServer?"],
+        ["8", "Znaczące powodzie historyczne-rzeczne o mechanizmie zatorowym", "https://wody.isok.gov.pl/gpservices/KZGW/ISOK_WORP_v2/MapServer/WMSServer?"],
+        ["9", "Znaczące powodzie historyczne-rzeczne w wyniku awarii budowli przeciwpowodziowych", "https://wody.isok.gov.pl/gpservices/KZGW/ISOK_WORP_v2/MapServer/WMSServer?"],
+        ["10", "Znaczące powodzie historyczne-rzeczne w wyniku przelania się wody przez budowle przeciwpowodziowe", "https://wody.isok.gov.pl/gpservices/KZGW/ISOK_WORP_v2/MapServer/WMSServer?"],
+        ["11", "Znaczące powodzie historyczne-rzeczne o mechanizmie naturalnego wezbrania", "https://wody.isok.gov.pl/gpservices/KZGW/ISOK_WORP_v2/MapServer/WMSServer?"]]
 
         mzp1 = [["2", "obszar zagrożenia powodziowego (MZP od morza)", "https://wody.isok.gov.pl/gpservices/KZGW/MZP20_Glebokosc_NiskiePrawdopodPowodzi/MapServer/WMSServer?"],
         ["5", "wał przeciwpowodziowy, przeciwsztormowy (MZP od morza)", "https://wody.isok.gov.pl/gpservices/KZGW/MZP20_Glebokosc_NiskiePrawdopodPowodzi/MapServer/WMSServer?"],
@@ -1266,7 +1266,7 @@ class WodyPolskieWMS:
             #Pobierz geobazę granice PGWWP
             self.dlg.pbPGWWP_dane.clicked.connect(lambda: self.open_url("https://dane.gov.pl/pl/dataset/2170,granice-jednostek-panstwowego-gospodarstwa-wodnego/resource/53970"))
             #Pobierz geobazę WORP
-            self.dlg.pbWORP_dane.clicked.connect(lambda: self.open_url("https://powodz.gov.pl/www/powodz/aWORP/Bazadanych/WORP_baza_danych.zip"))
+            self.dlg.pbWORP_dane.clicked.connect(lambda: self.open_url("https://dane.gov.pl/pl/dataset/2181,wstepna-ocena-ryzyka-powodziowego-worp/resource/66358/table"))
             #Pobierz geobazę PZRP
             self.dlg.pbPZRP_dane.clicked.connect(lambda: self.open_url("https://stoppowodzi.pl/wp-content/uploads/2022/10/Geobaza.zip"))
             #Pobierz SHP PPSS - Łączne zagrożenie suszą
