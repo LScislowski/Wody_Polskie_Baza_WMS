@@ -1262,13 +1262,13 @@ class WodyPolskieWMS:
             #Pobieranie danych
             
             #Pobierz geobazę IIaPGW
-            self.dlg.pb2aPGW_dane.clicked.connect(lambda: self.open_url("https://wody.isok.gov.pl/api/repo-mdd/publ/download/file/bccfebcf31ac47799fe1de6294b73c29/geobaza-2apgw-ver-20230915-gdb-zip"))
+            self.dlg.pb2aPGW_dane.clicked.connect(lambda: self.open_url("https://dane.gov.pl/pl/dataset/599,baza-danych-przestrzennych-aktualizacji-planow-gospodarowania-wodami/resource/53330/table"))
             #Pobierz geobazę granice PGWWP
             self.dlg.pbPGWWP_dane.clicked.connect(lambda: self.open_url("https://dane.gov.pl/pl/dataset/2170,granice-jednostek-panstwowego-gospodarstwa-wodnego/resource/53970"))
             #Pobierz geobazę WORP
             self.dlg.pbWORP_dane.clicked.connect(lambda: self.open_url("https://dane.gov.pl/pl/dataset/2181,wstepna-ocena-ryzyka-powodziowego-worp/resource/66358/table"))
             #Pobierz geobazę PZRP
-            self.dlg.pbPZRP_dane.clicked.connect(lambda: self.open_url("https://stoppowodzi.pl/wp-content/uploads/2022/10/Geobaza.zip"))
+            self.dlg.pbPZRP_dane.clicked.connect(lambda: self.open_url("https://dane.gov.pl/pl/dataset/3591,plany-zarzadzania-ryzykiem-powodziowym-pzrp/resource/54475/table"))
             #Pobierz SHP PPSS - Łączne zagrożenie suszą
             self.dlg.pbPPSS_L_dane.clicked.connect(lambda: self.open_url("https://dane.gov.pl/pl/dataset/2784,plan-przeciwdzialania-skutkom-suszy-ppss/resource/42511"))
             #Pobierz SHP PPSS - Zagrożenia suszą atmosferyczną
