@@ -20,7 +20,7 @@ repository=https://github.com/LScislowski/Wody_Polskie_Baza_WMS
 
 hasProcessingProvider=no
 # Uncomment the following line and add your changelog:
-changelog=Wersja 1.0.1 *Poprawki redakcyjne, Wersja 1.0.2 *dodano automatyczne grupowanie warstw, dodano warstwy PPSS, poprawiono kolejność wyświetlania się warstw, Wersja 1.0.3 *dodano warstwy IIaPGW, PZRP. Dodano możliwość pobierania wybranych danych (geobaza, shapefile), Wersja 1.0.4 *aktualizacja danych w zakresie WORP (usługi WMS, nowy link do pobrania nowej geobazy WORP w zakładce "Dane do pobrania").
+changelog=Wersja 1.0.1 *Poprawki redakcyjne, Wersja 1.0.2 *dodano automatyczne grupowanie warstw, dodano warstwy PPSS, poprawiono kolejność wyświetlania się warstw, Wersja 1.0.3 *dodano warstwy IIaPGW, PZRP. Dodano możliwość pobierania wybranych danych (geobaza, shapefile), Wersja 1.0.4 *aktualizacja danych w zakresie WORP (usługi WMS, nowy link do pobrania nowej geobazy WORP w zakładce "Dane do pobrania"), ustawiono przekierowania do pobrania plików na portal Otwarte Dane.
 
 # Tags are comma separated with spaces allowed
 tags=wms, python, pgwwp, mphp, apgw, mzp, mrp, worp, pzrp, ppss, water, hydrography, water management plans, flood hazard map, flood risk map, drought, woda, hydrografia, susza, powódź, plany, wody polskie, shapefile, geodatabase, download
